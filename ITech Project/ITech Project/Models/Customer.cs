@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITech_Project.Models
 
@@ -85,6 +86,11 @@ namespace ITech_Project.Models
         [Required]
         [DataType(DataType.Date)]
         public string DateEntered { get; set; }
+
+
+        [ForeignKey("Order")]
+        public int OrderID { get; set; }
+        public Order Order { get; set; }
 
     }
 }
