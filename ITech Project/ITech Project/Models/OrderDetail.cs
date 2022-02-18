@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ITech_Project.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace ITech_Project.Models
 {
@@ -26,14 +27,10 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Total Is Required")]
         [DataType(DataType.Currency)]
         public int Total { get; set; }
-
-        [Display(Name = "Model")]
-        [Required(ErrorMessage = "Model Is Required")]
-        public string Model { get; set; }
-
+      
         [Display(Name = "Color")]
         [Required(ErrorMessage = "Color Is Required")]
-        public string Color { get; set; }
+        public Color Color { get; set; }
 
         [Display(Name = "Ship Date")]
         [Required(ErrorMessage = "Ship Date Is Required")]
@@ -45,7 +42,17 @@ namespace ITech_Project.Models
         [DataType(DataType.Date)]
         public string BillDate { get; set; }
 
-        /* [ForeignKey("Order")]
+        /*
+         
+         [ForeignKey("Color")]
+         public int Color_Id { get; set; }
+         public Color Color { get; set; } 
+
+         [ForeignKey("Model")]
+         public int Model_Id { get; set; }
+         public Model Model { get; set; }
+         
+         [ForeignKey("Order")]
          public int Order_Id { get; set; }
          public Order Order { get; set; }
 
