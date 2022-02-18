@@ -53,6 +53,7 @@ namespace ITech_Project.Models
         public string CardExpYear { get; set; }
 
         [Required]
+        [MaxLength(50)]
         public string BillingAddress { get; set; }
 
         [Required]
