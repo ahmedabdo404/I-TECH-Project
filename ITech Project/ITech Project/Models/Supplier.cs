@@ -1,18 +1,27 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITech_Project.Models
 {
     public class Supplier
     {
         public int Id { get; set; }
+        [Required]
         public string CompanyName { get; set; }
+        [Required]
         public string ContactFName { get; set; }
+        [Required]
         public string ContactLName { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public int postalCode { get; set; }
         public string Country { get; set; }
+
+        [Required]
+
         public int Phone { get; set; }
+
+        [Required]
         public string Email { get; set; }
         public string Url { get; set; }
         public string paymentMethod { get; set; }
