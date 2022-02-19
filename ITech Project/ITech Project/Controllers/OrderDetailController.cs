@@ -19,14 +19,13 @@ namespace ITech_Project.Controllers
             return View(OrderDetailServices.GetAll());
         }
 
-        // Student/GetById
-        //[Route("Student/id:int")]
+       
         public IActionResult GetById([FromRoute] int id)
         {
             return View(OrderDetailServices.GetById(id));
         }
 
-        // Student/Create
+        
         [HttpGet]
         public IActionResult Create()
         {

@@ -24,14 +24,13 @@ namespace ITech_Project.Controllers
             return View( OrderServices.GetAll());
         }
 
-        // Student/GetById
-        //[Route("Student/id:int")]
+        
         public IActionResult GetById([FromRoute] int id)
         {
             return View(OrderServices.GetById(id));
         }
 
-        // Student/Create
+        
         [HttpGet]
         public IActionResult Create()
         {
