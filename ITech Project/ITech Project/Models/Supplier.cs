@@ -6,45 +6,38 @@ namespace ITech_Project.Models
     public class Supplier
     {
         public int Id { get; set; }
-        [Required]
+
+        [Display(Name = "Company Name")]
+        [Required(ErrorMessage = "Company Name Is Required")]
         public string CompanyName { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Contact FName Is Required")]
         public string ContactFName { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Contact LName Is Required")]
         public string ContactLName { get; set; }
+
+        [Required(ErrorMessage = "Address Is Required")]
         public string Address { get; set; }
+
+        [Required(ErrorMessage = "City Is Required")]
         public string City { get; set; }
-        public int postalCode { get; set; }
+
+        [Required(ErrorMessage = "Country Is Required")]
         public string Country { get; set; }
 
-        [Required]
+        [DataType(DataType.PostalCode)]
+        public int? PostalCode { get; set; }
 
-        public int Phone { get; set; }
-
-        [Required]
-        public string Email { get; set; }
         public string Url { get; set; }
-        public string paymentMethod { get; set; }
+
+        [Required(ErrorMessage = "payment Method Is Required")]
+        public string PaymentMethod { get; set; }
+
+        [Required(ErrorMessage = "Type Goods Is Required")]
         public string TypeGoods { get; set; }
         public bool DiscountAvaiable { get; set; }
         public string Logo { get; set; }
-
-        [ForeignKey("Customer")]
-        public int CustId { get; set; }
-
-        public virtual Customer Customer { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

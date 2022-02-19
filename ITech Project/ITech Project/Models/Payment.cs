@@ -5,11 +5,10 @@ namespace ITech_Project.Models
 {
     public class Payment
     {
+        public int Id { get; set; }
 
-
-        public int ID { get; set; }
-
-        [Required]
+        [Display(Name = "Payment Type")]
+        [Required(ErrorMessage = "Payment Type Is Required")]
         public string PaymentType { get; set; }
         public bool Allowed { get; set; }
     }

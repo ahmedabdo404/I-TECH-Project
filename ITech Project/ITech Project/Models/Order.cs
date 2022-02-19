@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITech_Project.Models
 {
@@ -26,14 +27,10 @@ namespace ITech_Project.Models
         [DataType(DataType.Date)]
         public string RequiredDate { get; set; }
 
-        [Display(Name = "Freight")]
         [DataType(DataType.Currency)]
-        public int Freight { get; set; }
-
-        [Display(Name = "Timestamp")]
+        public int? Freight { get; set; }
         public string Timestamp { get; set; }
 
-        
         [Display(Name = "Transact Status")]
         [Required(ErrorMessage = "Transact Status Is Required")]
         [DataType(DataType.CreditCard)]
@@ -43,28 +40,30 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Delete Order Is Required")]
         public bool Deleted { get; set; }
 
-        [Display(Name = "Paid")]
         [Required(ErrorMessage = "Paid Field Is Required")]
         [DataType(DataType.Currency)]
-        public int Paid { get; set; }
+        public int? Paid { get; set; }
 
         [Display(Name = "Payment Date")]
         [Required(ErrorMessage = "Payment Date Is Required")]
         [DataType(DataType.Date)]
         public string PaymentDate { get; set; }
 
-        /* [ForeignKey("Customer")]
-         public int Customer_Id { get; set; }
-         public Customer Customer { get; set; }
+        [Display(Name = "Customer")]
+        [ForeignKey("Customer")]
+        public int? CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
-         [ForeignKey("Payment")]
-         public int Payment_Id { get; set; }
-         public Payment Payment { get; set; }
+        [Display(Name = "Payment")]
+        [ForeignKey("Payment")]
+        public int? PaymentId { get; set; }
+        public Payment Payment { get; set; }
 
-         [ForeignKey("Shipper")]
-         public int Shipper_Id { get; set; }
-         public Shipper Shipper { get; set; }
-         */
+        [Display(Name = "Shipper")]
+        [ForeignKey("Shipper")]
+        public int? ShipperId { get; set; }
+        public Shipper Shipper { get; set; }
+
 
 
 

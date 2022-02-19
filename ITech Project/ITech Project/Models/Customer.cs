@@ -24,72 +24,57 @@ namespace ITech_Project.Models
 
         [Required(ErrorMessage = "City is required !")]
         public string City { get; set; }
-        public int PostalCode { get; set; }
 
+        [DataType(DataType.PostalCode)]
+        public int? PostalCode { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Country is required !")]
         public string Country { get; set; }
 
+        //[Required(ErrorMessage = "Email is required!")]
+        //[DataType(DataType.EmailAddress)]
+        //public string Email { get; set; }
 
-        [Required(ErrorMessage = "Phone Number is required !")]
-        public int Phone { get; set; }
+        //[DataType(DataType.PhoneNumber)]
+        //[Required(ErrorMessage = "Phone Number is required !")]
+        //public int? Phone { get; set; }
 
-        [Required]
-        public string Password { get; set; }
+        //[DataType(DataType.Password)]
+        //[Required(ErrorMessage = "Password is required !")]
+        //public string Password { get; set; }
+
+        //[Compare("Password", ErrorMessage = "Password and Confirm not matched")]
+        //[DataType(DataType.Password)]
+        //public string ComfirmedPassword { get; set; }
 
         ///---------------------------------
-        [Required]
+        [Required(ErrorMessage = "Credit Card is required!")]
         public string CreditCard { get; set; }
 
-        [Required]
-        public int CreditCardTypeID { get; set; }
+        [Required(ErrorMessage = "Credit Card Type Id is required!")]
+        [MaxLength (14)]
+        public int CreditCardTypeId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Card Exp Date is required!")]
         [DataType(DataType.Date)]
-        public string CardExpMonth { get; set; }
+        public string CardExpDate { get; set; }
 
-
-        [Required]
-        [DataType(DataType.Date)]
-        public string CardExpYear { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string BillingAddress { get; set; }
-
-        [Required]
-        public string BillingCity { get; set; }
-
-        [Required]
-        public string BillingRegion { get; set; }
-        public int BillingPostalCode { get; set; }
-
-        [Required]
         public string BillingCountry { get; set; }
-
-        [Required]
-        [MaxLength(50)]
+        public string BillingAddress { get; set; }
+        public string BillingCity { get; set; }
+        public int? BillingPostalCode { get; set; }
         public string ShipAddress { get; set; }
-
-        [Required]
         public string ShipCity { get; set; }
-
-        [Required]
         public string ShipRegion { get; set; }
-
-        [Required]
-        public int ShipPostalCode { get; set; }
-
-        [Required]
+        public int? ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
 
-        [Required]
         [DataType(DataType.Date)]
         public string DateEntered { get; set; }
 
 
         [ForeignKey("Order")]
-        public int OrderID { get; set; }
+        public int? OrderId { get; set; }
         public Order Order { get; set; }
 
     }

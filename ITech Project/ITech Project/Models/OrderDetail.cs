@@ -1,5 +1,6 @@
 ﻿using ITech_Project.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITech_Project.Models
 {
@@ -42,24 +43,21 @@ namespace ITech_Project.Models
         [DataType(DataType.Date)]
         public string BillDate { get; set; }
 
-        /*
-         
-         [ForeignKey("Color")]
-         public int Color_Id { get; set; }
-         public Color Color { get; set; } 
+        [Display(Name = "Model")]
+        [ForeignKey("Model")]
+        public int? ModelId { get; set; }
+        public Model Model { get; set; }
 
-         [ForeignKey("Model")]
-         public int Model_Id { get; set; }
-         public Model Model { get; set; }
-         
-         [ForeignKey("Order")]
-         public int Order_Id { get; set; }
-         public Order Order { get; set; }
+        [Display(Name = "Order")]
+        [ForeignKey("Order")]
+        public int? OrderId { get; set; }
+        public Order Order { get; set; }
 
-         [ForeignKey("Product")]
-         public int Product_Id { get; set; }
-         public Product Product { get; set; }
-         */
+        [Display(Name = "Product")]
+        [ForeignKey("Product")]
+        public int? ProductId { get; set; }
+        public Product Product { get; set; }
+
 
 
 
