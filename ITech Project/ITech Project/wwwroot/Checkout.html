@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-Tech</title>
+    <!-- External Libs -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <ul class="top-nav">
+                <li><a href="home.html">Home</a></li>
+                <li>My Account</li>
+                <li> <a href="cart.html">Shopping Cart</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+            </ul>
+            <div id="menu-bar"><i class='bx bx-menu'></i></div>
+        </nav>
+        <section class="items-section">
+            <div class="items-bar container">
+
+
+                <p> I-TECH</p>
+                <div class="search-bar d-flex justify-content-center align-items-center">
+                    <input type="text" placeholder="Search your item">
+                    <div class="Search-icon">
+                        <i class='bx bx-search-alt-2'></i>
+                    </div>
+                </div>
+                <div class="btn-group account">
+                    <p type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </p>
+                    <ul class="dropdown-menu dropdown-menu-center">
+                        <a href="login.html" targ">
+                            <li><button class="dropdown-item" type="button">Sign In</button></li>
+                        </a>
+                        <li><button class="dropdown-item" type="button">Account</button></li>
+
+                        <a href="orders.html" targ">
+                            <li><button class="dropdown-item" type="button">Orders</button></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class='bx bx-cart'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- back to top icon -->
+        <div class="back-top">
+            <i class='bx bx-up-arrow-alt'></i>
+        </div>
+    </header>
+
+    <section class="items-section mt-3 mb-3">
+        <div class="container">
+            <div class="h">
+                <p>Home/Orders/Checkout Information</p>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <h6>Checkout Information</h6>
+                    <hr>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    STEP 1: Check Out Information
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h4>NEW CUSTOMER</h4>
+                                            <P>Choose What are you going to do on I-Tech</P>
+                                            <input type="radio" name="check" value="register" checked id="SELLER">
+                                            <label for="SELLER">SELLER Account</label>
+                                            <br>
+                                            <input type="radio" name="check" value="guest" id="BUYER">
+                                            <label for="BUYER">Buyer Account</label>
+                                            <br><br>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.</p>
+                                            <input type="button" value="CONTINUE" class="b">
+
+                                        </div>
+                                        <form class="col-6" action="Dashboard.html" method="get">
+                                            <h5>Sign in</h5>
+                                            <P>Log in to my account</P>
+                                            <div class="d-flex flex-row login-inputs">
+                                                <div class="d-flex flex-column justify-content-center me-5">
+                                                    <label for="username">Email</label>
+                                                    <label for="password">Pass</label>
+                                                </div>
+                                                <div class="d-inline-flex flex-column col-7">
+                                                    <input type="text" id="username">
+                                                    <input type="password" id="password">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <p>Forgot your password?</p>
+                                            <input type="submit" value="LOG IN" class="b">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Step 2: Billing Information
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Step 3: Delivery Information
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Step 4: Payment Methods
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Step 5: Confirm Order
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <p class="h">CATEGORY</p>
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 catogery-list catogery-list-active"><i
+                                class='bx bxs-right-arrow pe-2'></i>Smart Phone</li>
+                        <li class="list-group-item border-0 catogery-list"><i
+                                class='bx bxs-right-arrow pe-2'></i>Desktop</li>
+                        <li class="list-group-item border-0 catogery-list"><i class="bx bxs-right-arrow pe-2"></i>Laptop
+                        </li>
+                        <li class="list-group-item border-0 catogery-list"><i
+                                class='bx bxs-right-arrow pe-2'></i>Accessories</li>
+                    </ul>
+                    <p class="h">By Brand</p>
+                    <div class="brand">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="HP" checked>
+                            <label class="form-check-label" for="HP">
+                                HP
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="DELL">
+                            <label class="form-check-label" for="DELL">
+                                DELL
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="APPLE">
+                            <label class="form-check-label" for="APPLE">
+                                APPLE
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="ASUS">
+                            <label class="form-check-label" for="ASUS">
+                                ASUS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="SUMSUNG">
+                            <label class="form-check-label" for="SUMSUNG">
+                                SUMSUNG
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="TOSHIBA">
+                            <label class="form-check-label" for="TOSHIBA">
+                                TOSHIBA
+                            </label>
+                        </div>
+                    </div>
+                    <p class="h">By Price</p>
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 catogery-list"><i
+                                class='bx bxs-right-arrow pe-2'></i>$1000-$2000</li>
+                        <li class="list-group-item border-0 catogery-list"><i
+                                class='bx bxs-right-arrow pe-2'></i>$2000-$3000</li>
+                        <li class="list-group-item border-0 catogery-list"><i
+                                class='bx bxs-right-arrow pe-2'></i>$3000-$4000</li>
+                        <li class="list-group-item border-0 catogery-list"><i
+                                class='bx bxs-right-arrow pe-2'></i>$4000-$5000</li>
+                        <li class="list-group-item border-0 catogery-list "><i
+                                class='bx bxs-right-arrow pe-2'></i>$5000-$6000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer" class="border-top footer text-muted">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row justify-content-evenly">
+
+
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Privacy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>MY Account</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="login.html">Sign In</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="cart.html">My Cart</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Orders</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Help</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>I-TECH</h3>
+                        <p>
+                            ITI Menofia Branch <br>
+                            Menofia, Shebin Elkom<br>
+                            Egypt <br><br>
+                            <strong>Phone:</strong> +20 1114474365<br>
+                            <strong>Email:</strong> ahmed.elzahed404@gmail.com<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4 inner-footer">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span> I-TECH
+                        </span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://github.com/ahmedabdo404/I-TECH-Project" target="_blank"> I-TECH
+                        Team</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+
+</html>
