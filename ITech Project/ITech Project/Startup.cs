@@ -1,7 +1,9 @@
 using ITech_Project.Models;
+using ITech_Project.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +30,13 @@ namespace ITech_Project
             services.AddControllersWithViews();
             services.AddDbContext<Db>(option => 
             option.UseSqlServer(Configuration.GetConnectionString("cs")));
+            //injection
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Db>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IModelService, ModelService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderDetailService, OrderDetailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
