@@ -9,14 +9,15 @@ namespace ITech_Project.Controllers
         private readonly IProductService ProductRepo;
         private readonly ICategoryService CategoryRepo;
         private readonly IModelService ModelRepo;
-        //private readonly ISupplierService SupplierRepo;
+        private readonly ISupplierService SupplierRepo;
 
         public ProductController(IProductService productRepo, ICategoryService categoryRepo,
-            IModelService modelRepo)
+            IModelService modelRepo, ISupplierService supplierRepo)
         {
             ProductRepo = productRepo;
             CategoryRepo = categoryRepo;
             ModelRepo = modelRepo;
+            SupplierRepo = supplierRepo;
         }
 
         public IActionResult GetAll()
@@ -30,7 +31,7 @@ namespace ITech_Project.Controllers
         {
             ViewData["category"] = CategoryRepo.GetAll();
             ViewData["model"] = ModelRepo.GetAll();
-            //ViewData["supplier"] = SupplierRepo.GetAll();
+            ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetById(id));
         }
 
@@ -39,7 +40,7 @@ namespace ITech_Project.Controllers
         {
             ViewData["category"] = CategoryRepo.GetAll();
             ViewData["model"] = ModelRepo.GetAll();
-            //ViewData["supplier"] = SupplierRepo.GetAll();
+            ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
         [HttpPost]
@@ -52,7 +53,7 @@ namespace ITech_Project.Controllers
             }
             ViewData["category"] = CategoryRepo.GetAll();
             ViewData["model"] = ModelRepo.GetAll();
-            //ViewData["supplier"] = SupplierRepo.GetAll();
+            ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
 
@@ -71,7 +72,7 @@ namespace ITech_Project.Controllers
             }
             ViewData["category"] = CategoryRepo.GetAll();
             ViewData["model"] = ModelRepo.GetAll();
-            //ViewData["supplier"] = SupplierRepo.GetAll();
+            ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
 

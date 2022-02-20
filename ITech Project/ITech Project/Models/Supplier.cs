@@ -10,10 +10,12 @@ namespace ITech_Project.Models
         [Display(Name = "Company Name")]
         [Required(ErrorMessage = "Company Name Is Required")]
         public string CompanyName { get; set; }
+        [Display(Name = "Contact FirstName")]
 
         [Required(ErrorMessage = "Contact FName Is Required")]
         public string ContactFName { get; set; }
 
+        [Display(Name = "Contact LastName")]
         [Required(ErrorMessage = "Contact LName Is Required")]
         public string ContactLName { get; set; }
 
