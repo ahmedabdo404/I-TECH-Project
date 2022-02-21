@@ -8,33 +8,32 @@ namespace ITech_Project.Controllers
     public class OrderDetailController : Controller
     {
         public IOrderDetailService OrderDetailServices { get; }
-<<<<<<< HEAD
         public IOrderService OrderServices { get; }
         public IProductService ProductServices { get; }
+        public ICustomerService CustomerServices { get; }
 
-        public OrderDetailController(IOrderDetailService _ordDetRepo, IOrderService _ordRepo, IProductService _prdRepo)
-=======
-        public OrderDetailController(IOrderDetailService _ordRepo, IProductService productRepo)
->>>>>>> 4b3f6483b35d98a4f1281820b598e908ee893e2f
+        public OrderDetailController(IOrderDetailService _ordDetRepo, IOrderService _ordRepo,
+            IProductService _prdRepo,ICustomerService _cusRepo)
         {
             OrderDetailServices = _ordDetRepo;
             OrderServices = _ordRepo;
             ProductServices = _prdRepo;
+            CustomerServices = _cusRepo;
         }
 
 
         public IActionResult GetAll()
         {
-            //ViewData["Ord"] = OrderServices.GetAll();
-            //ViewData["Cust"] = CustomerServices.GetAll();
+             ViewData["Ord"] = OrderServices.GetAll();
+            ViewData["Cust"] = CustomerServices.GetAll();
             return View(OrderDetailServices.GetAll());
         }
 
        
         public IActionResult GetById([FromRoute] int id)
         {
-            //ViewData["Ord"] = OrderServices.GetAll();
-            //ViewData["Cust"] = CustomerServices.GetAll();
+             ViewData["Ord"] = OrderServices.GetAll();
+             ViewData["Cust"] = CustomerServices.GetAll();
             return View(OrderDetailServices.GetById(id));
         }
 
@@ -42,8 +41,8 @@ namespace ITech_Project.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            //ViewData["Ord"] = OrderServices.GetAll();
-            //ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Ord"] = OrderServices.GetAll();
+            ViewData["Cust"] = CustomerServices.GetAll();
             return View();
         }
 
@@ -58,16 +57,16 @@ namespace ITech_Project.Controllers
                 //display index view
                 return RedirectToAction("GetAll");
             }
-            //ViewData["Ord"] = OrderServices.GetAll();
-            //ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Ord"] = OrderServices.GetAll();
+            ViewData["Cust"] = CustomerServices.GetAll();
             return View(neword);//html
         }
 
         [HttpGet]
         public IActionResult Update(int id)
         {
-            //ViewData["Ord"] = OrderServices.GetAll();
-            //ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Ord"] = OrderServices.GetAll();
+            ViewData["Cust"] = CustomerServices.GetAll();
             OrderDetail ord = OrderDetailServices.GetById(id);
             return View(ord);
         }
@@ -79,8 +78,8 @@ namespace ITech_Project.Controllers
                 OrderDetailServices.Update(newOrder);
                 return RedirectToAction("GetAll");
             }
-            //ViewData["Ord"] = OrderServices.GetAll();
-            //ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Ord"] = OrderServices.GetAll();
+            ViewData["Cust"] = CustomerServices.GetAll();
             return View(newOrder);
         }
 

@@ -1,60 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
+    "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
+    "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
         "projectName": "ITech Project",
-        "projectPath": "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "packagesPath": "C:\\Users\\Mayada\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
-=======
-<<<<<<< HEAD
-    "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
-  },
-  "projects": {
-    "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "projectName": "ITech Project",
-        "projectPath": "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "packagesPath": "C:\\Users\\samaa\\.nuget\\packages\\",
-        "outputPath": "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
-=======
-    "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "projectName": "ITech Project",
-        "projectPath": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "packagesPath": "C:\\Users\\Alli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
->>>>>>> 4b3f6483b35d98a4f1281820b598e908ee893e2f
->>>>>>> a3ef3c867cdd47abf94c86ef0afae2f133bd3cbc
+        "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\Mayada\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-<<<<<<< HEAD
-          "C:\\Users\\samaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\Alli\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4b3f6483b35d98a4f1281820b598e908ee893e2f
->>>>>>> a3ef3c867cdd47abf94c86ef0afae2f133bd3cbc
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
