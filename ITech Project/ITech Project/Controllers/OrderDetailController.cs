@@ -7,12 +7,10 @@ namespace ITech_Project.Controllers
 {
     public class OrderDetailController : Controller
     {
-        private readonly IProductService ProductRepo;
         public IOrderDetailService OrderDetailServices { get; }
         public OrderDetailController(IOrderDetailService _ordRepo, IProductService productRepo)
         {
             OrderDetailServices = _ordRepo;
-            ProductRepo = productRepo;
         }
 
 
