@@ -8,10 +8,12 @@ namespace ITech_Project.Controllers
     public class OrderController : Controller
     {
         public IOrderService OrderServices { get; }
+        public IShipperService ShipperServices { get; }
 
-        public OrderController(IOrderService _ordRepo)
+        public OrderController(IOrderService _ordRepo, IShipperService _shipRepo)
         {
             OrderServices = _ordRepo;
+            ShipperServices = _shipRepo;
         }
 
 
@@ -19,14 +21,17 @@ namespace ITech_Project.Controllers
         {
             //ViewData["Cust"] = CustomerServices.GetAll();
             //ViewData["Pay"] = PaymentServices.GetAll();
-            //ViewData["Ship"] = ShipperServices.GetAll();
+            ViewData["Ship"] = ShipperServices.GetAll();
 
-            return View( OrderServices.GetAll());
+            return View(OrderServices.GetAll());
         }
 
         
         public IActionResult GetById([FromRoute] int id)
         {
+            //ViewData["Cust"] = CustomerServices.GetAll();
+            //ViewData["Pay"] = PaymentServices.GetAll();
+            ViewData["Ship"] = ShipperServices.GetAll();
             return View(OrderServices.GetById(id));
         }
 
@@ -34,6 +39,9 @@ namespace ITech_Project.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            //ViewData["Cust"] = CustomerServices.GetAll();
+            //ViewData["Pay"] = PaymentServices.GetAll();
+            ViewData["Ship"] = ShipperServices.GetAll();
             return View();
         }
 
@@ -48,14 +56,18 @@ namespace ITech_Project.Controllers
                 //display index view
                 return RedirectToAction("GetAll");
             }
-           
+            //ViewData["Cust"] = CustomerServices.GetAll();
+            //ViewData["Pay"] = PaymentServices.GetAll();
+            ViewData["Ship"] = ShipperServices.GetAll();
             return View(neword);//html
         }
 
         [HttpGet]
         public IActionResult Update(int id)
         {
-            
+            //ViewData["Cust"] = CustomerServices.GetAll();
+            //ViewData["Pay"] = PaymentServices.GetAll();
+            ViewData["Ship"] = ShipperServices.GetAll();
             Order ord = OrderServices.GetById(id);
             return View(ord);
         }
@@ -67,7 +79,9 @@ namespace ITech_Project.Controllers
                 OrderServices.Update(newOrder);
                 return RedirectToAction("GetAll");
             }
-           
+            //ViewData["Cust"] = CustomerServices.GetAll();
+            //ViewData["Pay"] = PaymentServices.GetAll();
+            ViewData["Ship"] = ShipperServices.GetAll();
             return View(newOrder);
         }
 

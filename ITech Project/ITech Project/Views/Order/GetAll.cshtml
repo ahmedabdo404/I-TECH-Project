@@ -1,0 +1,61 @@
+﻿@model List<Order>
+<div class="container mt-3">
+    <a asp-action="Create" asp-controller="Student" class="btn btn-primary mb-3">Add new Student</a>
+    <table class="table table-bordered text-center" width="50%">
+        <tr>
+            <th>Order Number</th>
+            <th>Order Date</th>
+            <th>Ship Date</th>
+            <th>Required Date</th>
+            <th>Freight</th>
+            <th>Customer</th>
+            <th>Shipper</th>
+            <th>Payment</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderNumber</td>
+                <td>@item.OrderDate</td>
+                <td>@item.ShipDate</td>
+                <td>@item.RequiredDate</td>
+                <td>@item.Freight</td>
+               @foreach(var i in ViewBag.Cust)
+                {
+                    if(i.Id == item.CustomerId)
+                    {
+                        <td>@i.FirstName &nbsp; @i.LastName </td>
+                    }
+                }
+                @foreach(var i in ViewBag.Ship)
+                {
+                    if(i.Id == item.ShipperId)
+                    {
+                        <td>@i.CompanyName </td>
+                    }
+                }
+                @foreach(var i in ViewBag.Pay)
+                {
+                    if(i.Id == item.PaymentId)
+                    {
+                        <td>@i.PaymentType </td>
+                    }
+                }
+
+                <td> <a asp-action="GetById" asp-controller="Order" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
+                <td> <a asp-action="Update" asp-controller="Order" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
+                <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Order" asp-route-id="@item.Id" onclick="ConfirmDelete(event)">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<script>
+    function ConfirmDelete(){
+        var accept=confirm("Are You Sure?");
+        if(accept==false)
+            event.preventDefault();
+    }
+</script>
