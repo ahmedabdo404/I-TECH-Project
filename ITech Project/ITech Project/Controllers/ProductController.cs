@@ -24,7 +24,7 @@ namespace ITech_Project.Controllers
         {
             ViewData["category"] = CategoryRepo.GetAll();
             ViewData["model"] = ModelRepo.GetAll();
-            //ViewData["supplier"] = SupplierRepo.GetAll();
+            ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetAll());
         }
         public IActionResult GetById([FromRoute]int id)

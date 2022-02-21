@@ -44,7 +44,7 @@ let counter = setInterval(() => {
 //animation
 var options = {
     strings: ['All Tech ... in one place'],
-    typeSpeed: 100,
+    typeSpeed: 150,
     loop: true,
     loopCount: Infinity,
     showCursor:false,
@@ -52,18 +52,3 @@ var options = {
 };
 var typed = new Typed('.element', options);
 
-// back to top
-let upBtn = document.querySelector(".back-top")
-
-window.onscroll = () => {
-    // console.log(window.scrollY)
-    if(window.scrollY >= 600){
-        upBtn.style = ("opacity: 1;")
-    }else{
-        upBtn.style = ("opacity: 0;")
-    }
-}
-
-upBtn.onclick = () =>{
-    scrollTo({ top: 0, behavior: "smooth"});
-}

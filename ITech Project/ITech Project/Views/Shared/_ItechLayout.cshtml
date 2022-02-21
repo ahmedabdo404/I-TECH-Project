@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/imgs/icon.svg" rel="icon">
+    <link href="~/assets/imgs/icon.svg" rel="icon">
 
     <title>I-Tech</title>
-    <!-- External Libs -->
+    @*links*@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/assets/css/layout.css"/>
+    @RenderSection("style", false);
 
 </head>
 
@@ -20,10 +20,10 @@
     <header>
         <nav class="container">
             <ul class="top-nav">
-                <li><a href="home.html">Home</a></li>
+                <li><a asp-action="Index">Home</a></li>
                 <li>My Account</li>
-                <li> <a href="cart.html">Shopping Cart</a></li>
-                <li><a href="Checkout.html">Checkout</a></li>
+                <li> <a asp-action="cart">Shopping Cart</a></li>
+                <li><a asp-action="Checkout">Checkout</a></li>
             </ul>
             <div id="menu-bar"><i class='bx bx-menu'></i></div>
         </nav>
@@ -43,18 +43,18 @@
                         Account
                     </p>
                     <ul class="dropdown-menu dropdown-menu-center">
-                        <a href="login.html" targ">
+                        <a asp-action="login" targ">
                             <li><button class="dropdown-item" type="button">Sign In</button></li>
                         </a>
                         <li><button class="dropdown-item" type="button">Account</button></li>
 
-                        <a href="orders.html" targ">
+                        <a asp-action="orders" targ">
                             <li><button class="dropdown-item" type="button">Orders</button></li>
                         </a>
                     </ul>
                 </div>
                 <div class="cart-icon">
-                    <a href="cart.html">
+                    <a asp-action="cart">
                         <i class='bx bx-cart'></i>
                     </a>
                 </div>
@@ -75,10 +75,10 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Information</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Privacy</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="index">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="About">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="index">Privacy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="Contact">Contact</a></li>
 
                         </ul>
                     </div>
@@ -86,10 +86,10 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>MY Account</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="login.html">Sign In</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="cart.html">My Cart</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Orders</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="home.html">Help</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="login">Sign In</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="cart">My Cart</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="Orders">Orders</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-action="contact">Help</a></li>
                         </ul>
                     </div>
 
@@ -129,10 +129,9 @@
         </div>
     </footer>
     @*bootstrap*@
-      <script src="lib/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> </script>
-    @*typed.js*@
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="assets/js/script.js"></script>
+      <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> </script>
+      <script src="~/assets/js/layout.js"></script>
+    @RenderSection("script", false);
 </body>
 
 </html>

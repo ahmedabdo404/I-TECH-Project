@@ -4,62 +4,63 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ITech_Project.Controllers
 {
-    public class ShipperController : Controller
+    public class SupplierController : Controller
     {
-        private readonly IShipperService shipperService;
+        private readonly ISupplierService supplier;
 
-        public ShipperController(IShipperService shipperService)
+        public SupplierController(ISupplierService supplier)
         {
-            this.shipperService = shipperService;
+            this.supplier = supplier;
         }
 
         public IActionResult GetAll()
-        {
-            return View(shipperService.GetAll());   
+        { 
+        
+        return View(supplier.GetAll());
         }
 
         public IActionResult GetById(int id)
         { 
-        return View(shipperService.GetById(id));
+        return View(supplier.GetById(id));  
         }
 
         public IActionResult GetByName(string name)
         { 
-        return View(shipperService.GetByName(name));
+        return View(supplier.GetByName(name));
         }
-            
-            
-            [HttpGet]
+
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Shipper ship)
+        public IActionResult Create(Supplier sup)
         {
             if (ModelState.IsValid)
             { 
-            shipperService.Create(ship);
-            return RedirectToAction("GetAll");
+            supplier.Create(sup);
+                return RedirectToAction("GetAll");
             }
-            return View(ship);
+            return View(sup);
         }
+
 
         [HttpGet]
         public IActionResult Update(int id)
         {
-            return View(shipperService.GetById(id));
+            return View(supplier.GetById(id));
         }
-        [HttpPost]
 
-        public IActionResult Update(Shipper ship)
+        [HttpPost]
+        public IActionResult Update(Supplier sup)
         {
             if (ModelState.IsValid)
             { 
-            shipperService.Update(ship);
+            supplier.Update(sup);
                 return RedirectToAction("GetAll");
             }
-            return View();
+            return View();        
         }
 
 
@@ -67,8 +68,9 @@ namespace ITech_Project.Controllers
         {
             try
             {
-                shipperService.Delete(id);
+                supplier.Delete(id);
                 return RedirectToAction("GetAll");
+
             }
             catch //(System.Exception)
             {
@@ -77,19 +79,6 @@ namespace ITech_Project.Controllers
             }
         
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

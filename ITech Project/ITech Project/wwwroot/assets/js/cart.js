@@ -13,7 +13,8 @@ let productsAdd = document.querySelectorAll(".product-box i");
 // add links to products
 window.onload = () => {
     for(let l of productslink)
-        l.setAttribute("href", "details.html");
+        //l.setAttribute("asp-action", "details");
+        l.setAttribute("href", "details");
 }
 
 // add items to cart
