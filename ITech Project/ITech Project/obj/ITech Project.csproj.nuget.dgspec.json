@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
         "packagesPath": "C:\\Users\\samaa\\.nuget\\packages\\",
         "outputPath": "F:\\00-FinalProjects MVC\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+=======
+    "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "projectName": "ITech Project",
+        "projectPath": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "packagesPath": "C:\\Users\\Alli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+>>>>>>> 4b3f6483b35d98a4f1281820b598e908ee893e2f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\samaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Alli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4b3f6483b35d98a4f1281820b598e908ee893e2f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
