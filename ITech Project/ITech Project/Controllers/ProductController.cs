@@ -8,7 +8,7 @@ namespace ITech_Project.Controllers
     {
         private readonly IProductService ProductRepo;
         private readonly ICategoryService CategoryRepo;
-        private readonly IModelService ModelRepo;
+        private readonly IModelService ModelRepo; 
         private readonly ISupplierService SupplierRepo;
 
         public ProductController(IProductService productRepo, ICategoryService categoryRepo,
