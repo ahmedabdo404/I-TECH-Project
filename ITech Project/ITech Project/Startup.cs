@@ -37,6 +37,11 @@ namespace ITech_Project
             services.AddScoped<IModelService, ModelService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderDetailService, OrderDetailService>();
+
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IShipperService, ShipperService>();
+            services.AddScoped<ISupplierService, SupplierService>();
+            services.AddScoped<IPaymentService, PaymentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

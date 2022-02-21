@@ -61,6 +61,8 @@ C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Proje
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorCoreGenerate.cache
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAll.cshtml.g.cs
+C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetById.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ItechLayout.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -75,6 +77,7 @@ C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Proje
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
+<<<<<<< HEAD
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.json
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\libman.json
@@ -236,3 +239,7 @@ D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Pro
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\orders.cshtml.g.cs
+=======
+>>>>>>> 52774c7ac070fa64a4a3aba58f6b9fca0138553a
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAll.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetById.cshtml.g.cs
