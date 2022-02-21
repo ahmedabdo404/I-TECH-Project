@@ -8,7 +8,7 @@ namespace ITech_Project.Controllers
     {
         private readonly IProductService ProductRepo;
         private readonly ICategoryService CategoryRepo;
-        private readonly IModelService ModelRepo;
+        private readonly IModelService ModelRepo; 
         private readonly ISupplierService SupplierRepo;
 
         public ProductController(IProductService productRepo, ICategoryService categoryRepo,
@@ -24,7 +24,7 @@ namespace ITech_Project.Controllers
         {
             ViewData["category"] = CategoryRepo.GetAll();
             ViewData["model"] = ModelRepo.GetAll();
-            //ViewData["supplier"] = SupplierRepo.GetAll();
+            ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetAll());
         }
         public IActionResult GetById([FromRoute]int id)
