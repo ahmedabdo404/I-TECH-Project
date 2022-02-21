@@ -52,5 +52,12 @@
         "js/bootstrap.min.js.map"
       ]
     }
-  ]
+  ,
+{
+  "provider": "cdnjs",
+  "library": "bootstrap@5.1.3",
+  "destination": "wwwroot/lib/bootstrap/"
 }
+]
+}
+

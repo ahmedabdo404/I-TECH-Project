@@ -5953,19 +5953,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mgabr\\.nuget\\packages\\": {}
+    "C:\\Users\\Mayada\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+      "projectUniqueName": "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
       "projectName": "ITech Project",
-      "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-      "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+      "projectPath": "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+      "packagesPath": "C:\\Users\\Mayada\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mayada\\Desktop\\I-Tech Project\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mayada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
