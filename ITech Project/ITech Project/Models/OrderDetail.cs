@@ -34,12 +34,12 @@ namespace ITech_Project.Models
         public Color Color { get; set; }
 
         [Display(Name = "Ship Date")]
-        [Required(ErrorMessage = "Ship Date Is Required")]
+        //[Required(ErrorMessage = "Ship Date Is Required")]
         [DataType(DataType.Date)]
         public string ShipDate { get; set; }
 
         [Display(Name = "Bill Date")]
-        [Required(ErrorMessage = "Bill Date Is Required")]
+        //[Required(ErrorMessage = "Bill Date Is Required")]
         [DataType(DataType.Date)]
         public string BillDate { get; set; }
 

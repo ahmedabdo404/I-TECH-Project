@@ -1,0 +1,57 @@
+﻿@model List<OrderDetail>
+<div class="container mt-3">
+    <a asp-action="Create" asp-controller="OrderDetail" class="btn btn-primary mb-3">Add Details</a>
+    <table class="table table-bordered text-center" width="50%">
+        <tr>
+            <th>OrderNumber</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Color</th>
+            <th>Model</th>
+            <th>Product</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderNumber</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+                <td>@item.Discount</td>
+                <td>@item.Total</td>
+                <td>@item.Color</td>
+
+               @foreach(var i in ViewBag.Mod)
+                {
+                    if(i.Id == item.ModelId)
+                    {
+                        <td>@i.Name </td>
+                    }
+                }
+                @foreach(var i in ViewBag.Prod)
+                {
+                    if(i.Id == item.ProductId)
+                    {
+                        <td>@i.Name </td>
+                    }
+                }
+
+                <td> <a asp-action="GetById" asp-controller="OrderDetails" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
+                <td> <a asp-action="Update" asp-controller="OrderDetails" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
+                <td><a class="btn btn-danger" asp-action="Delete" asp-controller="OrderDetails" asp-route-id="@item.Id" onclick="ConfirmDelete(event)">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<script>
+    function ConfirmDelete(){
+        var accept=confirm("Are You Sure?");
+        if(accept==false)
+            event.preventDefault();
+    }
+</script>
