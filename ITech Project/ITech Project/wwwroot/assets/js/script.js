@@ -1,17 +1,10 @@
-// hide nav bar
-let menu = document.querySelector('#menu-bar i')
-let navbar = document.querySelector('.top-nav')
-
-menu.onclick = function(){
-    menu.classList.toggle('fa-times')
-    navbar.classList.toggle('active')
-}
 
 // countdown timer
 let daysDiv = document.querySelector(".days")
 let hoursDiv = document.querySelector(".Hours")
 let minutesDiv = document.querySelector(".Minutes")
 let secondsDiv = document.querySelector(".Seconds")
+let productslink = document.querySelectorAll(".p-link");
 
 let timer = new Date("Mar 1, 2022 00:00:00").getTime();
 // console.log(timer)
@@ -52,3 +45,11 @@ var options = {
 };
 var typed = new Typed('.element', options);
 
+
+
+// add links to products
+window.onload = () => {
+    for (let l of productslink)
+        //l.setAttribute("asp-action", "details");
+        l.setAttribute("href", "Home/details");
+}

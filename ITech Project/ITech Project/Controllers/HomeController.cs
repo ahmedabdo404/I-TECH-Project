@@ -28,7 +28,7 @@ namespace ITech_Project.Controllers
             return View();
         }
 
-        public IActionResult Cart()
+        public IActionResult sub()
         {
             return View();
         }
@@ -56,6 +56,14 @@ namespace ITech_Project.Controllers
         }
 
         public IActionResult Orders()
+        {
+            return View();
+        }
+        public IActionResult cart()
+        {
+            return View();
+        }
+        public IActionResult category()
         {
             return View();
         }
