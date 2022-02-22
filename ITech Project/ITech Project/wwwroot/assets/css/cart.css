@@ -20,10 +20,8 @@
     z-index: -1;
 }
 
-
-
-.container > h1 {
-    padding: 20px 0;
+.cart-c {
+    margin-top: 5%;
 }
 
 .cart {
@@ -174,7 +172,7 @@
 
 @media screen and (max-width: 1220px) {
 
-    .container {
+    .cart-c {
         max-width: 95%;
     }
 }
