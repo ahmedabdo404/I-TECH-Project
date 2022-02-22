@@ -1,0 +1,134 @@
+﻿@model Product
+
+<section class="items-section">
+    <div class="container">
+        <div class="h m-3 ms-0">
+            <p>Product Details</p>
+        </div>
+        <div class="details d-flex flex-row">
+            <div id="carouselExampleDark" class="carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    @{
+                        string str = Model.Picture;
+                        var pictureList = str.Split(",");
+                        foreach(var item in pictureList)
+                        {
+                            <div class="carousel-item active">
+                                <img src="@item" class="d-block" alt="...">
+                            </div>
+                        }
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="speces">
+                <div class="Product-Title">
+                    <h4>@Model.Name</h4>
+                    <hr>
+                    <div>
+                        Brand:
+                        @foreach(var item in ViewBag.model)
+                        {
+                            if(item.Id == Model.ModelId)
+                            {
+                                <p class="d-inline">@item.Name</p>
+                            }
+                        }
+                    </div>
+                    <div>
+                        Availability:
+                        @if(Model.UnitsInStock > Model.UnitsOnOrder)
+                        {
+                            <p class="d-inline">In Stock</p>
+                        }
+                        else
+                        {
+                            <p class="d-inline">Out Of Stock</p>
+                        }
+                    </div>
+                </div>
+                <div class="Product-dimensions">
+                    <h4>Product Description</h4>
+                    <hr>
+                    <p>
+                        @Model.Description
+                    </p>
+                </div>
+                <div class="Product-reviews">
+                    <h4>Product Reviews</h4>
+                    <hr>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star'></i>
+                        <p class="d-inline">&nbsp;&nbsp;&nbsp;1 review</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Desc">
+                <div class="Product-price">
+                    <h4>Product price</h4>
+                    <hr>
+                    <div class="price-val">
+                        @if(Model.DiscountAvailable != true)
+                        {
+                            <p class="d-inline">$ @Model.UnitPrice</p>
+                        }
+                        else
+                        {
+                            
+                            <p class="d-inline">$ @Model.UnitPrice- @Model.Discount</p>
+                        }
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center flex-row add-to-cart">
+                        <i class='bx bxs-cart-add add-cart '></i>
+                        <p class="d-inline">add-to cart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="custome-accordion" class="d-flex flex-column">
+            <div class="d-flex flex-row" id="ca-title">
+                <span>Description</span>
+                <span>Specification</span>
+                <span>reviews</span>
+            </div>
+            <div class="d-flex flex-row" id="ca-body">
+                <div>
+                    Body Description:
+                    <br>
+                    @Model.Description
+                </div>
+                <div hidden>
+                    Body Specification:
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deserunt minima possimus repellendus corporis aut cum quo quaerat! Qui ducimus voluptates vero! Voluptates earum iure quod eligendi modi beatae quia?
+                </div>
+                <div hidden>
+                    Body review
+                    :<br>
+                    @Model.Note
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -28,9 +28,9 @@ namespace ITech_Project.Models
         [Display(Name = "Quantity Per Unit Shipped")]
         public int? QuantityPerUnitShipped { get; set; }
 
-        [Display(Name = "Product Available")]
-        [Required(ErrorMessage = "Product Available is required !")]
-        public bool ProductAvailable { get; set; }
+        //[Display(Name = "Product Available")]
+        //[Required(ErrorMessage = "Product Available is required !")]
+        //public bool ProductAvailable { get; set; }
 
         [Display(Name = "Discount Available")]
         public bool? DiscountAvailable { get; set; }
