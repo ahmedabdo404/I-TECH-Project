@@ -2,7 +2,6 @@
   "version": "1.0",
   "defaultProvider": "cdnjs",
   "libraries": [
-<<<<<<< HEAD
   {
     "library": "bootstrap@5.1.3",
     "destination": "wwwroot/lib/bootstrap/",
@@ -13,23 +12,3 @@
 }
 ]
 }
-=======
-    {
-      "library": "bootstrap@5.1.3",
-      "destination": "wwwroot/lib/bootstrap/"
-    }
-<<<<<<< HEAD
-  ,
-{
-  "provider": "cdnjs",
-  "library": "bootstrap@5.1.3",
-  "destination": "wwwroot/lib/bootstrap/"
-}
-]
-}
-
-=======
-  ]
-}
->>>>>>> a3ef3c867cdd47abf94c86ef0afae2f133bd3cbc
->>>>>>> 52774c7ac070fa64a4a3aba58f6b9fca0138553a
