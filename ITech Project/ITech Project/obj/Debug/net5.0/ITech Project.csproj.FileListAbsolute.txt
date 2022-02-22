@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
 F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.json
 F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\libman.json
@@ -81,3 +82,93 @@ F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net
 F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
 F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\OrderDetail\GetAll.cshtml.g.cs
 F:\00-FinalProjects MVC\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\OrderDetail\Create.cshtml.g.cs
+=======
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.json
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\libman.json
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.exe
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.deps.json
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.runtimeconfig.json
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.runtimeconfig.dev.json
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ref\ITech Project.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.Views.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.Views.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Humanizer.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\scopedcss\bundle\ITech Project.styles.css
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\staticwebassets\ITech Project.StaticWebAssets.Manifest.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.input.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.output.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorCoreGenerate.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Cart.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\category.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\CheckOut.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\DashBoard.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\orders.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\sub.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAll.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetById.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ItechLayout.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorTargetAssemblyInfo.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorTargetAssemblyInfo.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.Views.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CopyComplete
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\ITech Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
+>>>>>>> 8ba220f3b9894255c7668c43a4f64c721ea9bd07
