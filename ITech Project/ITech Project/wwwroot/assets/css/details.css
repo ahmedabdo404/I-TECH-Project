@@ -1,3 +1,24 @@
+/*currnet page*/
+
+.top-nav li a {
+    color: var(--sec-color) !important;
+}
+
+.top-nav li:nth-child(4) a {
+    color: var(--main-color) !important;
+}
+
+.current-page {
+    width: 93px;
+    height: 200px;
+    background-color: var(--sec-color);
+    display: inline-block;
+    position: absolute;
+    margin-left: 245px;
+    margin-top: -160px;
+    border-radius: 5px;
+    z-index: -1;
+}
 
 /* body ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>body*/
 .h{
@@ -61,12 +82,21 @@ hr {
     font-size: var(--font-size1)
 }
 
-.add-to-cart{
+
+.cart-link {
+    text-decoration: none
+}
+.cart-link:visited {
+    text-decoration: none
+}
+
+.add-to-cart {
     width: 150px !important;
     height: 2.5rem;
     background-color: var(--main-color);
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 .add-to-cart p {
@@ -80,6 +110,7 @@ hr {
     font-size: var(--font-size1);
     color: var(--sec-color);
 }
+
 
 #custome-accordion {
     width: 100%;

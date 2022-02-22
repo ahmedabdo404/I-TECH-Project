@@ -1,4 +1,13 @@
-﻿// back to top
+﻿// hide nav bar
+let menu = document.querySelector('#menu-bar i')
+let navbar = document.querySelector('.top-nav')
+
+menu.onclick = function () {
+    menu.classList.toggle('fa-times')
+    navbar.classList.toggle('active')
+}
+
+// back to top
 let upBtn = document.querySelector(".back-top")
 
 window.onscroll = () => {
