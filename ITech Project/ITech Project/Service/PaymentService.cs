@@ -22,7 +22,7 @@ namespace ITech_Project.Service
         //Update payment info
         public void Update(Payment payment)
         {
-            Context.Payments.Add(payment);
+            Context.Payments.Update(payment);
             Context.SaveChanges();
         }
 
