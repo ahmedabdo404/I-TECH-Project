@@ -32,7 +32,6 @@ namespace ITech_Project
             option.UseSqlServer(Configuration.GetConnectionString("cs")));
             //injection
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Db>();
-            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderDetailService, OrderDetailService>();

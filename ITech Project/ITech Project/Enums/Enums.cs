@@ -15,6 +15,11 @@
         Aman = 4 ,
         CashOnDeliverd = 5 ,
     }
+    public enum Category : byte
+    {
+        Laptop = 1 ,
+        Phone = 2 ,
+    }
     public enum ModelLabtop : byte
     {
         Hp = 1 ,

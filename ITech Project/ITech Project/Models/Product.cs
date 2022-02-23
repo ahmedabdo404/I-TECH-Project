@@ -16,7 +16,7 @@ namespace ITech_Project.Models
 
         [Display(Name = "Unit Price")]
         [Required(ErrorMessage = "Price is required !")]
-        public int UnitPrice { get; set; }
+        public double UnitPrice { get; set; }
 
         [Display(Name = "Supplier Product Id")]
         public string SupplierProductId { get; set; }
@@ -31,27 +31,24 @@ namespace ITech_Project.Models
 
         [Required(ErrorMessage = "Picture is required !")]
         public string Picture { get; set; }
-        public int? Ranking { get; set; }
+
+        [Range(1, 5)]
+        public byte? Ranking { get; set; }
         public string Note { get; set; }
         public Color Color { get; set; }
+
+        [Required(ErrorMessage = "Category is required !")]
+        public Category Category { get; set; }
+
+        [Display(Name = "Mobile Model")]
+        public ModelMobile ModelMobile { get; set; }
+
+        [Display(Name = "Labtop Model")]
+        public ModelLabtop ModelLabtop { get; set; }
 
         [Display(Name = "Supplier")]
         [ForeignKey("Supplier")]
         public int? SupplierId { get; set; }
         public Supplier Supplier { get; set; }
-
-        [Required(ErrorMessage = "Mobile Model is required !")]
-        [Display(Name = "Mobile Model")]
-        public ModelMobile ModelMobile { get; set; }
-
-        [Required(ErrorMessage = "Labtop Model is required !")]
-        [Display(Name = "Labtop Model")]
-        public ModelLabtop ModelLabtop { get; set; }
-
-        [Display(Name = "Category")]
-        [ForeignKey("Category")]
-        public int? CategoryId { get; set; }
-        public Category Category { get; set; }
-
     }
 }

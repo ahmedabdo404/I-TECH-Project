@@ -1,0 +1,142 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_ItechLayout.cshtml";
+}
+
+<section class="container">
+    <h1>Create</h1>
+    <h4>Product</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="control-label mb-2"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="UnitPrice" class="control-label mb-2"></label>
+                    <input asp-for="UnitPrice" class="form-control" />
+                    <span asp-validation-for="UnitPrice" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="SupplierProductId" class="control-label mb-2"></label>
+                    <input asp-for="SupplierProductId" class="form-control" />
+                    <span asp-validation-for="SupplierProductId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="UnitsInStock" class="control-label mb-2"></label>
+                    <input asp-for="UnitsInStock" class="form-control" />
+                    <span asp-validation-for="UnitsInStock" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Discount" class="control-label mb-2"></label>
+                    <input asp-for="Discount" class="form-control" />
+                    <span asp-validation-for="Discount" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Picture" class="control-label mb-2"></label>
+                    <input type="file" accept="image/*" asp-for="Picture" class="form-control" multiple />
+                    <span asp-validation-for="Picture" class="text-danger"></span>
+                </div>
+
+
+                 <div class="form-group mb-3">
+                    <label asp-for="Color" class="control-label mb-2"></label>
+                    <select asp-for="Color" asp-items="Html.GetEnumSelectList<Color>()" class="form-control">
+                        <option selected>--Select Color--</option>
+                    </select>
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Category" class="control-label mb-2"></label>
+                    <select asp-for="Category" asp-items="Html.GetEnumSelectList<Category>()" class="form-control">
+                        <option selected>--Select Category--</option>
+                    </select>
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                    <div class="form-group mb-3 d-none" id="mob">
+                        <label asp-for="ModelMobile" class="control-label mb-2"></label>
+                        <select asp-for="ModelMobile" asp-items="Html.GetEnumSelectList<ModelMobile>()" class="form-control">
+                            <option selected>--Select Mobile Model--</option>
+                        </select>
+                        <span asp-validation-for="ModelMobile" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3 d-none" id="lab">
+                        <label asp-for="ModelLabtop" class="control-label mb-2"></label>
+                        <select asp-for="ModelLabtop" asp-items="Html.GetEnumSelectList<ModelLabtop>()" class="form-control">
+                            <option selected>--Select Labtop Model--</option>
+                        </select>
+                        <span asp-validation-for="ModelLabtop" class="text-danger"></span>
+                    </div>
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label mb-2"></label>
+                    <textarea asp-for="Description" class="form-control" rows="6" style="resize: none">
+                    </textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+@*                <div class="form-group mb-3">
+                    <label asp-for="SupplierId" class="control-label mb-2"></label>
+                    <input asp-for="SupplierId" class="form-control" />
+                    <span asp-validation-for="SupplierId" class="text-danger"></span>
+                </div>*@
+
+                <div class="form-group mt-3 mb-3">
+                    <input type="submit" value="Create" class="btn btn-primary me-3" />
+                    <a asp-action="GetAll" class="btn btn-primary">Back to All Products</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        
+    </div>
+</section>
+
+@section Script {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        let categ = document.getElementById("Category");
+        let mob = document.getElementById("mob");   
+        let lab = document.getElementById("lab");
+
+        categ.addEventListener("change", function() {
+            if(this.value == 1) {
+                mob.classList.add("d-none");
+                lab.classList.remove("d-none");
+            } else if(this.value == 2) {
+                lab.classList.add("d-none");
+                mob.classList.remove("d-none");
+            } else {
+                mob.classList.add("d-none");
+                lab.classList.add("d-none");
+            }
+        });
+         
+
+
+        let photo = document.getElementById("Picture");
+        let arr = [];
+        photo.onchange = function() {
+            arr = this.files;
+            for(let i of arr) {
+                console.log(i.name)
+            }
+        }        
+    </script>
+}

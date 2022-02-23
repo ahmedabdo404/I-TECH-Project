@@ -7,26 +7,21 @@ namespace ITech_Project.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService ProductRepo;
-        private readonly ICategoryService CategoryRepo;
         private readonly ISupplierService SupplierRepo;
 
-        public ProductController(IProductService productRepo, ICategoryService categoryRepo,
-            ISupplierService supplierRepo)
+        public ProductController(IProductService productRepo, ISupplierService supplierRepo)
         {
             ProductRepo = productRepo;
-            CategoryRepo = categoryRepo;
             SupplierRepo = supplierRepo;
         }
 
         public IActionResult GetAll()
         {
-            ViewData["category"] = CategoryRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetAll());
         }
         public IActionResult GetById([FromRoute]int id)
         {
-            ViewData["category"] = CategoryRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetById(id));
         }
@@ -34,7 +29,6 @@ namespace ITech_Project.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewData["category"] = CategoryRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
@@ -46,7 +40,6 @@ namespace ITech_Project.Controllers
                 ProductRepo.Create(product);
                 return RedirectToAction("GetAll");
             }
-            ViewData["category"] = CategoryRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
@@ -64,7 +57,6 @@ namespace ITech_Project.Controllers
                 ProductRepo.Update(product);
                 return RedirectToAction("GetAll");
             }
-            ViewData["category"] = CategoryRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }

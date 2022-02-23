@@ -38,26 +38,24 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-             <div>
-                <label asp-for="Color" class="form-control"></label>
-                <select asp-for="Color" asp-items="Html.GetEnumSelectList<Color>()" class="form-control">
-                    <option selected>--Select Color--</option>
-                </select>
-                <span asp-validation-for="Color" class="text-danger"></span>
-            </div>
+
             <div class="speces">
                 <div class="Product-Title">
                     <h4>@Model.Name</h4>
                     <hr>
                     <div>
                         Brand:
-                        @foreach(var item in ViewBag.model)
+                        @if(Model.Category == Category.Laptop)
                         {
-                            if(item.Id == Model.ModelId)
-                            {
-                                <p class="d-inline">@item.Name</p>
-                            }
+                            <p class="d-inline">@Model.ModelLabtop</p>
                         }
+                        else if(Model.Category == Category.Phone)
+                        {
+                            <p class="d-inline">@Model.ModelMobile</p>
+                        }
+                    </div>                    
+                    <div>
+                        Color: <p class="d-inline">@Model.Color</p> 
                     </div>
                     <div>
                         Availability:
@@ -82,6 +80,7 @@
                     <h4>Product Reviews</h4>
                     <hr>
                     <div>
+                        @Model.Ranking
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -98,6 +97,7 @@
                     <div class="price-val">
                         @if(Model.Discount > 0)
                         {
+                            <p class="d-inline" style="text-decoration: line-through">$ @Model.UnitPrice</p>
                             <p class="d-inline">$ @Model.UnitPrice- @Model.Discount</p>
                         }
                         else
@@ -132,7 +132,13 @@
                 <div hidden>
                     Body review
                     :<br>
-                    @Model.Note
+@*                    <div class="form-group">
+                        <label asp-for="Description" class="control-label mb-2"></label>
+                        <textarea asp-for="Note" class="form-control" rows="6" style="resize: none">
+                        </textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>*@
+
                 </div>
             </div>
         </div>

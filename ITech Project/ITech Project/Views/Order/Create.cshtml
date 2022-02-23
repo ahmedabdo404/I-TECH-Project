@@ -1,0 +1,45 @@
+﻿@model Order
+
+@{
+    SelectList custs;
+    if(Model !=null)
+    {
+        custs = new SelectList(ViewBag.Cust,"Id","FirstName",Model.CustomerId);
+    }
+    else
+    {
+        custs = new SelectList(ViewBag.Cust,"Id","FirstName");
+    }      
+}
+
+<div class="container mt-3">
+    <div class="row col-md-4">
+        <form asp-action="Create" asp-controller="Order">
+            <div>
+                <label asp-for="CustomerId"></label>
+                <select asp-for="CustomerId" asp-items="custs" class="form-control"></select>
+                <span class="text-danger" asp-validation-for="CustomerId"></span>
+            </div>
+            <div>
+                <label asp-for="OrderNumber"></label>
+                <input asp-for="OrderNumber" class="form-control" placeholder="Enter name">
+                <span asp-validation-for="OrderNumber" class="text-danger"></span>
+            </div>
+             <div>
+                <label asp-for="Payment" class="form-control"></label>
+                <select asp-for="Payment" asp-items="Html.GetEnumSelectList<Payment>()" class="form-control">
+                    <option selected>--Select Payment--</option>
+                </select>
+                <span asp-validation-for="Payment" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Freight"></label>
+                <input asp-for="Freight" class="form-control" placeholder="Enter your age!">
+                <span asp-validation-for="Freight" class="text-danger"></span> 
+            </div>
+
+            <input type="submit" value="Create" class="btn btn-primary mt-3"/>
+            <a asp-action="GetAll" class="btn btn-secondary ms-2 mt-3">Back</a>
+        </form>
+    </div>
+</div>

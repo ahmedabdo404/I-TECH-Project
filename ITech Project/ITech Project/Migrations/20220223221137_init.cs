@@ -47,62 +47,6 @@ namespace ITech_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Picture = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Models",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Models", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Payments",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PaymentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Allowed = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Payments", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Shippers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Shippers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Suppliers",
                 columns: table => new
                 {
@@ -116,10 +60,9 @@ namespace ITech_Project.Migrations
                     Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PostalCode = table.Column<int>(type: "int", nullable: true),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PaymentMethod = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TypeGoods = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DiscountAvaiable = table.Column<bool>(type: "bit", nullable: false),
-                    Logo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Logo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Payment = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -244,33 +187,19 @@ namespace ITech_Project.Migrations
                     SupplierProductId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UnitsInStock = table.Column<int>(type: "int", nullable: true),
                     UnitsOnOrder = table.Column<int>(type: "int", nullable: true),
-                    QuantityPerUnitShipped = table.Column<int>(type: "int", nullable: true),
-                    ProductAvailable = table.Column<bool>(type: "bit", nullable: false),
-                    DiscountAvailable = table.Column<bool>(type: "bit", nullable: true),
                     Discount = table.Column<double>(type: "float", nullable: true),
                     Picture = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ranking = table.Column<int>(type: "int", nullable: true),
+                    Ranking = table.Column<byte>(type: "tinyint", nullable: true),
                     Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<byte>(type: "tinyint", nullable: false),
-                    SupplierId = table.Column<int>(type: "int", nullable: true),
-                    ModelId = table.Column<int>(type: "int", nullable: true),
-                    CategoryId = table.Column<int>(type: "int", nullable: true)
+                    Category = table.Column<byte>(type: "tinyint", nullable: false),
+                    ModelMobile = table.Column<byte>(type: "tinyint", nullable: false),
+                    ModelLabtop = table.Column<byte>(type: "tinyint", nullable: false),
+                    SupplierId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Products_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Products_Models_ModelId",
-                        column: x => x.ModelId,
-                        principalTable: "Models",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Products_Suppliers_SupplierId",
                         column: x => x.SupplierId,
@@ -286,34 +215,22 @@ namespace ITech_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderNumber = table.Column<int>(type: "int", nullable: false),
-                    OrderDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShipDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RequiredDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrderDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ShipDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RequiredDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Freight = table.Column<int>(type: "int", nullable: true),
                     Timestamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TransactStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TransactStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Deleted = table.Column<bool>(type: "bit", nullable: false),
-                    Paid = table.Column<int>(type: "int", nullable: false),
-                    PaymentDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Paid = table.Column<int>(type: "int", nullable: true),
+                    PaymentDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CustomerId = table.Column<int>(type: "int", nullable: true),
-                    PaymentId = table.Column<int>(type: "int", nullable: true),
-                    ShipperId = table.Column<int>(type: "int", nullable: true)
+                    Payment = table.Column<byte>(type: "tinyint", nullable: false),
+                    Shipper = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Orders_Payments_PaymentId",
-                        column: x => x.PaymentId,
-                        principalTable: "Payments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Orders_Shippers_ShipperId",
-                        column: x => x.ShipperId,
-                        principalTable: "Shippers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -328,18 +245,14 @@ namespace ITech_Project.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PostalCode = table.Column<int>(type: "int", nullable: true),
                     Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreditCard = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreditCardTypeId = table.Column<int>(type: "int", maxLength: 14, nullable: false),
                     CardExpDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BillingCountry = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BillingAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BillingCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BillingPostalCode = table.Column<int>(type: "int", nullable: true),
-                    ShipAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShipCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShipRegion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShipPostalCode = table.Column<int>(type: "int", nullable: true),
-                    ShipCountry = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BillingCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipCountry = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateEntered = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OrderId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -365,22 +278,17 @@ namespace ITech_Project.Migrations
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Discount = table.Column<int>(type: "int", nullable: false),
                     Total = table.Column<int>(type: "int", nullable: false),
+                    ShipDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BillDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<byte>(type: "tinyint", nullable: false),
-                    ShipDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BillDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ModelId = table.Column<int>(type: "int", nullable: true),
+                    ModelMobile = table.Column<byte>(type: "tinyint", nullable: false),
+                    ModelLabtop = table.Column<byte>(type: "tinyint", nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: true),
                     ProductId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrderDetails", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_OrderDetails_Models_ModelId",
-                        column: x => x.ModelId,
-                        principalTable: "Models",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_OrderDetails_Orders_OrderId",
                         column: x => x.OrderId,
@@ -440,11 +348,6 @@ namespace ITech_Project.Migrations
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_ModelId",
-                table: "OrderDetails",
-                column: "ModelId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderDetails_OrderId",
                 table: "OrderDetails",
                 column: "OrderId");
@@ -458,26 +361,6 @@ namespace ITech_Project.Migrations
                 name: "IX_Orders_CustomerId",
                 table: "Orders",
                 column: "CustomerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Orders_PaymentId",
-                table: "Orders",
-                column: "PaymentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Orders_ShipperId",
-                table: "Orders",
-                column: "ShipperId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_CategoryId",
-                table: "Products",
-                column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_ModelId",
-                table: "Products",
-                column: "ModelId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_SupplierId",
@@ -527,12 +410,6 @@ namespace ITech_Project.Migrations
                 name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Categories");
-
-            migrationBuilder.DropTable(
-                name: "Models");
-
-            migrationBuilder.DropTable(
                 name: "Suppliers");
 
             migrationBuilder.DropTable(
@@ -540,12 +417,6 @@ namespace ITech_Project.Migrations
 
             migrationBuilder.DropTable(
                 name: "Customers");
-
-            migrationBuilder.DropTable(
-                name: "Payments");
-
-            migrationBuilder.DropTable(
-                name: "Shippers");
         }
     }
 }

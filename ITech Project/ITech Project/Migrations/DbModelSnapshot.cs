@@ -19,22 +19,6 @@ namespace ITech_Project.Migrations
                 .HasAnnotation("ProductVersion", "5.0.14")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ITech_Project.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("ITech_Project.Models.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -221,8 +205,8 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
+                    b.Property<byte>("Category")
+                        .HasColumnType("tinyint");
 
                     b.Property<byte>("Color")
                         .HasColumnType("tinyint");
@@ -250,8 +234,8 @@ namespace ITech_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Ranking")
-                        .HasColumnType("int");
+                    b.Property<byte?>("Ranking")
+                        .HasColumnType("tinyint");
 
                     b.Property<int?>("SupplierId")
                         .HasColumnType("int");
@@ -269,8 +253,6 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
 
                     b.HasIndex("SupplierId");
 
@@ -560,15 +542,9 @@ namespace ITech_Project.Migrations
 
             modelBuilder.Entity("ITech_Project.Models.Product", b =>
                 {
-                    b.HasOne("ITech_Project.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
                     b.HasOne("ITech_Project.Models.Supplier", "Supplier")
                         .WithMany()
                         .HasForeignKey("SupplierId");
-
-                    b.Navigation("Category");
 
                     b.Navigation("Supplier");
                 });
