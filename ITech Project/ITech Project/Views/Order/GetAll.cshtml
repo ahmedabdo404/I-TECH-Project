@@ -1,16 +1,14 @@
 ﻿@model List<Order>
 <div class="container mt-3">
-    <a asp-action="Create" asp-controller="Student" class="btn btn-primary mb-3">Add new Student</a>
+    <a asp-action="Create" asp-controller="Order" class="btn btn-primary mb-3">Add new Order</a>
     <table class="table table-bordered text-center" width="50%">
         <tr>
             <th>Order Number</th>
-            <th>Order Date</th>
-            <th>Ship Date</th>
-            <th>Required Date</th>
             <th>Freight</th>
             <th>Customer</th>
             <th>Shipper</th>
             <th>Payment</th>
+            <th>Details</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -18,9 +16,6 @@
         {
             <tr>
                 <td>@item.OrderNumber</td>
-                <td>@item.OrderDate</td>
-                <td>@item.ShipDate</td>
-                <td>@item.RequiredDate</td>
                 <td>@item.Freight</td>
                @foreach(var i in ViewBag.Cust)
                 {

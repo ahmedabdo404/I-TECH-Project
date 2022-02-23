@@ -28,25 +28,27 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Total Is Required")]
         [DataType(DataType.Currency)]
         public int Total { get; set; }
-      
-        [Display(Name = "Color")]
-        [Required(ErrorMessage = "Color Is Required")]
-        public Color Color { get; set; }
 
         [Display(Name = "Ship Date")]
-        [Required(ErrorMessage = "Ship Date Is Required")]
+        //[Required(ErrorMessage = "Ship Date Is Required")]
         [DataType(DataType.Date)]
         public string ShipDate { get; set; }
 
         [Display(Name = "Bill Date")]
-        [Required(ErrorMessage = "Bill Date Is Required")]
+        //[Required(ErrorMessage = "Bill Date Is Required")]
         [DataType(DataType.Date)]
         public string BillDate { get; set; }
 
-        [Display(Name = "Model")]
-        [ForeignKey("Model")]
-        public int? ModelId { get; set; }
-        public Model Model { get; set; }
+        //[Required(ErrorMessage = "Color Is Required")]
+        [Display(Name = "Color")]
+        public Color Color { get; set; }
+
+        //[Required(ErrorMessage = "Bill Date Is Required")]
+        [Display(Name = "Mobile Model")]
+        public ModelMobile ModelMobile { get; set; }
+
+        [Display(Name = "Labtop Model")]
+        public ModelLabtop ModelLabtop { get; set; }
 
         [Display(Name = "Order")]
         [ForeignKey("Order")]

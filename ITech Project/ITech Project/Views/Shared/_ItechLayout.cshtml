@@ -20,17 +20,16 @@
     <header>
         <nav class="container">
             <ul class="top-nav">
+                <div class="current-page"></div>
                 <li><a asp-action="Index">Home</a></li>
-                <li>My Account</li>
-                <li> <a asp-action="cart">Shopping Cart</a></li>
+                <li><a asp-action="login">My Account</a></li>
+                <li> <a asp-action="category">Shopping</a></li>
                 <li><a asp-action="Checkout">Checkout</a></li>
             </ul>
             <div id="menu-bar"><i class='bx bx-menu'></i></div>
         </nav>
         <section class="items-section">
             <div class="items-bar container">
-
-
                 <p> I-TECH</p>
                 <div class="search-bar d-flex justify-content-center align-items-center">
                     <input type="text" placeholder="Search your item">
@@ -128,23 +127,11 @@
             </div>
         </div>
     </footer>
+
     @*bootstrap*@
-<<<<<<< HEAD
-      <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> </script>
-      <script src="~/assets/js/layout.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> </script>
+    <script src="~/assets/js/layout.js"></script>
     @RenderSection("script", false);
-=======
-      <script src="lib/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> </script>
-    @*typed.js*@
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<<<<<<< HEAD
-      <script src="./lib/bootstrap/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"> </script>
-=======
->>>>>>> a3ef3c867cdd47abf94c86ef0afae2f133bd3cbc
-    <script src="assets/js/script.js"></script>
->>>>>>> 52774c7ac070fa64a4a3aba58f6b9fca0138553a
 </body>
 
 </html>

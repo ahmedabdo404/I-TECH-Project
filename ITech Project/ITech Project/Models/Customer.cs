@@ -48,9 +48,6 @@ namespace ITech_Project.Models
         //public string ComfirmedPassword { get; set; }
 
         ///---------------------------------
-        [Required(ErrorMessage = "Credit Card is required!")]
-        public string CreditCard { get; set; }
-
         [Required(ErrorMessage = "Credit Card Type Id is required!")]
         [MaxLength (14)]
         public int CreditCardTypeId { get; set; }
@@ -58,15 +55,19 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Card Exp Date is required!")]
         [DataType(DataType.Date)]
         public string CardExpDate { get; set; }
-
         public string BillingCountry { get; set; }
         public string BillingAddress { get; set; }
+
+        [Required(ErrorMessage = "Billing City is required!")]
         public string BillingCity { get; set; }
-        public int? BillingPostalCode { get; set; }
+
+        [Required(ErrorMessage = "Ship Address is required!")]
         public string ShipAddress { get; set; }
+
+        [Required(ErrorMessage = "Ship City is required!")]
         public string ShipCity { get; set; }
-        public string ShipRegion { get; set; }
-        public int? ShipPostalCode { get; set; }
+
+        [Required(ErrorMessage = "Ship Country is required!")]
         public string ShipCountry { get; set; }
 
         [DataType(DataType.Date)]

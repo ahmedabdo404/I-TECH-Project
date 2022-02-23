@@ -1,0 +1,87 @@
+﻿@using ITech_Project.Enums;
+@model OrderDetail
+
+@{
+    SelectList Prods;
+    if(Model !=null)
+    {
+        Prods = new SelectList(ViewBag.Prod,"Id","Name",Model.ProductId);
+    }
+    else
+    {
+        Prods = new SelectList(ViewBag.Prod,"Id","Name");
+    }      
+}
+@{
+    SelectList Mods;
+    if(Model !=null)
+    {
+        Mods = new SelectList(ViewBag.Mod,"Id","Name",Model.ModelId);
+    }
+    else
+    {
+        Mods = new SelectList(ViewBag.Mod,"Id","Name");
+    }      
+}
+
+<div class="container mt-3">
+    <div class="row col-md-4">
+        <form asp-action="Create" asp-controller="OrderDetail">
+            <div>
+                <label asp-for="ProductId"></label>
+                <select asp-for="ProductId" asp-items="Prods" class="form-control"></select>
+                <span class="text-danger" asp-validation-for="ProductId"></span>
+            </div>
+            <div>
+                <label asp-for="OrderNumber"></label>
+                <input asp-for="OrderNumber" class="form-control" placeholder="Enter number">
+                <span asp-validation-for="OrderNumber" class="text-danger"></span>
+            </div>
+             <div>
+                <label asp-for="ModelId"></label>
+                <select asp-for="ModelId" asp-items="Mods" class="form-control"></select>
+                <span class="text-danger" asp-validation-for="ModelId"></span>
+            </div>
+            <div>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control" placeholder="Enter Price">
+                <span asp-validation-for="Price" class="text-danger"></span> 
+            </div>
+            <div>
+                <label asp-for="Quantity"></label>
+                <input asp-for="Quantity" class="form-control" placeholder="Enter Quantity">
+                <span asp-validation-for="Quantity" class="text-danger"></span> 
+            </div>
+            <div>
+                <label asp-for="BillDate"></label>
+                <input asp-for="BillDate" class="form-control" placeholder="Enter BillDate">
+                <span asp-validation-for="BillDate" class="text-danger"></span> 
+            </div>
+            <div>
+                <label asp-for="ShipDate"></label>
+                <input asp-for="ShipDate" class="form-control" placeholder="Enter ShipDate">
+                <span asp-validation-for="ShipDate" class="text-danger"></span> 
+            </div>
+            <div>
+                <label asp-for="Discount"></label>
+                <input asp-for="Discount" class="form-control" placeholder="Enter Discount">
+                <span asp-validation-for="Discount" class="text-danger"></span> 
+            </div>
+            <div>
+                <label asp-for="Total"></label>
+                <input asp-for="Total" class="form-control" placeholder="Enter Total">
+                <span asp-validation-for="Total" class="text-danger"></span> 
+            </div>
+            <div>
+                <label asp-for="Color" class="form-control"></label>
+                <select asp-for="Color" asp-items="Html.GetEnumSelectList<Color>()" class="form-control">
+                    <option selected>--Select Color--</option>
+                </select>
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+
+            <input type="submit" value="Create" class="btn btn-primary mt-3"/>
+            <a asp-action="GetAll" class="btn btn-secondary ms-2 mt-3">Back</a>
+        </form>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ITech_Project.Enums;
+
 
 namespace ITech_Project.Models
 {
@@ -33,13 +35,11 @@ namespace ITech_Project.Models
 
         public string Url { get; set; }
 
-        [Required(ErrorMessage = "payment Method Is Required")]
-        public string PaymentMethod { get; set; }
-
         [Required(ErrorMessage = "Type Goods Is Required")]
         public string TypeGoods { get; set; }
-        public bool DiscountAvaiable { get; set; }
         public string Logo { get; set; }
 
+        [Required(ErrorMessage = "payment Method Is Required")]
+        public Payment Payment { get; set; }
     }
 }
