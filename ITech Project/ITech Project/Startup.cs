@@ -30,8 +30,13 @@ namespace ITech_Project
             services.AddControllersWithViews();
             services.AddDbContext<Db>(option => 
             option.UseSqlServer(Configuration.GetConnectionString("cs")));
+
+            //Set the time of token validity
+            services.Configure<DataProtectionTokenProviderOptions>(opts => opts.TokenLifespan = TimeSpan.FromHours(10));
+            
+            //extension method to enable the token generation in the project
             //injection
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Db>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Db>().AddDefaultTokenProviders();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IOrderService, OrderService>();
@@ -57,6 +62,10 @@ namespace ITech_Project
 
             app.UseRouting();
 
+            //Must be before Authorization
+            app.UseAuthentication();  // If i have cookie or not 
+
+            //Checking Cookie  == For Role
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -347,3 +347,6 @@ C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\De
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUp.cshtml.g.cs
+C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\ForgetPassword.cshtml.g.cs
+C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\ForgetPasswordConfirmation.cshtml.g.cs

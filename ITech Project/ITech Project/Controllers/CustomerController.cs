@@ -9,9 +9,9 @@ namespace ITech_Project.Controllers
     {
 
         private readonly ICustomerService CustomerService;
-        public CustomerController(ICustomerService customerRepo)
+        public CustomerController(ICustomerService customerservice)
         {
-            CustomerService = customerRepo;
+            CustomerService = customerservice;
         }
 
         #region Read
