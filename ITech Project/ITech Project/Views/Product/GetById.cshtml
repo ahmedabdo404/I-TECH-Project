@@ -38,6 +38,13 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+             <div>
+                <label asp-for="Color" class="form-control"></label>
+                <select asp-for="Color" asp-items="Html.GetEnumSelectList<Color>()" class="form-control">
+                    <option selected>--Select Color--</option>
+                </select>
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
             <div class="speces">
                 <div class="Product-Title">
                     <h4>@Model.Name</h4>

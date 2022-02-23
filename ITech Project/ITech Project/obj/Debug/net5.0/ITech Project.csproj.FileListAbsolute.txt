@@ -134,3 +134,28 @@ C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.input.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.output.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorCoreGenerate.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Cart.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\category.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\CheckOut.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\DashBoard.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\orders.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\sub.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetAll.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetById.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ItechLayout.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorTargetAssemblyInfo.cs
