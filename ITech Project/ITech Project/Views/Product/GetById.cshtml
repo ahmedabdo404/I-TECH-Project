@@ -44,13 +44,10 @@
                     <hr>
                     <div>
                         Brand:
-                        @foreach(var item in ViewBag.model)
-                        {
-                            if(item.Id == Model.ModelId)
-                            {
-                                <p class="d-inline">@item.Name</p>
-                            }
-                        }
+                                <p class="d-inline">@Model.ModelLabtop</p>
+                                <p class="d-inline">@Model.ModelMobile</p>
+
+                        
                     </div>
                     <div>
                         Availability:

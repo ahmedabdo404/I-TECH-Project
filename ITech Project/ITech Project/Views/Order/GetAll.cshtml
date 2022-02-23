@@ -18,26 +18,18 @@
                 <td>@item.OrderNumber</td>
                 <td>@item.Freight</td>
                @foreach(var i in ViewBag.Cust)
-                {
+               {
                     if(i.Id == item.CustomerId)
                     {
                         <td>@i.FirstName &nbsp; @i.LastName </td>
                     }
-                }
-                @foreach(var i in ViewBag.Ship)
-                {
-                    if(i.Id == item.ShipperId)
-                    {
-                        <td>@i.CompanyName </td>
-                    }
-                }
-                @foreach(var i in ViewBag.Pay)
-                {
-                    if(i.Id == item.PaymentId)
-                    {
-                        <td>@i.PaymentType </td>
-                    }
-                }
+               }
+             
+                 <td>@item.Shipper </td>
+               
+                
+                <td>@item.Payment </td>
+                 
 
                 <td> <a asp-action="GetById" asp-controller="Order" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
                 <td> <a asp-action="Update" asp-controller="Order" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>

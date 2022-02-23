@@ -21,23 +21,10 @@
         </tr>
          <tr>
             <th>Payment Method</th>
-            @foreach(var item in ViewBag.Pay)
-            {
-                if(item.Id == Model.PaymentId)
-                {
-                    <td>@item.PaymentType</td>
-                }
-            }
-        </tr>
-          <tr>
+           <td>@Model.Payment </td>
+
             <th>Shipper</th>
-            @foreach(var item in ViewBag.Ship)
-            {
-                if(item.Id == Model.ShipperId)
-                {
-                    <td>@item.CompanyName</td>
-                }
-            }
+            <td>@Model.Shipper </td>
         </tr>
         
         <tr>
