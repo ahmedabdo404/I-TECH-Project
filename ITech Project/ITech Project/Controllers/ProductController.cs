@@ -8,29 +8,25 @@ namespace ITech_Project.Controllers
     {
         private readonly IProductService ProductRepo;
         private readonly ICategoryService CategoryRepo;
-        private readonly IModelService ModelRepo; 
         private readonly ISupplierService SupplierRepo;
 
         public ProductController(IProductService productRepo, ICategoryService categoryRepo,
-            IModelService modelRepo, ISupplierService supplierRepo)
+            ISupplierService supplierRepo)
         {
             ProductRepo = productRepo;
             CategoryRepo = categoryRepo;
-            ModelRepo = modelRepo;
             SupplierRepo = supplierRepo;
         }
 
         public IActionResult GetAll()
         {
             ViewData["category"] = CategoryRepo.GetAll();
-            ViewData["model"] = ModelRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetAll());
         }
         public IActionResult GetById([FromRoute]int id)
         {
             ViewData["category"] = CategoryRepo.GetAll();
-            ViewData["model"] = ModelRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View(ProductRepo.GetById(id));
         }
@@ -39,7 +35,6 @@ namespace ITech_Project.Controllers
         public IActionResult Create()
         {
             ViewData["category"] = CategoryRepo.GetAll();
-            ViewData["model"] = ModelRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
@@ -52,7 +47,6 @@ namespace ITech_Project.Controllers
                 return RedirectToAction("GetAll");
             }
             ViewData["category"] = CategoryRepo.GetAll();
-            ViewData["model"] = ModelRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
@@ -71,7 +65,6 @@ namespace ITech_Project.Controllers
                 return RedirectToAction("GetAll");
             }
             ViewData["category"] = CategoryRepo.GetAll();
-            ViewData["model"] = ModelRepo.GetAll();
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }

@@ -1,0 +1,22 @@
+﻿@model List<Product>
+
+
+<!-- Shop -->
+<section class="shop container mb-3">
+    <h2 class="section-title"> Shop Products</h2>
+    <!-- Content -->
+    <div class="shop-content">
+        <!-- Box 2 -->
+        @foreach(var item in Model)
+        {
+            <div class="product-box">
+                <a asp-action="GetById" asp-route-id="@item.Id" class="p-link">
+                    <img src="@item.Picture" alt="" class="product-img">
+                </a>
+                <h2 class="product-title">@item.Name</h2>
+                <span class="price">$ @item.UnitPrice</span>
+                <i class='bx bxs-cart-add add-cart '></i>
+            </div>
+        }
+    </div>
+</section>

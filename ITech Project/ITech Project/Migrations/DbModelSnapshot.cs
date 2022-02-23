@@ -26,14 +26,7 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Picture")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -58,13 +51,11 @@ namespace ITech_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BillingCity")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BillingCountry")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("BillingPostalCode")
-                        .HasColumnType("int");
 
                     b.Property<string>("CardExpDate")
                         .IsRequired()
@@ -75,10 +66,6 @@ namespace ITech_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CreditCard")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -104,18 +91,15 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ShipAddress")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShipCity")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShipCountry")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ShipPostalCode")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ShipRegion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -123,22 +107,6 @@ namespace ITech_Project.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("ITech_Project.Models.Model", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Models");
                 });
 
             modelBuilder.Entity("ITech_Project.Models.Order", b =>
@@ -158,48 +126,38 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("OrderDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("OrderNumber")
                         .HasColumnType("int");
 
                     b.Property<int?>("Paid")
-                        .IsRequired()
                         .HasColumnType("int");
+
+                    b.Property<byte>("Payment")
+                        .HasColumnType("tinyint");
 
                     b.Property<string>("PaymentDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PaymentId")
-                        .HasColumnType("int");
-
                     b.Property<string>("RequiredDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShipDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ShipperId")
-                        .HasColumnType("int");
+                    b.Property<byte>("Shipper")
+                        .HasColumnType("tinyint");
 
                     b.Property<string>("Timestamp")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TransactStatus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
-
-                    b.HasIndex("PaymentId");
-
-                    b.HasIndex("ShipperId");
 
                     b.ToTable("Orders");
                 });
@@ -212,7 +170,6 @@ namespace ITech_Project.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("BillDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("Color")
@@ -221,8 +178,11 @@ namespace ITech_Project.Migrations
                     b.Property<int>("Discount")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ModelId")
-                        .HasColumnType("int");
+                    b.Property<byte>("ModelLabtop")
+                        .HasColumnType("tinyint");
+
+                    b.Property<byte>("ModelMobile")
+                        .HasColumnType("tinyint");
 
                     b.Property<int?>("OrderId")
                         .HasColumnType("int");
@@ -240,7 +200,6 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ShipDate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Total")
@@ -248,32 +207,11 @@ namespace ITech_Project.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ModelId");
-
                     b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
 
                     b.ToTable("OrderDetails");
-                });
-
-            modelBuilder.Entity("ITech_Project.Models.Payment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Allowed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PaymentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("ITech_Project.Models.Product", b =>
@@ -295,11 +233,11 @@ namespace ITech_Project.Migrations
                     b.Property<double?>("Discount")
                         .HasColumnType("float");
 
-                    b.Property<bool?>("DiscountAvailable")
-                        .HasColumnType("bit");
+                    b.Property<byte>("ModelLabtop")
+                        .HasColumnType("tinyint");
 
-                    b.Property<int?>("ModelId")
-                        .HasColumnType("int");
+                    b.Property<byte>("ModelMobile")
+                        .HasColumnType("tinyint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -311,12 +249,6 @@ namespace ITech_Project.Migrations
                     b.Property<string>("Picture")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("ProductAvailable")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("QuantityPerUnitShipped")
-                        .HasColumnType("int");
 
                     b.Property<int?>("Ranking")
                         .HasColumnType("int");
@@ -340,30 +272,9 @@ namespace ITech_Project.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("ModelId");
-
                     b.HasIndex("SupplierId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("ITech_Project.Models.Shipper", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Shippers");
                 });
 
             modelBuilder.Entity("ITech_Project.Models.Supplier", b =>
@@ -397,15 +308,11 @@ namespace ITech_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("DiscountAvaiable")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Logo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PaymentMethod")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte>("Payment")
+                        .HasColumnType("tinyint");
 
                     b.Property<int?>("PostalCode")
                         .HasColumnType("int");
@@ -633,27 +540,11 @@ namespace ITech_Project.Migrations
                         .WithMany()
                         .HasForeignKey("CustomerId");
 
-                    b.HasOne("ITech_Project.Models.Payment", "Payment")
-                        .WithMany()
-                        .HasForeignKey("PaymentId");
-
-                    b.HasOne("ITech_Project.Models.Shipper", "Shipper")
-                        .WithMany()
-                        .HasForeignKey("ShipperId");
-
                     b.Navigation("Customer");
-
-                    b.Navigation("Payment");
-
-                    b.Navigation("Shipper");
                 });
 
             modelBuilder.Entity("ITech_Project.Models.OrderDetail", b =>
                 {
-                    b.HasOne("ITech_Project.Models.Model", "Model")
-                        .WithMany()
-                        .HasForeignKey("ModelId");
-
                     b.HasOne("ITech_Project.Models.Order", "Order")
                         .WithMany()
                         .HasForeignKey("OrderId");
@@ -661,8 +552,6 @@ namespace ITech_Project.Migrations
                     b.HasOne("ITech_Project.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
-
-                    b.Navigation("Model");
 
                     b.Navigation("Order");
 
@@ -675,17 +564,11 @@ namespace ITech_Project.Migrations
                         .WithMany()
                         .HasForeignKey("CategoryId");
 
-                    b.HasOne("ITech_Project.Models.Model", "Model")
-                        .WithMany()
-                        .HasForeignKey("ModelId");
-
                     b.HasOne("ITech_Project.Models.Supplier", "Supplier")
                         .WithMany()
                         .HasForeignKey("SupplierId");
 
                     b.Navigation("Category");
-
-                    b.Navigation("Model");
 
                     b.Navigation("Supplier");
                 });

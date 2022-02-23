@@ -1,0 +1,55 @@
+﻿@using ITech_Project.Enums;
+@model Order
+
+@{
+    SelectList custs;
+    if(Model !=null)
+    {
+        custs = new SelectList(ViewBag.Cust,"Id","FirstName",Model.CustomerId);
+    }
+    else
+    {
+        custs = new SelectList(ViewBag.Cust,"Id","FirstName");
+    }      
+}
+
+<div class="container mt-3">
+    <h1>Update Student</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Update" asp-controller="Order" >
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <input asp-for="Id" type="hidden" class="form-control"/>
+                <div class="form-group">
+                    <label asp-for="CustomerId" class="control-label"></label>
+                    <input asp-for="CustomerId" class="form-control" />
+                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OrderNumber" class="control-label"></label>
+                    <input asp-for="OrderNumber" class="form-control" />
+                    <span asp-validation-for="OrderNumber" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Payment" class="form-control"></label>
+                    <select asp-for="Payment" asp-items="Html.GetEnumSelectList<Payment>()" class="form-control">
+                        <option selected>--Select Model Labtop--</option>
+                    </select>
+                    <span asp-validation-for="Payment" class="text-danger"></span>
+               </div>
+                <div class="form-group">
+                    <label asp-for="Freight" class="control-label"></label>
+                    <input asp-for="Freight" class="form-control" />
+                    <span asp-validation-for="Freight" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-2">
+                    <input type="submit" value="Edit" class="btn btn-warning mt-2 me-2" />
+                    <a asp-action="GetAll" asp-controller="Order" class="btn btn-secondary mt-2">Back</a>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
+
+

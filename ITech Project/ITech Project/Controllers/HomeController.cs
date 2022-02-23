@@ -63,7 +63,11 @@ namespace ITech_Project.Controllers
         {
             return View();
         }
-        public IActionResult category()
+        public IActionResult forgetPassword()
+        {
+            return View();
+        }
+        public IActionResult resetPassword()
         {
             return View();
         }

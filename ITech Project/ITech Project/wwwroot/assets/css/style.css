@@ -2,7 +2,7 @@
 /* carousel-slider ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>carousel-slider*/
 .landing {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -24,11 +24,11 @@
     border-radius: 50%;
     background-color: var(--main-color) !important;
     margin-left: 2% !important;
-
 }
-.overlay{
+
+.overlay {
     background-color: rgba(42, 42, 42, 0.50) !important;
-    position: absolute ;
+    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
@@ -44,18 +44,19 @@
 .carousel-caption {
     z-index: 2;
     transition: all 1s;
-    animation: change-color 3s infinite alternate linear ;
+    animation: change-color 3s infinite alternate linear;
 }
 
-.carousel-caption:hover {
-    color: var(--main-color) !important;
-}
+    .carousel-caption:hover {
+        color: var(--main-color) !important;
+    }
 
 @keyframes change-color {
     0% {
         color: var(--main-color);
         opacity: 0.4;
     }
+
     100% {
         color: var(--third-color);
         opacity: 1;
@@ -72,50 +73,55 @@
 }
 
 /* shop-content ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>shop-content*/
-.section-title{
+.section-title {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
 }
-.shop{
+
+.shop {
     margin-top: 10px;
     padding-top: 0px
 }
 
-.shop-content{
+.shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,auto));
     gap: 1.5rem;
 }
 
-.product-box{
+.product-box {
     position: relative;
     min-width: 200px;
     transition: var(--transition2);
 }
-.product-box:hover{
-    padding: 10px;
-    border: 1px solid var(--forth-color);
-    transition: var(--transition2);
-}
 
-.product-img{
+    .product-box:hover {
+        padding: 10px;
+        border: 1px solid var(--forth-color);
+        transition: var(--transition2);
+    }
+
+.product-img {
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
     transition: var(--transition2);
 }
-.product-title{
+
+.product-title {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
-.price{
+
+.price {
     font-weight: 500;
 }
-.add-cart{
+
+.add-cart {
     font-size: 30px;
     position: absolute;
     bottom: 0;
@@ -125,10 +131,11 @@
     padding: 10px;
     cursor: pointer;
 }
-.add-cart:hover{
-    background: var(--main-color);
-    transition: var(--transition2);
-}
+
+    .add-cart:hover {
+        background: var(--main-color);
+        transition: var(--transition2);
+    }
 
 /* offer ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>offer*/
 .offer {
@@ -150,7 +157,7 @@
 }
 
 
-.discount{
+.discount {
     position: absolute;
     align-self: flex-end;
     width: 120px;
@@ -165,19 +172,19 @@
     margin-top: 10px;
 }
 
-.discount h5 {
-    margin: 0;
-    text-decoration: line-through;
-    color: var(--forth-color)
-}
+    .discount h5 {
+        margin: 0;
+        text-decoration: line-through;
+        color: var(--forth-color)
+    }
 
-.discount p{
-    margin: 0;
-    color: var(--sec-color);
-    font-size: var(--font-size1);
-}
+    .discount p {
+        margin: 0;
+        color: var(--sec-color);
+        font-size: var(--font-size1);
+    }
 
-.sec1 img{
+.sec1 img {
     width: 20vw;
 }
 
@@ -187,41 +194,42 @@
     flex-direction: column;
 }
 
-.sec2 h1{
-    color: var(--main-color);
-    margin-bottom: 1.5rem;
-}
+    .sec2 h1 {
+        color: var(--main-color);
+        margin-bottom: 1.5rem;
+    }
 
-.sec2 h3{
-    margin-bottom: 1rem;
-}
+    .sec2 h3 {
+        margin-bottom: 1rem;
+    }
 
-.sec2 p{
-    margin-bottom: 1rem;
-}
+    .sec2 p {
+        margin-bottom: 1rem;
+    }
 
 .timer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-.timer div {
-    width: 75px;
-    height: 75px;
-    background-color: var(--main-color);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: flex-start; */
-    align-items: center;
-}
 
-.timer div h2,
-.timer div p{
-    color: var(--sec-color);
-    margin: 0 ;
-    padding: 0 ;
-}
+    .timer div {
+        width: 75px;
+        height: 75px;
+        background-color: var(--main-color);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        align-items: center;
+    }
+
+        .timer div h2,
+        .timer div p {
+            color: var(--sec-color);
+            margin: 0;
+            padding: 0;
+        }
 
 /* Join-us ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Join-us*/
 .Join-us {
@@ -236,18 +244,19 @@
     flex-direction: row;
     padding: 1rem;
 }
-.Join-us input{
-    width: 30vw;
-}
-.Join-us button {
-    margin-left: -68px !important;
-    border-radius: 0 5px 5px 0 !important;
-    height: 44px !important;
 
-}
+    .Join-us input {
+        width: 30vw;
+    }
+
+    .Join-us button {
+        margin-left: -68px !important;
+        border-radius: 0 5px 5px 0 !important;
+        height: 44px !important;
+    }
 
 /* adv-section ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>adv-section*/
-.adv-section{
+.adv-section {
     width: 100%;
     height: 10vh;
     background: var(--sec-color);
@@ -258,7 +267,7 @@
     flex-wrap: wrap;
 }
 
-.advantage{
+.advantage {
     padding: 5px;
     width: 250px;
     height: auto;
@@ -268,7 +277,7 @@
     color: var(--third-color);
 }
 
-.advantage h5,
-.advantage p{
-    margin: 0;
-}
+    .advantage h5,
+    .advantage p {
+        margin: 0;
+    }
