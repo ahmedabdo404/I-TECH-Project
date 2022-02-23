@@ -11,17 +11,6 @@
         custs = new SelectList(ViewBag.Cust,"Id","FirstName");
     }      
 }
-@{
-    SelectList pay;
-    if(Model !=null)
-    {
-        pay = new SelectList(ViewBag.Pay,"Id","PaymentType",Model.PaymentId);
-    }
-    else
-    {
-        pay = new SelectList(ViewBag.Pay,"Id","PaymentType");
-    }      
-}
 
 <div class="container mt-3">
     <div class="row col-md-4">
@@ -37,9 +26,11 @@
                 <span asp-validation-for="OrderNumber" class="text-danger"></span>
             </div>
              <div>
-                <label asp-for="PaymentId"></label>
-                <select asp-for="PaymentId" asp-items="pay" class="form-control"></select>
-                <span class="text-danger" asp-validation-for="PaymentId"></span>
+                <label asp-for="Payment" class="form-control"></label>
+                <select asp-for="Payment" asp-items="Html.GetEnumSelectList<Payment>()" class="form-control">
+                    <option selected>--Select Payment--</option>
+                </select>
+                <span asp-validation-for="Payment" class="text-danger"></span>
             </div>
             <div>
                 <label asp-for="Freight"></label>

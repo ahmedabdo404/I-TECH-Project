@@ -24,21 +24,10 @@
                 <td>@item.Discount</td>
                 <td>@item.Total</td>
                 <td>@item.Color</td>
+               <td>@item.ModelLabtop</td>
+                <td>@item.Product</td>
 
-               @foreach(var i in ViewBag.Mod)
-                {
-                    if(i.Id == item.ModelId)
-                    {
-                        <td>@i.Name </td>
-                    }
-                }
-                @foreach(var i in ViewBag.Prod)
-                {
-                    if(i.Id == item.ProductId)
-                    {
-                        <td>@i.Name </td>
-                    }
-                }
+              
 
                 <td> <a asp-action="GetById" asp-controller="OrderDetails" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
                 <td> <a asp-action="Update" asp-controller="OrderDetails" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>

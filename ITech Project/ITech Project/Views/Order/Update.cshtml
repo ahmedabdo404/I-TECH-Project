@@ -1,4 +1,5 @@
-﻿@model Order
+﻿@using ITech_Project.Enums;
+@model Order
 
 @{
     SelectList custs;
@@ -11,17 +12,7 @@
         custs = new SelectList(ViewBag.Cust,"Id","FirstName");
     }      
 }
-@{
-    SelectList pay;
-    if(Model !=null)
-    {
-        pay = new SelectList(ViewBag.Pay,"Id","PaymentType",Model.PaymentId);
-    }
-    else
-    {
-        pay = new SelectList(ViewBag.Pay,"Id","PaymentType");
-    }      
-}
+
 <div class="container mt-3">
     <h1>Update Student</h1>
     <hr />
@@ -40,11 +31,13 @@
                     <input asp-for="OrderNumber" class="form-control" />
                     <span asp-validation-for="OrderNumber" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="PaymentId" class="control-label"></label>
-                    <input asp-for="PaymentId" class="form-control" />
-                    <span asp-validation-for="PaymentId" class="text-danger"></span>
-                </div>
+                <div>
+                    <label asp-for="Payment" class="form-control"></label>
+                    <select asp-for="Payment" asp-items="Html.GetEnumSelectList<Payment>()" class="form-control">
+                        <option selected>--Select Model Labtop--</option>
+                    </select>
+                    <span asp-validation-for="Payment" class="text-danger"></span>
+               </div>
                 <div class="form-group">
                     <label asp-for="Freight" class="control-label"></label>
                     <input asp-for="Freight" class="form-control" />

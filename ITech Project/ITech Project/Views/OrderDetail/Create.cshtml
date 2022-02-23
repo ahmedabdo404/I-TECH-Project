@@ -12,17 +12,6 @@
         Prods = new SelectList(ViewBag.Prod,"Id","Name");
     }      
 }
-@{
-    SelectList Mods;
-    if(Model !=null)
-    {
-        Mods = new SelectList(ViewBag.Mod,"Id","Name",Model.ModelId);
-    }
-    else
-    {
-        Mods = new SelectList(ViewBag.Mod,"Id","Name");
-    }      
-}
 
 <div class="container mt-3">
     <div class="row col-md-4">
@@ -37,10 +26,12 @@
                 <input asp-for="OrderNumber" class="form-control" placeholder="Enter number">
                 <span asp-validation-for="OrderNumber" class="text-danger"></span>
             </div>
-             <div>
-                <label asp-for="ModelId"></label>
-                <select asp-for="ModelId" asp-items="Mods" class="form-control"></select>
-                <span class="text-danger" asp-validation-for="ModelId"></span>
+            <div>
+                <label asp-for="ModelLabtop" class="form-control"></label>
+                <select asp-for="ModelLabtop" asp-items="Html.GetEnumSelectList<ModelLabtop>()" class="form-control">
+                    <option selected>--Select Model Labtop--</option>
+                </select>
+                <span asp-validation-for="ModelLabtop" class="text-danger"></span>
             </div>
             <div>
                 <label asp-for="Price"></label>
