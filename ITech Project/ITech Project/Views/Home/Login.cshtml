@@ -2,53 +2,47 @@
      <link rel="stylesheet" href="~/assets/css/login.css">
 }
 
-<section class="items-section">
-    <div class="container login-c">
-        <div class="h m-3 ms-0">
-            <p>Login</p>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h6>Login OR Register anew account</h6>
-                <hr>
-                <div class="row border p-4 m-4">
-                    <div class="col-6">
-                        <h4>NEW CUSTOMER</h4>
-                        <P>Choose What are you going to do on I-Tech</P>
-                        <input type="radio" name="check" value="register" checked id="SELLER">
-                        <label for="SELLER">SELLER  Account</label>
-                        <br>
-                        <input type="radio" name="check" value="guest" id="BUYER">
-                        <label for="BUYER">Buyer Account</label>
-                        <br><br>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <input type="button" value="CONTINUE" class="b">
+    <section class="items-section">
+        <div class="container login-c">
+            <div class="h m-3 ms-0">
+                <p>Login</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h6>Login OR Register anew account</h6>
+                    <hr>
+                    <div class="row border p-4 m-4 d-flex flex-row">
+                        <form class="col-5" action="Dashboard" method="get">
+                            <h5>Sign in</h5>
+                            <P>Log in to my account</P>
+                            <div class="d-flex flex-row login-inputs">
+                                <div class="d-flex flex-column justify-content-center me-5">
+                                    <label for="username">Email</label>
+                                    <label for="password">Pass</label>
+                                </div>
+                                <div class="d-inline-flex flex-column col-7">
+                                    <input type="text" id="username">
+                                    <input type="password" id="password">
+                                </div>
+                            </div>
+                            <br>
+                            <a asp-action="forgetPassword">Forgot your password?</a>
+                            <input type="submit" value="LOG IN" class="ms-3 b">
+                        </form>
+                        <div class="col-2 align-self-center"><h6>Or</h6></div>
+                        <div class="col-5 align-self-center">
+                            <a asp-action="signup"></a>
+                                <p>Creat anew Account on I-Tech</p>
+                                <input type="button" value="Sign Up" class="b">
+                        </div>
 
                     </div>
-                    <form class="col-6" action="Dashboard" method="get">
-                        <h5>Sign in</h5>
-                        <P>Log in to my account</P>
-                        <div class="d-flex flex-row login-inputs">
-                            <div class="d-flex flex-column justify-content-center me-5">
-                                <label for="username">Email</label>
-                                <label for="password">Pass</label>
-                            </div>
-                            <div class="d-inline-flex flex-column col-7">
-                                <input type="text" id="username">
-                                <input type="password" id="password">
-                            </div>
-                        </div>
-                        <br>
-                        <p>Forgot your password?</p>
-                        <input type="submit" value="LOG IN" class="b">
-                    </form>
+    
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 @section script {
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/jquery.min.js"></script>
 }

@@ -1,5 +1,5 @@
 /*currnet page*/
-.top-nav li a{
+.top-nav li a {
     color: var(--sec-color) !important;
 }
 
@@ -21,7 +21,7 @@
 
 /* body ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>body*/
 .login-c {
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 .h {
@@ -31,12 +31,7 @@
     margin: 0
 }
 
-#SELLER,
-#BUYER {
-    accent-color: brown;
-}
-
-.b{
+.b {
     padding: 0.4rem 0.8rem;
     color: var(--sec-color);
     background-color: var(--main-color);
@@ -45,7 +40,6 @@
 }
 
 .login-inputs label,
-.login-inputs input
-{
+.login-inputs input {
     margin-top: 1rem
 }

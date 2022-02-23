@@ -243,8 +243,8 @@ namespace ITech_Project.Migrations
                     b.Property<string>("SupplierProductId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UnitPrice")
-                        .HasColumnType("int");
+                    b.Property<double>("UnitPrice")
+                        .HasColumnType("float");
 
                     b.Property<int?>("UnitsInStock")
                         .HasColumnType("int");
