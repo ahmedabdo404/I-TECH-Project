@@ -1,0 +1,39 @@
+﻿@model List<Customer>
+
+<div class="container mt-5">
+    <a asp-action="Create" asp-controller="Customer" class="btn btn-success mt-3 mb-3"> Add new Customer </a>
+    <table class="table table-bordered text-center">
+        <tr>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Credit Card</th>
+            <th>Billing Address</th>
+            <th>Billing City</th>
+            <th>Ship Address</th>
+            <th>Ship City</th>
+            <th>Ship Country</th>
+            <th>Date Entered</th>
+            <th>Details</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+          <tr>
+              <th>@item.FirstName &nbsp; @item.LastName</th>
+              <th>@item.Address</th>
+              <th>@item.City</th>
+              <th>@item.CreditCardTypeId</th>
+              <th>@item.BillingAddress</th>
+              <th>@item.BillingCity</th>
+              <th>@item.ShipAddress</th>
+              <th>@item.ShipCity</th>
+              <th>@item.ShipCountry</th>
+              <th>@item.DateEntered</th>
+              <th><a asp-action="GetById" asp-route-id="@item.Id" asp-controller="Customer" class="btn btn-success" >Details</a></th>
+          </tr>  
+        }
+    </table>
+
+</div>
+
+

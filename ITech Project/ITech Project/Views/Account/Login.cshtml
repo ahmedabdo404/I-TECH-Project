@@ -24,8 +24,11 @@
                                 <div class="d-inline-flex flex-column col-7">
                                     <input asp-for="Email" type="text" >
                                     <input asp-for="Password" id="password">
-                                </div>
-                            </div>
+                                </div><br />
+                                
+                            </div><br />
+                            <label class="form-check-label">Remember me</label>
+                            <input class="form-check-input" asp-for="RememberMe"/>
                             <div asp-validation-summary="All" class="text-danger"></div>
                             @*<p><span asp-validation-for="UserName" class="text-danger"></span></p>*@
                             @*<p><span asp-validation-for="Password" class="text-danger"></span></p>*@

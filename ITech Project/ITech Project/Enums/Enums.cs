@@ -5,7 +5,7 @@
        Red = 1 ,
        Black = 2,
        Blue = 4,
-       gray = 8
+       Gray = 8
     }
     public enum Payment : byte
     {
@@ -31,7 +31,7 @@
         Samsung = 7 ,
         MSI = 8 ,
         Asus = 9 ,
-        MicrosoftSerface = 10 ,
+        MicrosoftSurface = 10 ,
     }
     public enum ModelMobile : byte
     {

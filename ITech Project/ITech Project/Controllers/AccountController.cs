@@ -118,6 +118,7 @@ namespace ITech_Project.Controllers
             return View();
         }
 
+        //&& await userManager.IsEmailConfirmedAsync(user)
 
         [HttpPost]
         [AllowAnonymous]
@@ -128,13 +129,17 @@ namespace ITech_Project.Controllers
                 //Generate Password Reset Token
                 var user = await userManager.FindByEmailAsync(userMail.Email);
 
-                if (user != null && await userManager.IsEmailConfirmedAsync(user))
+                if (user != null)
                 {
                     var token = await userManager.GeneratePasswordResetTokenAsync(user);
 
                     //Build Password Reset Link [URL] TO Action and Controller
-                    var PasswordResetLink = Url.Action("ResetPassword", "Account", new { email = userMail.Email, token = token },
-                        Request.Scheme);
+
+                    //var PasswordResetLink = Url.Action("ResetPassword", "Account", new { email = userMail.Email, token = token },
+                    //    Request.Scheme);
+
+                    var PasswordResetLink = $"https://localhost:{44302}/Account/ResetPassword?email={userMail.Email}&token={token}";
+
                     //Request.scheme => it generates the request scheme and it's required to generate the full absolute url
 
                     //Log Password Reset Link
