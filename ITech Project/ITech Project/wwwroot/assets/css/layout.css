@@ -24,11 +24,14 @@
 
 body, html {
     width: 100%;
-    min-height: 1000px;
+    min-height: 60vh;
     scroll-behavior: smooth;
 }
 
-
+.main-c {
+    min-height: 50vh;
+    padding-top: 4%;
+}
 /* header ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>header*/
 header {
     width: 100%;
@@ -37,7 +40,7 @@ header {
     position: sticky;
     top: 0%;
     /* temprory margin because of margin bug in vs*/
-    margin-top:-5%;
+    margin-top: -5%;
     z-index: 5;
     align-content: center;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
