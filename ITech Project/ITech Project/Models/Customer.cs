@@ -8,8 +8,8 @@ namespace ITech_Project.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage ="First Name is required !")]
-        [RegularExpression(pattern: "[a-zA-Z]{3,}",ErrorMessage = "First Name must be letters only and more than 2 letters")]
+        [Required(ErrorMessage = "First Name is required !")]
+        [RegularExpression(pattern: "[a-zA-Z]{3,}", ErrorMessage = "First Name must be letters only and more than 2 letters")]
         public string FirstName { get; set; }
 
         [RegularExpression(pattern: "[a-zA-Z]{3,}", ErrorMessage = "Last Name must be letters only and more than 2 letters")]
@@ -31,26 +31,11 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Country is required !")]
         public string Country { get; set; }
 
-        //[Required(ErrorMessage = "Email is required!")]
-        //[DataType(DataType.EmailAddress)]
-        //public string Email { get; set; }
 
-        //[DataType(DataType.PhoneNumber)]
-        //[Required(ErrorMessage = "Phone Number is required !")]
-        //public int? Phone { get; set; }
-
-        //[DataType(DataType.Password)]
-        //[Required(ErrorMessage = "Password is required !")]
-        //public string Password { get; set; }
-
-        //[Compare("Password", ErrorMessage = "Password and Confirm not matched")]
-        //[DataType(DataType.Password)]
-        //public string ComfirmedPassword { get; set; }
-
-        ///---------------------------------
         [Required(ErrorMessage = "Credit Card Type Id is required!")]
-        [MaxLength (14)]
-        public int CreditCardTypeId { get; set; }
+        [MaxLength(14)]
+        [RegularExpression("[0-9]")]
+        public string CreditCardTypeId { get; set; }
 
         [Required(ErrorMessage = "Card Exp Date is required!")]
         [DataType(DataType.Date)]
@@ -74,9 +59,7 @@ namespace ITech_Project.Models
         public string DateEntered { get; set; }
 
 
-        [ForeignKey("Order")]
-        public int? OrderId { get; set; }
-        public Order Order { get; set; }
+      
 
     }
 }

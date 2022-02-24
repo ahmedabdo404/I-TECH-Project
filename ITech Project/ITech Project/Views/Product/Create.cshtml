@@ -1,9 +1,6 @@
 ﻿@model Product
 
-@{
-    ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_ItechLayout.cshtml";
-}
+ 
 
 <section class="container">
     <h1>Create</h1>
@@ -26,11 +23,7 @@
                     <span asp-validation-for="UnitPrice" class="text-danger"></span>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="SupplierProductId" class="control-label mb-2"></label>
-                    <input asp-for="SupplierProductId" class="form-control" />
-                    <span asp-validation-for="SupplierProductId" class="text-danger"></span>
-                </div>
+               
 
                 <div class="form-group mb-3">
                     <label asp-for="UnitsInStock" class="control-label mb-2"></label>

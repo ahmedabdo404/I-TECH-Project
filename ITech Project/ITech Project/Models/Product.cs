@@ -18,14 +18,9 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Price is required !")]
         public double UnitPrice { get; set; }
 
-        [Display(Name = "Supplier Product Id")]
-        public string SupplierProductId { get; set; }
 
         [Display(Name = "Units In Stock")]
         public int? UnitsInStock { get; set; }
-
-        [Display(Name = "Units On Order")]
-        public int? UnitsOnOrder { get; set; }
 
         public double? Discount { get; set; }
 
@@ -41,10 +36,10 @@ namespace ITech_Project.Models
         public Category Category { get; set; }
 
         [Display(Name = "Mobile Model")]
-        public ModelMobile ModelMobile { get; set; }
+        public ModelMobile? ModelMobile { get; set; }
 
         [Display(Name = "Labtop Model")]
-        public ModelLabtop ModelLabtop { get; set; }
+        public ModelLabtop? ModelLabtop { get; set; }
 
         [Display(Name = "Supplier")]
         [ForeignKey("Supplier")]

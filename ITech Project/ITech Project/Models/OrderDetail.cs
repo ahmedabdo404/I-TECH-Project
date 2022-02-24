@@ -30,25 +30,21 @@ namespace ITech_Project.Models
         public int Total { get; set; }
 
         [Display(Name = "Ship Date")]
-        //[Required(ErrorMessage = "Ship Date Is Required")]
         [DataType(DataType.Date)]
         public string ShipDate { get; set; }
 
         [Display(Name = "Bill Date")]
-        //[Required(ErrorMessage = "Bill Date Is Required")]
         [DataType(DataType.Date)]
         public string BillDate { get; set; }
 
-        //[Required(ErrorMessage = "Color Is Required")]
         [Display(Name = "Color")]
         public Color Color { get; set; }
 
-        //[Required(ErrorMessage = "Bill Date Is Required")]
         [Display(Name = "Mobile Model")]
-        public ModelMobile ModelMobile { get; set; }
+        public ModelMobile? ModelMobile { get; set; }
 
         [Display(Name = "Labtop Model")]
-        public ModelLabtop ModelLabtop { get; set; }
+        public ModelLabtop? ModelLabtop { get; set; }
 
         [Display(Name = "Order")]
         [ForeignKey("Order")]
