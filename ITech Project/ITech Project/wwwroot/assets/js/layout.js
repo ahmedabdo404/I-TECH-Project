@@ -1,6 +1,6 @@
 ﻿// hide nav bar
 let menu = document.querySelector('#menu-bar i')
-let navbar = document.querySelector('.top-nav')
+let navbar = document.querySelector('.top-nav, .menu-links')
 
 menu.onclick = function () {
     menu.classList.toggle('fa-times')
@@ -22,3 +22,23 @@ window.onscroll = () => {
 upBtn.onclick = () => {
     scrollTo({ top: 0, behavior: "smooth" });
 }
+
+// autocomplete
+$(function () {
+    var availableTags = [
+        "mobile1",
+        "mobile2",
+        "mobile3",
+        "iphone",
+        "laptop1",
+        "laptop2",
+        "laptop3",
+        "laptop4",
+        "accessories mobiles",
+        "accessories laptops"
+    ];
+    $("#tags").autocomplete({
+        source: availableTags
+    });
+});
+

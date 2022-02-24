@@ -1,4 +1,5 @@
 
+
 /* carousel-slider ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>carousel-slider*/
 .landing {
     position: absolute;
@@ -142,7 +143,7 @@
     width: 100%;
     max-height: 50vh;
     border: solid var(--fifth-color) 3px;
-    margin: 3rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -172,17 +173,17 @@
     margin-top: 10px;
 }
 
-    .discount h5 {
-        margin: 0;
-        text-decoration: line-through;
-        color: var(--forth-color)
-    }
+.discount h5 {
+    margin: 0;
+    text-decoration: line-through;
+    color: var(--forth-color)
+}
 
-    .discount p {
-        margin: 0;
-        color: var(--sec-color);
-        font-size: var(--font-size1);
-    }
+.discount p {
+    margin: 0;
+    color: var(--sec-color);
+    font-size: var(--font-size1);
+}
 
 .sec1 img {
     width: 20vw;
@@ -194,18 +195,18 @@
     flex-direction: column;
 }
 
-    .sec2 h1 {
-        color: var(--main-color);
-        margin-bottom: 1.5rem;
-    }
+.sec2 h1 {
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
 
-    .sec2 h3 {
-        margin-bottom: 1rem;
-    }
+.sec2 h3 {
+    margin-bottom: 1rem;
+}
 
-    .sec2 p {
-        margin-bottom: 1rem;
-    }
+.sec2 p {
+    margin-bottom: 1rem;
+}
 
 .timer {
     display: flex;
@@ -213,23 +214,23 @@
     justify-content: space-evenly;
 }
 
-    .timer div {
-        width: 75px;
-        height: 75px;
-        background-color: var(--main-color);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: flex-start; */
-        align-items: center;
+.timer div {
+    width: 75px;
+    height: 75px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
     }
 
-        .timer div h2,
-        .timer div p {
-            color: var(--sec-color);
-            margin: 0;
-            padding: 0;
-        }
+.timer div h2,
+.timer div p {
+    color: var(--sec-color);
+    margin: 0;
+    padding: 0;
+}
 
 /* Join-us ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Join-us*/
 .Join-us {
@@ -245,15 +246,15 @@
     padding: 1rem;
 }
 
-    .Join-us input {
-        width: 30vw;
-    }
+.Join-us input {
+    width: 30vw;
+}
 
-    .Join-us button {
-        margin-left: -68px !important;
-        border-radius: 0 5px 5px 0 !important;
-        height: 44px !important;
-    }
+.Join-us button {
+    margin-left: -68px !important;
+    border-radius: 0 5px 5px 0 !important;
+    height: 44px !important;
+}
 
 /* adv-section ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>adv-section*/
 .adv-section {
@@ -277,7 +278,43 @@
     color: var(--third-color);
 }
 
-    .advantage h5,
-    .advantage p {
-        margin: 0;
-    }
+.advantage h5,
+.advantage p {
+    margin: 0;
+}
+
+
+.offers {
+    width: 100%;
+    max-height: 50vh;
+    /*margin: 1rem 0;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0.5rem;
+}
+
+.section1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, rgba(122, 155, 31,0.7), rgb(209, 250, 26,0.7),rgb(146, 189, 29,0.7));
+}
+
+.section2 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(233, 175, 14, 0.945);
+}
+
+.section1 p {
+    font-weight: 600;
+    padding: 30px;
+}
+
+.section2 p {
+    font-weight: 600;
+    color: var(--sec-color);
+    padding: 30px;
+}

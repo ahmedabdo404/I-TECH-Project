@@ -34,18 +34,16 @@ let counter = setInterval(() => {
     }
 }, 1000)
 
-//animation
+//type animation
 var options = {
-    strings: ['All Tech ... in one place'],
-    typeSpeed: 150,
+    strings: ['Any Tech you need', 'Any Laptops', 'Any Mobile phones', 'Any Accessories', 'All Tech ... in one place'],
+    typeSpeed: 100,
     loop: true,
     loopCount: Infinity,
-    showCursor:false,
+    showCursor: false,
     backSpeed: 100
 };
 var typed = new Typed('.element', options);
-
-
 
 // add links to products
 window.onload = () => {

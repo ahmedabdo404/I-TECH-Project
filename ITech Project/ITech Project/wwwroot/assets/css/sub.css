@@ -1,5 +1,5 @@
-/*currnet page*/
 
+/*currnet page*/
 .top-nav li a {
     color: var(--sec-color) !important;
 }
@@ -21,49 +21,55 @@
 }
 
 /* Shop Content */
-.section-title{
+.section-title {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
 }
-.shop{
-    margin-top: 4%;
+
+.shop {
+    margin-top: 6%;
     padding-top: 0px
 }
 
-.shop-content{
+.shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,auto));
     gap: 1.5rem;
 }
 
-.product-box{
+.product-box {
     position: relative;
     min-width: 200px;
     transition: var(--transition2);
 }
-.product-box:hover{
-    padding: 10px;
-    border: 1px solid var(--forth-color);
+
+    .product-box:hover {
+        padding: 10px;
+        border: 1px solid var(--forth-color);
+        transition: var(--transition2);
+    }
+
+.product-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* margin-bottom: 0.5rem; */
     transition: var(--transition2);
 }
 
-.product-img{
-    width: 100%;
-    max-height: auto;
-    margin-bottom: 0.5rem;
-    transition: var(--transition2);
-}
-.product-title{
+.product-title {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
-.price{
+
+.price {
     font-weight: 500;
 }
-.add-cart{
+
+.add-cart {
     font-size: 30px;
     position: absolute;
     bottom: 0;
@@ -73,10 +79,11 @@
     padding: 10px;
     cursor: pointer;
 }
-.add-cart:hover{
-    background: var(--main-color);
-    transition: var(--transition2);
-}
+
+    .add-cart:hover {
+        background: var(--main-color);
+        transition: var(--transition2);
+    }
 /* filter ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>filter*/
 
 .filter {
@@ -93,9 +100,9 @@
     overflow-y: scroll;
 }
 
-.filter.active {
-    right: 0;
-}
+    .filter.active {
+        right: 0;
+    }
 
 .filter-title {
     text-align: center;
@@ -116,7 +123,7 @@
 
 /*filter*/
 .h {
-    min-width:10rem;
+    min-width: 10rem;
     background-color: var(--main-color);
     color: var(--sec-color);
     padding: 0 0.5rem;
@@ -136,9 +143,9 @@
     cursor: pointer;
 }
 
-.catogery-list:hover {
-    color: var(--main-color);
-}
+    .catogery-list:hover {
+        color: var(--main-color);
+    }
 
 .catogery-list-active {
     color: var(--main-color);
@@ -159,4 +166,22 @@ li i.bx.bxs-right-arrow {
 
 .list-group li {
     min-width: 11rem;
+}
+
+/* filter buttons */
+
+.filter-button-group button {
+transition: var(--transition1);
+background-color: var(--third-color);
+border: none;
+}
+
+.filter-button-group button:hover {
+    background-color: var(--main-color);
+    color: var(--third-color);
+}
+
+.filter-button-group button:focus {
+    outline: none;
+    box-shadow: none;
 }
