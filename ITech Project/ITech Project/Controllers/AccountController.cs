@@ -220,7 +220,7 @@ namespace ITech_Project.Controllers
                     IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
                     if (role.Succeeded)
                     {
-                        return LocalRedirect(ReturnUrl);
+                        //return LocalRedirect(ReturnUrl);
                     }
                     ModelState.AddModelError("", "No role found");
 
