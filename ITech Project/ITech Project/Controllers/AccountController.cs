@@ -55,7 +55,7 @@ namespace ITech_Project.Controllers
                 {
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
                     await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -124,6 +124,26 @@ namespace ITech_Project.Controllers
 
 
         #endregion
+
+        #region Check Email Exist
+
+        public async Task<IActionResult> Exist(string Email)
+        {
+            IdentityUser user = await userManager.FindByEmailAsync(Email);
+            if (user == null)
+                return Json(true);
+            return Json(false);
+        }
+
+
+        #endregion
+
+
+
+
+
+
+
 
         #region Login
 
