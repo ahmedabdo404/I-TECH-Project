@@ -1,6 +1,9 @@
 
 
 /* carousel-slider ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>carousel-slider*/
+.main-c {
+    padding-top: 2%;
+}
 .landing {
     position: absolute;
     top: 50%;
@@ -17,6 +20,7 @@
 .carousel-item img {
     height: 100vh;
     min-width: 100vw;
+    transition: var(--transition2);
 }
 
 .carousel-indicators button {
@@ -98,11 +102,11 @@
     transition: var(--transition2);
 }
 
-    .product-box:hover {
-        padding: 10px;
-        border: 1px solid var(--forth-color);
-        transition: var(--transition2);
-    }
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid var(--forth-color);
+    transition: var(--transition2);
+}
 
 .product-img {
     width: 100%;

@@ -28,7 +28,7 @@
 }
 
 .shop {
-    margin-top: 6%;
+    /*margin-top: 6%;*/
     padding-top: 0px
 }
 
@@ -44,11 +44,11 @@
     transition: var(--transition2);
 }
 
-    .product-box:hover {
-        padding: 10px;
-        border: 1px solid var(--forth-color);
-        transition: var(--transition2);
-    }
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid var(--forth-color);
+    transition: var(--transition2);
+}
 
 .product-img {
     width: 100%;
