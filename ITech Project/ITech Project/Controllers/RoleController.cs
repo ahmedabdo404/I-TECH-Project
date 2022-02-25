@@ -75,6 +75,30 @@ namespace ITech_Project.Controllers
             }
             return View("GetRoles");
         }
+
+
+        //Other way
+        public async Task<IActionResult> Delete(string name)
+        {
+            IdentityRole role = await RoleManager.FindByNameAsync(name);
+            if (role != null)
+            {
+                IdentityResult result = await RoleManager.DeleteAsync(role);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("GetRoles");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Error");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "No role found");
+            }
+            return View("GetRoles");
+        }
         #endregion
     }
 }

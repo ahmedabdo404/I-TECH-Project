@@ -76,7 +76,7 @@ namespace ITech_Project.Controllers
         [HttpGet]
         public IActionResult Login(string ReturnUrl = "~/Instructor/Index")
         {
-            ViewData["RedirectURL"] = ReturnUrl;
+            ViewData["RedirectUrl"] = ReturnUrl;
             return View();
         }
 

@@ -67,19 +67,7 @@ namespace ITech_Project
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = true;
             });
-
-
-
         }
-
-
-
-
-
-
-
-
-    
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
