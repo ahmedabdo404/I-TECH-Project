@@ -78,7 +78,7 @@ namespace ITech_Project.Controllers
             }
             else
             {
-                ModelState.AddModelError("", "No role found");
+                ModelState.AddModelError("","No role found");
             }
             return View("GetRoles");
         }

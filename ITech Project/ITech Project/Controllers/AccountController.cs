@@ -71,10 +71,64 @@ namespace ITech_Project.Controllers
 
         #endregion
 
+        #region Sign Up Admin
+
+
+        [HttpGet]
+        public IActionResult SignUpAdmin()
+        {
+            return View();
+        }
+
+
+        //Saving data in Database
+        [HttpPost]
+        public async Task<IActionResult> SignUpAdmin(SignUpViewModel newAccount)
+        {
+            if (ModelState.IsValid == true)
+            {
+                IdentityUser user = new IdentityUser();
+
+                user.UserName = newAccount.UserName;
+                user.Email = newAccount.Email;
+
+                //Saving user and creating cookie
+                IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
+                if (Result.Succeeded == true)
+                {
+                    //Add to Admin Role
+                    IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
+                    if (role.Succeeded)
+                    {
+                        return RedirectToAction("Dashboard", "Dashboard");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("","No Admin role is found !");
+                    }
+
+                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                    await signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("Dashboard", "Dashboard");
+                }
+                else
+                {
+                    foreach (var error in Result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
+            }
+            return View(newAccount);
+        }
+
+
+        #endregion
+
         #region Login
 
         [HttpGet]
-        public IActionResult Login(string ReturnUrl = "")
+        public IActionResult Login(string ReturnUrl)
         {
             ViewData["RedirectUrl"] = ReturnUrl;
             return View();
@@ -92,17 +146,24 @@ namespace ITech_Project.Controllers
                 {
                    Microsoft.AspNetCore.Identity.SignInResult Result = await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
                    if(Result.Succeeded == true)
-                    {
-                        return LocalRedirect(ReturnUrl);
-                    }
-                    else
-                    {
+                   {
+                        if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                        {
+                                return Redirect(ReturnUrl);
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
+                   }
+                   else
+                   {
                         ModelState.AddModelError("", "Invalid user name or password");
-                    }
+                   }
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid user name or password");
+                    ModelState.AddModelError("","Invalid user name or password");
                 }
             }
             return View(LoginUser);
@@ -191,58 +252,36 @@ namespace ITech_Project.Controllers
         //}
         #endregion
 
-        #region Sign Up Admin
+        //#region Change Password
 
 
-        [HttpGet]
-        public IActionResult SignUpAdmin()
-        {
-            return View();
-        }
+        //public IActionResult ChangePassword()
+        //{
+        //    return View();
+        //}
 
+        //[HttpPost("change-password")]
+        //public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var result = await sig.ChangePasswordAsync(model);
+        //        if (result.Succeeded)
+        //        {
+        //            ViewBag.IsSuccess = true;
+        //            ModelState.Clear();
+        //            signInManager.c
+        //            return View();
+        //        }
 
-        //Saving data in Database
-        [HttpPost]
-        public async Task<IActionResult> SignUpAdmin(SignUpViewModel newAccount)
-        {
-            if (ModelState.IsValid == true)
-            {
-                IdentityUser user = new IdentityUser();
+        //        foreach (var error in result.Errors)
+        //        {
+        //            ModelState.AddModelError("", error.Description);
+        //        }
 
-                user.UserName = newAccount.UserName;
-                user.Email = newAccount.Email;
-
-                //Saving user and creating cookie
-                IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
-                if (Result.Succeeded == true)
-                {
-                    //Add to Admin Role
-                    IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
-                    if (role.Succeeded)
-                    {
-                        return RedirectToAction("Dashboard", "Dashboard");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "No role found");
-                    }
-
-                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Dashboard", "Dashboard");
-                }
-                else
-                {
-                    foreach (var error in Result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
-                }
-            }
-            return View(newAccount);
-        }
-
-
-        #endregion
+        //    }
+        //    return View(model);
+        //}
+        //#endregion
     }
 }

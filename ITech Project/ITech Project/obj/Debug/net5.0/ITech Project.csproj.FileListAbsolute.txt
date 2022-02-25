@@ -900,3 +900,4 @@ C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\De
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\AddRole.cshtml.g.cs
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\GetRoles.cshtml.g.cs
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
+C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUpAdmin.cshtml.g.cs
