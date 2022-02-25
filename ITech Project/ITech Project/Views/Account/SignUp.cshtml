@@ -1,10 +1,5 @@
 ﻿@model ITech_Project.ViewModels.SignUpViewModel
 
-@{
-    ViewData["Title"] = "SignUp";
-    Layout = "~/Views/Shared/_ItechLayout.cshtml";
-}
-
 <div class="container mt-5">
 
     <h1>Sign Up</h1>
@@ -49,4 +44,8 @@
         <a asp-action="Login" asp-controller="Account">Back</a>
     </div>
 </div>
+
+@section Script {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 

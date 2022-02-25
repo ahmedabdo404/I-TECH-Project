@@ -79,7 +79,7 @@ namespace ITech_Project.Controllers
             }
             catch
             {
-                ModelState.AddModelError("", "this product is in use");
+                ModelState.AddModelError("","this product is in use");
                 return View("Update");
             }
         }

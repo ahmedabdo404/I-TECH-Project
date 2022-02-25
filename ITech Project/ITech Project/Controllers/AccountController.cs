@@ -49,12 +49,12 @@ namespace ITech_Project.Controllers
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
 
-                //Saving user and creating cookie
+                //Saving user
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
                 if (Result.Succeeded == true)
                 {
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, isPersistent: false);
+                    await signInManager.SignInAsync(user, false);  //False => Per session
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -100,6 +100,7 @@ namespace ITech_Project.Controllers
                     IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
                     if (role.Succeeded)
                     {
+                        //if(await userManager.IsInRoleAsync(user,"Admin"))
                         return RedirectToAction("Dashboard", "Dashboard");
                     }
                     else
@@ -108,7 +109,7 @@ namespace ITech_Project.Controllers
                     }
 
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, isPersistent: false);
+                    await signInManager.SignInAsync(user, false);
                     return RedirectToAction("Dashboard", "Dashboard");
                 }
                 else
@@ -167,18 +168,25 @@ namespace ITech_Project.Controllers
                    Microsoft.AspNetCore.Identity.SignInResult Result = await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
                    if(Result.Succeeded == true)
                    {
-                        if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                        if (await userManager.IsInRoleAsync(user, "Admin"))
                         {
-                                return Redirect(ReturnUrl);
+                            return RedirectToAction("Dashboard", "Dashboard");
                         }
                         else
                         {
-                            return RedirectToAction("Index", "Home");
+                            if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                            {
+                                return Redirect(ReturnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("Index", "Home");
+                            }
                         }
                    }
                    else
                    {
-                        ModelState.AddModelError("", "Invalid user name or password");
+                        ModelState.AddModelError("","Invalid user name or password");
                    }
                 }
                 else
