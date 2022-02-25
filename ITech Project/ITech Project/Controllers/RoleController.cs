@@ -45,7 +45,7 @@ namespace ITech_Project.Controllers
                 IdentityResult Result = await RoleManager.CreateAsync(Role);
                 if(Result.Succeeded == true)
                 {
-                    return View();
+                    return RedirectToAction("GetRoles");
                 }
                 else
                 {
