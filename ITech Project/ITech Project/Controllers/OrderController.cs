@@ -1,5 +1,6 @@
 ﻿using ITech_Project.Models;
 using ITech_Project.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -73,7 +74,7 @@ namespace ITech_Project.Controllers
             return View(newOrder);
         }
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete([FromRoute] int id)
         {
             try

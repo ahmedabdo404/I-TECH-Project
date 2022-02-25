@@ -74,7 +74,7 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
-        public IActionResult Login(string ReturnUrl = "~/Instructor/Index")
+        public IActionResult Login(string ReturnUrl = "")
         {
             ViewData["RedirectUrl"] = ReturnUrl;
             return View();
@@ -83,7 +83,7 @@ namespace ITech_Project.Controllers
 
         //Check create cookie
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "~/Instructor/Index")
+        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "")
         {
             if (ModelState.IsValid == true)
             {
@@ -220,13 +220,16 @@ namespace ITech_Project.Controllers
                     IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
                     if (role.Succeeded)
                     {
-                        //return LocalRedirect(ReturnUrl);
+                        return RedirectToAction("Dashboard", "Dashboard");
                     }
-                    ModelState.AddModelError("", "No role found");
+                    else
+                    {
+                        ModelState.AddModelError("", "No role found");
+                    }
 
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
                     await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("");
+                    return RedirectToAction("Dashboard", "Dashboard");
                 }
                 else
                 {

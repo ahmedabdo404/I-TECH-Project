@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace ITech_Project.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
 
@@ -61,23 +61,6 @@ namespace ITech_Project.Controllers
 
         #region Removing Role
 
-        public async Task<IActionResult> Remove(string name)
-        {
-            IdentityRole Role = await RoleManager.FindByNameAsync(name);
-            try
-            {
-                await RoleManager.DeleteAsync(Role);
-                return RedirectToAction("GetRoles");
-            }
-            catch
-            {
-                ModelState.AddModelError(string.Empty, "This role is already exists!");
-            }
-            return View("GetRoles");
-        }
-
-
-        //Other way
         public async Task<IActionResult> Delete(string name)
         {
             IdentityRole role = await RoleManager.FindByNameAsync(name);

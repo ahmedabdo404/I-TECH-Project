@@ -1,6 +1,7 @@
 ﻿using ITech_Project.Models;
 using ITech_Project.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ITech_Project.Controllers
 {
