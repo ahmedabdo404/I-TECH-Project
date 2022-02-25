@@ -42,7 +42,45 @@ namespace ITech_Project
             services.AddScoped<IOrderDetailService, OrderDetailService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISupplierService, SupplierService>();
+
+
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings.
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 0;
+
+                // Lockout settings.
+
+
+                //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                //options.Lockout.MaxFailedAccessAttempts = 5;
+                //options.Lockout.AllowedForNewUsers = true;
+
+                // User settings.
+                options.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = true;
+            });
+
+
+
         }
+
+
+
+
+
+
+
+
+    
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
