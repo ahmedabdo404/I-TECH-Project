@@ -52,9 +52,9 @@
     animation: change-color 3s infinite alternate linear;
 }
 
-    .carousel-caption:hover {
-        color: var(--main-color) !important;
-    }
+.carousel-caption:hover {
+    color: var(--main-color) !important;
+}
 
 @keyframes change-color {
     0% {

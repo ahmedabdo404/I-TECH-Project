@@ -39,7 +39,22 @@
     height: 333px;
 }
 
-.speces{
+.carousel-control-next,
+.carousel-control-prev {
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-indicators button {
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 50%;
+    background-color: var(--sec-color) !important;
+    margin-left: 2% !important;
+}
+
+.speces {
     margin-left: 2rem;
     width: 100%
 }

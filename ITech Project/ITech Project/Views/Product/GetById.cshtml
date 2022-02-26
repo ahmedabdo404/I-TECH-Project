@@ -10,7 +10,7 @@
             <p>Product Details</p>
         </div>
         <div class="details d-flex flex-row">
-            <div id="carouselExampleDark" class="carousel" data-bs-ride="carousel">
+            <div id="carouselExampleDark" class="carousel carousel-dark" data-bs-ride="carousel">
                 @{
                     string str = Model.Picture;
                     var pictureList = str.Split(",");
@@ -25,7 +25,7 @@
                 <div class="carousel-inner">
                     @if(pictureList.Length <= 1)
                     {
-                        //first image is active
+                        //image is one picture
                         <div class="carousel-item active">
                             @if (Model.ModelMobile != null)
                             {
@@ -38,6 +38,9 @@
                     } 
                     else
                     {
+                        @*more than one picture*@
+
+                        @*active image*@
                         <div class="carousel-item active">
                             @if (Model.ModelMobile != null)
                             {

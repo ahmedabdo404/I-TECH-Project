@@ -31,12 +31,6 @@
                 <span asp-validation-for="UnitsInStock" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-3">
-                <label asp-for="Picture" class="control-label mb-2"></label>
-                <input type="file" accept="image/*" asp-for="Picture" class="form-control" multiple />
-                <span asp-validation-for="Picture" class="text-danger"></span>
-            </div>
-
             <div class="form-group">
                 <label asp-for="Color" class="control-label"></label>
                 <select asp-for="Color" asp-items="Html.GetEnumSelectList<Color>()" class="form-control">
@@ -53,7 +47,7 @@
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
 
-            <div class="form-group" id="lab">
+            <div class="form-group d-none" id="lab">
                 <label asp-for="ModelLabtop" class="control-label"></label>
                 <select asp-for="ModelLabtop" asp-items="Html.GetEnumSelectList<ModelLabtop>()" class="form-control">
                     <option selected>--Select Labtop Model--</option>
@@ -61,7 +55,7 @@
                 @*<span asp-validation-for="ModelLabtop" class="text-danger"></span>*@ 
          </div>
 
-            <div class="form-group" id="mob">
+            <div class="form-group d-none" id="mob">
                 <label asp-for="ModelMobile" class="control-label mb-2"></label>
                 <select asp-for="ModelMobile" asp-items="Html.GetEnumSelectList<ModelMobile>()" class="form-control">
                     <option selected>--Select Mobile Model--</option>
@@ -74,6 +68,14 @@
                 <input asp-for="SupplierId" class="form-control" />
                 <span asp-validation-for="SupplierId" class="text-danger"></span>
             </div>*@
+            <div class="form-group mb-3">
+                <label asp-for="Picture" class="control-label">Pictures(Link)</label>
+                <i class="bx bxs-image-add"  id="image-add" style="font-size: 25px;cursor: pointer;"></i>
+                <textarea asp-for="Picture" class="form-control pic-input" placeholder="split with comma if more than one link"
+                rows="6" style="resize: none">
+                </textarea>
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
 
             <div class="form-group">
                 <label asp-for="Description" class="control-label mb-2"></label>
