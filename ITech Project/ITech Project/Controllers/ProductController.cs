@@ -28,7 +28,9 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
+
         //[Authorize(Roles = "Admin")]
+        [Authorize]
         public IActionResult Create()
         {
             ViewData["supplier"] = SupplierRepo.GetAll();

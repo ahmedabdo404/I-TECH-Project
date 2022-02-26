@@ -91,7 +91,10 @@
             <button class="filterbtn btn mx-1">More Filters</button>
         </div>
     </div>
-    <a class="btn btn-warning" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create</a>
+     @if (User.Identity.IsAuthenticated)
+    {
+        <a class="btn btn-warning" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create</a>
+    }
     <h2 class="section-title m-4"> Shop Products</h2>
     <!-- Content -->
     <div class="shop-content">
@@ -136,7 +139,7 @@
 </section>
     
 
-@section script {
+@section scripts {
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="~/assets/js/sub.js"></script>
 }

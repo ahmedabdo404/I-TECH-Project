@@ -83,19 +83,20 @@
                     <input asp-for="DateEntered" class="form-control" />
                     <span asp-validation-for="DateEntered" class="text-danger"></span>
                 </div>
+                <br />
                 <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <input type="submit" value="Save" class="btn btn-warning" />
                 </div>
             </form>
         </div>
     </div>
 
     <div>
-        <a asp-action="Index" asp-controller="Home">Back to Home</a>
+      <a asp-action="Index" asp-controller="Home">Back to Home</a>
     </div>
 </div>
 
 
-@section Script {
+@section scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
