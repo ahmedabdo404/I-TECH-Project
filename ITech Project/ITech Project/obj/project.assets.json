@@ -7310,11 +7310,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\FFFF\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+      "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
       "projectName": "ITech Project",
-      "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\FFFF\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+      "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
       "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\FFFF\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+      "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",

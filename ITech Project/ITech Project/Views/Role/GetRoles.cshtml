@@ -1,7 +1,8 @@
 ﻿@model List<string>
 
 <div class="container mt-5">
-    <a asp-action="AddRole" asp-controller="Role" class="btn btn-success mt-2">Add New Role</a>
+    <a asp-action="AddRole" asp-controller="Role" class="btn btn-warning mt-2">Add New Role</a>
+    <br /><br />
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -21,8 +22,8 @@
                 }
         </tbody>
     </table>
-    <div class="gap-2 col-3 mx-auto mt-5">
-        <a asp-action="Dashboard" asp-controller="Dashboard" class="btn btn-success ms-2">Go to Dashboard</a>
+    <div class="gap-2 col-3 mx-auto mt-4">
+        <a asp-action="Dashboard" asp-controller="Dashboard" class="btn btn-warning ms-2">Go to Dashboard</a>
     </div>
 </div>
 

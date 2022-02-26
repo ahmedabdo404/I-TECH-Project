@@ -51,13 +51,35 @@ namespace ITech_Project.Service
 
         public void StoreOrder(List<ShoppingCartItem> items, string UserId, string UserEmailAddress)
         {
-            throw new System.NotImplementedException();
+            var order = new Order()
+            {
+                UserId = UserId,
+                Email = UserEmailAddress
+            };
+            Context.Orders.Add(order);
+            Context.SaveChanges();
+
+            foreach (var item in items)
+            {
+                var orderitem = new OrderDetail()
+                {
+                    Price = (int)item.product.UnitPrice,
+                    ProductId = item.product.Id,
+                    Quantity = item.Amount,
+                    OrderId = order.Id
+
+                };
+                Context.Add(orderitem);
+            }
+            Context.SaveChanges();
+
         }
+
 
         public List<Order> GetOrdersByUserId(string userId)
         {
-            var orders = Context.Orders.Include(n=>n.Orderd).ThenInclude(n=>n.product).Where(n=>n.UserId==
-            userId).ToList();
+              var orders = Context.Orders.Include(n=>n.OrderDetails).ThenInclude(n=>n.Product).Where(n=>n.UserId==
+                  userId).ToList();
             return orders;
         }
     }

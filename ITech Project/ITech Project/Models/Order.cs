@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ITech_Project.Enums;
 
@@ -43,6 +44,10 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Shipper Is Required")]
         public Shipper Shipper { get; set; }
 
+        public List<OrderDetail> OrderDetails { get; set; }
+
+        public string UserId { get; set; }
+        public string Email { get; set; }
 
     }
 }
