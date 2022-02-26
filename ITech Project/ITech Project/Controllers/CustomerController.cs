@@ -1,6 +1,7 @@
 ﻿using System;
 using ITech_Project.Models;
 using ITech_Project.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITech_Project.Controllers
@@ -13,8 +14,9 @@ namespace ITech_Project.Controllers
         {
             CustomerService = customerservice;
         }
-
         #region Read
+
+        [Authorize(Roles = "Admin")]
         public IActionResult GetAllCustomers()
         {
             return View(CustomerService.GetAll());
@@ -27,6 +29,8 @@ namespace ITech_Project.Controllers
         #endregion
 
         #region Create
+
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -47,6 +51,7 @@ namespace ITech_Project.Controllers
         #endregion
 
         #region Update
+
         [HttpGet]
         public IActionResult Update([FromRoute]int id)
         {
@@ -60,7 +65,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 CustomerService.Update(customer);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("GetById");
             }
             return View(customer);
         }
@@ -70,6 +75,8 @@ namespace ITech_Project.Controllers
 
         #region Delete
 
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete([FromRoute] int id)
         {
             try
@@ -79,7 +86,7 @@ namespace ITech_Project.Controllers
             }
             catch (Exception exception)
             {
-                ModelState.AddModelError("", exception.InnerException.Message);
+                ModelState.AddModelError("",exception.InnerException.Message);
                 return View("Update");
             }
         }

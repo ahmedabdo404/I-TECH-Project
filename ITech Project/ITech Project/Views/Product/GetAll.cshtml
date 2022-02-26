@@ -1,22 +1,133 @@
 ﻿@model List<Product>
 
+@section style {
+    <link rel="stylesheet" href="~/assets/css/sub.css">
+}
 
+<section>
+    <div class="filter">
+        <h2 class="filter-title">Filter</h2>
+        <!-- Content -->
+        <div class="col-4">
+            <p class="h">CATEGORY</p>
+            <ul class="list-group">
+                <li class="list-group-item border-0 catogery-list catogery-list-active"><i
+                        class='bx bxs-right-arrow pe-2'></i>Smart Phone</li>
+                <li class="list-group-item border-0 catogery-list"><i
+                        class='bx bxs-right-arrow pe-2'></i>Desktop</li>
+                <li class="list-group-item border-0 catogery-list"><i class="bx bxs-right-arrow pe-2"></i>Laptop
+                </li>
+                <li class="list-group-item border-0 catogery-list"><i
+                        class='bx bxs-right-arrow pe-2'></i>Accessories</li>
+            </ul>
+            <p class="h">By Brand</p>
+            <div class="brand">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="HP" checked>
+                    <label class="form-check-label" for="HP">
+                        HP
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="DELL">
+                    <label class="form-check-label" for="DELL">
+                        DELL
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="APPLE">
+                    <label class="form-check-label" for="APPLE">
+                        APPLE
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ASUS">
+                    <label class="form-check-label" for="ASUS">
+                        ASUS
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="SUMSUNG">
+                    <label class="form-check-label" for="SUMSUNG">
+                        SUMSUNG
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="TOSHIBA">
+                    <label class="form-check-label" for="TOSHIBA">
+                        TOSHIBA
+                    </label>
+                </div>
+            </div>
+            <p class="h">By Price</p>
+            <ul class="list-group">
+                <li class="list-group-item border-0 catogery-list"><i
+                        class='bx bxs-right-arrow pe-2'></i>$1000-$2000</li>
+                <li class="list-group-item border-0 catogery-list"><i
+                        class='bx bxs-right-arrow pe-2'></i>$2000-$3000</li>
+                <li class="list-group-item border-0 catogery-list"><i
+                        class='bx bxs-right-arrow pe-2'></i>$3000-$4000</li>
+                <li class="list-group-item border-0 catogery-list"><i
+                        class='bx bxs-right-arrow pe-2'></i>$4000-$5000</li>
+                <li class="list-group-item border-0 catogery-list "><i
+                        class='bx bxs-right-arrow pe-2'></i>$5000-$6000</li>
+            </ul>
+        </div>
+        <!-- Cart Close -->
+        <i class='bx bx-x' id="close-filter"></i>
+    </div>
+</section>
+    
 <!-- Shop -->
-<section class="shop container mb-3">
-    <h2 class="section-title"> Shop Products</h2>
+<section class="shop container mb-4">
+    <div class="row mt-3 mb-3 button-group filter-button-group">
+        <div class="col d-flex justify-content-center">
+            <button type="button" data-filter="*" class="btn mx-1">All</button>
+            <button type="button" data-filter=".mobiles" class="btn mx-1">mobiles</button>
+            <button type="button" data-filter=".Laptops" class="btn mx-1">Laptops</button>
+            <button type="button" data-filter=".accessories" class="btn mx-1">accessories</button>
+            <button type="button" data-filter=".lessprice" class="btn mx-1">less price</button>
+            <button type="button" data-filter=".highprice" class="btn mx-1">high price</button>
+            <button class="filterbtn btn mx-1">More Filters</button>
+        </div>
+    </div>
+    <a class="btn btn-warning" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create</a>
+    <h2 class="section-title m-4"> Shop Products</h2>
     <!-- Content -->
     <div class="shop-content">
         <!-- Box 2 -->
+        <div class = " row justify-content-center g-4" id = "product-list">
         @foreach(var item in Model)
         {
-            <div class="product-box">
-                <a asp-action="GetById" asp-route-id="@item.Id" class="p-link">
-                    <img src="@item.Picture" alt="" class="product-img">
-                </a>
-                <h2 class="product-title">@item.Name</h2>
-                <span class="price">$ @item.UnitPrice</span>
-                <i class='bx bxs-cart-add add-cart '></i>
+            @if(item.ModelMobile != 0)
+            {
+            <div class="product-box col-lg-4 col-md-6 mobiles">
+            
+            <a asp-action="GetById" asp-route-id="@item.Id">
+                <img src="@item.Picture" alt="@item.Name" onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg'" class="product-img">
+            </a>
+            <h2 class="product-title">@item.Name</h2>
+            <span class="price">$@item.UnitPrice</span>
             </div>
+            }
+            @if(item.ModelLabtop != 0)
+            {
+            <div class="product-box col-lg-4 col-md-6 Laptops">
+            
+            <a asp-action="GetById" asp-route-id="@item.Id">
+                <img src="@item.Picture" alt="@item.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'" class="product-img">
+            </a>
+            <h2 class="product-title">@item.Name</h2>
+            <span class="price">$@item.UnitPrice</span>
+            </div>
+            }
         }
+        </div>
     </div>
 </section>
+    
+
+@section script {
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="~/assets/js/sub.js"></script>
+}

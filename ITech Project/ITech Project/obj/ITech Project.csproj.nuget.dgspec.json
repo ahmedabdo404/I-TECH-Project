@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\graduation-project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
   },
   "projects": {
@@ -12,9 +13,27 @@
         "projectPath": "E:\\graduation-project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
         "outputPath": "E:\\graduation-project\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+=======
+    "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
+  },
+  "projects": {
+    "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "projectName": "ITech Project",
+        "projectPath": "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+>>>>>>> 3c138c9db3c5f0c2c9a68a95270e76304d02b89d
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 3c138c9db3c5f0c2c9a68a95270e76304d02b89d
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +106,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 3c138c9db3c5f0c2c9a68a95270e76304d02b89d
         }
       }
     }

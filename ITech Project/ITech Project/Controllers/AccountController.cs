@@ -49,13 +49,13 @@ namespace ITech_Project.Controllers
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
 
-                //Saving user and creating cookie
+                //Saving user
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
                 if (Result.Succeeded == true)
                 {
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("");
+                    await signInManager.SignInAsync(user, false);  //False => Per session
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -71,42 +71,143 @@ namespace ITech_Project.Controllers
 
         #endregion
 
+        #region Sign Up Admin
+
+
+        [HttpGet]
+        public IActionResult SignUpAdmin()
+        {
+            return View();
+        }
+
+
+        //Saving data in Database
+        [HttpPost]
+        public async Task<IActionResult> SignUpAdmin(SignUpViewModel newAccount)
+        {
+            if (ModelState.IsValid == true)
+            {
+                IdentityUser user = new IdentityUser();
+
+                user.UserName = newAccount.UserName;
+                user.Email = newAccount.Email;
+
+                //Saving user and creating cookie
+                IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
+                if (Result.Succeeded == true)
+                {
+                    //Add to Admin Role
+                    IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
+                    if (role.Succeeded)
+                    {
+                        //if(await userManager.IsInRoleAsync(user,"Admin"))
+                        return RedirectToAction("Dashboard", "Dashboard");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("","No Admin role is found !");
+                    }
+
+                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                    await signInManager.SignInAsync(user, false);
+                    return RedirectToAction("Dashboard", "Dashboard");
+                }
+                else
+                {
+                    foreach (var error in Result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
+            }
+            return View(newAccount);
+        }
+
+
+        #endregion
+
+        #region Check Email Exist
+
+        public async Task<IActionResult> Exist(string Email)
+        {
+            IdentityUser user = await userManager.FindByEmailAsync(Email);
+            if (user == null)
+                return Json(true);
+            return Json(false);
+        }
+
+
+        #endregion
+
+
+
+
+
+
+
+
         #region Login
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string ReturnUrl)
         {
+            ViewData["RedirectUrl"] = ReturnUrl;
             return View();
         }
 
 
         //Check create cookie
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel LoginUser)
+        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "")
         {
             if (ModelState.IsValid == true)
             {
-                IdentityUser user = await userManager.FindByNameAsync(LoginUser.Email);
+                IdentityUser user = await userManager.FindByEmailAsync(LoginUser.Email);
                 if (user != null)
                 {
                    Microsoft.AspNetCore.Identity.SignInResult Result = await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
                    if(Result.Succeeded == true)
-                    {
-                        return RedirectToAction("", "");/////////////////////
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Invalid user name or password");
-                    }
+                   {
+                        if (await userManager.IsInRoleAsync(user, "Admin"))
+                        {
+                            return RedirectToAction("Dashboard", "Dashboard");
+                        }
+                        else
+                        {
+                            if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                            {
+                                return Redirect(ReturnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("Index", "Home");
+                            }
+                        }
+                   }
+                   else
+                   {
+                        ModelState.AddModelError("","Invalid user name or password");
+                   }
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid user name or password");
+                    ModelState.AddModelError("","Invalid user name or password");
                 }
             }
             return View(LoginUser);
         }
 
+
+        #endregion
+
+        #region Logout
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
+        }
 
         #endregion
 
@@ -178,5 +279,37 @@ namespace ITech_Project.Controllers
 
         //}
         #endregion
+
+        //#region Change Password
+
+
+        //public IActionResult ChangePassword()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost("change-password")]
+        //public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var result = await sig.ChangePasswordAsync(model);
+        //        if (result.Succeeded)
+        //        {
+        //            ViewBag.IsSuccess = true;
+        //            ModelState.Clear();
+        //            signInManager.c
+        //            return View();
+        //        }
+
+        //        foreach (var error in result.Errors)
+        //        {
+        //            ModelState.AddModelError("", error.Description);
+        //        }
+
+        //    }
+        //    return View(model);
+        //}
+        //#endregion
     }
 }

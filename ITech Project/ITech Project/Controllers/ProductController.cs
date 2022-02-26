@@ -1,6 +1,7 @@
 ﻿using ITech_Project.Models;
 using ITech_Project.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ITech_Project.Controllers
 {
@@ -27,11 +28,14 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
+
+
         [HttpPost]
         public IActionResult Create(Product product)
         {
@@ -44,7 +48,10 @@ namespace ITech_Project.Controllers
             return View();
         }
 
+
+
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update([FromRoute] int id)
         {
             return View(ProductRepo.GetById(id));
@@ -61,6 +68,8 @@ namespace ITech_Project.Controllers
             return View();
         }
 
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete([FromRoute]int id)
         {
             try
@@ -70,12 +79,10 @@ namespace ITech_Project.Controllers
             }
             catch
             {
-                ModelState.AddModelError("", "this product is in use");
+                ModelState.AddModelError("","this product is in use");
                 return View("Update");
             }
         }
-
-
 
     }
 }

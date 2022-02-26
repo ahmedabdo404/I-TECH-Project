@@ -1,8 +1,6 @@
+// add links to products
 let productslink = document.querySelectorAll(".p-link");
 
-
-
-// add links to products
 window.onload = () => {
     for(let l of productslink)
         //l.setAttribute("asp-action", "details");
@@ -31,3 +29,13 @@ closeFilter.onclick = () => {
     filter.classList.remove("active");
     console.log("close");
 };
+
+// filters
+var $grid = $('#product-list').isotope({
+    // options
+});
+// filter items on button click
+$('.filter-button-group').on('click', 'button', function () {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+});
