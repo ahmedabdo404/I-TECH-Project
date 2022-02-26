@@ -902,3 +902,8 @@ C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\De
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUpAdmin.cshtml.g.cs
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\Update.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUpAdmin.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\Update.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\AddRole.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\GetRoles.cshtml.g.cs

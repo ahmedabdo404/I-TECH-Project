@@ -43,8 +43,6 @@ namespace ITech_Project
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISupplierService, SupplierService>();
 
-
-
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
