@@ -1,4 +1,5 @@
 ﻿using ITech_Project.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -46,6 +47,18 @@ namespace ITech_Project.Service
             Context.Remove(Context.Orders.FirstOrDefault(i => i.Id == id));
             int row = Context.SaveChanges();
             return row;
+        }
+
+        public void StoreOrder(List<ShoppingCartItem> items, string UserId, string UserEmailAddress)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Order> GetOrdersByUserId(string userId)
+        {
+            var orders = Context.Orders.Include(n=>n.Orderd).ThenInclude(n=>n.product).Where(n=>n.UserId==
+            userId).ToList();
+            return orders;
         }
     }
 }

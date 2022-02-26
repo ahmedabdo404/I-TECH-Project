@@ -23,55 +23,55 @@
          <nav class="container">
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a asp-action="dashboard">
+                    <a asp-controller="Home" asp-action="dashboard">
                         <i class='bx bx-home-alt icon'></i>
                         <span class="text nav-text">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-action="cart">
+                    <a asp-controller="Home" asp-action="cart">
                         <i class='bx bx-bar-chart-alt-2 icon'></i>
                         <span class="text nav-text">Cart</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-action="orders">
+                    <a asp-controller="Home" asp-action="orders">
                         <i class='bx bx-bell icon'></i>
                         <span class="text nav-text">Orders</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-action="index">
+                    <a asp-controller="Home" asp-action="index">
                         <i class='bx bx-pie-chart-alt icon'></i>
                         <span class="text nav-text">Statitics</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-action="sub">
+                    <a asp-controller="Product" asp-action="GetAll">
                         <i class='bx bx-cart icon'></i>
                         <span class="text nav-text">Shop</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-action="about">
+                    <a asp-controller="Home" asp-action="about">
                         <i class='bx bx-info-circle icon'></i>
                         <span class="text nav-text">About</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-action="contact">
+                    <a asp-controller="Home" asp-action="contact">
                         <i class='bx bx-support icon'></i>
                         <span class="text nav-text">Contact</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a asp-action="index">
+                    <a asp-controller="Account" asp-action="Logout">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
@@ -85,17 +85,17 @@
             <nav class="container">
                 <ul class="top-nav">
                     <div class="current-page"></div>
-                    <li><a asp-action="Index">Home</a></li>
-                    <li><a asp-action="login">My Account</a></li>
-                    <li> <a asp-action="sub">Shopping</a></li>
-                    <li><a asp-action="Checkout">Checkout</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Account" asp-action="login">My Account</a></li>
+                    <li> <a asp-controller="Product" asp-action="GetAll">Shopping</a></li>
+                    <li><a asp-controller="Home" asp-action="Checkout">Checkout</a></li>
                 </ul>
                 <div id="menu-bar"><i class='bx bx-menu'></i></div>
             </nav>  
             }
         <section class="items-section">
             <div class="items-bar container">
-                <p> I-TECH</p>
+                <a asp-controller="Home" asp-action="Index"><p>I-TECH</p></a>
                 <div class="search-bar d-flex justify-content-center align-items-center">
                     <input type="text" placeholder="Search your item" id="tags">                    <div class="Search-icon">
                         <i class='bx bx-search-alt-2'></i>
@@ -106,18 +106,30 @@
                         Account
                     </p>
                     <ul class="dropdown-menu dropdown-menu-center">
-                        <a asp-action="login" targ">
-                            <li><button class="dropdown-item" type="button">Sign In</button></li>
+                        <a asp-controller="Account" asp-action="login">
+                            <li><button class="dropdown-item" type="button">Account</button></li>
                         </a>
-                        <li><button class="dropdown-item" type="button">Account</button></li>
 
-                        <a asp-action="orders" targ">
+                        <a asp-controller="Home" asp-action="orders">
                             <li><button class="dropdown-item" type="button">Orders</button></li>
                         </a>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Account" asp-action="Logout">
+                                <li><button class="dropdown-item" type="button">Log out</button></li>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Account" asp-action="login">
+                                <li><button class="dropdown-item" type="button">Sign In</button></li>
+                            </a>
+                        }
                     </ul>
                 </div>
                 <div class="cart-icon">
-                    <a asp-action="cart">
+                    <a asp-controller="Home" asp-action="cart">
                         <i class='bx bx-cart'></i>
                     </a>
                 </div>
@@ -140,20 +152,20 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Information</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="index">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="About">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="index">Privacy</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="Contact">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="index">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="About">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="index">Privacy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Contact">Contact</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>MY Account</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="login">Sign In</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="cart">My Cart</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="Orders">Orders</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-action="contact">Help</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="login">Sign In</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="cart">My Cart</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Orders">Orders</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="contact">Help</a></li>
                         </ul>
                     </div>
 

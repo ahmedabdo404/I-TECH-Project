@@ -7,12 +7,22 @@
       "destination": "wwwroot/lib/jquery/"
     },
     {
+<<<<<<< HEAD
       "library": "twitter-bootstrap@5.1.3",
       "destination": "wwwroot/lib/twitter-bootstrap/"
     },
     {
       "library": "bootstrap@5.1.3",
       "destination": "wwwroot/lib/bootstrap/"
+=======
+      "library": "bootstrap@5.1.3",
+      "destination": "wwwroot/lib/bootstrap/",
+      "files": [
+        "js/bootstrap.min.js",
+        "js/bootstrap.bundle.min.js",
+        "css/bootstrap.min.css"
+      ]
+>>>>>>> 9a57119de8832dc1f9da17ba8e4822fcb1ee69d2
     }
   ]
 }

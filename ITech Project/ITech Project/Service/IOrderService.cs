@@ -12,5 +12,8 @@ namespace ITech_Project.Service
         List<Order> GetAll();
         Order GetById(int id);
         int Update(Order ord);
+
+        void StoreOrder(List<ShoppingCartItem> items, string UserId, string UserEmailAddress);
+        List<Order> GetOrdersByUserId(string userId);
     }
 }

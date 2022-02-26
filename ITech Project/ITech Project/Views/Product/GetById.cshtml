@@ -1,5 +1,9 @@
 ﻿@model Product
 
+@section style {
+    <link rel="stylesheet" href="~/assets/css/details.css">
+}
+
 <section class="items-section">
     <div class="container">
         <div class="h m-3 ms-0">
@@ -7,22 +11,52 @@
         </div>
         <div class="details d-flex flex-row">
             <div id="carouselExampleDark" class="carousel" data-bs-ride="carousel">
+                @{
+                    string str = Model.Picture;
+                    var pictureList = str.Split(",");
+                }
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                        @for(int i = 0;i < @pictureList.Length; i++)
+                        {
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="@i" class="active"
+                            aria-current="true" aria-label="Slide @i"></button>
+                        }
                 </div>
                 <div class="carousel-inner">
-                    @{
-                        string str = Model.Picture;
-                        var pictureList = str.Split(",");
-                        foreach(var item in pictureList)
+                    @if(pictureList.Length <= 1)
+                    {
+                        //first image is active
+                        <div class="carousel-item active">
+                            @if (Model.ModelMobile != null)
+                            {
+                                <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg'">
+                            }else if (Model.ModelLabtop != null)
+                            {
+                                <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'">
+                            }
+                        </div>
+                    } 
+                    else
+                    {
+                        <div class="carousel-item active">
+                            @if (Model.ModelMobile != null)
+                            {
+                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg'"">
+                            }else if (Model.ModelLabtop != null)
+                            { 
+                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'"">
+                            }
+                        </div>
+                        for(int i = 1;i < pictureList.Length;i++)
                         {
-                            <div class="carousel-item active">
-                                <img src="@item" class="d-block" alt="...">
+                            <div class="carousel-item">
+                                @if (Model.ModelMobile != null)
+                                {
+                                    <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg'">
+                                }else if (Model.ModelLabtop != null)
+                                {
+                                    <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'">
+                                }
                             </div>
                         }
                     }
@@ -38,12 +72,15 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
             <div class="speces">
                 <div class="Product-Title">
                     <h4>@Model.Name</h4>
                     <hr>
-                    <div>
+                </div>
+                <div class="Product-Specification">
+                    <h4>Product Specification</h4>
+                    <hr>
+                    <span class="d-block">
                         Brand:
                         @if(Model.Category == Category.Laptop)
                         {
@@ -53,13 +90,13 @@
                         {
                             <p class="d-inline">@Model.ModelMobile</p>
                         }
-                    </div>                    
-                    <div>
+                    </span>
+                    <span>
                         Color: <p class="d-inline">@Model.Color</p> 
-                    </div>
-                   @* <div>
+                    </span>
+                    <span class="d-block">
                         Availability:
-                        @if(Model.UnitsInStock > Model.UnitsOnOrder)
+                        @if(Model.UnitsInStock > 0)
                         {
                             <p class="d-inline">In Stock</p>
                         }
@@ -67,48 +104,68 @@
                         {
                             <p class="d-inline">Out Of Stock</p>
                         }
-                    </div>*@
-                </div>
-                <div class="Product-dimensions">
-                    <h4>Product Description</h4>
-                    <hr>
-                    <p>
-                        @Model.Description
-                    </p>
+                    </span>
                 </div>
                 <div class="Product-reviews">
                     <h4>Product Reviews</h4>
                     <hr>
-                    <div>
-                        @Model.Ranking
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bx-star'></i>
-                        <p class="d-inline">&nbsp;&nbsp;&nbsp;1 review</p>
-                    </div>
+                    <span class="d-block">
+                        @for(int i = 0; i < Model.Ranking; i++)
+                        {
+                            <i class='bx bxs-star'></i> 
+                        }
+                        @for(byte? i = Model.Ranking; i < 5; i++)
+                        {
+                            <i class='bx bx-star'></i>
+                        }
+                        @switch (Model.Ranking)
+                        {
+                            case 0:
+                                 <p class="d-inline">Very Bad</p>
+                                 break;
+                            case 1:
+                                 <p class="d-inline">Bad</p>
+                                 break;
+                            case 2:
+                                 <p class="d-inline">Normal</p>
+                                 break;
+                            case 3:
+                                 <p class="d-inline">Good</p>
+                                 break;
+                            case 4:
+                                 <p class="d-inline">Very Good</p>
+                                 break;
+                            case 5:
+                                 <p class="d-inline">Excellent</p>
+                                 break;
+                        }
+                    </span>
                 </div>
             </div>
             <div class="Desc">
+                <div class="Product-Description">
+                    <h4>Product description</h4>
+                    <hr>
+                    <span class="d-block">
+                        <p>
+                            @Model.Description
+                        </p>
+                    </span>
+                </div>
                 <div class="Product-price">
                     <h4>Product price</h4>
                     <hr>
-                    <div class="price-val">
-                        @if(Model.Discount > 0)
-                        {
+                    <span class="d-block price-val">
+                        @{
+                            string price = ($"{Model.UnitPrice - Model.Discount}");
+                         }
                             <p class="d-inline" style="text-decoration: line-through">$ @Model.UnitPrice</p>
-                            <p class="d-inline">$ @Model.UnitPrice- @Model.Discount</p>
-                        }
-                        else
-                        {
-                            <p class="d-inline">$ @Model.UnitPrice</p>
-                        }
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center flex-row add-to-cart">
+                            <p class="d-inline">$@price</p>
+                    </span>
+                    <a asp-action="cart" class="cart-link"><span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
                         <i class='bx bxs-cart-add add-cart '></i>
                         <p class="d-inline">add-to cart</p>
-                    </div>
+                    </span></a>
                 </div>
             </div>
         </div>
@@ -120,27 +177,47 @@
             </div>
             <div class="d-flex flex-row" id="ca-body">
                 <div>
-                    Body Description:
-                    <br>
-                    @Model.Description
+                    <h6>Product Description:</h6><br>
+                    <p>@Model.Description</p>
                 </div>
                 <div hidden>
-                    Body Specification:
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deserunt minima possimus repellendus corporis aut cum quo quaerat! Qui ducimus voluptates vero! Voluptates earum iure quod eligendi modi beatae quia?
+                    <h6>Product Specification:</h6><br>
+                    <span class="d-block">
+                        Brand:
+                        @if(Model.Category == Category.Laptop)
+                        {
+                            <p class="d-inline">@Model.ModelLabtop</p>
+                        }
+                        else if(Model.Category == Category.Phone)
+                        {
+                            <p class="d-inline">@Model.ModelMobile</p>
+                        }
+                    </span>
+                    <span>
+                        Color: <p class="d-inline">@Model.Color</p> 
+                    </span>
+                    <span class="d-block">
+                        Availability:
+                        @if(Model.UnitsInStock > 0)
+                        {
+                            <p class="d-inline">In Stock</p>
+                        }
+                        else
+                        {
+                            <p class="d-inline">Out Of Stock</p>
+                        }
+                    </span>
                 </div>
                 <div hidden>
-                    Body review
-                    :<br>
-@*                    <div class="form-group">
-                        <label asp-for="Description" class="control-label mb-2"></label>
-                        <textarea asp-for="Note" class="form-control" rows="6" style="resize: none">
-                        </textarea>
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>*@
+                    <h6>Customers reviews:</h6><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolorem, atque nemo tenetur veritatis fuga dolore modi exercitationem quidem labore accusantium, delectus reiciendis quam voluptates architecto hic debitis sapiente earum.
 
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+@section script{
+    <script src="~/assets/js/details.js"></script>
+}

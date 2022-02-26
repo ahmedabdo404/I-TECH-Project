@@ -44,10 +44,11 @@ namespace ITech_Project
             services.AddScoped<IOrderDetailService, OrderDetailService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISupplierService, SupplierService>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
             services.AddScoped(sc => ShoppingCart.GEtShopCart(sc));
 
             services.AddSession();
+
 
             services.Configure<IdentityOptions>(options =>
             {

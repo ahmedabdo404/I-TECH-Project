@@ -72,7 +72,7 @@ hr {
 
 .price-val p:nth-child(1){
     color: var(--fifth-color);
-    text-decoration: line-through;
+    /*text-decoration: line-through;*/
     margin-right: 1rem;
     font-size: var(--font-size2)
 }
@@ -81,7 +81,6 @@ hr {
     color: var(--main-color);
     font-size: var(--font-size1)
 }
-
 
 .cart-link {
     text-decoration: none
@@ -119,7 +118,11 @@ hr {
     margin-bottom: 2rem;
 }
 
-#custome-accordion #ca-title{
+#custome-accordion p{
+    margin: 0
+}
+
+#custome-accordion #ca-title {
     width: fit-content;
     /* background-color: var(--third-color); */
 }

@@ -65,7 +65,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 CustomerService.Update(customer);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("GetById");
             }
             return View(customer);
         }
@@ -86,7 +86,7 @@ namespace ITech_Project.Controllers
             }
             catch (Exception exception)
             {
-                ModelState.AddModelError("", exception.InnerException.Message);
+                ModelState.AddModelError("",exception.InnerException.Message);
                 return View("Update");
             }
         }

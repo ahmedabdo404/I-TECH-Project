@@ -4,7 +4,6 @@ let daysDiv = document.querySelector(".days")
 let hoursDiv = document.querySelector(".Hours")
 let minutesDiv = document.querySelector(".Minutes")
 let secondsDiv = document.querySelector(".Seconds")
-let productslink = document.querySelectorAll(".p-link");
 
 let timer = new Date("Mar 1, 2022 00:00:00").getTime();
 // console.log(timer)
@@ -45,9 +44,10 @@ var options = {
 };
 var typed = new Typed('.element', options);
 
-// add links to products
-window.onload = () => {
-    for (let l of productslink)
-        //l.setAttribute("asp-action", "details");
-        l.setAttribute("href", "Home/details");
-}
+//// add links to products
+//let productslink = document.querySelectorAll(".p-link");
+//window.onload = () => {
+//    for (let l of productslink)
+//        //l.setAttribute("asp-action", "details");
+//        l.setAttribute("href", "Home/details");
+//}
