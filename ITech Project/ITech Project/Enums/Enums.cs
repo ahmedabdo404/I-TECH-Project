@@ -32,6 +32,7 @@
         MSI = 8 ,
         Asus = 9 ,
         MicrosoftSurface = 10 ,
+        Other = 11
     }
     public enum ModelMobile : byte
     {
@@ -43,6 +44,7 @@
         xiaomi = 6 ,
         Redmi = 7 ,
         Nokia = 8 ,
+        Other = 9
     }
     public enum Shipper : byte
     {
@@ -52,5 +54,6 @@
         Mashawier = 4 ,
         Engiziny = 5 ,
         ExpressCairo = 6 ,
+        Other = 7
     }
 }
