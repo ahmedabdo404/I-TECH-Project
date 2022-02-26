@@ -535,3 +535,184 @@ C:\Users\Mayada\Desktop\I-TECH Project\I-TECH-Project\ITech Project\ITech Projec
 C:\Users\Mayada\Desktop\I-TECH Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\GetAllCustomers.cshtml.g.cs
 C:\Users\Mayada\Desktop\I-TECH Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\GetById.cshtml.g.cs
 C:\Users\Mayada\Desktop\I-TECH Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\Create.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.json
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\libman.json
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.exe
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.deps.json
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.runtimeconfig.json
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.runtimeconfig.dev.json
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ref\ITech Project.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.Views.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ITech Project.Views.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Humanizer.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Composition.AttributedModel.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Composition.Convention.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Composition.Hosting.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Composition.Runtime.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Composition.TypedParts.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Runtime.Caching.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\scopedcss\bundle\ITech Project.styles.css
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\staticwebassets\ITech Project.StaticWebAssets.Manifest.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.input.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.output.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorCoreGenerate.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\ForgetPassword.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\ForgetPasswordConfirmation.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUp.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\Create.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\GetAllCustomers.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\GetById.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Cart.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\CheckOut.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\DashBoard.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\forgetPassword.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\orders.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\resetPassword.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\sub.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\OrderDetail\Create.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\OrderDetail\GetAll.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\Create.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAll.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetById.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\Update.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetAll.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetById.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ItechLayout.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Supplier\Create.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Supplier\GetAll.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Supplier\GetById.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Supplier\Update.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorTargetAssemblyInfo.cache
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorTargetAssemblyInfo.cs
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.Views.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CopyComplete
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
+E:\graduation-project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
