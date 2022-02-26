@@ -63,7 +63,7 @@ namespace ITech_Project.Service
             {
                 var orderitem = new OrderDetail()
                 {
-                    Price = (int)item.product.UnitPrice,
+                    Price =item.product.UnitPrice,
                     ProductId = item.product.Id,
                     Quantity = item.Amount,
                     OrderId = order.Id

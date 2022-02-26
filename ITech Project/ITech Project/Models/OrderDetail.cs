@@ -15,7 +15,7 @@ namespace ITech_Project.Models
         [Display(Name = "Price")]
         [Required(ErrorMessage = "Price Is Required")]
         [DataType(DataType.Currency)]
-        public int Price { get; set; }
+        public double Price { get; set; }
 
         [Display(Name = "Quantity")]
         [Required(ErrorMessage = "Quantity Is Required")]
