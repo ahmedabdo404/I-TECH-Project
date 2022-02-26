@@ -14,8 +14,7 @@ namespace ITech_Project.Models
 
         [Display(Name = "Price")]
         [Required(ErrorMessage = "Price Is Required")]
-        [DataType(DataType.Currency)]
-        public int Price { get; set; }
+        public double Price { get; set; }
 
         [Display(Name = "Quantity")]
         [Required(ErrorMessage = "Quantity Is Required")]
@@ -37,14 +36,14 @@ namespace ITech_Project.Models
         [DataType(DataType.Date)]
         public string BillDate { get; set; }
 
-        [Display(Name = "Color")]
-        public Color Color { get; set; }
+        //[Display(Name = "Color")]
+        //public Color Color { get; set; }
 
-        [Display(Name = "Mobile Model")]
-        public ModelMobile? ModelMobile { get; set; }
+        //[Display(Name = "Mobile Model")]
+        //public ModelMobile? ModelMobile { get; set; }
 
-        [Display(Name = "Labtop Model")]
-        public ModelLabtop? ModelLabtop { get; set; }
+        //[Display(Name = "Labtop Model")]
+        //public ModelLabtop? ModelLabtop { get; set; }
 
         [Display(Name = "Order")]
         [ForeignKey("Order")]
@@ -55,9 +54,6 @@ namespace ITech_Project.Models
         [ForeignKey("Product")]
         public int? ProductId { get; set; }
         public Product Product { get; set; }
-
-
-
 
 
     }

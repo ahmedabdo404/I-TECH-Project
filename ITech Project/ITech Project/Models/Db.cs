@@ -5,10 +5,6 @@ namespace ITech_Project.Models
 {
     public class Db : IdentityDbContext
     {
-        public Db()
-        {
-
-        }
         public Db(DbContextOptions<Db> options) : base(options)
         {
 

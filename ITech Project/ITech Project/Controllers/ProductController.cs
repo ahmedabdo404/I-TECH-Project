@@ -8,35 +8,31 @@ namespace ITech_Project.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService ProductRepo;
-        private readonly ISupplierService SupplierRepo;
 
-        public ProductController(IProductService productRepo, ISupplierService supplierRepo)
+        public ProductController(IProductService productRepo)
         {
             ProductRepo = productRepo;
-            SupplierRepo = supplierRepo;
         }
 
         public IActionResult GetAll()
         {
-            ViewData["supplier"] = SupplierRepo.GetAll();
-            return View(ProductRepo.GetAll());
+            var products = ProductRepo.GetAll();
+            return View(products);
         }
         public IActionResult GetById([FromRoute]int id)
         {
-            ViewData["supplier"] = SupplierRepo.GetAll();
-            return View(ProductRepo.GetById(id));
+            var product = ProductRepo.GetById(id);
+            if (product == null)
+                return Content("Product Not Found");
+            return View(product);
         }
 
         [HttpGet]
-
         //[Authorize(Roles = "Admin")]
-        [Authorize]
         public IActionResult Create()
         {
-            ViewData["supplier"] = SupplierRepo.GetAll();
             return View();
         }
-
 
         [HttpPost]
         public IActionResult Create(Product product)
@@ -46,16 +42,19 @@ namespace ITech_Project.Controllers
                 ProductRepo.Create(product);
                 return RedirectToAction("GetAll");
             }
-            ViewData["supplier"] = SupplierRepo.GetAll();
-            return View();
+            return View(product);
         }
 
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
+        //[HttpGet]
+        //[Authorize(Roles = "Admin")]
         public IActionResult Update([FromRoute] int id)
         {
-            return View(ProductRepo.GetById(id));
+            var product = ProductRepo.GetById(id);
+            if(product == null) 
+                return Content("Product Not Found");
+            return View(product);
         }
+
         [HttpPost]
         public IActionResult Update(Product product)
         {
@@ -64,14 +63,15 @@ namespace ITech_Project.Controllers
                 ProductRepo.Update(product);
                 return RedirectToAction("GetAll");
             }
-            ViewData["supplier"] = SupplierRepo.GetAll();
-            return View();
+            return View(product);
         }
 
-
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public IActionResult Delete([FromRoute]int id)
         {
+            var product = ProductRepo.GetById(id);
+            if (product == null)
+                return Content("Product Not Found");
             try
             {
                 ProductRepo.Delete(id);
