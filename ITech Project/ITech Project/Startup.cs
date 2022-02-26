@@ -1,7 +1,9 @@
+using ITech_Project.Cart;
 using ITech_Project.Models;
 using ITech_Project.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -42,8 +44,10 @@ namespace ITech_Project
             services.AddScoped<IOrderDetailService, OrderDetailService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISupplierService, SupplierService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sc => ShoppingCart.GEtShopCart(sc));
 
-
+            services.AddSession();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -86,6 +90,7 @@ namespace ITech_Project
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             //Must be before Authorization
             app.UseAuthentication();  // If i have cookie or not 

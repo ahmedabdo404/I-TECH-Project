@@ -16,7 +16,9 @@
                 <h2 class="product-title">@item.Name</h2>
                 <span class="price">$ @item.UnitPrice</span>
                 <i class='bx bxs-cart-add add-cart '></i>
+<a class="btn btn-success" asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">Add To Cart</a>
             </div>
         }
     </div>
 </section>
+

@@ -1,0 +1,48 @@
+﻿@model ShoppingCartViewModel
+
+
+<div class="Container">
+
+    <table class="table table">
+        <tr>
+            <th>Selected Amount</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+        @foreach (var item in @Model.ShoppingCart.ShoppingCartItems)
+       {   
+        <tr>
+            <td>@item.Amount</td>
+            <td>@item.product.Name</td>
+            <td>@item.product.UnitPrice.ToString("c")</td>
+            <td>@((item.Amount*item.product.UnitPrice).ToString("c"))</td>
+            <td>
+    <a class="btn btn success" asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id"  > Delete</a>
+    <a class="btn btn success" asp-action="AddToShoppingCart" asp-route-id="@item.product.Id"  > Add</a>
+            </td>
+        </tr>
+       }
+       <tfoot>
+           <tr>
+               <td colspan="2"></td>
+               <td> <b>Total: </b></td>
+               <td>@Model.ShoppingCartTotal.ToString("c")</td>
+       </tfoot>
+
+
+
+    </table>
+
+    <div class="text-center">
+        <div class="btn-group">
+            <a  class="btn btn-outline-danger" asp-controller="Product" asp-action="GetAll">Add More Prdouct</a>
+
+        </div>
+    </div>
+
+
+
+
+    </div>

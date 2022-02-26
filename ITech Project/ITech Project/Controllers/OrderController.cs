@@ -1,5 +1,7 @@
-﻿using ITech_Project.Models;
+﻿using ITech_Project.Cart;
+using ITech_Project.Models;
 using ITech_Project.Service;
+using ITech_Project.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,35 +10,40 @@ namespace ITech_Project.Controllers
 {
     public class OrderController : Controller
     {
-        public IOrderService OrderServices { get; }
-        public ICustomerService CustomerServices { get; }
+        private readonly IOrderService ordRepo;
+        private readonly ICustomerService custRepo;
+        private readonly IProductService proRepo;
+        private readonly ShoppingCart shoppingCart;
 
-        public OrderController(IOrderService _ordRepo,
-            ICustomerService _custRepo)
+        public OrderController(IOrderService _ordRepo,ICustomerService _custRepo,
+            IProductService _proRepo, ShoppingCart _shoppingCart)
         {
-            OrderServices = _ordRepo;
-            CustomerServices = _custRepo;
+            
+            ordRepo = _ordRepo;
+            custRepo = _custRepo;
+            proRepo = _proRepo;
+            shoppingCart = _shoppingCart;
         }
 
 
         public IActionResult GetAll()
         {
-            ViewData["Cust"] = CustomerServices.GetAll();
-            return View(OrderServices.GetAll());
+            ViewData["Cust"] = custRepo.GetAll();
+            return View(ordRepo.GetAll());
         }
 
         
         public IActionResult GetById([FromRoute] int id)
         {
-            ViewData["Cust"] = CustomerServices.GetAll();
-            return View(OrderServices.GetById(id));
+            ViewData["Cust"] = custRepo.GetAll();
+            return View(ordRepo.GetById(id));
         }
 
         
         [HttpGet]
         public IActionResult Create()
         {
-            ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Cust"] = custRepo.GetAll();
             return View();
         }
 
@@ -47,19 +54,19 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 //save db
-                OrderServices.Create(neword);
+                ordRepo.Create(neword);
                 //display index view
                 return RedirectToAction("GetAll");
             }
-            ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Cust"] = custRepo.GetAll();
             return View(neword);//html
         }
 
         [HttpGet]
         public IActionResult Update(int id)
         {
-            ViewData["Cust"] = CustomerServices.GetAll();
-            Order ord = OrderServices.GetById(id);
+            ViewData["Cust"] = custRepo.GetAll();
+            Order ord = ordRepo.GetById(id);
             return View(ord);
         }
         [HttpPost]
@@ -67,10 +74,10 @@ namespace ITech_Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                OrderServices.Update(newOrder);
+                ordRepo.Update(newOrder);
                 return RedirectToAction("GetAll");
             }
-            ViewData["Cust"] = CustomerServices.GetAll();
+            ViewData["Cust"] = custRepo.GetAll();
             return View(newOrder);
         }
 
@@ -79,7 +86,7 @@ namespace ITech_Project.Controllers
         {
             try
             {
-                OrderServices.Delete(id);
+                ordRepo.Delete(id);
                 return RedirectToAction("GetAll");
             }
             catch (Exception ex)
@@ -90,8 +97,43 @@ namespace ITech_Project.Controllers
         }
 
 
+        //---------------------------//
+        public IActionResult Index()
+        {
+            var items = shoppingCart.GetShoppingCart();
+            shoppingCart.ShoppingCartItems=items;
 
-      
+            var response = new ShoppingCartViewModel()
+            {
+                ShoppingCart = shoppingCart,
+                ShoppingCartTotal = shoppingCart.GetShoppingCartTotal()
+
+            };
+            return View(response);
+        }
+
+        public IActionResult AddToShoppingCart(int id)
+        { 
+        var item = proRepo.GetById(id);
+
+            if (item != null)
+            { 
+            shoppingCart.AddItemToCart(item);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult RemoveItemFromCart(int id)
+        {
+            var item = proRepo.GetById(id);
+
+            if (item != null)
+            {
+                shoppingCart.RemoveItemFromCart(item);
+            }
+            return RedirectToAction("Index");
+        }
+
 
 
 

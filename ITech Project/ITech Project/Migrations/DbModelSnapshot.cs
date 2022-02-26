@@ -237,6 +237,29 @@ namespace ITech_Project.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("ITech_Project.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShoppingCartId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("productId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("productId");
+
+                    b.ToTable("ShoppingCartItems");
+                });
+
             modelBuilder.Entity("ITech_Project.Models.Supplier", b =>
                 {
                     b.Property<int>("Id")
@@ -516,6 +539,15 @@ namespace ITech_Project.Migrations
                         .HasForeignKey("SupplierId");
 
                     b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("ITech_Project.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("ITech_Project.Models.Product", "product")
+                        .WithMany()
+                        .HasForeignKey("productId");
+
+                    b.Navigation("product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
