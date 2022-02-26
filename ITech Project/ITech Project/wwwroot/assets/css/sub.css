@@ -67,6 +67,7 @@
 
 .price {
     font-weight: 500;
+    color: var(--main-color) !important;
 }
 
 .add-cart {
@@ -80,10 +81,10 @@
     cursor: pointer;
 }
 
-    .add-cart:hover {
-        background: var(--main-color);
-        transition: var(--transition2);
-    }
+.add-cart:hover {
+    background: var(--main-color);
+    transition: var(--transition2);
+}
 /* filter ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>filter*/
 
 .filter {
