@@ -3,9 +3,10 @@
     public enum Color: byte
     {
        Red = 1 ,
-       Black = 2,
-       Blue = 4,
-       Gray = 8
+       Black = 2 ,
+       Blue = 4 ,
+       Gray = 8 ,
+       Other = 16
     }
     public enum Payment : byte
     {
@@ -19,6 +20,7 @@
     {
         Laptop = 1 ,
         Phone = 2 ,
+        Accessories = 3
     }
     public enum ModelLabtop : byte
     {
@@ -56,4 +58,9 @@
         ExpressCairo = 6 ,
         Other = 7
     }
+    public enum Accessories : byte
+    {
+
+    }
+
 }

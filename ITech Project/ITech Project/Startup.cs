@@ -32,11 +32,13 @@ namespace ITech_Project
             option.UseSqlServer(Configuration.GetConnectionString("cs")));
 
             //Set the time of token validity
-            services.Configure<DataProtectionTokenProviderOptions>(opts => opts.TokenLifespan = TimeSpan.FromHours(10));
+            services.Configure<DataProtectionTokenProviderOptions>(opts => 
+            opts.TokenLifespan = TimeSpan.FromHours(10));
             
             //extension method to enable the token generation in the project
             //injection
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Db>().AddDefaultTokenProviders();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<Db>().AddDefaultTokenProviders();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderDetailService, OrderDetailService>();

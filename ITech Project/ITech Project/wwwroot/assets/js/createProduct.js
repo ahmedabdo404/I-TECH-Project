@@ -28,7 +28,7 @@ window.onload = () => {
     console.log(categ.value)
 }
 
-// on submit for remove the other categry(temperory sol for category valdation issue)
+ //on submit for remove the other categry(temperory sol for category valdation issue)
 createFrom.onsubmit = () => {
     if (categ.value == 1) {
         mob.remove();

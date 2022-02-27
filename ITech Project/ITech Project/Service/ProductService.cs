@@ -1,4 +1,5 @@
 ﻿using ITech_Project.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,11 +22,11 @@ namespace ITech_Project.Service
         //read
         public List<Product> GetAll()
         {
-            return Context.Products.ToList();
+            return Context.Products.Include(x => x.Supplier).ToList();
         }
         public Product GetById(int id)
         {
-            return Context.Products.FirstOrDefault(x => x.Id == id);
+            return Context.Products.Include(x => x.Supplier).FirstOrDefault(x => x.Id == id);
         }
         public Product GetByName(string name)
         {

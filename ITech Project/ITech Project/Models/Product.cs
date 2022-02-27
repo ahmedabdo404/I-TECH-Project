@@ -41,6 +41,8 @@ namespace ITech_Project.Models
         [Display(Name = "Labtop Model")]
         public ModelLabtop? ModelLabtop { get; set; }
 
+        public Accessories? Accessories { get; set; }
+
         [Display(Name ="Supplier")]
         [ForeignKey("Supplier")]
         public int? SupplierId { get; set; }
