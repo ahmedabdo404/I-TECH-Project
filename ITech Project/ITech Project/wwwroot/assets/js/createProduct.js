@@ -36,7 +36,7 @@ createFrom.onsubmit = () => {
         lab.remove();
     }
 }
-
+console.log("test2")
 
 let picInput = document.querySelector(".pic-input");
 let imageAdd = document.querySelector("#image-add");
@@ -45,11 +45,10 @@ let imgLink;
 
 imageAdd.onclick = () => {
     imgLink = prompt("enter the link of image here");
-    console.log(imgLink)
-    if (imgLink !== "") {
+    if (imgLink !== "" && imgLink !== null) {
         if (picInput.value === '')
             picInput.value += `${imgLink}`;
         else if (picInput.value !== '')
-            picInput.value += `,${imgLink}`;
+            picInput.value += `,\n${imgLink}`;
     }
 }
