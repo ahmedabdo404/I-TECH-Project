@@ -140,17 +140,8 @@ namespace ITech_Project.Migrations
                     b.Property<string>("BillDate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("Color")
-                        .HasColumnType("tinyint");
-
                     b.Property<int>("Discount")
                         .HasColumnType("int");
-
-                    b.Property<byte?>("ModelLabtop")
-                        .HasColumnType("tinyint");
-
-                    b.Property<byte?>("ModelMobile")
-                        .HasColumnType("tinyint");
 
                     b.Property<int?>("OrderId")
                         .HasColumnType("int");
@@ -158,8 +149,8 @@ namespace ITech_Project.Migrations
                     b.Property<int>("OrderNumber")
                         .HasColumnType("int");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
@@ -188,6 +179,9 @@ namespace ITech_Project.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte?>("Accessories")
+                        .HasColumnType("tinyint");
 
                     b.Property<byte>("Category")
                         .HasColumnType("tinyint");

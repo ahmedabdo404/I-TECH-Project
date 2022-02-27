@@ -26,13 +26,7 @@
                 <input asp-for="OrderNumber" class="form-control" placeholder="Enter number">
                 <span asp-validation-for="OrderNumber" class="text-danger"></span>
             </div>
-            <div>
-                <label asp-for="ModelLabtop" class="form-control"></label>
-                <select asp-for="ModelLabtop" asp-items="Html.GetEnumSelectList<ModelLabtop>()" class="form-control">
-                    <option selected>--Select Model Labtop--</option>
-                </select>
-                <span asp-validation-for="ModelLabtop" class="text-danger"></span>
-            </div>
+
             <div>
                 <label asp-for="Price"></label>
                 <input asp-for="Price" class="form-control" placeholder="Enter Price">
@@ -62,13 +56,6 @@
                 <label asp-for="Total"></label>
                 <input asp-for="Total" class="form-control" placeholder="Enter Total">
                 <span asp-validation-for="Total" class="text-danger"></span> 
-            </div>
-            <div>
-                <label asp-for="Color" class="form-control"></label>
-                <select asp-for="Color" asp-items="Html.GetEnumSelectList<Color>()" class="form-control">
-                    <option selected>--Select Color--</option>
-                </select>
-                <span asp-validation-for="Color" class="text-danger"></span>
             </div>
 
             <input type="submit" value="Create" class="btn btn-warning mt-3"/>

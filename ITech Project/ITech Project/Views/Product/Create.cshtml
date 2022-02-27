@@ -47,7 +47,7 @@
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-3">
+            <div class="form-group d-none" id="Acc">
                 <label asp-for="Accessories" class="control-label mb-2"></label>
                 <select asp-for="Accessories" asp-items="Html.GetEnumSelectList<Accessories>()" class="form-control">
                     <option selected>--Select Accessories--</option>

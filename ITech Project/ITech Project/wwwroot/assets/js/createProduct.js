@@ -2,17 +2,30 @@
 let categ = document.getElementById("Category");
 let mob = document.getElementById("mob");
 let lab = document.getElementById("lab");
+let Acc = document.getElementById("Acc");
 
 function changeValue() {
     if (this.value == 1) {
+        // show lab-brand
         mob.classList.add("d-none");
+        Acc.classList.add("d-none");
         lab.classList.remove("d-none");
+
     } else if (this.value == 2) {
+        // show mob-brand
         lab.classList.add("d-none");
+        Acc.classList.add("d-none");
         mob.classList.remove("d-none");
+    } else if (this.value == 3) {
+        // show Acc-Kind
+        lab.classList.add("d-none");
+        mob.classList.add("d-none");
+        Acc.classList.remove("d-none");
     } else {
+        // show nothing
         mob.classList.add("d-none");
         lab.classList.add("d-none");
+        Acc.classList.add("d-none");
     }
 }
 
@@ -24,6 +37,8 @@ window.onload = () => {
         lab.classList.remove("d-none");
     } else if (categ.value == 2) {
         mob.classList.remove("d-none");
+    } else if (categ.value == 3) {
+        Acc.classList.remove("d-none");
     }
     console.log(categ.value)
 }
@@ -32,11 +47,15 @@ window.onload = () => {
 createFrom.onsubmit = () => {
     if (categ.value == 1) {
         mob.remove();
+        Acc.remove();
     } else if (categ.value == 2){
         lab.remove();
+        Acc.remove();
+    } else if (categ.value == 3){
+        lab.remove();
+        mob.remove();
     }
 }
-console.log("test2")
 
 let picInput = document.querySelector(".pic-input");
 let imageAdd = document.querySelector("#image-add");

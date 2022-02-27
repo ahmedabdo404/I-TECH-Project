@@ -33,6 +33,9 @@
                             }else if (Model.ModelLabtop != null)
                             {
                                 <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'">
+                            }else if (Model.Accessories != null)
+                            {
+                                <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'">
                             }
                         </div>
                     } 
@@ -48,6 +51,9 @@
                             }else if (Model.ModelLabtop != null)
                             { 
                                 <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format' />
+                            }else if (Model.Accessories != null)
+                            {
+                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'">
                             }
                         </div>
                         for(int i = 1;i < pictureList.Length;i++)
@@ -59,6 +65,9 @@
                                 }else if (Model.ModelLabtop != null)
                                 {
                                     <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'">
+                                }else if (Model.Accessories != null)
+                                {
+                                    <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'">
                                 }
                             </div>
                         }
@@ -165,21 +174,14 @@
                             <p class="d-inline" style="text-decoration: line-through">$ @Model.UnitPrice</p>
                             <p class="d-inline">$@price</p>
                     </span>
-<<<<<<< HEAD
                     <a asp-controller="Home" asp-action="cart" class="cart-link">
                             <span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
-=======
-                    <a asp-action="cart" class="cart-link">
-                        <span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
->>>>>>> 68b6e22b466c5da0043c08322b05bef066a9daf1
                             <i class='bx bxs-cart-add add-cart '></i>
                             <p class="d-inline">add-to cart</p>
                         </span>
                     </a>
-<<<<<<< HEAD
-=======
+
                     <a asp-action="Delete" asp-route-id="@Model.Id" id="delete-product">Delete</a>
->>>>>>> 68b6e22b466c5da0043c08322b05bef066a9daf1
                 </div>
             </div>
         </div>

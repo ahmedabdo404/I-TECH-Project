@@ -60,6 +60,8 @@
     }
     public enum Accessories : byte
     {
+        MobileAccessories = 1,
+        LabtopAccessories = 2
 
     }
 
