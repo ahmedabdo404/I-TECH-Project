@@ -15,10 +15,10 @@
                 }
             }
         </tr>
-        <tr>
+       @* <tr>
             <th>Order Number</th>
             <td>@Model.OrderNumber</td>
-        </tr>
+        </tr>*@
          <tr>
             <th>Payment Method</th>
            <td>@Model.Payment </td>
@@ -27,10 +27,10 @@
             <td>@Model.Shipper </td>
         </tr>
         
-        <tr>
+      @*  <tr>
             <th>Order Date</th>
             <td>@Model.OrderDate</td>
-        </tr>
+        </tr>*@
         <tr>
             <th>Freight</th>
             <td>@Model.Freight</td>
@@ -40,10 +40,10 @@
             <td>@Model.Freight</td>
         </tr>
  
-        <tr>
+       @* <tr>
             <th>Payment Date</th>
             <td>@Model.PaymentDate</td>
-        </tr>    
+        </tr>   *@ 
     </table>
 
     <a asp-action="GetAll" asp-controller="Order" class="btn btn-secondary">Back</a>

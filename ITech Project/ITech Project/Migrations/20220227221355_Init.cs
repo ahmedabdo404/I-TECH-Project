@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ITech_Project.Migrations
 {
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,33 @@ namespace ITech_Project.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Customers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PostalCode = table.Column<int>(type: "int", nullable: true),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreditCardTypeId = table.Column<string>(type: "nvarchar(14)", maxLength: 14, nullable: false),
+                    CardExpDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    BillingCountry = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BillingAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BillingCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipCountry = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateEntered = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Customers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -176,6 +203,31 @@ namespace ITech_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Orders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Freight = table.Column<int>(type: "int", nullable: false),
+                    Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CustomerId = table.Column<int>(type: "int", nullable: true),
+                    Payment = table.Column<byte>(type: "tinyint", nullable: false),
+                    Shipper = table.Column<byte>(type: "tinyint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Orders_Customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -184,17 +236,16 @@ namespace ITech_Project.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UnitPrice = table.Column<double>(type: "float", nullable: false),
-                    SupplierProductId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UnitsInStock = table.Column<int>(type: "int", nullable: true),
-                    UnitsOnOrder = table.Column<int>(type: "int", nullable: true),
-                    Discount = table.Column<double>(type: "float", nullable: true),
+                    UnitsInStock = table.Column<int>(type: "int", nullable: false),
+                    Discount = table.Column<double>(type: "float", nullable: false),
                     Picture = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ranking = table.Column<byte>(type: "tinyint", nullable: true),
                     Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<byte>(type: "tinyint", nullable: false),
                     Category = table.Column<byte>(type: "tinyint", nullable: false),
-                    ModelMobile = table.Column<byte>(type: "tinyint", nullable: false),
-                    ModelLabtop = table.Column<byte>(type: "tinyint", nullable: false),
+                    ModelMobile = table.Column<byte>(type: "tinyint", nullable: true),
+                    ModelLabtop = table.Column<byte>(type: "tinyint", nullable: true),
+                    Accessories = table.Column<byte>(type: "tinyint", nullable: true),
                     SupplierId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -209,80 +260,15 @@ namespace ITech_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Orders",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OrderNumber = table.Column<int>(type: "int", nullable: false),
-                    OrderDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ShipDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RequiredDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Freight = table.Column<int>(type: "int", nullable: true),
-                    Timestamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TransactStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Deleted = table.Column<bool>(type: "bit", nullable: false),
-                    Paid = table.Column<int>(type: "int", nullable: true),
-                    PaymentDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CustomerId = table.Column<int>(type: "int", nullable: true),
-                    Payment = table.Column<byte>(type: "tinyint", nullable: false),
-                    Shipper = table.Column<byte>(type: "tinyint", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Orders", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Customers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PostalCode = table.Column<int>(type: "int", nullable: true),
-                    Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreditCardTypeId = table.Column<int>(type: "int", maxLength: 14, nullable: false),
-                    CardExpDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BillingCountry = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BillingAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BillingCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShipAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShipCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShipCountry = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateEntered = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    OrderId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Customers_Orders_OrderId",
-                        column: x => x.OrderId,
-                        principalTable: "Orders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "OrderDetails",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    OrderNumber = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    Discount = table.Column<int>(type: "int", nullable: false),
-                    Total = table.Column<int>(type: "int", nullable: false),
-                    ShipDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    BillDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Color = table.Column<byte>(type: "tinyint", nullable: false),
-                    ModelMobile = table.Column<byte>(type: "tinyint", nullable: false),
-                    ModelLabtop = table.Column<byte>(type: "tinyint", nullable: false),
+                    Discount = table.Column<double>(type: "float", nullable: false),
+                    Total = table.Column<double>(type: "float", nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: true),
                     ProductId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -298,6 +284,27 @@ namespace ITech_Project.Migrations
                     table.ForeignKey(
                         name: "FK_OrderDetails_Products_ProductId",
                         column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ShoppingCartItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    productId = table.Column<int>(type: "int", nullable: true),
+                    Amount = table.Column<int>(type: "int", nullable: false),
+                    ShoppingCartId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShoppingCartItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ShoppingCartItems_Products_productId",
+                        column: x => x.productId,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -343,11 +350,6 @@ namespace ITech_Project.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Customers_OrderId",
-                table: "Customers",
-                column: "OrderId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderDetails_OrderId",
                 table: "OrderDetails",
                 column: "OrderId");
@@ -367,21 +369,14 @@ namespace ITech_Project.Migrations
                 table: "Products",
                 column: "SupplierId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Orders_Customers_CustomerId",
-                table: "Orders",
-                column: "CustomerId",
-                principalTable: "Customers",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
+            migrationBuilder.CreateIndex(
+                name: "IX_ShoppingCartItems_productId",
+                table: "ShoppingCartItems",
+                column: "productId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Customers_Orders_OrderId",
-                table: "Customers");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -401,22 +396,25 @@ namespace ITech_Project.Migrations
                 name: "OrderDetails");
 
             migrationBuilder.DropTable(
+                name: "ShoppingCartItems");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Products");
-
-            migrationBuilder.DropTable(
-                name: "Suppliers");
-
-            migrationBuilder.DropTable(
                 name: "Orders");
 
             migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
                 name: "Customers");
+
+            migrationBuilder.DropTable(
+                name: "Suppliers");
         }
     }
 }

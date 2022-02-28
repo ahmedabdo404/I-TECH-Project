@@ -41,9 +41,8 @@ namespace ITech_Project.Migrations
                     b.Property<string>("BillingCountry")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CardExpDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CardExpDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -58,8 +57,8 @@ namespace ITech_Project.Migrations
                         .HasMaxLength(14)
                         .HasColumnType("nvarchar(14)");
 
-                    b.Property<string>("DateEntered")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("DateEntered")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -99,28 +98,22 @@ namespace ITech_Project.Migrations
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Freight")
-                        .HasColumnType("int");
-
-                    b.Property<string>("OrderDate")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderNumber")
+                    b.Property<int>("Freight")
                         .HasColumnType("int");
 
                     b.Property<byte>("Payment")
                         .HasColumnType("tinyint");
 
-                    b.Property<string>("PaymentDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ShipDate")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<byte>("Shipper")
                         .HasColumnType("tinyint");
 
-                    b.Property<string>("Timestamp")
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -137,16 +130,10 @@ namespace ITech_Project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("BillDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Discount")
-                        .HasColumnType("int");
+                    b.Property<double>("Discount")
+                        .HasColumnType("float");
 
                     b.Property<int?>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderNumber")
                         .HasColumnType("int");
 
                     b.Property<double>("Price")
@@ -158,11 +145,8 @@ namespace ITech_Project.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<string>("ShipDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Total")
-                        .HasColumnType("int");
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -192,7 +176,7 @@ namespace ITech_Project.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("Discount")
+                    b.Property<double>("Discount")
                         .HasColumnType("float");
 
                     b.Property<byte?>("ModelLabtop")
@@ -221,7 +205,7 @@ namespace ITech_Project.Migrations
                     b.Property<double>("UnitPrice")
                         .HasColumnType("float");
 
-                    b.Property<int?>("UnitsInStock")
+                    b.Property<int>("UnitsInStock")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -229,6 +213,29 @@ namespace ITech_Project.Migrations
                     b.HasIndex("SupplierId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("ITech_Project.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShoppingCartId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("productId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("productId");
+
+                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("ITech_Project.Models.Supplier", b =>
@@ -271,9 +278,8 @@ namespace ITech_Project.Migrations
                     b.Property<int?>("PostalCode")
                         .HasColumnType("int");
 
-                    b.Property<string>("TypeGoods")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte>("TypeGoods")
+                        .HasColumnType("tinyint");
 
                     b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");
@@ -491,7 +497,7 @@ namespace ITech_Project.Migrations
             modelBuilder.Entity("ITech_Project.Models.OrderDetail", b =>
                 {
                     b.HasOne("ITech_Project.Models.Order", "Order")
-                        .WithMany()
+                        .WithMany("OrderDetails")
                         .HasForeignKey("OrderId");
 
                     b.HasOne("ITech_Project.Models.Product", "Product")
@@ -510,6 +516,15 @@ namespace ITech_Project.Migrations
                         .HasForeignKey("SupplierId");
 
                     b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("ITech_Project.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("ITech_Project.Models.Product", "product")
+                        .WithMany()
+                        .HasForeignKey("productId");
+
+                    b.Navigation("product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -561,6 +576,11 @@ namespace ITech_Project.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ITech_Project.Models.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }

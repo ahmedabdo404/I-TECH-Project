@@ -56,11 +56,21 @@
                 <input asp-for="Url" class="form-control" />
                 <span asp-validation-for="Url" class="text-danger"></span>
             </div>
-            <div class="form-group">
+          @*  <div class="form-group">
                 <label asp-for="TypeGoods" class="control-label"></label>
                 <input asp-for="TypeGoods" class="form-control" />
                 <span asp-validation-for="TypeGoods" class="text-danger"></span>
+            </div>*@
+           
+             <div class="form-group mb-3">
+                <label asp-for="TypeGoods" class="control-label mb-2"></label>
+                <select asp-for="TypeGoods" asp-items="Html.GetEnumSelectList<Category>()" class="form-control">
+                    <option selected>--Select TypeGoods--</option>
+                </select>
+                <span asp-validation-for="TypeGoods" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Logo" class="control-label"></label>
                 <input asp-for="Logo" class="form-control" />

@@ -20,9 +20,9 @@ namespace ITech_Project.Models
 
 
         [Display(Name = "Units In Stock")]
-        public int? UnitsInStock { get; set; }
+        public int UnitsInStock { get; set; }
 
-        public double? Discount { get; set; }
+        public double Discount { get; set; }
 
         [Required(ErrorMessage = "Picture is required !")]
         public string Picture { get; set; }

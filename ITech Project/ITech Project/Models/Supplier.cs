@@ -36,7 +36,7 @@ namespace ITech_Project.Models
         public string Url { get; set; }
 
         [Required(ErrorMessage = "Type Goods Is Required")]
-        public string TypeGoods { get; set; }
+        public Category TypeGoods { get; set; }
         public string Logo { get; set; }
 
         [Required(ErrorMessage = "payment Method Is Required")]

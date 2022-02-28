@@ -135,8 +135,9 @@
                     </ul>
                 </div>
                 <div class="cart-icon">
-                    <a asp-controller="Home" asp-action="cart">
+                    <a asp-controller="Order" asp-action="AddToShoppingCart">
                         <i class='bx bx-cart'></i>
+                        @await Component.InvokeAsync("ShoppingCartSummary")
                     </a>
                 </div>
             </div>
