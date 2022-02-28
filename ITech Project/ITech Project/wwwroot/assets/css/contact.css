@@ -4,20 +4,23 @@
     margin-top: 5%;
 }*/
 
-.h{
+.h {
     background-color: var(--main-color);
     color: var(--sec-color);
     padding: 0 0.5rem;
     margin: 0
 }
 
-
-.login-inputs input
-{
-    margin-bottom: 1rem;
+hr {
+    margin: 0;
 }
 
-.b{
+.login-inputs input {
+    margin-bottom: 1rem;
+    width: 300px !important
+}
+
+.b {
     padding: 0.4rem 0.8rem;
     color: var(--sec-color);
     background-color: var(--main-color);

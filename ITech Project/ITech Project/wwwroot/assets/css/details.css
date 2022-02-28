@@ -21,7 +21,8 @@
 }
 
 /* body ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>body*/
-.h{
+
+.h {
     background-color: var(--main-color);
     color: var(--sec-color);
     padding: 0 0.5rem;
@@ -31,19 +32,11 @@
 .details .carousel {
     width: 500px;
     height: 300px;
-
 }
 
-.details .carousel-item img{
+.details .carousel-item img {
     width: 500px;
     height: 333px;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    height: fit-content;
-    position: absolute;
-    top: 50%;
 }
 
 .carousel-indicators button {
@@ -61,11 +54,11 @@
 
 hr {
     margin: 0;
-    max-width: 75% 
+    max-width: 75%
 }
 
 .speces h4,
-.speces span{
+.speces span {
     width: auto;
     margin: 0.8rem 0
 }
@@ -74,32 +67,34 @@ hr {
     color: var(--main-color);
 }
 
-.Desc{
+.Desc {
     margin-left: 2rem;
     width: 100%
 }
 
-.Desc h4,
-.Desc span{
-    width: auto;
-    margin: 0.8rem 0
-}
+    .Desc h4,
+    .Desc span {
+        width: auto;
+        margin: 0.8rem 0
+    }
 
-.price-val p:nth-child(1){
+.price-val p:nth-child(1) {
     color: var(--fifth-color);
-    /*text-decoration: line-through;*/
+    text-decoration: line-through;
     margin-right: 1rem;
     font-size: var(--font-size2)
 }
 
-.price-val p:nth-child(2){
+.price-val p:nth-child(2) {
     color: var(--main-color);
     font-size: var(--font-size1)
 }
 
+
 .cart-link {
     text-decoration: none
 }
+
 .cart-link:visited {
     text-decoration: none
 }
@@ -110,20 +105,19 @@ hr {
     background-color: var(--main-color);
     border-radius: 5px;
     cursor: pointer;
-
 }
 
-.add-to-cart p {
-    width: fit-content;
-    margin: 0;
-    margin-left: 0.2rem;
-    color: var(--sec-color);
-}
+    .add-to-cart p {
+        width: fit-content;
+        margin: 0;
+        margin-left: 0.2rem;
+        color: var(--sec-color);
+    }
 
-.add-to-cart i{
-    font-size: var(--font-size1);
-    color: var(--sec-color);
-}
+    .add-to-cart i {
+        font-size: var(--font-size1);
+        color: var(--sec-color);
+    }
 
 
 #custome-accordion {
@@ -133,35 +127,98 @@ hr {
     margin-bottom: 2rem;
 }
 
-#custome-accordion p{
-    margin: 0
-}
+    #custome-accordion #ca-title {
+        width: fit-content;
+        /* background-color: var(--third-color); */
+    }
 
-#custome-accordion #ca-title {
-    width: fit-content;
-    /* background-color: var(--third-color); */
-}
+        #custome-accordion #ca-title span {
+            margin-right: 1rem;
+            cursor: pointer;
+            color: var(--main-color);
+            transition: var(--transition1);
+            font-size: var(--font-size2);
+            border-radius: 2px;
+            padding: 0.5rem;
+        }
 
-#custome-accordion #ca-title span{
-    margin-right: 1rem;
-    cursor: pointer;
-    color: var(--main-color);
-    transition: var(--transition1);
-    font-size: var(--font-size2);
-    border-radius: 2px;
-    padding: 0.5rem;
-}
-
-/* #custome-accordion #ca-title span:hover{
+    /* #custome-accordion #ca-title span:hover{
     transform: translateY(-10%);
     color: var(--fifth-color)
 } */
 
-#custome-accordion #ca-body div{
-    width: 100%;
-    height: auto;
-    background-color: var(--third-color);
-    border-radius: 2px;
-    padding: 1rem;
-    /* transition: var(--transition1); */
+    #custome-accordion #ca-body div {
+        width: 100%;
+        height: auto;
+        background-color: var(--third-color);
+        border-radius: 2px;
+        padding: 1rem;
+        /* transition: var(--transition1); */
+    }
+
+@media (max-width: 992px) {
+
+    .details .carousel {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .details .carousel-item img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .speces h4 {
+        font-size: 1.2rem;
+    }
+
+    .speces span {
+        font-size: 0.9rem;
+    }
+
+    .details {
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .speces,
+    .Desc {
+        margin: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .details .carousel {
+        width: 100%;
+        max-height: 30vh;
+    }
+
+    .details .carousel-item img {
+        width: 100%;
+        max-height: 30vh;
+    }
+
+    #custome-accordion {
+        max-width: 80vw;
+    }
+
+    #custome-accordion #ca-title span {
+        width: fit-content;
+        font-size: 0.8rem !important;
+        margin: 0;
+        padding: 0.5rem
+    }
+
+    #custome-accordion #ca-body div {
+        width: 100%;
+    }
+
+    .Product-Description {
+        width: 250px !important;
+    }
+
+    .Product-Description p {
+        font-size: 0.8rem;
+    }
 }
