@@ -4,6 +4,16 @@ let mob = document.getElementById("mob");
 let lab = document.getElementById("lab");
 let Acc = document.getElementById("Acc");
 
+//image input
+let picInput = document.querySelector(".pic-input");
+let imageAdd = document.querySelector("#image-add");
+let imgLink;
+
+let arr = createFrom.elements
+console.log(createFrom)
+console.log(arr)
+
+console.log("ahmed")
 function changeValue() {
     if (this.value == 1) {
         // show lab-brand
@@ -32,41 +42,11 @@ function changeValue() {
 categ.addEventListener("change", changeValue);
 
 // on onload window automaticlly show the right category
-window.onload = () => {
-    if (this.value == 1) {
-        // show lab-brand
-        mob.classList.add("d-none");
-        Acc.classList.add("d-none");
-        lab.classList.remove("d-none");
-
-    } else if (this.value == 2) {
-        // show mob-brand
-        lab.classList.add("d-none");
-        Acc.classList.add("d-none");
-        mob.classList.remove("d-none");
-    } else if (this.value == 3) {
-        // show Acc-Kind
-        lab.classList.add("d-none");
-        mob.classList.add("d-none");
-        Acc.classList.remove("d-none");
-    } else {
-        // show nothing
-        mob.classList.add("d-none");
-        lab.classList.add("d-none");
-        Acc.classList.add("d-none");
-    }
-    //if (categ.value == 1) {
-    //    lab.classList.remove("d-none");
-    //} else if (categ.value == 2) {
-    //    mob.classList.remove("d-none");
-    //} else if (categ.value == 3) {
-    //    Acc.classList.remove("d-none");
-    //}
-    console.log(categ.value)
-}
+window.onload = changeValue
 
  //on submit for remove the other categry(temperory sol for category valdation issue)
-createFrom.onsubmit = () => {
+let catgoreyNum= 0
+createFrom.addEventListener("submit" ,() => {
     if (categ.value == 1) {
         mob.remove();
         Acc.remove();
@@ -77,12 +57,25 @@ createFrom.onsubmit = () => {
         lab.remove();
         mob.remove();
     }
-}
+    catgoreyNum = categ.value;
+})
 
-let picInput = document.querySelector(".pic-input");
-let imageAdd = document.querySelector("#image-add");
-let imgLink;
-
+// restore the removed inputs if the user intends to change the value
+categ.addEventListener("change", () => {
+    console.log(catgoreyNum)
+    if (catgoreyNum != 0) {
+        if (catgoreyNum == 1) {
+            categ.after(mob)
+            categ.after(Acc)
+        } else if (catgoreyNum == 2) {
+            categ.after(lab)
+            categ.after(Acc)
+        } else if (catgoreyNum == 3) {
+            categ.after(lab)
+            categ.after(mob)
+        }
+    }
+})
 
 imageAdd.onclick = () => {
     imgLink = prompt("enter the link of image here");

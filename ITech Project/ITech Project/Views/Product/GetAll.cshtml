@@ -79,7 +79,7 @@
 </section>
     
 <!-- Shop -->
-<section class="shop container mb-3">
+<section class="shop container mb-5">
     <div class="row mt-3 mb-3 button-group filter-button-group flex-wrap">
         <div class="d-flex justify-content-center flex-wrap">
             <button type="button" data-filter="*" class="btn mx-1">All</button>
@@ -155,9 +155,8 @@
               
                 <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
                 <span class="price">$@price</span>
-                    <a asp-controller="Order"
-                             asp-action="AddToShoppingCart" asp-route-id="@item.Id">
-                <i  class="bx bxs-cart-add add-cart"></i>
+                <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                    <i  class="bx bxs-cart-add add-cart"></i>
                 </a>
             </div>
 
