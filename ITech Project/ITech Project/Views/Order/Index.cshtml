@@ -37,42 +37,38 @@
 </div>
 *@
 
+
 <div class="container cart-c">
     <h1>Shopping Cart</h1>
     <div class="cart">
         <div class="products">
+
             @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
             {
+
                 string str = item.product.Picture;
-            var pictureList = str.Split(","); 
+                var pictureList = str.Split(","); 
+
                 <div class="product">
-                        
-            @if(item.product.ModelMobile != null)
-            {
-             <div class="product-box col-lg-4 col-md-6 mobiles">
+                @if(item.product.ModelMobile != null)
+                {
                     <img src="@pictureList[0]" alt="@item.product.Name" width="150"
                     onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg' " 
                     class="product-img">
-                </div>
-            }
-            @if(item.product.ModelLabtop != null)
-            {
-            <div class="product-box col-lg-4 col-md-6 Laptops">        
-               <img src="@pictureList[0]" alt="@item.product.Name" width="150" 
-               onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'"
-                class="product-img">
-            </div>
-            }
-            @if(item.product.Accessories != null)
-            {
-            <div class="product-box col-lg-4 col-md-6 accessories">              
-    <img src="@pictureList[0]" alt="@item.product.Name" width="150"
-    onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'"
-    class="product-img">
-                  </div>
-            }
-
-                    @*<img src="@item.product.Picture[0]">*@
+                }
+                @if(item.product.ModelLabtop != null)
+                {    
+                    <img src="@pictureList[0]" alt="@item.product.Name" width="150" 
+                    onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'"
+                    class="product-img">
+                }
+                @if(item.product.Accessories != null)
+                {             
+                    <img src="@pictureList[0]" alt="@item.product.Name" width="150"
+                    onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'"
+                    class="product-img">
+                }
+            
                     <div class="product-info">
                         <h3 class="product-name">@item.product.Name</h3>
                         <div>
@@ -80,82 +76,63 @@
                             <h4 class="product-price d-inline">@item.product.UnitPrice.ToString("c")</h4><br />
                         </div>
 
-                        <div class="mt-2">
-                            <span class=" mt-3">Discount:</span>
+                        <div>
+                            <span >Discount:</span>
                             <h4 class="product-offer d-inline">@item.product.Discount</h4>
                         </div>
 
                         <div>
-                            <span>SubTotal:</span>
+                             <span>SubTotal:</span>
                             <h4 class="product-price d-inline">@((item.Amount*item.product.UnitPrice).ToString("c"))</h4><br />
                         </div>
 
                         <div>
                             <p class="product-quantity">
-                                quantity:@item.Amount
-                                
+                                Quantity:@item.Amount
+                            </p>
                         </div>
 
-                        <p class="product-remove me-5">
-                            <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
-
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                <span class="remove">Remove</span>
-                            </a>
-                        </p>
-
-                        <p class="product-remove ms-4">
+                        
+                        <div class="product-add">
                             <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
-
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                <span class="remove">Add</span>
+                                <i class='bx bxs-message-square-add'></i>
                             </a>
+                        </div>
 
-                        </p>
+                        <div class="product-remove">
+                            <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
+                                <i class='bx bxs-message-square-minus'></i>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
-            }
-         
-        </div>
-   
-
-
-
-
+                }
+            </div>
         <div class="cart-total">
             <p>
                 <span>Total Price</span>
                 <span>@Model.ShoppingCartTotal.ToString("c")</span>
             </p>
-            <p>
-                <span>Number of Items:
-                                      @await Component.InvokeAsync("ShoppingCartSummary")
-
+            <div class="Items-number-c">
+                <span>Number of Items:</span>
+                <span>
+                        @await Component.InvokeAsync("ShoppingCartSummary")
                 </span>
- 
+            </div>
+            <p>
+                <span>Discount</span>
+                <span>100$</span>
             </p>
-
-            <a asp-action="checkout" class="checkout-btn">Proceed to Checkout</a>
-        </div>
-    </div>
+            <a asp-controller="Product" asp-action="GetAll" class="cart-btn">Add More Products</a>
+		    <a asp-controller="home" asp-action="checkout" class="cart-btn">Proceed to Checkout</a>
+		    <a asp-controller="Order" asp-action="CompleteOrder" class="cart-btn">Complete Order</a>
+            @*  <div id="paypal-btn"></div>
+                <span style="padding:5px"></span>*@
+	    </div>
+	</div>
 </div>
 
-
-
-<div class="text-center">
-    <div class="btn-group">
-        <a class="btn btn-outline-Primary" asp-controller="Order" asp-action="CompleteOrder">
-            Complete Order
-        </a>
-        @*  <div id="paypal-btn"></div>
-            <span style="padding:5px"></span>*@
-
-        <a class="btn btn-outline-Success" asp-controller="Product" asp-action="GetAll">
-            Add More Prdouct
-        </a>
-
-    </div>
-</div>
 
 
 

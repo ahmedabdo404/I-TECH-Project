@@ -137,7 +137,9 @@
                 <div class="cart-icon">
                     <a asp-controller="Order" asp-action="AddToShoppingCart">
                         <i class='bx bx-cart'></i>
-                        @await Component.InvokeAsync("ShoppingCartSummary")
+                        <div class="cart-items-number">
+                            @await Component.InvokeAsync("ShoppingCartSummary")
+                        </div>
                     </a>
                 </div>
             </div>

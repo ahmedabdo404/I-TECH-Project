@@ -301,19 +301,39 @@ header a:active {
     border-radius: 5px;
 }
 
-    .cart-icon i {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: var(--font-size1);
-        color: var(--sec-color);
-    }
+.cart-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size1);
+    color: var(--sec-color);
+}
 
+.cart-items-number {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--sec-color);
+    list-style: none;
+    z-index: 5;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%)
+}
+.cart-items-number a {
+    position: absolute;
+    color: var(--main-color) !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+
+}
 /* res */
 @media(max-width:768px) {
-    .cart-icon,
-    .account {
+    .cart-icon, .account {
         display: none !important;
     }
 
