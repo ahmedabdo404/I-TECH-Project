@@ -2,6 +2,7 @@
 using ITech_Project.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using System.Linq;
 
 namespace ITech_Project.Controllers
 {
@@ -14,6 +15,19 @@ namespace ITech_Project.Controllers
             ProductRepo = productRepo;
         }
 
+        public IActionResult Filter(string searchstring)
+
+        {
+            var allproducts = ProductRepo.GetAll();
+            if (!string.IsNullOrEmpty(searchstring))
+            {
+                var filterresult = allproducts.Where(n => n.Name.Contains(searchstring)
+                 || n.Description.Contains(searchstring)).ToList();
+                return View("GetAll", filterresult);
+            }
+            return View("GetAll", allproducts);
+
+        }
         public IActionResult GetAll()
         {
             var products = ProductRepo.GetAll();

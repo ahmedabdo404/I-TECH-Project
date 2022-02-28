@@ -101,12 +101,13 @@
             }
         <section class="items-section">
             <div class="items-bar container">
-                <div class="search-bar d-flex justify-content-center align-items-center">
-                    <input type="text" placeholder="Search your item" id="tags">
-                    <div class="Search-icon">
+                <form class="search-bar d-flex justify-content-center align-items-center" asp-controller="Product" asp-action="Filter">
+                    <input type="text" name="searchstring" placeholder="Search your item" id="tags">
+                    @*<div class="Search-icon">
                         <i class='bx bx-search-alt-2'></i>
-                    </div>
-                </div>
+                    </div>*@
+                    <button class="btn btn-warning my-2 my-sm-0" type="submit" ><i class='bx bx-search-alt-2'></i></button>
+                </form>
                 <div class="btn-group account">
                     <p type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
                         Account
