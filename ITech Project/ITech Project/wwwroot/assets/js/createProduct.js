@@ -44,6 +44,7 @@ categ.addEventListener("change", changeValue);
 // on onload window automaticlly show the right category
 window.onload = changeValue
 
+console.log("ahmed")
  //on submit for remove the other categry(temperory sol for category valdation issue)
 let catgoreyNum= 0
 createFrom.addEventListener("submit" ,() => {
@@ -64,16 +65,9 @@ createFrom.addEventListener("submit" ,() => {
 categ.addEventListener("change", () => {
     console.log(catgoreyNum)
     if (catgoreyNum != 0) {
-        if (catgoreyNum == 1) {
-            categ.after(mob)
-            categ.after(Acc)
-        } else if (catgoreyNum == 2) {
-            categ.after(lab)
-            categ.after(Acc)
-        } else if (catgoreyNum == 3) {
-            categ.after(lab)
-            categ.after(mob)
-        }
+        categ.after(mob)
+        categ.after(lab)
+        categ.after(Acc)
     }
 })
 

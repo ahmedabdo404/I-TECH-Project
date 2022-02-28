@@ -16,13 +16,12 @@ namespace ITech_Project.Controllers
         }
 
         public IActionResult Filter(string searchstring)
-
         {
             var allproducts = ProductRepo.GetAll();
             if (!string.IsNullOrEmpty(searchstring))
             {
-                var filterresult = allproducts.Where(n => n.Name.Contains(searchstring)
-                 || n.Description.Contains(searchstring)).ToList();
+                var filterresult = allproducts.Where(n => n.Name.ToLower().Contains(searchstring.ToLower())
+                 || n.Description.ToLower().Contains(searchstring.ToLower())).ToList();
                 return View("GetAll", filterresult);
             }
             return View("GetAll", allproducts);
