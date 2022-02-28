@@ -26,16 +26,8 @@ upBtn.onclick = () => {
 // autocomplete
 $(function () {
     var availableTags = [
-        "mobile1",
-        "mobile2",
-        "mobile3",
-        "iphone",
-        "laptop1",
-        "laptop2",
-        "laptop3",
-        "laptop4",
-        "accessories mobiles",
-        "accessories laptops"
+        "SamSung A32",
+        "IdeaPad570"
     ];
     $("#tags").autocomplete({
         source: availableTags
