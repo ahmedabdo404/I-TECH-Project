@@ -1,8 +1,11 @@
 ﻿@model ShoppingCartViewModel
+@section style {
+<link rel="stylesheet" href="~/assets/css/cart.css">
+}
 
-
-<div class="Container">
-
+@*
+   //------------------- old Code--------------------
+    <div class="Container">
     <table class="table table">
         <tr>
             <th>Selected Amount</th>
@@ -12,91 +15,204 @@
             <th></th>
         </tr>
         @foreach (var item in @Model.ShoppingCart.ShoppingCartItems)
-       {   
-        <tr>
-            <td>@item.Amount</td>
-            <td>@item.product.Name</td>
-            <td>@item.product.UnitPrice.ToString("c")</td>
-            <td>@((item.Amount*item.product.UnitPrice).ToString("c"))</td>
-            <td>
-    <a class="btn btn success" asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id"  > Delete</a>
-    <a class="btn btn success" asp-action="AddToShoppingCart" asp-route-id="@item.product.Id"  > Add</a>
-            </td>
-        </tr>
-       }
-       <tfoot>
-           <tr>
-               <td colspan="2"></td>
-               <td> <b>Total: </b></td>
-               <td>@Model.ShoppingCartTotal.ToString("c")</td>
-       </tfoot>
-
+        {
+            <tr>
+                <td>@item.Amount</td>
+                <td>@item.product.Name</td>
+                <td>@item.product.UnitPrice.ToString("c")</td>
+                <td>@((item.Amount*item.product.UnitPrice).ToString("c"))</td>
+                <td>
+                    <a class="btn btn success" asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id"> Delete</a>
+                    <a class="btn btn success" asp-action="AddToShoppingCart" asp-route-id="@item.product.Id"> Add</a>
+                </td>
+            </tr>
+        }
+        <tfoot>
+            <tr>
+                <td colspan="2"></td>
+                <td> <b>Total: </b></td>
+                <td>@Model.ShoppingCartTotal.ToString("c")</td>
+        </tfoot>
     </table>
+</div>
+*@
 
-    <div class="text-center">
-        <div class="btn-group">
-            <a class="btn btn-outline-Primary" asp-controller="Order" asp-action="CompleteOrder">
-                Complete Order
-                </a>
-              @*  <div id="paypal-btn"></div>
-                <span style="padding:5px"></span>*@
-            <a  class="btn btn-outline-danger" asp-controller="Product" asp-action="GetAll">
-                Add More Prdouct
-                </a>
+<div class="container cart-c">
+    <h1>Shopping Cart</h1>
+    <div class="cart">
+        <div class="products">
+            @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+            {
+                string str = item.product.Picture;
+            var pictureList = str.Split(","); 
+                <div class="product">
+                        
+            @if(item.product.ModelMobile != null)
+            {
+             <div class="product-box col-lg-4 col-md-6 mobiles">
+                    <img src="@pictureList[0]" alt="@item.product.Name" width="150"
+                    onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg' " 
+                    class="product-img">
+                </div>
+            }
+            @if(item.product.ModelLabtop != null)
+            {
+            <div class="product-box col-lg-4 col-md-6 Laptops">        
+               <img src="@pictureList[0]" alt="@item.product.Name" width="150" 
+               onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'"
+                class="product-img">
+            </div>
+            }
+            @if(item.product.Accessories != null)
+            {
+            <div class="product-box col-lg-4 col-md-6 accessories">              
+    <img src="@pictureList[0]" alt="@item.product.Name" width="150"
+    onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'"
+    class="product-img">
+                  </div>
+            }
 
+                    @*<img src="@item.product.Picture[0]">*@
+                    <div class="product-info">
+                        <h3 class="product-name">@item.product.Name</h3>
+                        <div>
+                            <span>Price:</span>
+                            <h4 class="product-price d-inline">@item.product.UnitPrice.ToString("c")</h4><br />
+                        </div>
+
+                        <div class="mt-2">
+                            <span class=" mt-3">Discount:</span>
+                            <h4 class="product-offer d-inline">@item.product.Discount</h4>
+                        </div>
+
+                        <div>
+                            <span>SubTotal:</span>
+                            <h4 class="product-price d-inline">@((item.Amount*item.product.UnitPrice).ToString("c"))</h4><br />
+                        </div>
+
+                        <div>
+                            <p class="product-quantity">
+                                quantity:@item.Amount
+                                
+                        </div>
+
+                        <p class="product-remove me-5">
+                            <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
+
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <span class="remove">Remove</span>
+                            </a>
+                        </p>
+
+                        <p class="product-remove ms-4">
+                            <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
+
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <span class="remove">Add</span>
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            }
+         
+        </div>
+   
+
+
+
+
+        <div class="cart-total">
+            <p>
+                <span>Total Price</span>
+                <span>@Model.ShoppingCartTotal.ToString("c")</span>
+            </p>
+            <p>
+                <span>Number of Items:
+                                      @await Component.InvokeAsync("ShoppingCartSummary")
+
+                </span>
+ 
+            </p>
+
+            <a asp-action="checkout" class="checkout-btn">Proceed to Checkout</a>
         </div>
     </div>
+</div>
 
 
-@*@section Scripts{
+
+<div class="text-center">
+    <div class="btn-group">
+        <a class="btn btn-outline-Primary" asp-controller="Order" asp-action="CompleteOrder">
+            Complete Order
+        </a>
+        @*  <div id="paypal-btn"></div>
+            <span style="padding:5px"></span>*@
+
+        <a class="btn btn-outline-Success" asp-controller="Product" asp-action="GetAll">
+            Add More Prdouct
+        </a>
+
+    </div>
+</div>
+
+
+
+
+@*
+    @section Scripts{
 
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
     <script>
 
-        let _total = @Html.Raw(Model.ShoppingCartTotal);
+    let _total = @Html.Raw(Model.ShoppingCartTotal);
 
-        paypal.Button.render({
-            //Configure environment
-            env: 'sandbox',
-            client: {
-                sandbox: '*****--------clientID VALUE--------****'
-            },
+    paypal.Button.render({
+    //Configure environment
+    env: 'sandbox',
+    client: {
+    sandbox: '*****--------clientID VALUE--------****'
+    },
 
-            //Customize button
-            locale: 'en_US',
-            style: {
-                size: 'small',
-                color: 'gold',
-                shape: 'pill'
-            },
-            commit: true, // PAY NOW CHECK
+    //Customize button
+    locale: 'en_US',
+    style: {
+    size: 'small',
+    color: 'gold',
+    shape: 'pill'
+    },
+    commit: true, // PAY NOW CHECK
 
-            //Set up a payment
-            payment: function (data, actions) {
-                return actions.payment.create({
-                    transactions: [{
-                        amount: {
-                            total: _total,
-                            currency: 'USD' //LE
-                        }
-                    }]
-                });
-            },
+    //Set up a payment
+    payment: function (data, actions) {
+    return actions.payment.create({
+    transactions: [{
+    amount: {
+    total: _total,
+    currency: 'USD' //LE
+    }
+    }]
+    });
+    },
 
-            //Execute the payment
-            onAuthorize: function (data, actions) {
-                return actions.payment.execute().then(function () {
-                    var url = '@Url.Action("CompleteOrder", "Orders", new { })';
-                    window.location.href = url;
-                });
-            }
+    //Execute the payment
+    onAuthorize: function (data, actions) {
+    return actions.payment.execute().then(function () {
+    var url = '@Url.Action("CompleteOrder", "Orders", new { })';
+    window.location.href = url;
+    });
+    }
 
-        }, '#paypal-btn')
+    }, '#paypal-btn')
     </script>
-} 
+    }
 *@
 
 
 
-    </div>
+ 
+@section scripts {
+<script src="~/assets/js/cart.js"></script>
+}
