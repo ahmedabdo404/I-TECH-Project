@@ -1,5 +1,6 @@
 ﻿using ITech_Project.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ITech_Project.Service
 {
@@ -12,5 +13,9 @@ namespace ITech_Project.Service
         List<Order> GetAll();
         Order GetById(int id);
         int Update(Order ord);
+
+        public Task StoreOrder(List<ShoppingCartItem> items, string UserId, string UserEmailAddress);
+        public Task <List<Order>> GetOrdersByUserId(string userId);
+
     }
 }

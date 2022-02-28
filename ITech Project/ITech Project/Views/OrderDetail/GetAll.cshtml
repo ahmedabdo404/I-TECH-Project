@@ -3,7 +3,7 @@
     <a asp-action="Create" asp-controller="OrderDetail" class="btn btn-primary mb-3">Add Details</a>
     <table class="table table-bordered text-center" width="50%">
         <tr>
-            <th>OrderNumber</th>
+            @*<th>OrderNumber</th>*@
             <th>Price</th>
             <th>Quantity</th>
             <th>Discount</th>
@@ -18,7 +18,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.OrderNumber</td>
+                @*<td>@item.OrderNumber</td>*@
                 <td>@item.Price</td>
                 <td>@item.Quantity</td>
                 <td>@item.Discount</td>

@@ -1,7 +1,9 @@
+using ITech_Project.Cart;
 using ITech_Project.Models;
 using ITech_Project.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -28,22 +30,25 @@ namespace ITech_Project
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<Db>(option => 
+            services.AddDbContext<Db>(option =>
             option.UseSqlServer(Configuration.GetConnectionString("cs")));
 
             //Set the time of token validity
-            services.Configure<DataProtectionTokenProviderOptions>(opts => 
-            opts.TokenLifespan = TimeSpan.FromHours(10));
-            
+            services.Configure<DataProtectionTokenProviderOptions>(opts => opts.TokenLifespan = TimeSpan.FromHours(10));
+
             //extension method to enable the token generation in the project
             //injection
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<Db>().AddDefaultTokenProviders();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<Db>().AddDefaultTokenProviders();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderDetailService, OrderDetailService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISupplierService, SupplierService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sc => ShoppingCart.GEtShopCart(sc));
+
+            services.AddSession();
+
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -86,6 +91,7 @@ namespace ITech_Project
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             //Must be before Authorization
             app.UseAuthentication();  // If i have cookie or not 

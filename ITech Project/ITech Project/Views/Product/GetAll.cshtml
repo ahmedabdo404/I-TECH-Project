@@ -119,6 +119,10 @@
                 </a>
                 <h2 class="product-title">@item.Name</h2>
                 <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
+                <a asp-controller="Order"
+                             asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                <i  class="bx bxs-cart-add add-cart"></i>
+                </a>
                 <span class="price">$@price</span>                </div>
             }
             @if(item.ModelLabtop != null)
@@ -131,6 +135,10 @@
                 <h2 class="product-title">@item.Name</h2>
                 <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
                 <span class="price">$@price</span>
+                    <a asp-controller="Order"
+                             asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                <i  class="bx bxs-cart-add add-cart"></i>
+                </a>
             </div>
             }
             @if(item.Accessories != null)
@@ -140,10 +148,19 @@
                 <a asp-action="GetById" asp-route-id="@item.Id">
                     <img src="@pictureList[0]" alt="@item.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'" class="product-img">
                 </a>
+
+
                 <h2 class="product-title">@item.Name</h2>
+
+              
                 <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
                 <span class="price">$@price</span>
+                    <a asp-controller="Order"
+                             asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                <i  class="bx bxs-cart-add add-cart"></i>
+                </a>
             </div>
+
             }
         }
         </div>

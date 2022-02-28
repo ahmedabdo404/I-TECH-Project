@@ -20,11 +20,11 @@
                 <select asp-for="CustomerId" asp-items="custs" class="form-control"></select>
                 <span class="text-danger" asp-validation-for="CustomerId"></span>
             </div>
-            <div>
+           @* <div>
                 <label asp-for="OrderNumber"></label>
                 <input asp-for="OrderNumber" class="form-control" placeholder="Enter name">
                 <span asp-validation-for="OrderNumber" class="text-danger"></span>
-            </div>
+            </div>*@
              <div>
                 <label asp-for="Payment" class="form-control"></label>
                 <select asp-for="Payment" asp-items="Html.GetEnumSelectList<Payment>()" class="form-control">

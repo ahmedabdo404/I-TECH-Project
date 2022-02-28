@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ITech_Project.Models
 
@@ -47,7 +48,7 @@ namespace ITech_Project.Models
         [Display(Name = "Card Expiration Date")]
         [Required(ErrorMessage = "Card Exp Date is required!")]
         [DataType(DataType.Date)]
-        public string CardExpDate { get; set; }
+        public DateTime CardExpDate { get; set; }
 
 
         [Display(Name = "Billing Country")]
@@ -83,7 +84,7 @@ namespace ITech_Project.Models
 
         [Display(Name = "Date Entered")]
         [DataType(DataType.Date)]
-        public string DateEntered { get; set; }
+        public DateTime DateEntered { get; set; }
 
 
       

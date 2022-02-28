@@ -3,7 +3,7 @@
     <a asp-action="Create" asp-controller="Order" class="btn btn-primary mb-3">Add new Order</a>
     <table class="table table-bordered text-center" width="50%">
         <tr>
-            <th>Order Number</th>
+            @*<th>Order Number</th>*@
             <th>Freight</th>
             <th>Customer</th>
             <th>Shipper</th>
@@ -15,7 +15,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.OrderNumber</td>
+                @*<td>@item.OrderNumber</td>*@
                 <td>@item.Freight</td>
                @foreach(var i in ViewBag.Cust)
                {

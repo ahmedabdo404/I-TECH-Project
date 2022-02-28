@@ -33,13 +33,35 @@ categ.addEventListener("change", changeValue);
 
 // on onload window automaticlly show the right category
 window.onload = () => {
-    if (categ.value == 1) {
+    if (this.value == 1) {
+        // show lab-brand
+        mob.classList.add("d-none");
+        Acc.classList.add("d-none");
         lab.classList.remove("d-none");
-    } else if (categ.value == 2) {
+
+    } else if (this.value == 2) {
+        // show mob-brand
+        lab.classList.add("d-none");
+        Acc.classList.add("d-none");
         mob.classList.remove("d-none");
-    } else if (categ.value == 3) {
+    } else if (this.value == 3) {
+        // show Acc-Kind
+        lab.classList.add("d-none");
+        mob.classList.add("d-none");
         Acc.classList.remove("d-none");
+    } else {
+        // show nothing
+        mob.classList.add("d-none");
+        lab.classList.add("d-none");
+        Acc.classList.add("d-none");
     }
+    //if (categ.value == 1) {
+    //    lab.classList.remove("d-none");
+    //} else if (categ.value == 2) {
+    //    mob.classList.remove("d-none");
+    //} else if (categ.value == 3) {
+    //    Acc.classList.remove("d-none");
+    //}
     console.log(categ.value)
 }
 

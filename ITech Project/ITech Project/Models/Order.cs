@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ITech_Project.Enums;
 
@@ -8,29 +10,13 @@ namespace ITech_Project.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Order Number")]
-        [Required(ErrorMessage = "Order Number Is Required")]
-        public int OrderNumber { get; set; }
-
-
-        [Display(Name = "Order Date")]
-        [DataType(DataType.Date)]
-        public string OrderDate { get; set; }
-
-        [Display(Name = "Ship Date")]
-        [DataType(DataType.Date)]
-        public string ShipDate { get; set; }
-
-
         [DataType(DataType.Currency)]
-        public int? Freight { get; set; }
+        public int Freight { get; set; }
 
-        public string Timestamp { get; set; }
- 
-
-        [Display(Name = "Payment Date")]
-        [DataType(DataType.Date)]
-        public string PaymentDate { get; set; }
+        public DateTime Timestamp { get; set; }
+        public string UserId { get; set; }
+        
+        public string Email { get; set; }
 
         [Display(Name = "Customer")]
         [ForeignKey("Customer")]
@@ -43,6 +29,7 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Shipper Is Required")]
         public Shipper Shipper { get; set; }
 
+        public List<OrderDetail> OrderDetails { get; set; }
 
     }
 }
