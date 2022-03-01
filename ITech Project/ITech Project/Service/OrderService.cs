@@ -21,33 +21,33 @@ namespace ITech_Project.Service
         //Read All
         List<Order> IOrderService.GetAll()
         {
-            return ((IOrderService)this).Context.Orders.ToList();
+            return  Context.Orders.ToList();
         }
         //Read One
         Order IOrderService.GetById(int id)
         {
-            return ((IOrderService)this).Context.Orders.FirstOrDefault(i => i.Id == id);
+            return  Context.Orders.FirstOrDefault(i => i.Id == id);
         }
 
         //Create
         int IOrderService.Create(Order ord)
         {
-            ((IOrderService)this).Context.Orders.Add(ord);
-            int row = ((IOrderService)this).Context.SaveChanges();
+             Context.Orders.Add(ord);
+            int row = Context.SaveChanges();
             return row;
         }
         //Update
         int IOrderService.Update(Order ord)
         {
-            ((IOrderService)this).Context.Update(ord);
-            int row = ((IOrderService)this).Context.SaveChanges();
+             Context.Update(ord);
+            int row =  Context.SaveChanges();
             return row;
         }
         //Delete
         int IOrderService.Delete(int id)
         {
-            ((IOrderService)this).Context.Remove(((IOrderService)this).Context.Orders.FirstOrDefault(i => i.Id == id));
-            int row = ((IOrderService)this).Context.SaveChanges();
+             Context.Remove(Context.Orders.FirstOrDefault(i => i.Id == id));
+            int row =  Context.SaveChanges();
             return row;
         }
         
