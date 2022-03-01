@@ -1,48 +1,31 @@
 ﻿@model LoginViewModel
 @section style {
-     <link rel="stylesheet" href="~/assets/css/login.css">
+<link rel="stylesheet" href="~/assets/css/login.css">
 }
 
-    <section class="items-section mb-3">
-        <div class="container login-c">
-            <div class="h m-3 ms-0">
-                <p>Login</p>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h6>Login or Register a new account</h6>
-                    <hr>
-                    <div class="row border p-2 m-1 d-flex flex-row justify-content-center">
-                        <form class="col-12 col-lg-5" asp-action="Login">
-                            <h5>Sign in</h5>
-                            <p>Log in to my account</p>
-                            <div class="d-flex flex-row login-inputs">
-                                <div class="d-flex flex-column justify-content-center me-1 me-lg-5">
-                                    <label asp-for="Email" >Email</label>
-                                    <label asp-for="Password">Password</label>
-                                </div>
-                                <div class="d-inline-flex flex-column col-8">
-                                    <input asp-for="Email" type="text" >
-                                    <input asp-for="Password">
-                                </div>
+<section class="items-section mb-3">
+    <div class="container login-c">
+        <div class="h m-3 ms-0">
+            <p>Login</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h6>Login or Register a new account</h6>
+                <hr>
+                <div class="row border p-2 m-1 d-flex flex-row justify-content-center">
+                    <form class="col-12 col-lg-5" asp-action="Login">
+                        <h5>Sign in</h5>
+                        <p>Log in to my account</p>
+                        <div class="d-flex flex-row login-inputs">
+                            <div class="d-flex flex-column justify-content-center me-1 me-lg-5">
+                                <label asp-for="Email">Email</label>
+                                <label asp-for="Password">Password</label>
                             </div>
-                            <br />
-                            <label class="form-check-label">Remember me</label>
-                            <input class="form-check-input" asp-for="RememberMe"/>
-                            <div asp-validation-summary="All" class="text-danger"></div>
-                            <input type="hidden" value="@ViewBag.ReturnUrl" />
-                            @*<p><span asp-validation-for="UserName" class="text-danger"></span></p>*@
-                            @*<p><span asp-validation-for="Password" class="text-danger"></span></p>*@
-                            <br>
-                            <a asp-action="ForgetPassword">Forgot Password?</a>
-                            <input type="submit" value="LOG IN" class="b mt-3 ms-lg-3 mt-lg-0 " />
-                        </form>
-                        <div class="col-1 align-self-center d-none d-lg-flex"><div class="v-line"></div></div>
-                        <div class="col-12 mt-3 col-lg-5 d-flex flex-column justify-content-center p-0">
-                            <div>
-                                <h5>Sign UP</h5>
-                                <P>Sign up on My tech platform</P>
+                            <div class="d-inline-flex flex-column col-8">
+                                <input asp-for="Email" type="text">
+                                <input asp-for="Password">
                             </div>
+<<<<<<< HEAD
 
                             <div class="signup-sec d-flex flex-row flex-md-column">
                                 <a asp-controller="account" asp-action="SignUpSupplier"
@@ -56,14 +39,37 @@
                                     <input type="button" value="Buyer" class="b">
                                 </a>
                             </div>
+=======
+                        </div>
+                        <br />
+                        <label class="form-check-label">Remember me</label>
+                        <input class="form-check-input" asp-for="RememberMe" />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <input type="hidden" value="@ViewBag.ReturnUrl" />
+                        @*<p><span asp-validation-for="UserName" class="text-danger"></span></p>*@
+                        @*<p><span asp-validation-for="Password" class="text-danger"></span></p>*@
+                        <br>
+                        <a asp-action="ForgetPassword">Forgot Password?</a>
+                        <input type="submit" value="LOG IN" class="b mt-3 ms-lg-3 mt-lg-0 " />
+                    </form>
+                    <div class="col-1 align-self-center d-none d-lg-flex"><div class="v-line"></div></div>
+                    <div class="col-12 mt-3 col-lg-5 d-flex flex-column justify-content-center p-0">
+                        <div>
+                            <h5>Sign UP</h5>
+                            <P>Sign up on I-tech platform</P>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <a asp-controller="account" asp-action="signup"><input type="button" value="Sign Up" class="b me-3"></a>
+                            <a asp-controller="account" asp-action="SignUpSupplier"><input type="button" value="Sign Up As Supplier" class="b"></a>
+>>>>>>> eb601fb1c101f687335f7a7633029b3554ebb7ad
 
                         </div>
                     </div>
-                     
 
-                    </div>
 
                 </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>

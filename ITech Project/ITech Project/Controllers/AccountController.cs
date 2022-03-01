@@ -28,7 +28,7 @@ namespace ITech_Project.Controllers
         }
         #endregion
 
-        #region Sign UPCustomer
+        #region Sign UP Customer
 
         //To open an empty page
         [HttpGet]
@@ -55,7 +55,7 @@ namespace ITech_Project.Controllers
                 {
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
                     await signInManager.SignInAsync(user, false);  //False => Per session
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Create", "Customer");
                 }
                 else
                 {
@@ -72,8 +72,7 @@ namespace ITech_Project.Controllers
         #endregion 
 
 
-
-        #region Sign UpSupplier
+        #region Sign Up Supplier
 
         //To open an empty page
         [HttpGet]
@@ -96,6 +95,16 @@ namespace ITech_Project.Controllers
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
                 if (Result.Succeeded == true)
                 {
+
+                    IdentityResult role = await userManager.AddToRoleAsync(user, "Supplier");
+                    if (role.Succeeded)
+                    {
+                        return RedirectToAction("Create", "Supplier");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("","No Supplier role is found !");
+                    }
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
                     await signInManager.SignInAsync(user, false);  //False => Per session
                     return RedirectToAction("Create", "Supplier");
@@ -113,13 +122,6 @@ namespace ITech_Project.Controllers
 
 
         #endregion 
-
-
-
-
-
-
-
 
         #region Sign Up Admin
 
@@ -190,13 +192,6 @@ namespace ITech_Project.Controllers
 
 
         #endregion
-
-
-
-
-
-
-
 
         #region Login
 
