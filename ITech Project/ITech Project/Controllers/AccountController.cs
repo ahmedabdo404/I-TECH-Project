@@ -193,13 +193,6 @@ namespace ITech_Project.Controllers
 
         #endregion
 
-
-
-
-
-
-
-
         #region Login
 
         [HttpGet]
