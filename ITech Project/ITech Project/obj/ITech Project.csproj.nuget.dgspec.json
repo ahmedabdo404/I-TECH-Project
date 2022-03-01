@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
+    "F:\\00-FinalProjects MVC\\cmder\\teck\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
+    "F:\\00-FinalProjects MVC\\cmder\\teck\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "projectUniqueName": "F:\\00-FinalProjects MVC\\cmder\\teck\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
         "projectName": "ITech Project",
-        "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+        "projectPath": "F:\\00-FinalProjects MVC\\cmder\\teck\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "packagesPath": "C:\\Users\\samaa\\.nuget\\packages\\",
+        "outputPath": "F:\\00-FinalProjects MVC\\cmder\\teck\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
