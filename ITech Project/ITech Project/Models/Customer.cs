@@ -41,7 +41,7 @@ namespace ITech_Project.Models
         [Display(Name = "Credit Card")]
         [Required(ErrorMessage = "Credit Card Type Id is required!")]
         [MaxLength(14)]
-        [RegularExpression("[0-9]")]
+       // [RegularExpression("[0-9]")]
         public string CreditCardTypeId { get; set; }
 
 

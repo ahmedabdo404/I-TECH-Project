@@ -155,15 +155,9 @@ C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Proje
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\orders.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\resetPassword.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\sub.cshtml.g.cs
-C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\OrderDetail\Create.cshtml.g.cs
-C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\OrderDetail\GetAll.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\CompleteOrder.cshtml.g.cs
-C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\Create.cshtml.g.cs
-C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAll.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAllOrders.cshtml.g.cs
-C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetById.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
-C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\Update.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetAll.cshtml.g.cs
 C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetById.cshtml.g.cs
@@ -563,3 +557,4 @@ C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\De
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
 C:\Users\Mayada\Desktop\I-TECH\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\mgabr\OneDrive\Desktop\Finaaal\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
