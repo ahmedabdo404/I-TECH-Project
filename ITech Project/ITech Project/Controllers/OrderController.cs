@@ -26,6 +26,7 @@ namespace ITech_Project.Controllers
             shoppingCart = _shoppingCart;
         }
 
+        [Authorize(Roles = "Admin")]
 
         public IActionResult GetAll()
         {
@@ -33,7 +34,7 @@ namespace ITech_Project.Controllers
             return View(ordRepo.GetAll());
         }
 
-        
+        [Authorize(Roles = "Customer")]
         public IActionResult GetById([FromRoute] int id)
         {
             ViewData["Cust"] = custRepo.GetAll();
@@ -112,6 +113,7 @@ namespace ITech_Project.Controllers
             };
             return View(response);
         }
+        [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> GetAllOrders()
         {

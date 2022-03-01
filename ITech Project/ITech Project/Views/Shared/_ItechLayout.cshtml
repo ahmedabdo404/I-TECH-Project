@@ -35,14 +35,14 @@
                 </li>
 
                 <li class="nav-link">
-                    <a asp-controller="Home" asp-action="cart">
+                    <a asp-controller="Order" asp-action="Index">
                         <i class='bx bx-bar-chart-alt-2 icon'></i>
                         <span class="text nav-text">Cart</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
-                    <a asp-controller="Home" asp-action="orders">
+                    <a asp-controller="Order" asp-action="GetAllOrders">
                         <i class='bx bx-bell icon'></i>
                         <span class="text nav-text">Orders</span>
                     </a>
@@ -117,7 +117,7 @@
                             <li><button class="dropdown-item" type="button">Account</button></li>
                         </a>
 
-                        <a asp-controller="Home" asp-action="orders">
+                        <a asp-controller="Order" asp-action="Index">
                             <li><button class="dropdown-item" type="button">Orders</button></li>
                         </a>
 
@@ -174,8 +174,8 @@
                         <h4>MY Account</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="login">Sign In</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="cart">My Cart</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Orders">Orders</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Order" asp-action="Index">My Cart</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="order" asp-action="GetAllOrders">Orders</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="contact">Help</a></li>
                         </ul>
                     </div>

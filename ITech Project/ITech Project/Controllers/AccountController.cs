@@ -28,7 +28,7 @@ namespace ITech_Project.Controllers
         }
         #endregion
 
-        #region Sign UP
+        #region Sign UPCustomer
 
         //To open an empty page
         [HttpGet]
@@ -69,12 +69,64 @@ namespace ITech_Project.Controllers
         }
 
 
-        #endregion
+        #endregion 
+
+
+
+        #region Sign UpSupplier
+
+        //To open an empty page
+        [HttpGet]
+        public IActionResult SignUpSupplier()
+        {
+            return View();
+        }
+        //Saving data in Database
+        [HttpPost]
+        public async Task<IActionResult> SignUpSupplier(SignUpViewModel newAccount)
+        {
+            if (ModelState.IsValid == true)
+            {
+                IdentityUser user = new IdentityUser();
+
+                user.UserName = newAccount.UserName;
+                user.Email = newAccount.Email;
+
+                //Saving user
+                IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
+                if (Result.Succeeded == true)
+                {
+                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                    await signInManager.SignInAsync(user, false);  //False => Per session
+                    return RedirectToAction("Create", "Supplier");
+                }
+                else
+                {
+                    foreach (var error in Result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
+            }
+            return View(newAccount);
+        }
+
+
+        #endregion 
+
+
+
+
+
+
+
 
         #region Sign Up Admin
 
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
+
         public IActionResult SignUpAdmin()
         {
             return View();
