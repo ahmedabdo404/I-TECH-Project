@@ -59,17 +59,17 @@
                         </div>
 
                         
-                        <div class="product-add">
                             <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
+                                <div class="product-add">
                                 <i class='bx bxs-message-square-add'></i>
+                                </div>
                             </a>
-                        </div>
 
-                        <div class="product-remove">
                             <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
+                                <div class="product-remove">
                                 <i class='bx bxs-message-square-minus'></i>
+                                </div>
                             </a>
-                        </div>
 
                     </div>
                 </div>
