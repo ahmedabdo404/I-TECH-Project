@@ -1,5 +1,4 @@
 
-
 /* carousel-slider ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>carousel-slider*/
 .main-c {
     padding-top: 2%;
@@ -125,7 +124,7 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, rgb(209, 250, 26,0.7), rgb(146, 189, 29,0.7),rgb(209, 250, 26,0.7));
-    animation: ads1 1s alternate infinite;
+    animation: ads1 1s alternate-reverse infinite ease-in-out;
 }
 
 @keyframes ads1 {
@@ -146,7 +145,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--third-color);
-    animation: ads2 1s alternate infinite;
+    animation: ads2 1s alternate-reverse infinite ease-in-out;
 }
 
 @keyframes ads2 {
@@ -264,7 +263,7 @@
 .offer {
     width: 100%;
     max-height: 60vh;
-    border: solid var(--fifth-color) 3px;
+    /*border: solid var(--fifth-color) 1px;*/
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
@@ -297,17 +296,17 @@
     margin-top: 10px;
 }
 
-    .discount h5 {
-        margin: 0;
-        text-decoration: line-through;
-        color: var(--forth-color)
-    }
+.discount h5 {
+    margin: 0;
+    text-decoration: line-through;
+    color: var(--forth-color)
+}
 
-    .discount p {
-        margin: 0;
-        color: var(--sec-color);
-        font-size: var(--font-size1);
-    }
+.discount p {
+    margin: 0;
+    color: var(--sec-color);
+    font-size: var(--font-size1);
+}
 
 .sec1 img {
     max-width: 500px;
@@ -319,18 +318,18 @@
     flex-direction: column;
 }
 
-    .sec2 h1 {
-        color: var(--main-color);
-        margin-bottom: 1.5rem;
-    }
+.sec2 h1 {
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
 
-    .sec2 h3 {
-        margin-bottom: 1rem;
-    }
+.sec2 h3 {
+    margin-bottom: 1rem;
+}
 
-    .sec2 p {
-        margin-bottom: 1rem;
-    }
+.sec2 p {
+    margin-bottom: 1rem;
+}
 
 /* res */
 /* timer ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>timer*/
@@ -343,24 +342,24 @@
     align-items: center;
 }
 
-    .timer div {
-        width: auto;
-        height: 4rem;
-        padding: 0.2rem;
-        background-color: var(--main-color);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.timer div {
+    width: auto;
+    height: 4rem;
+    padding: 0.2rem;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    .timer div h2,
-    .timer div p {
-        font-size: 1.2rem;
-        color: var(--sec-color);
-        margin: 0;
-        padding: 0;
+.timer div h2,
+.timer div p {
+    font-size: 1.2rem;
+    color: var(--sec-color);
+    margin: 0;
+    padding: 0;
     }
 
 /* res */
@@ -510,10 +509,10 @@
         width: auto;
     }
 
-        .timer div h2,
-        .timer div p {
-            font-size: 0.8rem;
-        }
+    .timer div h2,
+    .timer div p {
+        font-size: 0.8rem;
+    }
 }
 
 /* res */
@@ -532,18 +531,18 @@
     margin-bottom: 40px
 }
 
-    .Join-us input {
-        width: 30vw;
-        height: 38px;
-        margin-top: 3px;
-    }
+.Join-us input {
+    width: 30vw;
+    height: 38px;
+    margin-top: 1px;
+}
 
-    .Join-us button {
-        padding: 7px;
-        margin-left: -5px;
-        border-radius: 0 5px 5px 0 !important;
-        height: 44px !important;
-    }
+.Join-us button {
+    padding: 7px;
+    margin-left: -5px;
+    border-radius: 0 5px 5px 0 !important;
+    height: 40px !important;
+}
 /* res */
 @media (max-width: 768px) {
     .Join-us h1 {

@@ -1,0 +1,55 @@
+﻿@model ITech_Project.ViewModels.ContactFormViewModel
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_ItechLayout.cshtml";
+}
+@section style {
+    <link rel="stylesheet" href="~/assets/css/contact.css">
+}
+
+<section class="items-section">
+    <div class="container contact-c">
+        <div class="h ms-0">
+            <p>Contact Information</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h6>Contact Information</h6><hr>
+                <div class="row p-4 login-inputs">
+                   <p>Enter Your message, and We will contact with you as soon as possible.</p>
+                    <form asp-controller="Home" class="form-sub">
+                        <div class="row d-flex flex-column flex-xl-row">
+                            <div class="col-3">
+                                <label for="Name" asp-for="Name"></label>
+                                <input asp-for="Name" type="text" placeholder="Name" id="Name" asp-for="Name">
+                            </div>
+                            <div class="col-3 ms-xl-5 ">
+                                <label for="Email" asp-for="Email"></label>
+                                <input type="email" placeholder="Email" required id="Email" asp-for="Email">
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <div class="d-flex flex-column">
+                            <label for="Message" asp-for="Message"></label>
+                            <textarea name="" id="Message" cols="60" rows="10"
+                                placeholder="Type Your Message" required asp-for="Message"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Send" class="b mt-3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/assets/js/contact.js"></script>
+}
+

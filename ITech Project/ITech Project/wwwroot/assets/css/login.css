@@ -14,7 +14,7 @@
     display: inline-block;
     position: absolute;
     margin-left: 109px;
-    margin-top: -160px;
+    margin-top: -165px;
     border-radius: 5px;
     z-index: -1;
 }
@@ -33,11 +33,18 @@
 }
 
 .b {
-    padding: 0.4rem 0.8rem;
+    /*padding: 0.4rem 0.8rem;*/
     color: var(--sec-color);
     background-color: var(--main-color);
     border: 0;
     border-radius: 5px;
+    width: 6rem;
+    height: 2.5rem;
+}
+
+.signup-sec i {
+    font-size: 25px;
+    color: var(--sec-color)
 }
 
 .login-inputs label,
@@ -75,4 +82,15 @@
     border-color: var(--forth-color);
     opacity: 0.3;
 }
+
+@media (max-width: 320px) {
+
+    .signup-sec {
+        flex-direction: column !important;
+    }
+
+    .signup-sec a:nth-child(2){
+        margin-left: 0 !important;
+        margin-top: 12px;
+    }
 }

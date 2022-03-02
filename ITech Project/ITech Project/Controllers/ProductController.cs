@@ -3,6 +3,7 @@ using ITech_Project.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using System.Linq;
+using ITech_Project.pagination;
 
 namespace ITech_Project.Controllers
 {
@@ -27,10 +28,19 @@ namespace ITech_Project.Controllers
             return View("GetAll", allproducts);
 
         }
-        public IActionResult GetAll()
+        public IActionResult GetAll(int pg=1)
         {
             var products = ProductRepo.GetAll();
-            return View(products);
+            const int pageSize = 3;
+            if (pg < 1)
+                pg = 1; 
+            int recsCount = products.Count();
+            var pager=new Pager(recsCount,pg,pageSize);
+            int recSkip = (pg-1) * pageSize;
+            var data = products.Skip(recSkip).Take(pager.PageSize).ToList();
+            this.ViewBag.Pager = pager;
+            return View(data);
+   
         }
          
 
@@ -43,7 +53,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Supplier")]
+        [Authorize]
 
         public IActionResult Create()
         {

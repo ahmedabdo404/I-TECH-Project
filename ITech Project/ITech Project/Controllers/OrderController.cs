@@ -1,11 +1,16 @@
 ﻿using ITech_Project.Cart;
 using ITech_Project.Models;
+using ITech_Project.pagination;
 using ITech_Project.Service;
 using ITech_Project.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+<<<<<<< HEAD
 using System.Security.Claims;
+=======
+using System.Linq;
+>>>>>>> eb534016eeee1dc154ac9b15e371288fd4fa2e44
 using System.Threading.Tasks;
 
 namespace ITech_Project.Controllers
@@ -41,6 +46,7 @@ namespace ITech_Project.Controllers
             };
             return View(response);
         }
+<<<<<<< HEAD
         //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> GetAllOrders()
@@ -50,6 +56,24 @@ namespace ITech_Project.Controllers
 
             var Orders = await ordRepo.GetOrdersByUserIdAndRoleAsync(userId, userRole);
             return View(Orders);
+=======
+        
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllOrders(int pg = 1)
+        {
+            string userId = "";
+            var Orders = await ordRepo.GetOrdersByUserId(userId);
+            const int pageSize = 2;
+            if (pg < 1)
+                pg = 1;
+            int recsCount =Orders.Count();
+            var pager = new Pager(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
+            var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
+            this.ViewBag.Pager = pager;
+            return View(data);
+         
+>>>>>>> eb534016eeee1dc154ac9b15e371288fd4fa2e44
         }
 
         public IActionResult AddToShoppingCart(int id)

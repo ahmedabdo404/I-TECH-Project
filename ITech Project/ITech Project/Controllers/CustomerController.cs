@@ -45,7 +45,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 CustomerService.Create(customer);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("Index","Home");
             }
             return View(customer);
         }

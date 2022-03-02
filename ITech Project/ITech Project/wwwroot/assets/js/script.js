@@ -6,7 +6,6 @@ let minutesDiv = document.querySelector(".Minutes")
 let secondsDiv = document.querySelector(".Seconds")
 
 let timer = new Date("Mar 3, 2022 12:00:00").getTime();
- console.log("Ahmedaaaaaaaaaa")
 
 let counter = setInterval(() => {
     let datenow = new Date().getTime()
@@ -44,10 +43,13 @@ var options = {
 };
 var typed = new Typed('.element', options);
 
-//// add links to products
-//let productslink = document.querySelectorAll(".p-link");
-//window.onload = () => {
-//    for (let l of productslink)
-//        //l.setAttribute("asp-action", "details");
-//        l.setAttribute("href", "Home/details");
-//}
+// Join us confirm
+let jform = document.querySelector(".Join-us form")
+let jInput= document.querySelector(".Join-us input")
+
+console.log("ahmed eeeeeeeeeeeeeeeee")
+jform.onsubmit = () => {
+    if (jInput.value != "") {
+        alert(`We will send to you thae lastest offers to: ${jInput.value}`);
+    }
+}
