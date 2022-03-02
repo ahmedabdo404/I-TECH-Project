@@ -139,6 +139,7 @@ C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUp.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUpAdmin.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\SignUpSupplier.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Contact\Contact.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\Create.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\GetAllCustomers.cshtml.g.cs
