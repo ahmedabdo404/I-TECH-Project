@@ -1,7 +1,23 @@
 ﻿@model List<Product>
 
 @section style {
+<<<<<<< HEAD
+
+    <link rel="stylesheet" href="~/assets/css/sub.css">
+=======
 <link rel="stylesheet" href="~/assets/css/sub.css">
+>>>>>>> 94298891810a06021852dab97b2a970a2843c084
+}
+
+@{
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if(ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+
 }
 
 <section>
@@ -155,9 +171,20 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
+   
+<partial name="_Pager"  model="@pager"/>
+
+@section scripts {
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="~/assets/js/sub.js"></script>
+}
+
+=======
 
 
 @section scripts {
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 <script src="~/assets/js/sub.js"></script>
 }
+>>>>>>> 94298891810a06021852dab97b2a970a2843c084

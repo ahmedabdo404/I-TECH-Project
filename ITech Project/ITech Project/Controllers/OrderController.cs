@@ -1,10 +1,12 @@
 ﻿using ITech_Project.Cart;
 using ITech_Project.Models;
+using ITech_Project.pagination;
 using ITech_Project.Service;
 using ITech_Project.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ITech_Project.Controllers
@@ -42,11 +44,20 @@ namespace ITech_Project.Controllers
         }
         [Authorize(Roles = "Admin")]
 
-        public async Task<IActionResult> GetAllOrders()
+        public async Task<IActionResult> GetAllOrders(int pg = 1)
         {
             string userId = "";
             var Orders = await ordRepo.GetOrdersByUserId(userId);
-            return View(Orders);
+            const int pageSize = 2;
+            if (pg < 1)
+                pg = 1;
+            int recsCount =Orders.Count();
+            var pager = new Pager(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
+            var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
+            this.ViewBag.Pager = pager;
+            return View(data);
+            //return View(Orders);
         }
 
         public IActionResult AddToShoppingCart(int id)
