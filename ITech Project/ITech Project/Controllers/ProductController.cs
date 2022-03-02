@@ -43,7 +43,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Supplier")]
+        [Authorize]
 
         public IActionResult Create()
         {

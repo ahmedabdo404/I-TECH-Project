@@ -3,11 +3,10 @@
 @{
     ViewData["Title"] = "Create";
 }
-<div class="container">
-<h1>Create</h1>
-<h4>Supplier</h4>
-<hr />
+<div class="container m-3">
  
+<h4>Create Supplier</h4>
+<hr />
         <form asp-action="Create">
             <div class="row">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -89,7 +88,7 @@
                 <span asp-validation-for="Payment" class="text-danger"></span>
             </div>
             <div class="form-group m-3">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-warning" />
             </div>
          </div>        
    </div>

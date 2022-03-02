@@ -55,7 +55,7 @@ namespace ITech_Project.Controllers
                 {
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
                     await signInManager.SignInAsync(user, false);  //False => Per session
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Create", "Customer");
                 }
                 else
                 {
