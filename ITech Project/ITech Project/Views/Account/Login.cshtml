@@ -31,8 +31,6 @@
                             <input class="form-check-input" asp-for="RememberMe"/>
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <input type="hidden" value="@ViewBag.ReturnUrl" />
-                            @*<p><span asp-validation-for="UserName" class="text-danger"></span></p>*@
-                            @*<p><span asp-validation-for="Password" class="text-danger"></span></p>*@
                             <br>
                             <a asp-action="ForgetPassword">Forgot Password?</a>
                             <input type="submit" value="LOG IN" class="b mt-3 ms-lg-3 mt-lg-0 " />
