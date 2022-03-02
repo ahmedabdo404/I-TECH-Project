@@ -21,7 +21,6 @@
 }
 
 /* body ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>body*/
-
 .h {
     background-color: var(--main-color);
     color: var(--sec-color);
@@ -54,7 +53,7 @@
 
 hr {
     margin: 0;
-    max-width: 75%
+    max-width: 50%
 }
 
 .speces h4,
@@ -105,19 +104,20 @@ hr {
     background-color: var(--main-color);
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-    .add-to-cart p {
-        width: fit-content;
-        margin: 0;
-        margin-left: 0.2rem;
-        color: var(--sec-color);
-    }
+.add-to-cart p {
+    width: fit-content;
+    margin: 0;
+    margin-left: 0.2rem;
+    color: var(--sec-color);
+}
 
-    .add-to-cart i {
-        font-size: var(--font-size1);
-        color: var(--sec-color);
-    }
+.add-to-cart i {
+    font-size: var(--font-size1);
+    color: var(--sec-color);
+}
 
 
 #custome-accordion {
@@ -127,34 +127,34 @@ hr {
     margin-bottom: 2rem;
 }
 
-    #custome-accordion #ca-title {
-        width: fit-content;
-        /* background-color: var(--third-color); */
-    }
+#custome-accordion #ca-title {
+    width: fit-content;
+    /* background-color: var(--third-color); */
+}
 
-        #custome-accordion #ca-title span {
-            margin-right: 1rem;
-            cursor: pointer;
-            color: var(--main-color);
-            transition: var(--transition1);
-            font-size: var(--font-size2);
-            border-radius: 2px;
-            padding: 0.5rem;
-        }
+#custome-accordion #ca-title span {
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--main-color);
+    transition: var(--transition1);
+    font-size: var(--font-size2);
+    border-radius: 2px;
+    padding: 0.5rem;
+}
 
-    /* #custome-accordion #ca-title span:hover{
-    transform: translateY(-10%);
-    color: var(--fifth-color)
+/* #custome-accordion #ca-title span:hover{
+transform: translateY(-10%);
+color: var(--fifth-color)
 } */
 
-    #custome-accordion #ca-body div {
-        width: 100%;
-        height: auto;
-        background-color: var(--third-color);
-        border-radius: 2px;
-        padding: 1rem;
-        /* transition: var(--transition1); */
-    }
+#custome-accordion #ca-body div {
+    width: 100%;
+    height: auto;
+    background-color: var(--third-color);
+    border-radius: 2px;
+    padding: 1rem;
+    /* transition: var(--transition1); */
+}
 
 @media (max-width: 992px) {
 
@@ -179,6 +179,7 @@ hr {
     .details {
         flex-direction: column !important;
     }
+
 }
 
 @media (max-width: 600px) {

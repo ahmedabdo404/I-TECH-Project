@@ -2,6 +2,10 @@
     <link rel="stylesheet" href="~/assets/css/contact.css">
 }
 
+
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
     <section class="items-section">
         <div class="container contact-c">
             <div class="h ms-0">
@@ -18,7 +22,7 @@
                         <div class="row d-flex flex-column flex-xl-row">
                             <div class="col-3">
                                 <label for="Name">Name</label>
-                                <input type="text" placeholder="Name" id="Name">
+                                <input asp-for="Name" type="text" placeholder="Name" id="Name">
                             </div>
                             <div class="col-3 ms-xl-5">
                                 <label for="Email">Email</label>

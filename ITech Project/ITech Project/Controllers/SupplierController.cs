@@ -13,17 +13,20 @@ namespace ITech_Project.Controllers
         {
             this.supplier = supplier;
         }
+        [Authorize(Roles = "Admin")]
 
         public IActionResult GetAll()
         { 
         
         return View(supplier.GetAll());
         }
+        [Authorize(Roles = "Supplier")]
 
         public IActionResult GetById(int id)
         { 
         return View(supplier.GetById(id));  
         }
+        [Authorize(Roles = "Supplier")]
 
         public IActionResult GetByName(string name)
         { 
@@ -31,6 +34,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
+
         public IActionResult Create()
         {
             return View();
@@ -48,6 +52,8 @@ namespace ITech_Project.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "Supplier")]
+
         public IActionResult Update(int id)
         {
             return View(supplier.GetById(id));
@@ -64,6 +70,7 @@ namespace ITech_Project.Controllers
             return View();        
         }
 
+        [Authorize(Roles = "Admin")]
 
         public IActionResult Delete(int id)
         {

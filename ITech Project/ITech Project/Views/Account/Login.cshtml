@@ -29,10 +29,8 @@
                             <br />
                             <label class="form-check-label">Remember me</label>
                             <input class="form-check-input" asp-for="RememberMe"/>
-                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <input type="hidden" value="@ViewBag.ReturnUrl" />
-                            @*<p><span asp-validation-for="UserName" class="text-danger"></span></p>*@
-                            @*<p><span asp-validation-for="Password" class="text-danger"></span></p>*@
                             <br>
                             <a asp-action="ForgetPassword">Forgot Password?</a>
                             <input type="submit" value="LOG IN" class="b mt-3 ms-lg-3 mt-lg-0 " />
@@ -43,11 +41,22 @@
                                 <h5>Sign UP</h5>
                                 <P>Sign up on My tech platform</P>
                             </div>
-                                <a asp-controller="account" asp-action="signup"><input type="button" value="Sign Up" class="b"></a>
+
+                            <div class="signup-sec d-flex flex-row flex-md-column">
+                                <a asp-controller="account" asp-action="SignUpSupplier"
+                                class="d-flex flex-row align-items-center justify-content-between b">
+                                    <i class='bx bxs-cart-download' ></i>
+                                    <input type="button" value="Supplier" class="b"></a>
+                                
+                                <a asp-controller="account" asp-action="signup"
+                                class=" d-flex flex-row align-items-center justify-content-between b ms-2 ms-md-0 mt-md-2">
+                                    <i class='bx bxs-cart-add'></i>
+                                    <input type="button" value="Buyer" class="b">
+                                </a>
+                            </div>
+
                         </div>
                     </div>
-
-
                     </div>
 
                 </div>

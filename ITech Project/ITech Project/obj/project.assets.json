@@ -7305,19 +7305,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+    "C:\\Users\\mgabr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\itechproject\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+      "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
       "projectName": "ITech Project",
-      "projectPath": "D:\\itechproject\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\itechproject\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+      "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+      "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7376,12 +7376,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.12, 5.0.12]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7390,7 +7384,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

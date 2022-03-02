@@ -22,6 +22,10 @@
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none
+}
+
 body, html {
     width: 100%;
     min-height: 60vh;
@@ -29,7 +33,7 @@ body, html {
 }
 
 .main-c {
-    min-height: 50vh;
+    min-height: 100vh;
     padding-top: 100px;
 }
 /* header ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>header*/
@@ -40,7 +44,7 @@ header {
     position: fixed;
     top: 0%;
     /* temprory margin because of margin bug in vs*/
-    z-index: 5;
+    z-index: 100;
     align-content: center;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
@@ -99,7 +103,8 @@ header nav {
 
 .logo {
     margin: 0;
-    font-size: var(--font-size1)
+    font-size: var(--font-size1);
+    width: fit-content;
 }
 /* temporary cursor (develpoment)*/
 header li a {

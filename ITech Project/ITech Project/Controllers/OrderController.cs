@@ -28,78 +28,6 @@ namespace ITech_Project.Controllers
             shoppingCart = _shoppingCart;
         }
 
-
-        public IActionResult GetAll()
-        {
-            ViewData["Cust"] = custRepo.GetAll();
-            return View(ordRepo.GetAll());
-        }
-
-        
-        public IActionResult GetById([FromRoute] int id)
-        {
-            ViewData["Cust"] = custRepo.GetAll();
-            return View(ordRepo.GetById(id));
-        }
-
-        
-        [HttpGet]
-        public IActionResult Create()
-        {
-            ViewData["Cust"] = custRepo.GetAll();
-            return View();
-        }
-
-
-        [HttpPost]
-        public IActionResult Create(Order neword)
-        {
-            if (ModelState.IsValid)
-            {
-                //save db
-                ordRepo.Create(neword);
-                //display index view
-                return RedirectToAction("GetAll");
-            }
-            ViewData["Cust"] = custRepo.GetAll();
-            return View(neword);//html
-        }
-
-        [HttpGet]
-        public IActionResult Update(int id)
-        {
-            ViewData["Cust"] = custRepo.GetAll();
-            Order ord = ordRepo.GetById(id);
-            return View(ord);
-        }
-        [HttpPost]
-        public IActionResult Update(Order newOrder)
-        {
-            if (ModelState.IsValid)
-            {
-                ordRepo.Update(newOrder);
-                return RedirectToAction("GetAll");
-            }
-            ViewData["Cust"] = custRepo.GetAll();
-            return View(newOrder);
-        }
-
-        [Authorize(Roles = "Admin")]
-        public IActionResult Delete([FromRoute] int id)
-        {
-            try
-            {
-                ordRepo.Delete(id);
-                return RedirectToAction("GetAll");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.InnerException.Message);
-                return View("Update");
-            }
-        }
-
-
         //---------------------------//
         public IActionResult Index()
         {
@@ -114,6 +42,7 @@ namespace ITech_Project.Controllers
             };
             return View(response);
         }
+        [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> GetAllOrders(int pg = 1)
         {

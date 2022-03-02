@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace ITech_Project.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
 

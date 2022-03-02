@@ -22,6 +22,8 @@ namespace ITech_Project.Controllers
             return View(CustomerService.GetAll());
         }
 
+        [Authorize(Roles = "Customer")]
+
         public IActionResult GetById(int id)
         {
             return View(CustomerService.GetById(id));
@@ -30,7 +32,6 @@ namespace ITech_Project.Controllers
 
         #region Create
 
-        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -44,7 +45,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 CustomerService.Create(customer);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("Index","Home");
             }
             return View(customer);
         }
@@ -53,6 +54,7 @@ namespace ITech_Project.Controllers
         #region Update
 
         [HttpGet]
+        [Authorize(Roles = "Customer")]
         public IActionResult Update([FromRoute]int id)
         {
             Customer customer = CustomerService.GetById(id);

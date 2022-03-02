@@ -17,13 +17,12 @@ namespace ITech_Project.Controllers
         }
 
         public IActionResult Filter(string searchstring)
-
         {
             var allproducts = ProductRepo.GetAll();
             if (!string.IsNullOrEmpty(searchstring))
             {
-                var filterresult = allproducts.Where(n => n.Name.Contains(searchstring)
-                 || n.Description.Contains(searchstring)).ToList();
+                var filterresult = allproducts.Where(n => n.Name.ToLower().Contains(searchstring.ToLower())
+                 || n.Description.ToLower().Contains(searchstring.ToLower())).ToList();
                 return View("GetAll", filterresult);
             }
             return View("GetAll", allproducts);
@@ -43,6 +42,8 @@ namespace ITech_Project.Controllers
             return View(data);
             //return View(products);
         }
+         
+
         public IActionResult GetById([FromRoute]int id)
         {
             var product = ProductRepo.GetById(id);
@@ -52,13 +53,15 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Roles = "Admin")]
+        [Authorize]
+
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+
         public IActionResult Create(Product product)
         {
             if (ModelState.IsValid)
@@ -69,8 +72,8 @@ namespace ITech_Project.Controllers
             return View(product);
         }
 
-        //[HttpGet]
-        //[Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Authorize(Roles = "Supplier")]
         public IActionResult Update([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
@@ -90,7 +93,7 @@ namespace ITech_Project.Controllers
             return View(product);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Suuplier, Admin")]
         public IActionResult Delete([FromRoute]int id)
         {
             var product = ProductRepo.GetById(id);
