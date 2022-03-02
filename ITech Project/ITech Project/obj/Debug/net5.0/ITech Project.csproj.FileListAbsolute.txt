@@ -949,3 +949,4 @@ D:\itechproject\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITec
 D:\itechproject\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
 D:\itechproject\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 D:\itechproject\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
+D:\itechproject\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_Pager.cshtml.g.cs

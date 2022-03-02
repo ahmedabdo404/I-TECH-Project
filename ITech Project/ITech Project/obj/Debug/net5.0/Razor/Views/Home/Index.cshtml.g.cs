@@ -33,8 +33,15 @@ using ITech_Project.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "D:\itechproject\I-TECH-Project\ITech Project\ITech Project\Views\_ViewImports.cshtml"
+using ITech_Project.pagination;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fcbb0f3bef2fceeb119792ca59c54b9e9a570706", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8dd424cdfade54604a18dccd835c985414b57402", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -71,7 +78,7 @@ using ITech_Project.ViewModels;
         {
             DefineSection("style", async() => {
                 WriteLiteral("\r\n     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c5825", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c6023", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -142,7 +149,7 @@ using ITech_Project.ViewModels;
             <h1 class=""text-white"">I-Tech</h1>
             <h6 class=""text-white element""></h6>
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c10167", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c10365", async() => {
                 WriteLiteral("\r\n                <button type=\"button\" class=\"btn btn-outline-warning m-3\"\r\n                    style=\"border-radius: 25px; transition: all 0.5s;\">Start Shopping Now</button>\r\n            ");
             }
             );
@@ -194,7 +201,7 @@ using ITech_Project.ViewModels;
         <!-- Content -->
         <h2 class=""se");
             WriteLiteral("ction-title\"> Choose Your category</h2>\r\n        <div class=\"shop-content\">\r\n            <!-- Box 1 -->\r\n            <div class=\"product-box\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c12762", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c12960", async() => {
                 WriteLiteral("<img src=\"assets/imgs/carts/12.jpeg\"");
                 BeginWriteAttribute("alt", " alt=\"", 4471, "\"", 4477, 0);
                 EndWriteAttribute();
@@ -216,7 +223,7 @@ using ITech_Project.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                <h2 class=\"product-title text-center\">Phones</h2>\r\n            </div>\r\n            <!-- Box 2 -->\r\n            <div class=\"product-box\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c14621", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c14819", async() => {
                 WriteLiteral("<img src=\"assets/imgs/carts/8.jpeg\"");
                 BeginWriteAttribute("alt", " alt=\"", 4798, "\"", 4804, 0);
                 EndWriteAttribute();
@@ -238,7 +245,7 @@ using ITech_Project.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                <h2 class=\"product-title text-center\">Laptops</h2>\r\n            </div>\r\n            <!-- Box 3 -->\r\n            <div class=\"product-box\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c16453", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c16651", async() => {
                 WriteLiteral("<img src=\"assets/imgs/carts/5.jpeg\"");
                 BeginWriteAttribute("alt", " alt=\"", 5101, "\"", 5107, 0);
                 EndWriteAttribute();
@@ -306,7 +313,7 @@ using ITech_Project.ViewModels;
             DefineSection("scripts", async() => {
                 WriteLiteral("\r\n");
                 WriteLiteral("    <script src=\"https://cdn.jsdelivr.net/npm/typed.js@2.0.12\"></script>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c19939", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd9b0f27cc76de4e4f31cf7b9e004b5bff07644c20137", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
