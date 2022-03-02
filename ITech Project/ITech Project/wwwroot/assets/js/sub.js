@@ -2,7 +2,7 @@
 let productslink = document.querySelectorAll(".p-link");
 
 window.onload = () => {
-    for(let l of productslink)
+    for (let l of productslink)
         //l.setAttribute("asp-action", "details");
         l.setAttribute("href", "details");
 }

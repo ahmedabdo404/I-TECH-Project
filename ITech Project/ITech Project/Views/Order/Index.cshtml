@@ -3,41 +3,6 @@
 <link rel="stylesheet" href="~/assets/css/cart.css">
 }
 
-@*
-   //------------------- old Code--------------------
-    <div class="Container">
-    <table class="table table">
-        <tr>
-            <th>Selected Amount</th>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Subtotal</th>
-            <th></th>
-        </tr>
-        @foreach (var item in @Model.ShoppingCart.ShoppingCartItems)
-        {
-            <tr>
-                <td>@item.Amount</td>
-                <td>@item.product.Name</td>
-                <td>@item.product.UnitPrice.ToString("c")</td>
-                <td>@((item.Amount*item.product.UnitPrice).ToString("c"))</td>
-                <td>
-                    <a class="btn btn success" asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id"> Delete</a>
-                    <a class="btn btn success" asp-action="AddToShoppingCart" asp-route-id="@item.product.Id"> Add</a>
-                </td>
-            </tr>
-        }
-        <tfoot>
-            <tr>
-                <td colspan="2"></td>
-                <td> <b>Total: </b></td>
-                <td>@Model.ShoppingCartTotal.ToString("c")</td>
-        </tfoot>
-    </table>
-</div>
-*@
-
-
 <div class="container cart-c">
     <h1>Shopping Cart</h1>
     <div class="cart">
@@ -70,24 +35,24 @@
                 }
             
                     <div class="product-info">
-                        <h3 class="product-name">@item.product.Name</h3>
+                        <h4 class="product-name">@item.product.Name</h4>
                         <div class="mb-2">
-                            <h5 class="d-inline">Price:</h5>
+                            <h6 class="d-inline">Price:</h6>
                             <span class="product-price d-inline">@item.product.UnitPrice.ToString("c")</span><br />
                         </div>
 
                         <div class="mb-2">
-                            <h5 class="d-inline">Discount:</h5>
+                            <h6 class="d-inline">Discount:</h6>
                             <span class="product-offer d-inline">@item.product.Discount</span>
                         </div>
 
                         <div class="mb-2">
-                             <h5 class="d-inline">SubTotal:</h5>
+                             <h6 class="d-inline">SubTotal:</h6>
                             <span class="product-price d-inline">@((item.Amount*item.product.UnitPrice).ToString("c"))</span><br />
                         </div>
 
                         <div class="mb-2">
-                            <h5 class="d-inline">Quantity:</h5>
+                            <h6 class="d-inline">Quantity:</h6>
                             <span class="product-quantity">
                                 @item.Amount
                             </span>

@@ -123,7 +123,7 @@
 #close-filter {
     position: absolute;
     top: 0.5rem;
-    left: 14rem;
+    left: 12rem;
     right: 0.8rem;
     font-size: 2rem;
     color: var(--forth-color);
@@ -184,6 +184,7 @@ li i.bx.bxs-right-arrow {
 /* filter buttons */
 
 .filter-button-group button {
+    transition: var(--transition1);
     transition: var(--transition1);
     background-color: var(--third-color);
     border: none;
