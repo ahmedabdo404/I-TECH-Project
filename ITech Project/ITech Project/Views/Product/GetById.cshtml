@@ -1,7 +1,7 @@
 ﻿@model Product
 
 @section style {
-    <link rel="stylesheet" href="~/assets/css/details.css">
+<link rel="stylesheet" href="~/assets/css/details.css">
 }
 
 <section class="items-section">
@@ -16,29 +16,31 @@
                     var pictureList = str.Split(",");
                 }
                 <div class="carousel-indicators">
-                        @for(int i = 0;i < @pictureList.Length; i++)
-                        {
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="@i" class="active"
+                    @for (int i = 0; i < @pictureList.Length; i++)
+                    {
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="@i" class="active"
                             aria-current="true" aria-label="Slide @i"></button>
-                        }
+                    }
                 </div>
                 <div class="carousel-inner">
-                    @if(pictureList.Length <= 1)
+                    @if (pictureList.Length <= 1)
                     {
                         //image is one picture
                         <div class="carousel-item active">
                             @if (Model.ModelMobile != null)
                             {
                                 <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg'">
-                            }else if (Model.ModelLabtop != null)
+                            }
+                            else if (Model.ModelLabtop != null)
                             {
                                 <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'">
-                            }else if (Model.Accessories != null)
+                            }
+                            else if (Model.Accessories != null)
                             {
                                 <img src="@str" class="d-block" alt="@Model.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'">
                             }
                         </div>
-                    } 
+                    }
                     else
                     {
                         @*more than one picture*@
@@ -47,25 +49,29 @@
                         <div class="carousel-item active">
                             @if (Model.ModelMobile != null)
                             {
-                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg' />
-                            }else if (Model.ModelLabtop != null)
-                            { 
-                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format' />
-                            }else if (Model.Accessories != null)
+                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror=" this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg' />
+                            }
+                            else if (Model.ModelLabtop != null)
+                            {
+                                <img src="@pictureList[0]" class="d-block" alt="@Model.Name onerror=" this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format' />
+                            }
+                            else if (Model.Accessories != null)
                             {
                                 <img src="@pictureList[0]" class="d-block" alt="@Model.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'">
                             }
                         </div>
-                        for(int i = 1;i < pictureList.Length;i++)
+                        for (int i = 1; i < pictureList.Length; i++)
                         {
                             <div class="carousel-item">
                                 @if (Model.ModelMobile != null)
                                 {
                                     <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg'">
-                                }else if (Model.ModelLabtop != null)
+                                }
+                                else if (Model.ModelLabtop != null)
                                 {
                                     <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'">
-                                }else if (Model.Accessories != null)
+                                }
+                                else if (Model.Accessories != null)
                                 {
                                     <img src="@pictureList[i]" class="d-block" alt="@Model.Name" onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'">
                                 }
@@ -74,12 +80,12 @@
                     }
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
+                        data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
+                        data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -94,21 +100,21 @@
                     <hr>
                     <span class="d-block">
                         Brand:
-                        @if(Model.Category == Category.Laptop)
+                        @if (Model.Category == Category.Laptop)
                         {
                             <p class="d-inline">@Model.ModelLabtop</p>
                         }
-                        else if(Model.Category == Category.Phone)
+                        else if (Model.Category == Category.Phone)
                         {
                             <p class="d-inline">@Model.ModelMobile</p>
                         }
                     </span>
                     <span>
-                        Color: <p class="d-inline">@Model.Color</p> 
+                        Color: <p class="d-inline">@Model.Color</p>
                     </span>
                     <span class="d-block">
                         Availability:
-                        @if(Model.UnitsInStock > 0)
+                        @if (Model.UnitsInStock > 0)
                         {
                             <p class="d-inline">In Stock</p>
                         }
@@ -122,34 +128,34 @@
                     <h4>Product Reviews</h4>
                     <hr>
                     <span class="d-block">
-                        @for(int i = 0; i < Model.Ranking; i++)
+                        @for (int i = 0; i < Model.Ranking; i++)
                         {
-                            <i class='bx bxs-star'></i> 
+                            <i class='bx bxs-star'></i>
                         }
-                        @for(byte? i = Model.Ranking; i < 5; i++)
+                        @for (byte? i = Model.Ranking; i < 5; i++)
                         {
                             <i class='bx bx-star'></i>
                         }
                         @switch (Model.Ranking)
                         {
                             case 0:
-                                 <p class="d-inline">Very Bad</p>
-                                 break;
+                                <p class="d-inline">Very Bad</p>
+                                break;
                             case 1:
-                                 <p class="d-inline">Bad</p>
-                                 break;
+                                <p class="d-inline">Bad</p>
+                                break;
                             case 2:
-                                 <p class="d-inline">Normal</p>
-                                 break;
+                                <p class="d-inline">Normal</p>
+                                break;
                             case 3:
-                                 <p class="d-inline">Good</p>
-                                 break;
+                                <p class="d-inline">Good</p>
+                                break;
                             case 4:
-                                 <p class="d-inline">Very Good</p>
-                                 break;
+                                <p class="d-inline">Very Good</p>
+                                break;
                             case 5:
-                                 <p class="d-inline">Excellent</p>
-                                 break;
+                                <p class="d-inline">Excellent</p>
+                                break;
                         }
                     </span>
                 </div>
@@ -170,19 +176,21 @@
                     <span class="d-block price-val">
                         @{
                             string price = ($"{Model.UnitPrice - Model.Discount}");
-                         }
-                            <p class="d-inline" style="text-decoration: line-through">$ @Model.UnitPrice</p>
-                            <p class="d-inline">$@price</p>
+                        }
+                        <p class="d-inline" style="text-decoration: line-through">$ @Model.UnitPrice</p>
+                        <p class="d-inline">$@price</p>
                     </span>
 
                     <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@Model.Id">
-                            <span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
+                        <span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
                             <i class='bx bxs-cart-add add-cart '></i>
                             <p class="d-inline">add-to cart</p>
                         </span>
                     </a>
-
-                    <a asp-action="Delete" asp-route-id="@Model.Id" id="delete-product">Delete</a>
+                    @if (User.IsInRole("Suuplier, Admin"))
+                    {
+                        <a asp-action="Delete" asp-route-id="@Model.Id" id="delete-product" class="btn btn-danger">Delete</a>
+                    }
                 </div>
             </div>
         </div>
@@ -201,21 +209,21 @@
                     <h6>Product Specification:</h6><br>
                     <span class="d-block">
                         Brand:
-                        @if(Model.Category == Category.Laptop)
+                        @if (Model.Category == Category.Laptop)
                         {
                             <p class="d-inline">@Model.ModelLabtop</p>
                         }
-                        else if(Model.Category == Category.Phone)
+                        else if (Model.Category == Category.Phone)
                         {
                             <p class="d-inline">@Model.ModelMobile</p>
                         }
                     </span>
                     <span>
-                        Color: <p class="d-inline">@Model.Color</p> 
+                        Color: <p class="d-inline">@Model.Color</p>
                     </span>
                     <span class="d-block">
                         Availability:
-                        @if(Model.UnitsInStock > 0)
+                        @if (Model.UnitsInStock > 0)
                         {
                             <p class="d-inline">In Stock</p>
                         }
@@ -236,5 +244,5 @@
 </section>
 
 @section scripts{
-    <script src="~/assets/js/details.js"></script>
+<script src="~/assets/js/details.js"></script>
 }
