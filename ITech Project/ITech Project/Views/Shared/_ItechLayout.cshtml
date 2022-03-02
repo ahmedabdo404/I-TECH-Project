@@ -25,14 +25,19 @@
     <header>
         @if(User.Identity.IsAuthenticated)
         {
-         <nav class="container">
-            <ul class="menu-links">
-                <li class="nav-link">
-                    <a asp-controller="Home" asp-action="dashboard">
-                        <i class='bx bx-home-alt icon'></i>
-                        <span class="text nav-text">Dashboard</span>
-                    </a>
-                </li>
+            <nav class="container">
+                <a asp-controller="Home" asp-action="Index"><p class="logo" style="width:150px">I-TECH</p></a>
+
+                <ul class="menu-links">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-link">
+                            <a asp-controller="Home" asp-action="dashboard">
+                                <i class='bx bx-home-alt icon'></i>
+                                <span class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>  
+                    }
 
                 <li class="nav-link">
                     <a asp-controller="Order" asp-action="Index">
@@ -173,7 +178,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 footer-links">
                         <h4>MY Account</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="login">Sign In</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Account" asp-action="login">Sign In</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Order" asp-action="Index">My Cart</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="order" asp-action="GetAllOrders">Orders</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="contact">Help</a></li>

@@ -7305,53 +7305,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\mgabr\\.nuget\\packages\\": {}
-=======
-<<<<<<< HEAD
-    "C:\\Users\\Mayada\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\Alli\\.nuget\\packages\\": {},
->>>>>>> 296e1881ad3a8205caece321e7ef94484f2fac56
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> b65bb337a7aa618ee6df11133688df50653e6eb5
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
       "projectName": "ITech Project",
       "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
       "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Finaaal\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
-=======
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Mayada\\Desktop\\I-TECH Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-      "projectName": "ITech Project",
-      "projectPath": "C:\\Users\\Mayada\\Desktop\\I-TECH Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-      "packagesPath": "C:\\Users\\Mayada\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mayada\\Desktop\\I-TECH Project\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-      "projectName": "ITech Project",
-      "projectPath": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-      "packagesPath": "C:\\Users\\Alli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alli\\Desktop\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
->>>>>>> 296e1881ad3a8205caece321e7ef94484f2fac56
->>>>>>> b65bb337a7aa618ee6df11133688df50653e6eb5
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-<<<<<<< HEAD
-        "C:\\Users\\Mayada\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Alli\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 296e1881ad3a8205caece321e7ef94484f2fac56
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> b65bb337a7aa618ee6df11133688df50653e6eb5
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
