@@ -32,7 +32,7 @@
                     @if (User.IsInRole("Admin"))
                     {
                         <li class="nav-link">
-                            <a asp-controller="Home" asp-action="dashboard">
+                            <a asp-controller="dashboard" asp-action="dashboard">
                                 <i class='bx bx-home-alt icon'></i>
                                 <span class="text nav-text">Dashboard</span>
                             </a>
@@ -75,7 +75,7 @@
                 </li>
 
                 <li class="nav-link">
-                    <a asp-controller="Home" asp-action="contact">
+                    <a asp-controller="Contact" asp-action="index">
                         <i class='bx bx-support icon'></i>
                         <span class="text nav-text">Contact</span>
                     </a>
@@ -99,7 +99,7 @@
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-controller="Account" asp-action="login">My Account</a></li>
                     <li> <a asp-controller="Product" asp-action="GetAll">Shopping</a></li>
-                    <li><a asp-controller="Home" asp-action="Checkout">Checkout</a></li>
+                    <li><a asp-controller="Contact" asp-action="index">Contact</a></li>
                 </ul>
                 <div id="menu-bar"><i class='bx bx-menu'></i></div>
             </nav>  
@@ -111,7 +111,7 @@
                     @*<div class="Search-icon">
                         <i class='bx bx-search-alt-2'></i>
                     </div>*@
-                    <button class="btn btn-warning my-2 my-sm-0" type="submit" ><i class='bx bx-search-alt-2'></i></button>
+                    <button class="btn btn-warning my-2 my-sm-0 Search-icon" type="submit" ><i class='bx bx-search-alt-2'></i></button>
                 </form>
                 <div class="btn-group account">
                     <p type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
@@ -161,31 +161,30 @@
     </div>
     <!-- footer -->
     <footer id="footer" class="border-top footer text-muted">
-
-         <div class="footer-top">
+        <div class="footer-top">
             <div class="container">
-                <div class="row d-flex flex-row justify-content-md-center footer-sections">
-                    <div class="col-lg-3 col-md-3 col-sm-3 footer-links">
+                <div class="d-flex flex-row justify-content-sm-around justify-content-md-evenly footer-sections">
+                    <div class="footer-links">
                         <h4>Information</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="index">Home</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="About">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="index">Privacy</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Contact" asp-action="index">Contact</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 col-sm-3 footer-links">
+                    <div class="footer-links">
                         <h4>MY Account</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Account" asp-action="login">Sign In</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="Order" asp-action="Index">My Cart</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-controller="order" asp-action="GetAllOrders">Orders</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="contact">Help</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Contact" asp-action="index">Help</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 col-sm-3 footer-contact text-wrap">
+                    <div class="footer-contact text-wrap">
                         <h3>I-TECH</h3>
                         <p>
                             ITI Menofia Branch <br>
@@ -199,24 +198,25 @@
             </div>
         </div>
 
-        <div class="container d-md-flex p-0 pb-3 pt-3 inner-footer text-wrap">
-
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span> I-TECH
-                        </span></strong>. All Rights Reserved
+        <div class="inner-footer">
+            <div class="container text-wrap d-md-flex pt-3 pb-3">
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span> I-TECH
+                            </span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <a href="https://github.com/ahmedabdo404/I-TECH-Project" target="_blank"> I-TECH
+                            Team</a>
+                    </div>
                 </div>
-                <div class="credits">
-                    Designed by <a href="https://github.com/ahmedabdo404/I-TECH-Project" target="_blank"> I-TECH
-                        Team</a>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
-            </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
         </div>
     </footer>

@@ -148,17 +148,9 @@ D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Pr
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Customer\Update.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Cart.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\CheckOut.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\DashBoard.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\forgetPassword.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\orders.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\resetPassword.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\sub.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\CompleteOrder.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\GetAllOrders.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
@@ -169,7 +161,6 @@ D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Pr
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\AddRole.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\GetRoles.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
-D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ItechLayout.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_Pager.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -187,3 +178,6 @@ D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Pr
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\_ErrorLayout.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Home\Error.cshtml.g.cs
