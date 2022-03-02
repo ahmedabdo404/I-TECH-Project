@@ -42,8 +42,8 @@ namespace ITech_Project.Controllers
             };
             return View(response);
         }
+        
         [Authorize(Roles = "Admin")]
-
         public async Task<IActionResult> GetAllOrders(int pg = 1)
         {
             string userId = "";
@@ -57,7 +57,7 @@ namespace ITech_Project.Controllers
             var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
             this.ViewBag.Pager = pager;
             return View(data);
-            //return View(Orders);
+         
         }
 
         public IActionResult AddToShoppingCart(int id)

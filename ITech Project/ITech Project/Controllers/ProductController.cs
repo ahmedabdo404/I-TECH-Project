@@ -40,7 +40,7 @@ namespace ITech_Project.Controllers
             var data = products.Skip(recSkip).Take(pager.PageSize).ToList();
             this.ViewBag.Pager = pager;
             return View(data);
-            //return View(products);
+   
         }
          
 
