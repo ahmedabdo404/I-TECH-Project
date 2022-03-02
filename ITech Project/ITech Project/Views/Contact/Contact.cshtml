@@ -21,7 +21,7 @@
                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est nihil obcaecati nam suscipit
                             molestias excepturi necessitatibus eum exercitationem illum sapiente, officia hic neque esse
                             sit quidem voluptate consectetur nobis quae.</p>
-                    <form asp-action="Index" asp-controller="Contact" >
+                    <form asp-action="contact" asp-controller="Contact" >
                         <div class="row d-flex flex-column flex-xl-row">
                             <div class="col-3">
                                 <label for="Name" asp-for="Name"></label>
@@ -53,3 +53,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
