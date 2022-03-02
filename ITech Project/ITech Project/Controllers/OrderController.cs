@@ -5,6 +5,7 @@ using ITech_Project.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace ITech_Project.Controllers
@@ -40,12 +41,14 @@ namespace ITech_Project.Controllers
             };
             return View(response);
         }
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> GetAllOrders()
         {
-            string userId = "";
-            var Orders = await ordRepo.GetOrdersByUserId(userId);
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userRole = User.FindFirstValue(ClaimTypes.Role);
+
+            var Orders = await ordRepo.GetOrdersByUserIdAndRoleAsync(userId, userRole);
             return View(Orders);
         }
 
@@ -74,8 +77,8 @@ namespace ITech_Project.Controllers
         public async Task <IActionResult> CompleteOrder()
         {
             var items = shoppingCart.GetShoppingCart();
-            string userId = "";
-            string userEmailAddress = "";
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
             await ordRepo.StoreOrder(items, userId, userEmailAddress);
             await shoppingCart.ClearShoppingCartAsync();
             return View();

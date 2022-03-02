@@ -15,7 +15,7 @@ namespace ITech_Project.Service
         int Update(Order ord);
 
         public Task StoreOrder(List<ShoppingCartItem> items, string UserId, string UserEmailAddress);
-        public Task <List<Order>> GetOrdersByUserId(string userId);
+        public Task <List<Order>> GetOrdersByUserIdAndRoleAsync(string userId, string userRole);
 
     }
 }
