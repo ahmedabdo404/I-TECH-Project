@@ -16,9 +16,9 @@ namespace ITech_Project.Models
 
         public DateTime Timestamp { get; set; }
 
-        public IdentityUser User { get; set; }
-        [ForeignKey("UserId")]
+        [ForeignKey("User")]
         public string UserId { get; set; }
+        public IdentityUser User { get; set; }
         
         public string Email { get; set; }
 
