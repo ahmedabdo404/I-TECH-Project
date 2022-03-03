@@ -36,7 +36,7 @@
 .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,auto));
-    gap: 2rem;
+    gap: 1rem;
 }
 
 #product-list {
@@ -48,6 +48,7 @@
     max-width: 300px;
     transition: var(--transition2);
     overflow: hidden;
+    margin-left: 1rem;
 }
 
 .product-img {
@@ -55,7 +56,7 @@
     height: 250px;
     object-fit: cover;
     transition: var(--transition2);
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 450px) {
@@ -71,14 +72,13 @@
 }
 
 .product-box:hover {
-    padding: 0 10px;
     border: 1px solid var(--forth-color);
     transition: var(--transition2);
 }
 
-    .product-box:hover .product-img {
-        transform: scale(106%);
-    }
+.product-box:hover .product-img {
+    transform: scale(110%);
+}
 
 .product-title {
     font-size: 1.1rem;
