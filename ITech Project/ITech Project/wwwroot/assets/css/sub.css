@@ -42,6 +42,7 @@
 #product-list {
     justify-content: space-evenly;
 }
+
 .product-box {
     position: relative;
     max-width: 300px;
@@ -121,9 +122,9 @@
     overflow-y: scroll;
 }
 
-    .filter.active {
-        right: -8%;
-    }
+.filter.active {
+    right: -8%;
+}
 
 .filter-title {
     text-align: start;
@@ -132,9 +133,9 @@
     margin-top: 2rem;
 }
 
-#close-filter {
+#close-f {
     position: absolute;
-    top: 0.5rem;
+    top: 0.8rem;
     left: 12rem;
     right: 0.8rem;
     font-size: 2rem;
