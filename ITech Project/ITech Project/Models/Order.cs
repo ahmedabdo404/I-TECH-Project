@@ -19,7 +19,7 @@ namespace ITech_Project.Models
         [ForeignKey("User")]
         public string UserId { get; set; }
         public IdentityUser User { get; set; }
-        
+
         public string Email { get; set; }
 
         [Display(Name = "Customer")]

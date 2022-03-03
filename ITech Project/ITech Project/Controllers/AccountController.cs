@@ -12,9 +12,9 @@ namespace ITech_Project.Controllers
 {
     public class AccountController : Controller
     {
-        UserManager<IdentityUser> userManager;
-        SignInManager<IdentityUser> signInManager;
-        ILogger<IdentityUser> logger;
+        private readonly UserManager<IdentityUser> userManager;
+        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly ILogger<IdentityUser> logger;
 
 
 
@@ -42,16 +42,15 @@ namespace ITech_Project.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpViewModel newAccount)
         {
-            if (ModelState.IsValid == true)
+            if (ModelState.IsValid)
             {
-                IdentityUser user = new IdentityUser();
-
+                IdentityUser user = new();
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
 
                 //Saving user
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
-                if (Result.Succeeded == true)
+                if (Result.Succeeded)
                 {
                     //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
                     await signInManager.SignInAsync(user, false);  //False => Per session
@@ -84,30 +83,28 @@ namespace ITech_Project.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUpSupplier(SignUpViewModel newAccount)
         {
-            if (ModelState.IsValid == true)
+            if (ModelState.IsValid)
             {
-                IdentityUser user = new IdentityUser();
+                IdentityUser user = new();
 
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
 
                 //Saving user
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
-                if (Result.Succeeded == true)
+                if (Result.Succeeded)
                 {
-
                     IdentityResult role = await userManager.AddToRoleAsync(user, "Supplier");
                     if (role.Succeeded)
                     {
+                        //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                        await signInManager.SignInAsync(user, false);  //False => Per session
                         return RedirectToAction("Create", "Supplier");
                     }
                     else
                     {
-                        ModelState.AddModelError("","No Supplier role is found !");
+                        ModelState.AddModelError("", "No Supplier role is found !");
                     }
-                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, false);  //False => Per session
-                    return RedirectToAction("Create", "Supplier");
                 }
                 else
                 {
@@ -141,30 +138,27 @@ namespace ITech_Project.Controllers
         {
             if (ModelState.IsValid == true)
             {
-                IdentityUser user = new IdentityUser();
-
+                IdentityUser user = new();
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
 
                 //Saving user and creating cookie
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
-                if (Result.Succeeded == true)
+                if (Result.Succeeded)
                 {
                     //Add to Admin Role
                     IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
                     if (role.Succeeded)
                     {
+                        //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                        await signInManager.SignInAsync(user, false);
                         //if(await userManager.IsInRoleAsync(user,"Admin"))
                         return RedirectToAction("Dashboard", "Dashboard");
                     }
                     else
                     {
-                        ModelState.AddModelError("","No Admin role is found !");
+                        ModelState.AddModelError("", "No Admin role is found !");
                     }
-
-                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, false);
-                    return RedirectToAction("Dashboard", "Dashboard");
                 }
                 else
                 {
@@ -196,32 +190,35 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
-        public IActionResult Login(string ReturnUrl)
+        public IActionResult Login(string ReturnUrl = "~/product/getall")
         {
-            ViewData["RedirectUrl"] = ReturnUrl;
+            ViewData["ReturnUrl"] = ReturnUrl;
             return View();
         }
 
 
         //Check create cookie
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "")
+        public async Task<IActionResult> Login(LoginViewModel LoginUser,
+            string ReturnUrl = "~/product/getall")
         {
-            if (ModelState.IsValid == true)
+            if (ModelState.IsValid)
             {
                 IdentityUser user = await userManager.FindByEmailAsync(LoginUser.Email);
                 if (user != null)
                 {
-                   Microsoft.AspNetCore.Identity.SignInResult Result = await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
-                   if(Result.Succeeded == true)
-                   {
+                    Microsoft.AspNetCore.Identity.SignInResult Result =
+                        await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
+                    if (Result.Succeeded)
+                    {
+                        //return LocalRedirect(ReturnUrl);
                         if (await userManager.IsInRoleAsync(user, "Admin"))
                         {
                             return RedirectToAction("Dashboard", "Dashboard");
                         }
                         else
                         {
-                            if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                            if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
                             {
                                 return Redirect(ReturnUrl);
                             }
@@ -230,15 +227,15 @@ namespace ITech_Project.Controllers
                                 return RedirectToAction("Index", "Home");
                             }
                         }
-                   }
-                   else
-                   {
-                        ModelState.AddModelError("","Invalid user name or password");
-                   }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Invalid user name or password");
+                    }
                 }
                 else
                 {
-                    ModelState.AddModelError("","Invalid user name or password");
+                    ModelState.AddModelError("", "Invalid user name or password");
                 }
             }
             return View(LoginUser);

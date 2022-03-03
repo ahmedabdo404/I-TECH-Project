@@ -1,0 +1,455 @@
+﻿++Solution 'ITech Project' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:ITech Project.sln
+++ITech Project
+i:{00000000-0000-0000-0000-000000000000}:ITech Project
+++Connected Services 
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>943
+++Dependencies
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>942
+++Properties
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\properties\
+++wwwroot
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\
+++Cart
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\cart\
+++Controllers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\
+++AccountController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\accountcontroller.cs
+++ContactController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\contactcontroller.cs
+++CustomerController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\customercontroller.cs
+++DashboardController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\dashboardcontroller.cs
+++HomeController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\homecontroller.cs
+++OrderController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\ordercontroller.cs
+++ProductController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\productcontroller.cs
+++RoleController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\rolecontroller.cs
+++SupplierController.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\controllers\suppliercontroller.cs
+++Email
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\email\
+++Enums
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\enums\
+++Migrations
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\migrations\
+++20220227221355_Init.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\migrations\20220227221355_init.cs
+++20220227224814_supEdit.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\migrations\20220227224814_supedit.cs
+++DbModelSnapshot.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\migrations\dbmodelsnapshot.cs
+++Models
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\
+++pagination
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\pagination\
+++Service
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\
+++ViewComponents
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewcomponents\
+++ViewModels
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\
+++Views
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\
+++Account
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\
+++Contact
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\contact\
+++Customer
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\customer\
+++Dashboard
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\dashboard\
+++Home
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\
+++About.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\about.cshtml
+++CheckOut.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\checkout.cshtml
+++Error.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\error.cshtml
+++Index.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\index.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\order\index.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\contact\index.cshtml
+++orders.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\orders.cshtml
+++Privacy.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\home\privacy.cshtml
+++Order
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\order\
+++CompleteOrder.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\order\completeorder.cshtml
+++GetAllOrders.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\order\getallorders.cshtml
+++Product
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\product\
+++Role
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\role\
+++Shared
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\
+++Components
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\components\
+++_ErrorLayout.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\_errorlayout.cshtml
+++_ItechLayout.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\_itechlayout.cshtml
+++_Pager.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\_pager.cshtml
+++_Pager2.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\_pager2.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\_validationscriptspartial.cshtml
+++Supplier
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\supplier\
+++_ViewImports.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\_viewstart.cshtml
+++appsettings.json
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\appsettings.json
+++libman.json
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\libman.json
+++Program.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\program.cs
+++Startup.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\startup.cs
+++No service dependencies discovered
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>944
+++Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:analyzers
+++Frameworks
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:frameworks
+++Packages
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:packages
+++launchSettings.json
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\properties\launchsettings.json
+++assets
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\
+++lib
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\
+++ShoppingCart.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\cart\shoppingcart.cs
+++EmailHelper.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\email\emailhelper.cs
+++Enums.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\enums\enums.cs
+++20220227221355_Init.Designer.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\migrations\20220227221355_init.designer.cs
+++20220227224814_supEdit.Designer.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\migrations\20220227224814_supedit.designer.cs
+++Customer.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\customer.cs
+++Db.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\db.cs
+++ErrorViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\errorviewmodel.cs
+++Order.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\order.cs
+++OrderDetail.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\orderdetail.cs
+++Product.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\product.cs
+++ShoppingCartItem.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\shoppingcartitem.cs
+++Supplier.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\models\supplier.cs
+++Pager.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\pagination\pager.cs
+++CustomerService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\customerservice.cs
+++ICustomerService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\icustomerservice.cs
+++IOrderDetailService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\iorderdetailservice.cs
+++IOrderService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\iorderservice.cs
+++IProductService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\iproductservice.cs
+++ISupplierService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\isupplierservice.cs
+++OrderDetailService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\orderdetailservice.cs
+++OrderService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\orderservice.cs
+++ProductService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\productservice.cs
+++SupplierService.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\service\supplierservice.cs
+++ShoppingCartSummary.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewcomponents\shoppingcartsummary.cs
+++ChangePasswordViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\changepasswordviewmodel.cs
+++ContactFormViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\contactformviewmodel.cs
+++ForgetPasswordViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\forgetpasswordviewmodel.cs
+++LoginViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\loginviewmodel.cs
+++RoleViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\roleviewmodel.cs
+++ShoppingCartViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\shoppingcartviewmodel.cs
+++SignUpViewModel.cs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\viewmodels\signupviewmodel.cs
+++ForgetPassword.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\forgetpassword.cshtml
+++ForgetPasswordConfirmation.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\forgetpasswordconfirmation.cshtml
+++Login.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\login.cshtml
+++SignUp.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\signup.cshtml
+++SignUpAdmin.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\signupadmin.cshtml
+++SignUpSupplier.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\account\signupsupplier.cshtml
+++Contact.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\contact\contact.cshtml
+++Create.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\customer\create.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\product\create.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\supplier\create.cshtml
+++GetAllCustomers.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\customer\getallcustomers.cshtml
+++GetById.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\customer\getbyid.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\product\getbyid.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\supplier\getbyid.cshtml
+++Update.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\customer\update.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\product\update.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\supplier\update.cshtml
+++Dashboard.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\dashboard\dashboard.cshtml
+++GetAll.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\product\getall.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\supplier\getall.cshtml
+++AddRole.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\role\addrole.cshtml
+++GetRoles.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\role\getroles.cshtml
+++ShoppingCartSummary
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\components\shoppingcartsummary\
+++appsettings.Development.json
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.14\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\microsoft.netcore.app
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.14)
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>960
+++Microsoft.EntityFrameworkCore (5.0.14)
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>958
+++Microsoft.EntityFrameworkCore.SqlServer (5.0.14)
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>959
+++Microsoft.EntityFrameworkCore.Tools (5.0.14)
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>961
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (5.0.2)
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:>962
+++css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\
+++imgs
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\
+++js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\
+++jquery
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\
+++jquery-validation
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation-unobtrusive\
+++Default.cshtml
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\views\shared\components\shoppingcartsummary\default.cshtml
+++about.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\about.css
+++cart.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\cart.css
+++checkout.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\checkout.css
+++contact.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\contact.css
+++Dashboard.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\dashboard.css
+++details.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\details.css
+++error.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\error.css
+++forgetPassword.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\forgetpassword.css
+++layout.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\layout.css
+++login.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\login.css
+++orders.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\orders.css
+++restPassword.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\restpassword.css
+++style.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\style.css
+++sub.css
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\css\sub.css
+++carts
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\
+++dashboard
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\
+++1.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\1.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\1.jpg
+++2.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\2.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\2.jpg
+++3.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\3.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\3.jpg
+++4.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\4.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\4.jpg
+++5.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\5.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\5.jpg
+++6.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\6.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\6.jpg
+++about.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\about.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\about.jpg
+++icon.svg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\icon.svg
+++iphones.png
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\iphones.png
+++contact.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\contact.js
+++createProduct.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\createproduct.js
+++dashboard.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\dashboard.js
+++details.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\details.js
+++forget.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\forget.js
+++layout.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\layout.js
+++orders.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\orders.js
+++script.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\script.js
+++sub.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\js\sub.js
+++jquery.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\jquery.js
+++LICENSE.txt
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\license.txt
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++dist
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\dist\
+++LICENSE.md
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++1.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\1.jpeg
+++10.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\10.jpg
+++11.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\11.jpeg
+++11.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\11.jpg
+++12.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\12.jpeg
+++12.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\12.jpg
+++13.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\13.jpeg
+++13.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\13.jpg
+++14.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\14.jpeg
+++15.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\15.jpeg
+++16.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\16.jpeg
+++17.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\17.jpeg
+++18.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\18.jpeg
+++19.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\19.jpeg
+++2.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\2.jpeg
+++20.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\20.jpeg
+++21.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\21.jpeg
+++22.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\22.jpeg
+++23.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\23.jpeg
+++24.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\24.jpeg
+++3.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\3.jpeg
+++4.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\4.jpeg
+++5.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\5.jpeg
+++6.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\6.jpeg
+++7.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\7.jpeg
+++8.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\8.jpeg
+++9.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\9.jpg
+++pexels-photo-699459.jpeg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\carts\pexels-photo-699459.jpeg
+++course-1.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\course-1.jpg
+++course-2.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\course-2.jpg
+++course-3.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\course-3.jpg
+++events-1.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\events-1.jpg
+++events-2.jpg
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\assets\imgs\dashboard\events-2.jpg
+++jquery.min.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\jquery.min.js
+++jquery.slim.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\jquery.slim.js
+++additional-methods.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++jquery.min.map
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\jquery.min.map
+++jquery.slim.min.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\jquery.slim.min.js
+++additional-methods.min.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++jquery.slim.min.map
+i:{5cacdc8e-433e-4060-afd8-63b15ed7bc46}:c:\users\alli\desktop\i-tech-project\itech project\itech project\wwwroot\lib\jquery\jquery.slim.min.map

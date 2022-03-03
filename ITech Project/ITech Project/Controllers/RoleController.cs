@@ -36,14 +36,14 @@ namespace ITech_Project.Controllers
 
 
         [HttpPost]
-        public async Task <IActionResult> AddRole(RoleViewModel newRole)
+        public async Task<IActionResult> AddRole(RoleViewModel newRole)
         {
             if (ModelState.IsValid == true)
             {
                 IdentityRole Role = new IdentityRole() { Name = newRole.RoleName };
 
                 IdentityResult Result = await RoleManager.CreateAsync(Role);
-                if(Result.Succeeded == true)
+                if (Result.Succeeded == true)
                 {
                     return RedirectToAction("GetRoles");
                 }
@@ -78,7 +78,7 @@ namespace ITech_Project.Controllers
             }
             else
             {
-                ModelState.AddModelError("","No role found");
+                ModelState.AddModelError("", "No role found");
             }
             return View("GetRoles");
         }

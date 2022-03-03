@@ -28,23 +28,23 @@ namespace ITech_Project.Controllers
             return View("GetAll", allproducts);
 
         }
-        public IActionResult GetAll(int pg=1)
+        public IActionResult GetAll(int pg = 1)
         {
             var products = ProductRepo.GetAll();
             const int pageSize = 3;
             if (pg < 1)
-                pg = 1; 
+                pg = 1;
             int recsCount = products.Count();
-            var pager=new Pager(recsCount,pg,pageSize);
-            int recSkip = (pg-1) * pageSize;
+            var pager = new Pager(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
             var data = products.Skip(recSkip).Take(pager.PageSize).ToList();
             this.ViewBag.Pager = pager;
             return View(data);
-   
-        }
-         
 
-        public IActionResult GetById([FromRoute]int id)
+        }
+
+
+        public IActionResult GetById([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
             if (product == null)
@@ -77,7 +77,7 @@ namespace ITech_Project.Controllers
         public IActionResult Update([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
-            if(product == null) 
+            if (product == null)
                 return Content("Product Not Found");
             return View(product);
         }
@@ -94,7 +94,7 @@ namespace ITech_Project.Controllers
         }
 
         [Authorize(Roles = "Suuplier, Admin")]
-        public IActionResult Delete([FromRoute]int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
             if (product == null)
@@ -106,7 +106,7 @@ namespace ITech_Project.Controllers
             }
             catch
             {
-                ModelState.AddModelError("","this product is in use");
+                ModelState.AddModelError("", "this product is in use");
                 return View("Update");
             }
         }

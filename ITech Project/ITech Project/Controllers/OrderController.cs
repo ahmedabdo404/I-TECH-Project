@@ -4,9 +4,10 @@ using ITech_Project.Service;
 using ITech_Project.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
- using System.Security.Claims;
+using System.Security.Claims;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ITech_Project.Controllers
 {
@@ -47,71 +48,50 @@ namespace ITech_Project.Controllers
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             string userRole = User.FindFirstValue(ClaimTypes.Role);
-        
             var Orders = await ordRepo.GetOrdersByUserIdAndRoleAsync(userId, userRole);
-            return View(Orders);
             const int pageSize = 2;
             if (pg < 1)
                 pg = 1;
-            int recsCount =Orders.Count();
+            int recsCount = Orders.Count();
             var pager = new Pager(recsCount, pg, pageSize);
             int recSkip = (pg - 1) * pageSize;
             var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
             ViewBag.Pager = pager;
             return View(data);
-        
         }
 
-            //[Authorize(Roles = "Admin")]
-            //public async Task<IActionResult> GetAllOrders(int pg = 1)
-            //{
-            //string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //string userRole = User.FindFirstValue(ClaimTypes.Role);
-            //var Orders = await ordRepo.GetOrdersByUserId(userId);
-            //    const int pageSize = 2;
-            //    if (pg < 1)
-            //        pg = 1;
-            //    int recsCount = Orders.Count();
-            //    var pager = new Pager(recsCount, pg, pageSize);
-            //    int recSkip = (pg - 1) * pageSize;
-            //    var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
-            //    this.ViewBag.Pager = pager;
-            //    return View(data);
+        public IActionResult AddToShoppingCart(int id)
+        {
+            var item = proRepo.GetById(id);
 
-            //}
-
-            public IActionResult AddToShoppingCart(int id)
+            if (item != null)
             {
-                var item = proRepo.GetById(id);
-
-                if (item != null)
-                {
-                    shoppingCart.AddItemToCart(item);
-                }
-                return RedirectToAction("Index");
+                shoppingCart.AddItemToCart(item);
             }
+            return RedirectToAction("Index");
+        }
 
-            public IActionResult RemoveItemFromCart(int id)
+        public IActionResult RemoveItemFromCart(int id)
+        {
+            var item = proRepo.GetById(id);
+
+            if (item != null)
             {
-                var item = proRepo.GetById(id);
-
-                if (item != null)
-                {
-                    shoppingCart.RemoveItemFromCart(item);
-                }
-                return RedirectToAction("Index");
+                shoppingCart.RemoveItemFromCart(item);
             }
+            return RedirectToAction("Index");
+        }
 
-            public async Task<IActionResult> CompleteOrder()
-            {
-                var items = shoppingCart.GetShoppingCart();
-                string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
-                await ordRepo.StoreOrder(items, userId, userEmailAddress);
-                await shoppingCart.ClearShoppingCartAsync();
-                return View();
-            }
-        } 
+        public async Task<IActionResult> CompleteOrder()
+        {
+            var items = shoppingCart.GetShoppingCart();
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
+            await ordRepo.StoreOrder(items, userId, userEmailAddress);
+            await shoppingCart.ClearShoppingCartAsync();
+            return View();
+        }
     }
+}
 
 
