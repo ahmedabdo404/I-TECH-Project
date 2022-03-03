@@ -190,9 +190,9 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
-        public IActionResult Login(string ReturnUrl = "~/product/getall")
+        public IActionResult Login(string ReturnURL = "~/product/getall")
         {
-            ViewData["ReturnUrl"] = ReturnUrl;
+            ViewData["ReturnURL"] = ReturnURL;
             return View();
         }
 
@@ -200,7 +200,7 @@ namespace ITech_Project.Controllers
         //Check create cookie
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel LoginUser,
-            string ReturnUrl = "~/product/getall")
+            string ReturnURL = "~/product/getall")
         {
             if (ModelState.IsValid)
             {
@@ -211,16 +211,16 @@ namespace ITech_Project.Controllers
                         await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
                     if (Result.Succeeded)
                     {
-                        //return LocalRedirect(ReturnUrl);
+                        //return LocalRedirect(ReturnURL);
                         if (await userManager.IsInRoleAsync(user, "Admin"))
                         {
                             return RedirectToAction("Dashboard", "Dashboard");
                         }
                         else
                         {
-                            if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                            if (!string.IsNullOrWhiteSpace(ReturnURL) && Url.IsLocalUrl(ReturnURL))
                             {
-                                return Redirect(ReturnUrl);
+                                return Redirect(ReturnURL);
                             }
                             else
                             {
