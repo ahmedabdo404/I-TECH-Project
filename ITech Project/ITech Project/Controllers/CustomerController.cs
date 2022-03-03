@@ -2,6 +2,7 @@
 using ITech_Project.Models;
 using ITech_Project.Service;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITech_Project.Controllers

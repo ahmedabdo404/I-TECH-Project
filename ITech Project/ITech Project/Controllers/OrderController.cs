@@ -57,7 +57,6 @@ namespace ITech_Project.Controllers
             var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
             this.ViewBag.Pager = pager;
             return View(data);
-         
         }
 
         public IActionResult AddToShoppingCart(int id)

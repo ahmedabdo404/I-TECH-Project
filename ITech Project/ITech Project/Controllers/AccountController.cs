@@ -14,17 +14,15 @@ namespace ITech_Project.Controllers
     {
         UserManager<IdentityUser> userManager;
         SignInManager<IdentityUser> signInManager;
-        ILogger<IdentityUser> logger;
 
 
 
         #region Injection
         public AccountController(UserManager<IdentityUser> _userManager,
-            SignInManager<IdentityUser> _signInManager, ILogger<IdentityUser> _logger)
+            SignInManager<IdentityUser> _signInManager)
         {
             userManager = _userManager;
             signInManager = _signInManager;
-            logger = _logger;
         }
         #endregion
 
@@ -196,16 +194,23 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
-        public IActionResult Login(string ReturnUrl)
+        public IActionResult Login(string ReturnUrl = "~/Home/index")
         {
-            ViewData["RedirectUrl"] = ReturnUrl;
-            return View();
+            if (!User.Identity.IsAuthenticated)
+            {
+                ViewData["RedirectUrl"] = ReturnUrl;
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
 
         //Check create cookie
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "")
+        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "~/Home/index")
         {
             if (ModelState.IsValid == true)
             {
@@ -223,7 +228,7 @@ namespace ITech_Project.Controllers
                         {
                             if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
                             {
-                                return Redirect(ReturnUrl);
+                                return LocalRedirect(ReturnUrl);
                             }
                             else
                             {
@@ -291,7 +296,6 @@ namespace ITech_Project.Controllers
                     //Request.scheme => it generates the request scheme and it's required to generate the full absolute url
 
                     //Log Password Reset Link
-                    logger.Log(LogLevel.Warning, PasswordResetLink);
 
 
                     return View("ForgetPasswordConfirmation");

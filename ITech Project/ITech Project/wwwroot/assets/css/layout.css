@@ -390,8 +390,31 @@ header a:active {
     font-size: 40px;
     color: var(--main-color)
 }
+/*body & global*/
+.pagination .page-link {
+    color: var(--main-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--main-color);
+    border-color: transparent !important;
+}
 
 
+ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.td, th {
+    transition: 0.2s all;
+    cursor: context-menu;
+}
+
+td:hover,
+th:hover {
+    background-color: var(--third-color);
+}
 
 /* res */
 /* footer ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>footer*/
