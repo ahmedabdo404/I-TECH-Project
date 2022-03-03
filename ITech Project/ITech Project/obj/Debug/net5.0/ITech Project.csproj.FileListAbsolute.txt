@@ -371,3 +371,14 @@ D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Pr
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
 >>>>>>> eb534016eeee1dc154ac9b15e371288fd4fa2e44
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.dll
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\refint\ITech Project.dll
+C:\Users\mgabr\OneDrive\Desktop\Final\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
