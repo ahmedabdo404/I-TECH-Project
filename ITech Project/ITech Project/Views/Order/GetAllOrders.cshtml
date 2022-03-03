@@ -4,7 +4,7 @@
 
     Pager pager = new Pager();
     int pageNo = 0;
-    if(ViewBag.Pager != null)
+    if (ViewBag.Pager != null)
     {
         pager = ViewBag.Pager;
         pageNo = pager.CurrentPage;
@@ -14,25 +14,28 @@
 <div class="row">
     <div class="col-md-8  offset-2">
         <p>
-             <h3>list of all your orders</h3>
+            <h3>list of all your orders</h3>
         </p>
         <table class="table">
             <thead>
                 <tr>
-                    <td>Orders Id</td> 
-                    <td>Items</td> 
-                    <th>Total</th> 
-                    <th>User</th> 
+                    <td>Orders Id</td>
+                    <td>Items</td>
+                    <th>Total</th>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <th>User</th>
+                    }
                 </tr>
             </thead>
             <tbody>
-                
-                @foreach(var order in Model)
-               {
-                   <tr>
-                     <td class="align-middle"> @order.Id</td>
-                       <td class="align-middle">
-                           <ul style="list-style-type:none">
+
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td class="align-middle"> @order.Id</td>
+                        <td class="align-middle">
+                            <ul style="list-style-type:none">
                                 @foreach (var item in order.OrderDetails)
                                 {
                                     <li>
@@ -41,18 +44,20 @@
                                     </li>
                                 }
                             </ul>
-                       </td>
-                       <td class="align-middle">
-                           @order.OrderDetails.Select(xx => xx.Product.UnitPrice * xx.Quantity).Sum().ToString("c")
-                           </td>
-                       <td class="align-middle"> - </td>
-                      
-                   </tr>
-               }
+                        </td>
+                        <td class="align-middle">
+                            @order.OrderDetails.Select(xx => xx.Product.UnitPrice * xx.Quantity).Sum().ToString("c")
+                        </td>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <td class="align-middle"> @order.User.UserName</td>
+                        }
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
 
 </div>
 
-<partial name="_Pager2"  model="@pager"/>
+<partial name="_Pager2" model="@pager" />

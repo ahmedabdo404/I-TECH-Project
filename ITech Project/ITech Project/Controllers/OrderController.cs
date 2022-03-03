@@ -1,13 +1,13 @@
 ﻿using ITech_Project.Cart;
-using ITech_Project.Models;
 using ITech_Project.pagination;
 using ITech_Project.Service;
 using ITech_Project.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Claims;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ITech_Project.Controllers
 {
@@ -18,10 +18,10 @@ namespace ITech_Project.Controllers
         private readonly IProductService proRepo;
         private readonly ShoppingCart shoppingCart;
 
-        public OrderController(IOrderService _ordRepo,ICustomerService _custRepo,
+        public OrderController(IOrderService _ordRepo, ICustomerService _custRepo,
             IProductService _proRepo, ShoppingCart _shoppingCart)
         {
-            
+
             ordRepo = _ordRepo;
             custRepo = _custRepo;
             proRepo = _proRepo;
@@ -32,7 +32,7 @@ namespace ITech_Project.Controllers
         public IActionResult Index()
         {
             var items = shoppingCart.GetShoppingCart();
-            shoppingCart.ShoppingCartItems=items;
+            shoppingCart.ShoppingCartItems = items;
 
             var response = new ShoppingCartViewModel()
             {
@@ -42,30 +42,31 @@ namespace ITech_Project.Controllers
             };
             return View(response);
         }
-        
-        [Authorize(Roles = "Admin")]
+
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllOrders(int pg = 1)
         {
-            string userId = "";
-            var Orders = await ordRepo.GetOrdersByUserId(userId);
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userRole = User.FindFirstValue(ClaimTypes.Role);
+            var Orders = await ordRepo.GetOrdersByUserIdAndRoleAsync(userId, userRole);
             const int pageSize = 2;
             if (pg < 1)
                 pg = 1;
-            int recsCount =Orders.Count();
+            int recsCount = Orders.Count();
             var pager = new Pager(recsCount, pg, pageSize);
             int recSkip = (pg - 1) * pageSize;
             var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
-            this.ViewBag.Pager = pager;
+            ViewBag.Pager = pager;
             return View(data);
         }
 
         public IActionResult AddToShoppingCart(int id)
-        { 
-        var item = proRepo.GetById(id);
+        {
+            var item = proRepo.GetById(id);
 
             if (item != null)
-            { 
-            shoppingCart.AddItemToCart(item);
+            {
+                shoppingCart.AddItemToCart(item);
             }
             return RedirectToAction("Index");
         }
@@ -81,14 +82,16 @@ namespace ITech_Project.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task <IActionResult> CompleteOrder()
+        public async Task<IActionResult> CompleteOrder()
         {
             var items = shoppingCart.GetShoppingCart();
-            string userId = "";
-            string userEmailAddress = "";
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
             await ordRepo.StoreOrder(items, userId, userEmailAddress);
             await shoppingCart.ClearShoppingCartAsync();
             return View();
         }
     }
 }
+
+

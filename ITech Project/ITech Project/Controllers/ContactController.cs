@@ -26,7 +26,7 @@ namespace ITech_Project.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult>  Index(ContactFormViewModel model)
+        public async Task<IActionResult> Index(ContactFormViewModel model)
         {
             //Read SMTP settings from AppSettings.json.
             string host = this.Configuration.GetValue<string>("Smtp:Server");
@@ -49,7 +49,7 @@ namespace ITech_Project.Controllers
                     smtp.UseDefaultCredentials = true;
                     smtp.Credentials = NetworkCred;
                     smtp.Port = port;
-                    
+
                     await smtp.SendMailAsync(mm);
                     ViewBag.Message = "Email sent sucessfully.";
                 }

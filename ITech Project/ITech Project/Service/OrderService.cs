@@ -79,10 +79,14 @@ namespace ITech_Project.Service
         }
 
 
-        public async Task<List<Order>> GetOrdersByUserId(string userId)
+        public async Task<List<Order>> GetOrdersByUserIdAndRoleAsync(string userId, string userRole)
         {
-            var orders = await Context.Orders.Include(n => n.OrderDetails).ThenInclude(n => n.Product).Where(n => n.UserId ==
-                      userId).ToListAsync();
+            var orders = await Context.Orders.Include(n => n.OrderDetails).ThenInclude(n => n.Product)
+                .Include(n => n.User).ToListAsync();
+            if(userRole != "Admin")
+            {
+                orders = orders.Where(n => n.UserId == userId).ToList();
+            }
             return orders;
         }
     }

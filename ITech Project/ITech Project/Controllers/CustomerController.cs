@@ -46,7 +46,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 CustomerService.Create(customer);
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             return View(customer);
         }
@@ -56,7 +56,7 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Customer")]
-        public IActionResult Update([FromRoute]int id)
+        public IActionResult Update([FromRoute] int id)
         {
             Customer customer = CustomerService.GetById(id);
             return View(customer);
@@ -89,10 +89,11 @@ namespace ITech_Project.Controllers
             }
             catch (Exception exception)
             {
-                ModelState.AddModelError("",exception.InnerException.Message);
+                ModelState.AddModelError("", exception.InnerException.Message);
                 return View("Update");
             }
         }
         #endregion
+
     }
 }

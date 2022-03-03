@@ -12,28 +12,28 @@
             {
 
                 string str = item.product.Picture;
-                var pictureList = str.Split(","); 
+                var pictureList = str.Split(",");
 
                 <div class="product">
-                @if(item.product.ModelMobile != null)
-                {
-                    <img src="@pictureList[0]" alt="@item.product.Name" width="150"
-                    onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg' " 
-                    class="product-img">
-                }
-                @if(item.product.ModelLabtop != null)
-                {    
-                    <img src="@pictureList[0]" alt="@item.product.Name" width="150" 
-                    onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'"
-                    class="product-img">
-                }
-                @if(item.product.Accessories != null)
-                {             
-                    <img src="@pictureList[0]" alt="@item.product.Name" width="150"
-                    onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'"
-                    class="product-img">
-                }
-            
+                    @if (item.product.ModelMobile != null)
+                    {
+                        <img src="@pictureList[0]" alt="@item.product.Name" width="150"
+                     onerror="this.src='https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg' "
+                     class="product-img">
+                    }
+                    @if (item.product.ModelLabtop != null)
+                    {
+                        <img src="@pictureList[0]" alt="@item.product.Name" width="150"
+                     onerror="this.src='https://images.prismic.io/frameworkmarketplace/cca31de3-3b75-4932-af96-7646b7eba6c7__DSC3630-Edit-cropped.jpg?auto=compress,format'"
+                     class="product-img">
+                    }
+                    @if (item.product.Accessories != null)
+                    {
+                        <img src="@pictureList[0]" alt="@item.product.Name" width="150"
+                     onerror="this.src='https://3.bp.blogspot.com/-zka4TWwz3ZM/WjQjLhMVNrI/AAAAAAABT18/tpJM9Owjtwwqc-ZlMlUiBrxL8By3tF55wCLcBGAs/s1600/best-tech-accessories.jpg'"
+                     class="product-img">
+                    }
+
                     <div class="product-info">
                         <h4 class="product-name">@item.product.Name</h4>
                         <div class="mb-2">
@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="mb-2">
-                             <h6 class="d-inline">SubTotal:</h6>
+                            <h6 class="d-inline">SubTotal:</h6>
                             <span class="product-price d-inline">@((item.Amount*item.product.UnitPrice).ToString("c"))</span><br />
                         </div>
 
@@ -58,23 +58,23 @@
                             </span>
                         </div>
 
-                        
-                            <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
-                                <div class="product-add">
-                                <i class='bx bxs-message-square-add'></i>
-                                </div>
-                            </a>
 
-                            <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
-                                <div class="product-remove">
+                        <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
+                            <div class="product-add">
+                                <i class='bx bxs-message-square-add'></i>
+                            </div>
+                        </a>
+
+                        <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
+                            <div class="product-remove">
                                 <i class='bx bxs-message-square-minus'></i>
-                                </div>
-                            </a>
+                            </div>
+                        </a>
 
                     </div>
                 </div>
-                }
-            </div>
+            }
+        </div>
         <div class="cart-total">
             <p>
                 <span>Total Price</span>
@@ -83,7 +83,7 @@
             <div class="Items-number-c">
                 <span>Number of Items:</span>
                 <span>
-                        @await Component.InvokeAsync("ShoppingCartSummary")
+                    @await Component.InvokeAsync("ShoppingCartSummary")
                 </span>
             </div>
             <p>
@@ -91,60 +91,67 @@
                 <span>100$</span>
             </p>
             <a asp-controller="Product" asp-action="GetAll" class="cart-btn">Add More Products</a>
-		    <a asp-controller="Order" asp-action="CompleteOrder" class="cart-btn">Complete Order</a>
-		    @*<a asp-controller="home" asp-action="checkout" class="cart-btn">Proceed to Checkout</a>*@
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Order" asp-action="CompleteOrder" class="cart-btn">Complete Order</a>
+            }
+            else
+            {
+                <a asp-action="login" asp-controller="account" class="cart-btn">login</a>
+            }
+            @*<a asp-controller="home" asp-action="checkout" class="cart-btn">Proceed to Checkout</a>*@
             <div class="paypal-chk">
-              <div id="paypal-btn"></div>
+                <div id="paypal-btn"></div>
             </div>
 
-              <span style="padding:5px"></span>
-	    </div>
-	</div>
+            <span style="padding:5px"></span>
+        </div>
+    </div>
 </div>
 
 @section scripts {
 <script src="~/assets/js/cart.js"></script>
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
 
-        let _total = @Html.Raw(Model.ShoppingCartTotal);
+    let _total = @Html.Raw(Model.ShoppingCartTotal);
 
-        paypal.Button.render({
-            //Configure environment
-            env: 'sandbox',
-            client: {
-                sandbox: 'AckjySmxYA4fGOYvakp4CxB_CC3g_Hj240XCMjrmQ4gHfy0A4ek9W8myZWH38isHRiJaXWzt7kED8xhp'
-            },
+    paypal.Button.render({
+        //Configure environment
+        env: 'sandbox',
+        client: {
+            sandbox: 'AckjySmxYA4fGOYvakp4CxB_CC3g_Hj240XCMjrmQ4gHfy0A4ek9W8myZWH38isHRiJaXWzt7kED8xhp'
+        },
 
-            //Customize button
-            locale: 'en_US',
-            style: {
-                size: 'small',
-                color: 'gold',
-                shape: 'pill'
-            },
-            commit: true, // PAY NOW CHECK
+        //Customize button
+        locale: 'en_US',
+        style: {
+            size: 'small',
+            color: 'gold',
+            shape: 'pill'
+        },
+        commit: true, // PAY NOW CHECK
 
-            //Set up a payment
-            payment: function (data, actions) {
-                return actions.payment.create({
-                    transactions: [{
-                        amount: {
-                            total: _total,
-                            currency: 'USD' //LE
-                        }
-                    }]
-                });
-            },
+        //Set up a payment
+        payment: function (data, actions) {
+            return actions.payment.create({
+                transactions: [{
+                    amount: {
+                        total: _total,
+                        currency: 'USD' //LE
+                    }
+                }]
+            });
+        },
 
-            //Execute the payment
-            onAuthorize: function (data, actions) {
-                return actions.payment.execute().then(function () {
-                    var url = '@Url.Action("CompleteOrder", "Order", new { })';
-                    window.location.href = url;
-                });
-            }
+        //Execute the payment
+        onAuthorize: function (data, actions) {
+            return actions.payment.execute().then(function () {
+                var url = '@Url.Action("CompleteOrder", "Order", new { })';
+                window.location.href = url;
+            });
+        }
 
-        }, '#paypal-btn')
-    </script>
-} 
+    }, '#paypal-btn')
+</script>
+}
