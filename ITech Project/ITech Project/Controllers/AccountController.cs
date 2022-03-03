@@ -14,17 +14,15 @@ namespace ITech_Project.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
-        private readonly ILogger<IdentityUser> logger;
 
 
 
         #region Injection
         public AccountController(UserManager<IdentityUser> _userManager,
-            SignInManager<IdentityUser> _signInManager, ILogger<IdentityUser> _logger)
+            SignInManager<IdentityUser> _signInManager)
         {
             userManager = _userManager;
             signInManager = _signInManager;
-            logger = _logger;
         }
         #endregion
 
@@ -190,17 +188,26 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
-        public IActionResult Login(string ReturnURL = "~/product/getall")
+        //public IActionResult Login(string ReturnUrl = "~/Home/index")
+        //{
+        //    ViewData["ReturnUrl"] = ReturnUrl;
+        //    return View();
+        //}
+        public IActionResult Login(string ReturnUrl = "~/Home/index")
         {
-            ViewData["ReturnURL"] = ReturnURL;
-            return View();
+            if (!User.Identity.IsAuthenticated)
+            {
+                ViewData["ReturnUrl"] = ReturnUrl;
+                return View();
+            }
+            return RedirectToAction("index", "Home");
         }
 
 
         //Check create cookie
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel LoginUser,
-            string ReturnURL = "~/product/getall")
+            string ReturnUrl = "~/Home/index")
         {
             if (ModelState.IsValid)
             {
@@ -211,20 +218,20 @@ namespace ITech_Project.Controllers
                         await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
                     if (Result.Succeeded)
                     {
-                        //return LocalRedirect(ReturnURL);
+                        //return LocalRedirect(ReturnUrl);
                         if (await userManager.IsInRoleAsync(user, "Admin"))
                         {
                             return RedirectToAction("Dashboard", "Dashboard");
                         }
                         else
                         {
-                            if (!string.IsNullOrWhiteSpace(ReturnURL) && Url.IsLocalUrl(ReturnURL))
+                            if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
                             {
-                                return Redirect(ReturnURL);
+                                return Redirect(ReturnUrl);
                             }
                             else
                             {
-                                return RedirectToAction("Index", "Home");
+                                return RedirectToAction("index", "Home");
                             }
                         }
                     }
@@ -288,8 +295,6 @@ namespace ITech_Project.Controllers
                     //Request.scheme => it generates the request scheme and it's required to generate the full absolute url
 
                     //Log Password Reset Link
-                    logger.Log(LogLevel.Warning, PasswordResetLink);
-
 
                     return View("ForgetPasswordConfirmation");
                 }

@@ -15,7 +15,7 @@ $('.catogery-list').click(function () {
 
 let filterbtn = document.querySelector(".filterbtn");
 let filter = document.querySelector(".filter");
-let closeFilter = document.querySelector("#close-filter");
+let closeFilter = document.querySelector("#close-f");
 
 
 //Open Filter

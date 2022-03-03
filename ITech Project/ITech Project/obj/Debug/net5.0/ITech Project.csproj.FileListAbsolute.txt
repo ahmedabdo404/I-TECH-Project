@@ -1,3 +1,11 @@
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.json
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\libman.json
@@ -120,14 +128,6 @@ C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\scopedcss\bundle\ITech Project.styles.css
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\staticwebassets\ITech Project.StaticWebAssets.Manifest.cache
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.input.cache

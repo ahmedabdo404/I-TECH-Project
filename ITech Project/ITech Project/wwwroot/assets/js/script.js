@@ -5,7 +5,7 @@ let hoursDiv = document.querySelector(".Hours")
 let minutesDiv = document.querySelector(".Minutes")
 let secondsDiv = document.querySelector(".Seconds")
 
-let timer = new Date("Mar 3, 2022 12:00:00").getTime();
+let timer = new Date("Mar 7, 2022 12:00:00").getTime();
 
 let counter = setInterval(() => {
     let datenow = new Date().getTime()
