@@ -12,14 +12,8 @@ namespace ITech_Project.Controllers
 {
     public class AccountController : Controller
     {
-<<<<<<< HEAD
-        UserManager<IdentityUser> userManager;
-        SignInManager<IdentityUser> signInManager;
-=======
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
-        private readonly ILogger<IdentityUser> logger;
->>>>>>> a4ded8248c2acb93a5a525e6b511704fd19ff57e
 
 
 
@@ -194,35 +188,21 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
-<<<<<<< HEAD
         public IActionResult Login(string ReturnUrl = "~/Home/index")
         {
             if (!User.Identity.IsAuthenticated)
             {
-                ViewData["RedirectUrl"] = ReturnUrl;
+                ViewData["ReturnUrl"] = ReturnUrl;
                 return View();
             }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
-=======
-        public IActionResult Login(string ReturnUrl = "~/product/getall")
-        {
-            ViewData["ReturnUrl"] = ReturnUrl;
-            return View();
->>>>>>> a4ded8248c2acb93a5a525e6b511704fd19ff57e
+            return RedirectToAction("index", "Home");
         }
 
 
         //Check create cookie
         [HttpPost]
-<<<<<<< HEAD
-        public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "~/Home/index")
-=======
         public async Task<IActionResult> Login(LoginViewModel LoginUser,
-            string ReturnUrl = "~/product/getall")
->>>>>>> a4ded8248c2acb93a5a525e6b511704fd19ff57e
+            string ReturnUrl = "~/Home/index")
         {
             if (ModelState.IsValid)
             {
@@ -242,11 +222,11 @@ namespace ITech_Project.Controllers
                         {
                             if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
                             {
-                                return LocalRedirect(ReturnUrl);
+                                return Redirect(ReturnUrl);
                             }
                             else
                             {
-                                return RedirectToAction("Index", "Home");
+                                return RedirectToAction("index", "Home");
                             }
                         }
                     }
@@ -310,7 +290,6 @@ namespace ITech_Project.Controllers
                     //Request.scheme => it generates the request scheme and it's required to generate the full absolute url
 
                     //Log Password Reset Link
-
 
                     return View("ForgetPasswordConfirmation");
                 }

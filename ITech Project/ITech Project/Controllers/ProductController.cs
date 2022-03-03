@@ -31,7 +31,7 @@ namespace ITech_Project.Controllers
         public IActionResult GetAll(int pg = 1)
         {
             var products = ProductRepo.GetAll();
-            const int pageSize = 3;
+            const int pageSize = 8;
             if (pg < 1)
                 pg = 1;
             int recsCount = products.Count();

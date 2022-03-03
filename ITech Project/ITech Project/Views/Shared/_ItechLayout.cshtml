@@ -25,7 +25,7 @@
     <header>
         @if(User.Identity.IsAuthenticated)
         {
-            <nav class="container">
+            <nav class="container d-flex flex-row justify-content-between">
                 <a asp-controller="Home" asp-action="Index"><p class="logo" style="width:150px">I-TECH</p></a>
 
                 <ul class="menu-links">

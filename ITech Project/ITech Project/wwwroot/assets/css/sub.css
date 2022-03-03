@@ -39,22 +39,34 @@
     gap: 2rem;
 }
 
+#product-list {
+    justify-content: space-evenly;
+}
 .product-box {
     position: relative;
-    min-width: 200px;
-/*    max-width: 408px;
-*/    transition: var(--transition2);
+    max-width: 300px;
+    transition: var(--transition2);
     overflow: hidden;
-    /*margin-left: 5px;*/
 }
-
 
 .product-img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     transition: var(--transition2);
     margin-bottom: 10px;
+}
+
+@media (max-width: 450px) {
+
+    .product-box {
+        max-width: 250px;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .product-box:hover {
@@ -63,9 +75,9 @@
     transition: var(--transition2);
 }
 
-.product-box:hover .product-img {
-    transform: scale(106%);
-}
+    .product-box:hover .product-img {
+        transform: scale(106%);
+    }
 
 .product-title {
     font-size: 1.1rem;
@@ -89,10 +101,10 @@
     cursor: pointer;
 }
 
-.add-cart:hover {
-    background: var(--main-color);
-    transition: var(--transition2);
-}
+    .add-cart:hover {
+        background: var(--main-color);
+        transition: var(--transition2);
+    }
 /* filter ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>filter*/
 
 .filter {
@@ -109,9 +121,9 @@
     overflow-y: scroll;
 }
 
-.filter.active {
-    right: -8%;
-}
+    .filter.active {
+        right: -8%;
+    }
 
 .filter-title {
     text-align: start;
@@ -153,9 +165,9 @@
     cursor: pointer;
 }
 
-.catogery-list:hover {
-    color: var(--main-color);
-}
+    .catogery-list:hover {
+        color: var(--main-color);
+    }
 
 .catogery-list-active {
     color: var(--main-color);
@@ -191,15 +203,15 @@ li i.bx.bxs-right-arrow {
     margin-top: 5px;
 }
 
-.filter-button-group button:hover {
-    background-color: var(--main-color);
-    color: var(--third-color);
-}
+    .filter-button-group button:hover {
+        background-color: var(--main-color);
+        color: var(--third-color);
+    }
 
-.filter-button-group button:focus {
-    outline: none;
-    box-shadow: none;
-}
+    .filter-button-group button:focus {
+        outline: none;
+        box-shadow: none;
+    }
 
 @media (max-width: 768px) {
     .filter-button-group button {
