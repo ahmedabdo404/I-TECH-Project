@@ -1,9 +1,7 @@
 ﻿using ITech_Project.Cart;
-using ITech_Project.Models;
 using ITech_Project.pagination;
 using ITech_Project.Service;
 using ITech_Project.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
  using System.Security.Claims;
@@ -44,33 +42,43 @@ namespace ITech_Project.Controllers
             return View(response);
         }
 
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetAllOrders()
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllOrders(int pg = 1)
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             string userRole = User.FindFirstValue(ClaimTypes.Role);
-
+        
             var Orders = await ordRepo.GetOrdersByUserIdAndRoleAsync(userId, userRole);
             return View(Orders);
+            const int pageSize = 2;
+            if (pg < 1)
+                pg = 1;
+            int recsCount =Orders.Count();
+            var pager = new Pager(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
+            var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
+            ViewBag.Pager = pager;
+            return View(data);
+        
         }
 
-            [Authorize(Roles = "Admin")]
-            public async Task<IActionResult> GetAllOrders(int pg = 1)
-            {
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            string userRole = User.FindFirstValue(ClaimTypes.Role);
-            var Orders = await ordRepo.GetOrdersByUserId(userId);
-                const int pageSize = 2;
-                if (pg < 1)
-                    pg = 1;
-                int recsCount = Orders.Count();
-                var pager = new Pager(recsCount, pg, pageSize);
-                int recSkip = (pg - 1) * pageSize;
-                var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
-                this.ViewBag.Pager = pager;
-                return View(data);
+            //[Authorize(Roles = "Admin")]
+            //public async Task<IActionResult> GetAllOrders(int pg = 1)
+            //{
+            //string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //string userRole = User.FindFirstValue(ClaimTypes.Role);
+            //var Orders = await ordRepo.GetOrdersByUserId(userId);
+            //    const int pageSize = 2;
+            //    if (pg < 1)
+            //        pg = 1;
+            //    int recsCount = Orders.Count();
+            //    var pager = new Pager(recsCount, pg, pageSize);
+            //    int recSkip = (pg - 1) * pageSize;
+            //    var data = Orders.Skip(recSkip).Take(pager.PageSize).ToList();
+            //    this.ViewBag.Pager = pager;
+            //    return View(data);
 
-            }
+            //}
 
             public IActionResult AddToShoppingCart(int id)
             {
