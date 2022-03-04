@@ -188,6 +188,11 @@ namespace ITech_Project.Controllers
         #region Login
 
         [HttpGet]
+        //public IActionResult Login(string ReturnUrl = "~/Home/index")
+        //{
+        //    ViewData["ReturnUrl"] = ReturnUrl;
+        //    return View();
+        //}
         public IActionResult Login(string ReturnUrl = "~/Home/index")
         {
             if (!User.Identity.IsAuthenticated)

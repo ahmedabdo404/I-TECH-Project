@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
+    "C:\\Users\\mgabr\\OneDrive\\Desktop\\Final\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {}
   },
   "projects": {
-    "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
+    "C:\\Users\\mgabr\\OneDrive\\Desktop\\Final\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "projectUniqueName": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Final\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
         "projectName": "ITech Project",
-        "projectPath": "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
-        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-        "outputPath": "D:\\R@N\\Ahmed\\Pro\\certificates\\ITI\\Content\\ItI Menofia 3M\\Final Project\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
+        "projectPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Final\\I-TECH-Project\\ITech Project\\ITech Project\\ITech Project.csproj",
+        "packagesPath": "C:\\Users\\mgabr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mgabr\\OneDrive\\Desktop\\Final\\I-TECH-Project\\ITech Project\\ITech Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mgabr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.14, )"
@@ -65,6 +65,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [
@@ -85,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
