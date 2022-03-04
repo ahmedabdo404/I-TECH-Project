@@ -8,13 +8,13 @@ namespace ITech_Project.ViewModels
     public class LoginViewModel
     {
        
-        [Required(ErrorMessage ="Invalid email address")]
+        [Required(ErrorMessage = "Email is Required")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
-        [Required(ErrorMessage ="Password must be not less than 6 letters!")]
+        [Required(ErrorMessage = "Password is Required!")]
         public string Password { get; set; }
 
 

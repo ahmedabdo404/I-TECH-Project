@@ -26,17 +26,17 @@ namespace ITech_Project.Controllers
         }
 
 
-    [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> SendMail([FromForm] MailRequestDto dto)
         {
             await _mailingService.SendEmailAsync(dto.ToEmail, dto.Subject, dto.Body, dto.Attachments);
-            RedirectToAction("EmailSent");
-            return Ok();
+            
+            return RedirectToAction("EmailSent", dto);
         }
 
-        public IActionResult EmailSent()
+        public IActionResult EmailSent(MailRequestDto dto)
         {
-            return View();
+            return View(dto);
         }
     }
 

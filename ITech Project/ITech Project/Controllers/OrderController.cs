@@ -50,7 +50,7 @@ namespace ITech_Project.Controllers
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             string userRole = User.FindFirstValue(ClaimTypes.Role);
             var Orders = await ordRepo.GetOrdersByUserIdAndRoleAsync(userId, userRole);
-            const int pageSize = 2;
+            const int pageSize = 3;
             if (pg < 1)
                 pg = 1;
             int recsCount = Orders.Count();

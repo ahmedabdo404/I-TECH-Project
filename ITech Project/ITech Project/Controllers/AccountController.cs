@@ -119,7 +119,6 @@ namespace ITech_Project.Controllers
 
         #region Sign Up Admin
 
-
         [HttpGet]
         [Authorize(Roles = "Admin")]
 
@@ -131,6 +130,7 @@ namespace ITech_Project.Controllers
 
         //Saving data in Database
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SignUpAdmin(SignUpViewModel newAccount)
         {
             if (ModelState.IsValid == true)
@@ -144,18 +144,20 @@ namespace ITech_Project.Controllers
                 if (Result.Succeeded)
                 {
                     //Add to Admin Role
-                    IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
-                    if (role.Succeeded)
-                    {
-                        //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                        await signInManager.SignInAsync(user, false);
-                        //if(await userManager.IsInRoleAsync(user,"Admin"))
-                        return RedirectToAction("Dashboard", "Dashboard");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "No Admin role is found !");
-                    }
+                    //IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
+                    //if (role.Succeeded)
+                    //{
+                    //    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                    //    await signInManager.SignInAsync(user, false);
+                    //    //if(await userManager.IsInRoleAsync(user,"Admin"))
+                    //    return RedirectToAction("Dashboard", "Dashboard");
+                    //}
+                    //else
+                    //{
+                    //    ModelState.AddModelError("", "No Admin role is found !");
+                    //}
+                    await userManager.AddToRoleAsync(user, "Admin");
+                    return RedirectToAction("Dashboard", "Dashboard");
                 }
                 else
                 {
@@ -213,22 +215,7 @@ namespace ITech_Project.Controllers
                         await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
                     if (Result.Succeeded)
                     {
-                        //return LocalRedirect(ReturnUrl);
-                        if (await userManager.IsInRoleAsync(user, "Admin"))
-                        {
-                            return RedirectToAction("Dashboard", "Dashboard");
-                        }
-                        else
-                        {
-                            if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
-                            {
-                                return Redirect(ReturnUrl);
-                            }
-                            else
-                            {
-                                return RedirectToAction("index", "Home");
-                            }
-                        }
+                        return RedirectToAction("index", "Home");
                     }
                     else
                     {

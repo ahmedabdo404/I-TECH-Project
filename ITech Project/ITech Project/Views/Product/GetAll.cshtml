@@ -28,10 +28,9 @@
             <button class="filterbtn btn mx-1">More Filters</button>
         </div>
     </div>
-    @if (User.IsInRole("Supplier"))
-    {
-        <a class="btn btn-warning" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create</a>
-    }
+
+        <a class="btn btn-warning mb-3 ms-3" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create Product</a>
+
     <!-- Content -->
     <div class="shop-content">
         <!-- Box 2 -->

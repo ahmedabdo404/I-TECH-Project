@@ -42,7 +42,7 @@
     max-width: 300px;
     transition: var(--transition2);
     overflow: hidden;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .product-img {
