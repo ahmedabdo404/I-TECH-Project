@@ -108,7 +108,7 @@
 /* res */
 .offers {
     position: relative;
-    width: 60%;
+    width: 75%;
     height: 18vh;
     display: flex;
     justify-content: center;
@@ -186,7 +186,7 @@
     }
 }
 
-@media(max-width:520px) {
+@media(max-width:538px) {
 
     .offers {
         margin-top: 14rem;
