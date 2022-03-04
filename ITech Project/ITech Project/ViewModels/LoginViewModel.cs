@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Authentication;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITech_Project.ViewModels
@@ -18,5 +20,9 @@ namespace ITech_Project.ViewModels
 
         [Display (Name ="Remember me")]
         public bool RememberMe { get; set; }
+
+        public string  ReturnUrl { get; set; }
+
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
     }
 }

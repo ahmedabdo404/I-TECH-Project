@@ -33,7 +33,9 @@
     ".NETCoreApp,Version=v5.0": {
       "ITech Project/1.0.0": {
         "dependencies": {
+          "GoogleAuthentication": "1.0.0",
           "MailKit": "3.1.1",
+          "Microsoft.AspNetCore.Authentication.Google": "5.0.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.14",
           "Microsoft.EntityFrameworkCore": "5.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14",
@@ -325,6 +327,20 @@
           "ITech Project.dll": {}
         }
       },
+      "GoogleAuthentication/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/net46/GoogleAuthentication.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net46/GoogleAuthentication.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -345,6 +361,17 @@
         },
         "compile": {
           "lib/net5.0/MailKit.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/5.0.2": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.220.61302"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.14": {
@@ -940,7 +967,7 @@
       "Microsoft.IdentityModel.JsonWebTokens/5.6.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "5.6.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -981,7 +1008,7 @@
       "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.6.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "5.6.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.IdentityModel.Tokens.Jwt": "5.6.0"
         },
         "runtime": {
@@ -997,7 +1024,7 @@
       "Microsoft.IdentityModel.Tokens/5.6.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Logging": "5.6.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.Security.Cryptography.Cng": "5.0.0"
         },
         "runtime": {
@@ -1029,7 +1056,7 @@
       },
       "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/5.0.2": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.Collections.Immutable": "5.0.0"
         },
         "runtime": {
@@ -1046,7 +1073,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "5.0.2",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
@@ -1120,7 +1147,7 @@
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.8.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "5.0.2",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
@@ -1172,11 +1199,11 @@
           "lib/net5.0/MimeKit.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
           }
         },
         "compile": {
@@ -1470,7 +1497,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "5.6.0",
           "Microsoft.IdentityModel.Tokens": "5.6.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -3596,6 +3623,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GoogleAuthentication/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o8etqL7SsgtLQpptUH1A6sHgufH3/LlSwZV0snQwPxelMqjH9fBXVe7AocWYU+Afjvf42CX0HWwQxrHoA2DL1Q==",
+      "path": "googleauthentication/1.0.0",
+      "hashPath": "googleauthentication.1.0.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
@@ -3609,6 +3643,13 @@
       "sha512": "sha512-NprdMF0ABNWOqQUuqz45X5YkJK6f3vtYwwvqR6nGVdmrZ7HkahNbSATpOZ5Rj3W1cgDGf/iD8vs/oCyZ4wUO7g==",
       "path": "mailkit/3.1.1",
       "hashPath": "mailkit.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XzfvUNcnybehwplulywBsiaKxbUGAbJ52S693pg4qAZcwVptCblQPU4baSYF4/e2tYUGEb95giQbiuj4abFfVw==",
+      "path": "microsoft.aspnetcore.authentication.google/5.0.2",
+      "hashPath": "microsoft.aspnetcore.authentication.google.5.0.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.14": {
       "type": "package",
@@ -3988,12 +4029,12 @@
       "path": "mimekit/3.1.1",
       "hashPath": "mimekit.3.1.1.nupkg.sha512"
     },
-    "Newtonsoft.Json/11.0.2": {
+    "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
     "Portable.BouncyCastle/1.9.0": {
       "type": "package",
