@@ -389,22 +389,31 @@ header a:active {
     align-items: center;
 }
 
-    .back-top:hover {
-        background-color: var(--sec-color);
-    }
+.back-top:hover {
+    background-color: var(--sec-color);
+}
 
-    .back-top i {
-        font-size: 40px;
-        color: var(--sec-color)
-    }
+.back-top i {
+    font-size: 40px;
+    color: var(--sec-color)
+}
 
-        .back-top i:hover {
-            font-size: 40px;
-            color: var(--main-color)
-        }
+.back-top i:hover {
+    font-size: 40px;
+    color: var(--main-color)
+}
+
 /*body & global*/
 .pagination .page-link {
     color: var(--main-color);
+}
+
+@media (max-width: 450px){
+    .pagination .page-link {
+        color: var(--main-color);
+        font-size: 0.6rem !important;
+    }
+
 }
 
 .page-item.active .page-link {
@@ -423,10 +432,10 @@ ul li {
     cursor: context-menu;
 }
 
-    td:hover,
-    th:hover {
-        background-color: var(--third-color);
-    }
+td:hover,
+th:hover {
+    background-color: var(--third-color);
+}
 
 /* res */
 /* footer ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>footer*/

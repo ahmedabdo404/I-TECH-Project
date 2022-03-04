@@ -52,7 +52,7 @@
                                     @foreach (var item in order.OrderDetails)
                                     {
                                         <li>
-                                            <div class="alert alert-info" role="alert"></div>
+                                            <div class="alert alert-info mb-1 mt-2" role="alert"></div>
                                             <span class="badge bg-success">@item.Quantity</span> [@item.Price.ToString("c")] - @item.Product.Name
                                         </li>
                                     }
