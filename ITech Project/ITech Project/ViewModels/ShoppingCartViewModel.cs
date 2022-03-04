@@ -7,5 +7,6 @@ namespace ITech_Project.ViewModels
 
         public ShoppingCart ShoppingCart { get; set; }
         public double ShoppingCartTotal { get; set; }
+        public double ShoppingCartDiscount { get; set; }
     }
 }

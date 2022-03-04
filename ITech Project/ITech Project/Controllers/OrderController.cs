@@ -37,7 +37,8 @@ namespace ITech_Project.Controllers
             var response = new ShoppingCartViewModel()
             {
                 ShoppingCart = shoppingCart,
-                ShoppingCartTotal = shoppingCart.GetShoppingCartTotal()
+                ShoppingCartTotal = shoppingCart.GetShoppingCartTotal(),
+                ShoppingCartDiscount = shoppingCart.GetShoppingCartDiscount()
 
             };
             return View(response);

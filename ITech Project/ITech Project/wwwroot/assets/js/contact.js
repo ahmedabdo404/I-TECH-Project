@@ -1,8 +1,8 @@
-﻿let inputEmail = document.querySelector("#Email")
-let inputMessage = document.querySelector("#Message")
-let form = document.querySelector(".form-sub")
-
-form.onsubmit = () => {
-    if (inputEmail.value != "" && inputMessage.value != "")
-        alert(`We will send an email to: ${inputEmail.value}`);
+﻿console.log()
+let inputEmail, mail
+if (window.location.href.toLowerCase().includes("sendmail")) {
+    inputEmail = document.querySelector("#ToEmail")
+} else if (window.location.href.toLowerCase().includes("emailsent")){
+    mail = document.querySelector(".mail")
+    mail.innerHTML = inputEmail.value;
 }
