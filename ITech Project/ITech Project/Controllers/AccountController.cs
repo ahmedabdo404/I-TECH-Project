@@ -185,21 +185,13 @@ namespace ITech_Project.Controllers
         #endregion
 
         #region Login
-        //public IActionResult Login(string ReturnUrl = "~/Home/index")
-        //{
-        //    if (!User.Identity.IsAuthenticated)
-        //    {
-        //        ViewData["ReturnUrl"] = ReturnUrl;
-        //        return View();
-        //    }
-        //    return RedirectToAction("index", "Home");
-        //}
+
 
 
         //Check create cookie
 
         [HttpGet]
-        public async Task<IActionResult> Login(string returnUrl)
+        public async Task<IActionResult> LoginWithGoogle(string returnUrl)
         {
             LoginViewModel model = new LoginViewModel
             {
@@ -209,7 +201,58 @@ namespace ITech_Project.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> LoginWithGoogle(LoginViewModel LoginUser, string ReturnUrl = "~/Home/index")
+        {
+            if (ModelState.IsValid)
+            {
+                IdentityUser user = await userManager.FindByEmailAsync(LoginUser.Email);
+                if (user != null)
+                {
+                    Microsoft.AspNetCore.Identity.SignInResult Result =
+                        await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
+                    if (Result.Succeeded)
+                    {
+                        //return LocalRedirect(ReturnUrl);
+                        if (await userManager.IsInRoleAsync(user, "Admin"))
+                        {
+                            return RedirectToAction("Dashboard", "Dashboard");
+                        }
+                        else
+                        {
+                            if (!string.IsNullOrWhiteSpace(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                            {
+                                return Redirect(ReturnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("index", "Home");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Invalid user name or password");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid user name or password");
+                }
+            }
+            return View(LoginUser);
+        }
 
+        [HttpGet]
+        public IActionResult Login(string ReturnUrl = "~/Home/index")
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                ViewData["ReturnUrl"] = ReturnUrl;
+                return View();
+            }
+            return RedirectToAction("index", "Home");
+        }
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel LoginUser, string ReturnUrl = "~/Home/index")
         {

@@ -31,22 +31,10 @@
                         <label class="form-check-label">Remember me</label>
                         <input class="form-check-input" asp-for="RememberMe" />
                         <br>
-                        <a asp-action="ForgetPassword">Forgot Password?</a>
-                        <input type="submit" value="Login" class="b mt-3 ms-lg-3 mt-lg-0 " />
+                        <a asp-action="ForgetPassword">Forgot Password?</a><br />
+                        <input type="submit" value="Login" class="b mt-3 me-3 " />
+                        <a asp-action="LoginWithGoogle" asp-controller="Account" class="btn btn-primary mt-3 mb-3">LoginWithGoogle</a>
                     </form>
-                   
-                    @{
-                            <form method="post" asp-action="ExternalLogin" asp-route-returnurl="@Model.ReturnUrl">
-                                <div>
-                                        @foreach(var provider in Model.ExternalLogins)
-                                        {
-                                            <input type="submit"class="btn btn-primary" name="provider"
-                                            value="@provider.Name" title="Login with your @provider.Name account "/>
-                                        }
-                                 </div>
-                            </form>
-                      }
-
 
                     <div class="col-1 align-self-center d-none d-lg-flex"><div class="v-line"></div></div>
                     <div class="col-12 mt-3 col-lg-5 d-flex flex-column justify-content-center p-0">
