@@ -16,21 +16,21 @@ namespace ITech_Project.Controllers
         [Authorize(Roles = "Admin")]
 
         public IActionResult GetAll()
-        { 
-        
-        return View(supplier.GetAll());
+        {
+
+            return View(supplier.GetAll());
         }
         [Authorize(Roles = "Supplier")]
 
         public IActionResult GetById(int id)
-        { 
-        return View(supplier.GetById(id));  
+        {
+            return View(supplier.GetById(id));
         }
         [Authorize(Roles = "Supplier")]
 
         public IActionResult GetByName(string name)
-        { 
-        return View(supplier.GetByName(name));
+        {
+            return View(supplier.GetByName(name));
         }
 
         [HttpGet]
@@ -43,8 +43,8 @@ namespace ITech_Project.Controllers
         public IActionResult Create(Supplier sup)
         {
             if (ModelState.IsValid)
-            { 
-            supplier.Create(sup);
+            {
+                supplier.Create(sup);
                 return RedirectToAction("GetAll");
             }
             return View(sup);
@@ -63,11 +63,11 @@ namespace ITech_Project.Controllers
         public IActionResult Update(Supplier sup)
         {
             if (ModelState.IsValid)
-            { 
-            supplier.Update(sup);
+            {
+                supplier.Update(sup);
                 return RedirectToAction("GetAll");
             }
-            return View();        
+            return View();
         }
 
         [Authorize(Roles = "Admin")]
@@ -85,7 +85,7 @@ namespace ITech_Project.Controllers
                 ModelState.AddModelError("", "this category is in use");
                 return View("Update");
             }
-        
+
         }
 
     }

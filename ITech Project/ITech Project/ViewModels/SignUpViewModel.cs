@@ -12,7 +12,7 @@ namespace ITech_Project.ViewModels
 
         [Required(ErrorMessage = "Email is required!")]
         [DataType(DataType.EmailAddress)]
-        [Remote(action: "Exist", controller: "Account", ErrorMessage = "This e-mail is already exista !")]
+        [Remote(action: "Exist", controller: "Account", ErrorMessage = "This e-mail is already exist !")]
         public string Email { get; set; }
 
 

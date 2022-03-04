@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ITech_Project.Enums;
+using Microsoft.AspNetCore.Identity;
 
 namespace ITech_Project.Models
 {
@@ -14,8 +15,11 @@ namespace ITech_Project.Models
         public int Freight { get; set; }
 
         public DateTime Timestamp { get; set; }
+
+        [ForeignKey("User")]
         public string UserId { get; set; }
-        
+        public IdentityUser User { get; set; }
+
         public string Email { get; set; }
 
         [Display(Name = "Customer")]

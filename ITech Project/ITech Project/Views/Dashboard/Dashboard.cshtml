@@ -1,5 +1,5 @@
 ﻿@section style {
-    <link rel="stylesheet" href="~/assets/css/Dashboard.css">
+<link rel="stylesheet" href="~/assets/css/Dashboard.css">
 }
 
 <section class="home p-4">
@@ -8,20 +8,19 @@
         <div class="product-box">
             <img src="~/assets/imgs/dashboard/events-2.jpg" class="product-img" alt="...">
             <div class="Dash-item">
-                <div class="d-flex align-items-center mb-3 mt-3">
-                    <h4 class="me-3">Show my Items</h4>
-                    <a class="btn btn-outline-warning">Items</a>
+                <div class="d-flex flex-column flex-md-row align-items-center mb-3 mt-3">
+                    <h5 class="me-3 mb-0">Show All Products</h5>
+                    <a class="btn btn-outline-warning" asp-controller="Product" asp-action="GetAll">Products</a>
                 </div>
-
             </div>
         </div>
 
         <div class="product-box">
             <img src="~/assets/imgs/dashboard/events-1.jpg" class="product-img" alt="...">
             <div class="Dash-item">
-                <div class="d-flex align-items-center mb-3 mt-3">
-                    <h4 class="me-3">Show My orders:</h4>
-                    <a class="btn btn-outline-warning">orders</a>
+                <div class="d-flex flex-column flex-md-row align-items-center mb-3 mt-3">
+                    <h5 class="me-3 mb-0">Show All orders:</h5>
+                    <a class="btn btn-outline-warning" asp-controller="Order" asp-action="GetAllOrders">orders</a>
                 </div>
             </div>
         </div>
@@ -30,9 +29,9 @@
             <div class="course-item">
                 <img src="~/assets/imgs/dashboard/course-2.jpg" class="product-img" alt="...">
                 <div class="Dash-item">
-                    <div class="d-flex align-items-center mb-3 mt-3">
-                        <h4 class="me-3">Show My Statistics:</h4>
-                        <a class="btn btn-outline-warning">Statistics</a>
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-3 mt-3">
+                        <h5 class="me-3 mb-0">Show Customers:</h5>
+                        <a class="btn btn-outline-warning" asp-controller="Customer" asp-action="GetAllCustomers">Customers</a>
                     </div>
                 </div>
             </div>
@@ -42,9 +41,9 @@
             <div class="course-item">
                 <img src="~/assets/imgs/dashboard/course-1.jpg" class="product-img" alt="...">
                 <div class="Dash-item">
-                    <div class="d-flex align-items-center mb-3 mt-3">
-                        <h4 class="me-3">Show Tracks Data:</h4>
-                        <a class="btn btn-outline-warning">Tracks</a>
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-3 mt-3">
+                        <h5 class="me-3 mb-0">Show Roles Data:</h5>
+                        <a class="btn btn-outline-warning" asp-controller="Role" asp-action="GetRoles">Roles</a>
                     </div>
                 </div>
             </div>
@@ -53,9 +52,9 @@
         <div class="product-box">
             <img src="~/assets/imgs/dashboard/about.jpg" class="product-img" alt="...">
             <div class="Dash-item">
-                <div class="d-flex align-items-center mb-3 mt-3">
-                    <h4 class="me-3">About our Team:</h4>
-                    <a class="btn btn-outline-warning">About</a>
+                <div class="d-flex flex-column flex-md-row align-items-center mb-3 mt-3">
+                    <h5 class="me-3 mb-0">About Team:</h5>
+                    <a class="btn btn-outline-warning" asp-controller="Home" asp-action="About">About</a>
                 </div>
             </div>
         </div>
@@ -63,9 +62,9 @@
         <div class="product-box">
             <img src="~/assets/imgs/dashboard/course-3.jpg" class="product-img" alt="...">
             <div class="Dash-item">
-                <div class="d-flex align-items-center mb-3 mt-3">
-                    <h4 class="me-3">Contact us:</h4>
-                    <a class="btn btn-outline-warning">Contact</a>
+                <div class="d-flex flex-column flex-md-row align-items-center mb-3 mt-3">
+                    <h5 class="me-3 mb-0">Privacy Data:</h5>
+                    <a class="btn btn-outline-warning" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </div>
             </div>
         </div>
@@ -73,5 +72,5 @@
 </section>
 
 @section scripts {
-    <script src="~/assets/js/dashboard.js"></script>
+<script src="~/assets/js/dashboard.js"></script>
 }

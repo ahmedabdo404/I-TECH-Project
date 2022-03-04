@@ -1,6 +1,8 @@
 using ITech_Project.Cart;
 using ITech_Project.Models;
 using ITech_Project.Service;
+using ITech_Project.Services;
+using ITech_Project.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -46,6 +48,9 @@ namespace ITech_Project
             services.AddScoped<ISupplierService, SupplierService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => ShoppingCart.GEtShopCart(sc));
+          
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<IMailingService, MailingService>();
 
             services.AddSession();
 
@@ -84,6 +89,7 @@ namespace ITech_Project
             }
             else
             {
+                app.UseStatusCodePagesWithRedirects("/Home/Error");
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
