@@ -1,7 +1,7 @@
 ﻿@model List<Supplier>
 
 <div class="container mt-3">
-    <a asp-action="Create" asp-controller="Supplier" class="btn btn-primary mb-3">Add new Order</a>
+    <a asp-action="Create" asp-controller="Supplier" class="btn btn-primary mb-3">Add new Supplier</a>
     <table class="table table-bordered text-center" width="50%">
         <tr>
             <th>Company Name</th>
@@ -14,8 +14,11 @@
             <th>TypeGoods</th>
             <th>LoGo</th>
             <th>URL</th>*@
-            <th>Details</th>
-            <th>Edit</th>
+            @if (User.IsInRole("Supplier"))
+            {
+                <th>Details</th>
+                <th>Edit</th>
+            }
             <th>Delete</th>
 
 
@@ -34,9 +37,11 @@
               <td>@item.Logo</td>
                 <td>@item.Url</td>*@
        
-
-                <td> <a asp-action="GetById" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
-                <td> <a asp-action="Update" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
+                @if (User.IsInRole("Supplier"))
+                {
+                    <td> <a asp-action="GetById" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
+                    <td> <a asp-action="Update" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
+                }
                 <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Supplier" asp-route-id="@item.Id" onclick="ConfirmDelete(event)">Delete</a></td>
             </tr>
         }
