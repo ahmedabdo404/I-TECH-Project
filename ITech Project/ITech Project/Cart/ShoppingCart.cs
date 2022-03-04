@@ -85,7 +85,10 @@ namespace ITech_Project.Cart
 
 
         public double GetShoppingCartTotal() => _context.ShoppingCartItems.Where(n => n.ShoppingCartId ==
-         ShoppingCartId).Select(n => n.product.UnitPrice * n.Amount).Sum();
+         ShoppingCartId).Select(n => (n.product.UnitPrice - n.product.Discount) * n.Amount).Sum();
+
+        public double GetShoppingCartDiscount() => _context.ShoppingCartItems.Where(n => n.ShoppingCartId ==
+         ShoppingCartId).Select(n => n.product.Discount * n.Amount).Sum();
 
         public async Task ClearShoppingCartAsync()
         {

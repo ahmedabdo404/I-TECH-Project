@@ -4,7 +4,7 @@
 }
 
 <div class="container cart-c">
-    <h1>Shopping Cart</h1>
+    <h1>Your cart</h1>
     <div class="cart">
         <div class="products">
 
@@ -43,12 +43,12 @@
 
                         <div class="mb-2">
                             <h6 class="d-inline">Discount:</h6>
-                            <span class="product-offer d-inline">@item.product.Discount</span>
+                            <span class="product-offer d-inline">@item.product.Discount.ToString("c")</span>
                         </div>
 
                         <div class="mb-2">
                             <h6 class="d-inline">SubTotal:</h6>
-                            <span class="product-price d-inline">@((item.Amount*item.product.UnitPrice).ToString("c"))</span><br />
+                            <span class="product-price d-inline">@((item.Amount*item.product.UnitPrice-item.product.Discount).ToString("c"))</span><br />
                         </div>
 
                         <div class="mb-2">
@@ -88,7 +88,7 @@
             </div>
             <p>
                 <span>Discount</span>
-                <span>100$</span>
+                <span>@Model.ShoppingCartDiscount.ToString("c")</span>
             </p>
             <a asp-controller="Product" asp-action="GetAll" class="cart-btn">Add More Products</a>
             @if (User.Identity.IsAuthenticated)

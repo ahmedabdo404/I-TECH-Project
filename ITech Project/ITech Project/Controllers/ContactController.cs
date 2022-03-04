@@ -30,9 +30,14 @@ namespace ITech_Project.Controllers
         public async Task<IActionResult> SendMail([FromForm] MailRequestDto dto)
         {
             await _mailingService.SendEmailAsync(dto.ToEmail, dto.Subject, dto.Body, dto.Attachments);
+            RedirectToAction("EmailSent");
             return Ok();
         }
 
+        public IActionResult EmailSent()
+        {
+            return View();
+        }
     }
 
 }
