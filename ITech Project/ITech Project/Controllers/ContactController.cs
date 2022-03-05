@@ -35,6 +35,7 @@ namespace ITech_Project.Controllers
             return RedirectToAction("EmailSent", dto);
         }
 
+        [Route("EmailSent")]
         public IActionResult EmailSent(MailRequestDto dto)
         {
             return View(dto);

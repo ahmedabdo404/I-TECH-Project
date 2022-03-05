@@ -93,17 +93,14 @@
             <a asp-controller="Product" asp-action="GetAll" class="cart-btn">Add More Products</a>
             @if (User.Identity.IsAuthenticated)
             {
-                <a asp-controller="Order" asp-action="CompleteOrder" class="cart-btn">Complete Order</a>
+                <div class="paypal-chk">
+                    <div id="paypal-btn"></div>
+                </div>
             }
             else
             {
                 <a asp-action="login" asp-controller="account" class="cart-btn">Login To Complete Order</a>
             }
-            @*<a asp-controller="home" asp-action="checkout" class="cart-btn">Proceed to Checkout</a>*@
-            <div class="paypal-chk">
-                <div id="paypal-btn"></div>
-            </div>
-
             <span style="padding:5px"></span>
         </div>
     </div>
@@ -145,13 +142,7 @@
         },
 
         //Execute the payment
-        onAuthorize: function (data, actions) {
-            return actions.payment.execute().then(function () {
-                var url = '@Url.Action("CompleteOrder", "Order", new { })';
-                window.location.href = url;
-            });
-        }
-
+        onAuthorize: () => window.location.assign("/ordercompleted?Ispaid=true")
     }, '#paypal-btn')
 </script>
 }

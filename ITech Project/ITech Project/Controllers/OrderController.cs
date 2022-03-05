@@ -87,14 +87,21 @@ namespace ITech_Project.Controllers
         }
 
         [Route("ordercompleted")]
-        public async Task<IActionResult> CompleteOrder()
+        public async Task<IActionResult> CompleteOrder([FromQuery] bool Ispaid)
         {
-            var items = shoppingCart.GetShoppingCart();
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
-            await ordRepo.StoreOrder(items, userId, userEmailAddress);
-            await shoppingCart.ClearShoppingCartAsync();
-            return View();
+            if (Ispaid == true)
+            {
+                var items = shoppingCart.GetShoppingCart();
+                string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                string userEmailAddress = User.FindFirstValue(ClaimTypes.Email);
+                await ordRepo.StoreOrder(items, userId, userEmailAddress);
+                await shoppingCart.ClearShoppingCartAsync();
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("error", "Home");
+            }
         }
     }
 }

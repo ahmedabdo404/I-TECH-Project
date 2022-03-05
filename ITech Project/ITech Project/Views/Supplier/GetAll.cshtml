@@ -1,5 +1,9 @@
 ﻿@model List<Supplier>
 
+@section style {
+    <link rel="stylesheet" href="~/assets/css/orders.css">
+}
+
 <div class="container mt-3">
     <a asp-action="Create" asp-controller="Supplier" class="btn btn-warning mb-3">Add new Supplier</a>
     <table class="table table-bordered text-center" width="50%">

@@ -1,17 +1,26 @@
-// add links to products
-let productslink = document.querySelectorAll(".p-link");
+// filter products depending on url
+let filterAll = document.querySelector("button[data-filter='*']")
+let filterMobiles = document.querySelector("button[data-filter='.mobiles']")
+let filterLaptops = document.querySelector("button[data-filter='.Laptops']")
+let filterAccessories = document.querySelector("button[data-filter='.accessories']")
+
+let pageUrl = window.location.href.toLocaleLowerCase()
 
 window.onload = () => {
-    for (let l of productslink)
-        //l.setAttribute("asp-action", "details");
-        l.setAttribute("href", "details");
+    if (pageUrl.includes("mobiles"))
+        filterMobiles.click();
+    else if (pageUrl.includes("laptops"))
+        filterLaptops.click()
+    else if (pageUrl.includes("accessories"))
+        filterAccessories.click()
+    else
+        filterAll.click()
 }
 
 $('.catogery-list').click(function () {
     $(this).addClass('catogery-list-active');
     $(this).siblings().removeClass('catogery-list-active');
 })
-
 
 let filterbtn = document.querySelector(".filterbtn");
 let filter = document.querySelector(".filter");
