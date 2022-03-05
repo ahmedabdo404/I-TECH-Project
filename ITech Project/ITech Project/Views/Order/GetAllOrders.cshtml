@@ -35,7 +35,7 @@
                         <th>Total</th>
                         <th>Discount</th>
                         <th>Total(After discount)</th>
-                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        @if (User.IsInRole("Admin"))
                         {
                             <th>User</th>
                         }

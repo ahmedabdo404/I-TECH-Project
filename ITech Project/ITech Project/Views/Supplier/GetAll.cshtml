@@ -12,17 +12,11 @@
             <th>Contact First Name</th>
             <th>Contact Last Name</th>
             <th>Country</th>
-            @*<th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>TypeGoods</th>
-                <th>LoGo</th>
-                <th>URL</th>*@
-            @if (User.IsInRole("Supplier"))
-            {
-                <th>Details</th>
+            @*            @if (User.IsInRole("Supplier"))
+                {
                 <th>Edit</th>
-            }
+                }*@
+            <th>Details</th>
             <th>Delete</th>
 
 
@@ -34,22 +28,16 @@
                 <td>@item.ContactFName</td>
                 <td>@item.ContactLName</td>
                 <td>@item.Country</td>
-                @*  <td>@item.Address</td>
-                    <td>@item.City</td>
-                    <td>@item.PostalCode</td>
-                    <td>@item.TypeGoods</td>
-                    <td>@item.Logo</td>
-                    <td>@item.Url</td>*@
-
-                @if (User.IsInRole("Supplier"))
-                {
-                    <td> <a asp-action="GetById" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
+                @*                @if (User.IsInRole("Supplier"))
+                    {
                     <td> <a asp-action="Update" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
-                }
+                    }*@
+                <td> <a asp-action="GetById" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
                 <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Supplier" asp-route-id="@item.Id" onclick="ConfirmDelete(event)">Delete</a></td>
             </tr>
         }
     </table>
+    <a asp-action="index" asp-controller="home" class="btn btn-secondary">Back Home</a>
 </div>
 
 <script>

@@ -19,6 +19,7 @@
             <th>Ship Country</th>
             <th>Date Entered</th>
             <th>Details</th>
+            <th>Delete</th>
         </tr>
         @foreach (var item in Model)
         {
@@ -34,11 +35,20 @@
                 <th>@item.ShipCountry</th>
                 <th>@item.DateEntered</th>
                 <th><a asp-action="GetById" asp-route-id="@item.Id" asp-controller="Customer" class="btn btn-success">Details</a></th>
-                <th><a asp-action="index" asp-controller="home" class="btn btn-info">Back Home</a></th>
+                <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Supplier" asp-route-id="@item.Id" onclick="ConfirmDelete(event)">Delete</a></td>
             </tr>
         }
     </table>
+    <a asp-action="index" asp-controller="home" class="btn btn-secondary">Back Home</a>
 
 </div>
+
+<script>
+    function ConfirmDelete(){
+        var accept=confirm("Are You Sure?");
+        if(accept==false)
+            event.preventDefault();
+    }
+</script>
 
 

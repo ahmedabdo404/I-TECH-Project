@@ -18,17 +18,16 @@ namespace ITech_Project.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult GetAll()
         {
-
             return View(supplier.GetAll());
         }
 
-        [Authorize(Roles = "Supplier")]
+        //[Authorize(Roles = "Supplier")]
         public IActionResult GetById(int id)
         {
             return View(supplier.GetById(id));
         }
 
-        [Authorize(Roles = "Supplier")]
+        //[Authorize(Roles = "Supplier")]
         public IActionResult GetByName(string name)
         {
             return View(supplier.GetByName(name));
