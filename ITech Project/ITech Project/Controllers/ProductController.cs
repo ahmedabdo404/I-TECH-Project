@@ -56,7 +56,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "Supplier")]
         [Route("createproduct")]
         public IActionResult Create()
         {
@@ -64,7 +64,6 @@ namespace ITech_Project.Controllers
         }
 
         [HttpPost]
-
         public IActionResult Create(Product product)
         {
             if (ModelState.IsValid)
@@ -76,7 +75,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Supplier")]
+        [Authorize(Roles = "Admin")]
         [Route("editeproduct/{id}")]
         public IActionResult Update([FromRoute] int id)
         {
@@ -98,7 +97,7 @@ namespace ITech_Project.Controllers
         }
 
         [Route("deleteproduct/{id}")]
-        [Authorize(Roles = "Suuplier, Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
