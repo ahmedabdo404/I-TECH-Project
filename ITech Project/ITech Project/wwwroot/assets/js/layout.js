@@ -34,3 +34,12 @@ $(function () {
     });
 });
 
+console.log("ahmedaaaaaaaadfasdfasa")
+// Preloader
+let preloader = document.getElementById('preloader');
+if (preloader) {
+    window.addEventListener('load', () => {
+        setTimeout(() => preloader.remove(), 500)
+
+    });
+}

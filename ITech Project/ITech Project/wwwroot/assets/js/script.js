@@ -28,7 +28,6 @@ let counter = setInterval(() => {
 
     if (diff <= 0){
         clearInterval(counter)
-        alert("Offer has been ended")
     }
 }, 1000)
 
@@ -47,7 +46,6 @@ var typed = new Typed('.element', options);
 let jform = document.querySelector(".Join-us form")
 let jInput= document.querySelector(".Join-us input")
 
-console.log("ahmed eeeeeeeeeeeeeeeee")
 jform.onsubmit = () => {
     if (jInput.value != "") {
         alert(`We will send to you thae lastest offers to: ${jInput.value}`);
