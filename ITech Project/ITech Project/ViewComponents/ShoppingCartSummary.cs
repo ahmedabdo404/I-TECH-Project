@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 namespace ITech_Project.ViewComponents
 {
-    public class ShoppingCartSummary:ViewComponent
+    public class ShoppingCartSummary : ViewComponent
     {
         private readonly ShoppingCart _shoppingCart;
 
@@ -16,6 +16,6 @@ namespace ITech_Project.ViewComponents
             var items = _shoppingCart.GetShoppingCart();
             return View(items.Count);
         }
-      
+
     }
 }

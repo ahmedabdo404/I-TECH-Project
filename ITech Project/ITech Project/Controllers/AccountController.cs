@@ -30,6 +30,8 @@ namespace ITech_Project.Controllers
 
         //To open an empty page
         [HttpGet]
+        [Route("AddCustomer")]
+
         public IActionResult SignUp()
         {
             return View();
@@ -72,6 +74,8 @@ namespace ITech_Project.Controllers
 
         //To open an empty page
         [HttpGet]
+        [Route("AddSupplier")]
+
         public IActionResult SignUpSupplier()
         {
             return View();
@@ -121,7 +125,7 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-
+        [Route("AddAdmin")]
         public IActionResult SignUpAdmin()
         {
             return View();
@@ -233,9 +237,9 @@ namespace ITech_Project.Controllers
         [HttpGet]
         public IActionResult Login(string ReturnUrl = "~/Home/index")
         {
+            ViewData["ReturnUrl"] = ReturnUrl;
             if (!User.Identity.IsAuthenticated)
             {
-                ViewData["ReturnUrl"] = ReturnUrl;
                 return View();
             }
             return RedirectToAction("index", "Home");
@@ -249,7 +253,8 @@ namespace ITech_Project.Controllers
                 if (user != null)
                 {
                     Microsoft.AspNetCore.Identity.SignInResult Result =
-                        await signInManager.PasswordSignInAsync(user, LoginUser.Password, LoginUser.RememberMe, false);
+                        await signInManager.PasswordSignInAsync(user, LoginUser.Password,
+                        LoginUser.RememberMe, false);
                     if (Result.Succeeded)
                     {
                         //return LocalRedirect(ReturnUrl);
@@ -301,7 +306,8 @@ namespace ITech_Project.Controllers
 
             LoginViewModel loginViewModel = new LoginViewModel
             {
-                ReturnUrl = returnUrl,ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+                ReturnUrl = returnUrl,
+                ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
             };
 
             if (remoteError != null)

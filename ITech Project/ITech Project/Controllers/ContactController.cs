@@ -20,8 +20,9 @@ namespace ITech_Project.Controllers
         {
             _mailingService = mailingService;
         }
-        public  IActionResult SendMail( )
-        { 
+        [Route("SendMail")]
+        public IActionResult SendMail()
+        {
             return View();
         }
 
@@ -30,7 +31,7 @@ namespace ITech_Project.Controllers
         public async Task<IActionResult> SendMail([FromForm] MailRequestDto dto)
         {
             await _mailingService.SendEmailAsync(dto.ToEmail, dto.Subject, dto.Body, dto.Attachments);
-            
+
             return RedirectToAction("EmailSent", dto);
         }
 

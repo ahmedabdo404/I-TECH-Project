@@ -15,13 +15,15 @@ namespace ITech_Project.Controllers
         }
         [Authorize(Roles = "Admin")]
 
+        [Route("suppliers")]
         public IActionResult GetAll()
         {
 
             return View(supplier.GetAll());
         }
-        [Authorize(Roles = "Supplier")]
 
+        [Authorize(Roles = "Supplier")]
+        [Route("suplier/{id}")]
         public IActionResult GetById(int id)
         {
             return View(supplier.GetById(id));
@@ -34,7 +36,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpGet]
-
+        [Route("createsupplier")]
         public IActionResult Create()
         {
             return View();
@@ -53,7 +55,7 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Supplier")]
-
+        [Route("editsupplier/{id}")]
         public IActionResult Update(int id)
         {
             return View(supplier.GetById(id));
@@ -71,7 +73,7 @@ namespace ITech_Project.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-
+        [Route("deletesupplier/{id}")]
         public IActionResult Delete(int id)
         {
             try

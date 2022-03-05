@@ -29,6 +29,7 @@ namespace ITech_Project.Controllers
         }
 
         //---------------------------//
+        [Route("cart")]
         public IActionResult Index()
         {
             var items = shoppingCart.GetShoppingCart();
@@ -44,7 +45,7 @@ namespace ITech_Project.Controllers
             return View(response);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Route("orders")]
         public async Task<IActionResult> GetAllOrders(int pg = 1)
         {
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -61,6 +62,7 @@ namespace ITech_Project.Controllers
             return View(data);
         }
 
+        [Route("order/{id}")]
         public IActionResult AddToShoppingCart(int id)
         {
             var item = proRepo.GetById(id);
@@ -72,6 +74,7 @@ namespace ITech_Project.Controllers
             return RedirectToAction("Index");
         }
 
+        [Route("deleteorder/{id}")]
         public IActionResult RemoveItemFromCart(int id)
         {
             var item = proRepo.GetById(id);
@@ -83,6 +86,7 @@ namespace ITech_Project.Controllers
             return RedirectToAction("Index");
         }
 
+        [Route("ordercompleted")]
         public async Task<IActionResult> CompleteOrder()
         {
             var items = shoppingCart.GetShoppingCart();

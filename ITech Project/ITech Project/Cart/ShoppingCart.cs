@@ -21,11 +21,11 @@ namespace ITech_Project.Cart
         }
 
         public static ShoppingCart GEtShopCart(IServiceProvider services)
-        { 
-         ISession Session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
-            var context =services.GetService<Db>();
+        {
+            ISession Session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+            var context = services.GetService<Db>();
 
-            string CartId=Session.GetString("CartId")?? Guid.NewGuid().ToString();
+            string CartId = Session.GetString("CartId") ?? Guid.NewGuid().ToString();
             Session.SetString("CartId", CartId);
             return new ShoppingCart(context)
             {
@@ -34,9 +34,9 @@ namespace ITech_Project.Cart
         }
 
         public void AddItemToCart(Product product)
-        { 
-        var ShoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(n=>n.product.Id==product.Id &&
-        n.ShoppingCartId==ShoppingCartId);
+        {
+            var ShoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(n => n.product.Id == product.Id &&
+            n.ShoppingCartId == ShoppingCartId);
 
             if (ShoppingCartItem == null)
             {
@@ -51,7 +51,7 @@ namespace ITech_Project.Cart
             }
             else
             { ShoppingCartItem.Amount++; }
-            _context.SaveChanges(); 
+            _context.SaveChanges();
         }
 
         public void RemoveItemFromCart(Product product)
@@ -79,8 +79,8 @@ namespace ITech_Project.Cart
 
         public List<ShoppingCartItem> GetShoppingCart()
         {
-            return ShoppingCartItems ?? (ShoppingCartItems = _context.ShoppingCartItems.Where(f => f.ShoppingCartId ==
-              ShoppingCartId).Include(n => n.product).ToList());
+            return ShoppingCartItems ?? _context.ShoppingCartItems.Where(f => f.ShoppingCartId ==
+              ShoppingCartId).Include(n => n.product).ToList();
         }
 
 
