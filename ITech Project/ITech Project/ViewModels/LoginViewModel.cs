@@ -7,7 +7,7 @@ namespace ITech_Project.ViewModels
 {
     public class LoginViewModel
     {
-       
+
         [Required(ErrorMessage = "Email is Required")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
@@ -18,10 +18,10 @@ namespace ITech_Project.ViewModels
         public string Password { get; set; }
 
 
-        [Display (Name ="Remember me")]
+        [Display(Name = "Remember me")]
         public bool RememberMe { get; set; }
 
-        public string  ReturnUrl { get; set; }
+        public string ReturnUrl { get; set; }
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
     }

@@ -20,7 +20,7 @@ namespace ITech_Project.Controllers
         {
             _mailingService = mailingService;
         }
-        [Route("SendMail")]
+
         public IActionResult SendMail()
         {
             return View();

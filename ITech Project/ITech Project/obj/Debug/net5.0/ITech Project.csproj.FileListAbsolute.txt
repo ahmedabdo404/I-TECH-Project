@@ -1,3 +1,19 @@
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\scopedcss\bundle\ITech Project.styles.css
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\staticwebassets\ITech Project.StaticWebAssets.Manifest.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.input.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.output.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorCoreGenerate.cache
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.dll
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\refint\ITech Project.dll
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.json
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\libman.json
@@ -125,19 +141,6 @@ C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.AssemblyReference.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfoInputs.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.AssemblyInfo.cs
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CoreCompileInputs.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorAssemblyInfo.cs
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\scopedcss\bundle\ITech Project.styles.css
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\staticwebassets\ITech Project.StaticWebAssets.Manifest.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.input.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.TagHelpers.output.cache
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorCoreGenerate.cache
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\ForgetPassword.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\ForgetPasswordConfirmation.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
@@ -163,6 +166,7 @@ C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetAll.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetById.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\Update.cshtml.g.cs
+C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Profile\Profile.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\AddRole.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\GetRoles.cshtml.g.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
@@ -181,9 +185,6 @@ C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.RazorTargetAssemblyInfo.cs
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.Views.pdb
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.csproj.CopyComplete
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.dll
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\refint\ITech Project.dll
-C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.pdb
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ITech Project.genruntimeconfig.cache
 C:\Users\Alli\Desktop\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\ref\ITech Project.dll
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\bin\Debug\net5.0\appsettings.Development.json
@@ -352,6 +353,7 @@ D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Pr
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetAll.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\GetById.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Product\Update.cshtml.g.cs
+D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Profile\Profile.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\AddRole.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Role\GetRoles.cshtml.g.cs
 D:\R@N\Ahmed\Pro\certificates\ITI\Content\ItI Menofia 3M\Final Project\I-TECH-Project\ITech Project\ITech Project\obj\Debug\net5.0\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs

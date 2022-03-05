@@ -187,7 +187,7 @@
                             <p class="d-inline">add-to cart</p>
                         </span>
                     </a>
-                    @if (User.IsInRole("Supplier") || User.IsInRole("Admin"))
+                    @if (User.IsInRole("Admin"))
                     {
                         <a asp-action="Delete" asp-route-id="@Model.Id" id="delete-product" class="btn btn-danger">Delete</a>
                     }

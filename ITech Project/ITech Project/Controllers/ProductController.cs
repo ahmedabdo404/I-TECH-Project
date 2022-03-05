@@ -16,7 +16,6 @@ namespace ITech_Project.Controllers
             ProductRepo = productRepo;
         }
 
-        [Route("search")]
         public IActionResult Filter(string searchstring)
         {
             var allproducts = ProductRepo.GetAll();
@@ -30,7 +29,6 @@ namespace ITech_Project.Controllers
 
         }
 
-        [Route("products")]
         public IActionResult GetAll(int pg = 1)
         {
             var products = ProductRepo.GetAll();
@@ -46,18 +44,16 @@ namespace ITech_Project.Controllers
 
         }
 
-        [Route("product/{id}")]
         public IActionResult GetById([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
-            if (product == null)
-                return Content("Product Not Found");
+            //if (product == null)
+            //    return Content("Product Not Found");
             return View(product);
         }
 
         [HttpGet]
         [Authorize(Roles = "Supplier")]
-        [Route("createproduct")]
         public IActionResult Create()
         {
             return View();
@@ -76,7 +72,6 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        [Route("editeproduct/{id}")]
         public IActionResult Update([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
@@ -91,12 +86,11 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 ProductRepo.Update(product);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("index", "home");
             }
             return View(product);
         }
 
-        [Route("deleteproduct/{id}")]
         [Authorize(Roles = "Admin")]
         public IActionResult Delete([FromRoute] int id)
         {

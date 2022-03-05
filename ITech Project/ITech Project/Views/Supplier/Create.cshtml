@@ -4,57 +4,57 @@
     ViewData["Title"] = "Create";
 }
 <div class="container m-3">
- 
-<h4>Create Supplier</h4>
-<hr />
-        <form asp-action="Create">
-            <div class="row d-flex flex-column flex-md-row">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-              @*  <div class="form-group">
-                    <label asp-for="Id" class="control-label"></label>
-                    <input asp-for="Id" class="form-control" />
-                    <span asp-validation-for="Id" class="text-danger"></span>
+
+    <h4>Create Supplier</h4>
+    <hr />
+    <form asp-action="Create">
+        <div class="row d-flex flex-column flex-md-row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*  <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
                 </div>*@
-               <div class="col-9 col-md-6" >
-                    <div class="form-group">
+            <div class="col-9 col-md-6">
+                <div class="form-group">
                     <label asp-for="CompanyName" class="control-label"></label>
                     <input asp-for="CompanyName" class="form-control" />
                     <span asp-validation-for="CompanyName" class="text-danger"></span>
 
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="ContactFName" class="control-label"></label>
-                        <input asp-for="ContactFName" class="form-control" />
-                        <span asp-validation-for="ContactFName" class="text-danger"></span>
-                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ContactFName" class="control-label"></label>
+                    <input asp-for="ContactFName" class="form-control" />
+                    <span asp-validation-for="ContactFName" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <label asp-for="ContactLName" class="control-label"></label>
-                        <input asp-for="ContactLName" class="form-control" />
-                        <span asp-validation-for="ContactLName" class="text-danger"></span>
-                    </div>
+                <div class="form-group">
+                    <label asp-for="ContactLName" class="control-label"></label>
+                    <input asp-for="ContactLName" class="form-control" />
+                    <span asp-validation-for="ContactLName" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <label asp-for="Address" class="control-label"></label>
-                        <input asp-for="Address" class="form-control" />
-                        <span asp-validation-for="Address" class="text-danger"></span>
-                    </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <label asp-for="City" class="control-label"></label>
-                        <input asp-for="City" class="form-control" />
-                        <span asp-validation-for="City" class="text-danger"></span>
-                    </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <label asp-for="Country" class="control-label"></label>
-                        <input asp-for="Country" class="form-control" />
-                        <span asp-validation-for="Country" class="text-danger"></span>
-                    </div>
+                <div class="form-group">
+                    <label asp-for="Country" class="control-label"></label>
+                    <input asp-for="Country" class="form-control" />
+                    <span asp-validation-for="Country" class="text-danger"></span>
+                </div>
 
-             </div>
-             <div class="col-9 col-md-6">
-                
+            </div>
+            <div class="col-9 col-md-6">
+
                 <div class="form-group">
                     <label asp-for="PostalCode" class="control-label"></label>
                     <input asp-for="PostalCode" class="form-control" />
@@ -66,13 +66,13 @@
                     <input asp-for="Url" class="form-control" />
                     <span asp-validation-for="Url" class="text-danger"></span>
                 </div>
-              @*  <div class="form-group">
+                @*  <div class="form-group">
                     <label asp-for="TypeGoods" class="control-label"></label>
                     <input asp-for="TypeGoods" class="form-control" />
                     <span asp-validation-for="TypeGoods" class="text-danger"></span>
-                </div>*@
-           
-                 <div class="form-group">
+                    </div>*@
+
+                <div class="form-group">
                     <label asp-for="TypeGoods" class="control-label mb-2"></label>
                     <select asp-for="TypeGoods" asp-items="Html.GetEnumSelectList<Category>()" class="form-control">
                         <option selected>--Select TypeGoods--</option>
@@ -87,7 +87,7 @@
                     <span asp-validation-for="Logo" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                       <label asp-for="Payment" class="control-label"></label>
+                    <label asp-for="Payment" class="control-label"></label>
                     <select asp-for="Payment" asp-items="Html.GetEnumSelectList<Payment>()" class="form-control">
                         <option selected>--Select Payment--</option>
                     </select>
@@ -96,10 +96,10 @@
                 <div class="form-group m-3">
                     <input type="submit" value="Create" class="btn btn-warning" />
                 </div>
-         </div>        
-   </div>
+            </div>
+        </div>
 
-        </form>
+    </form>
 
- 
+
 </div>

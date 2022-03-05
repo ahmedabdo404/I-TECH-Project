@@ -20,7 +20,6 @@ namespace ITech_Project.Controllers
 
         #region Get Roles
 
-        [Route("roles")]
         public IActionResult GetRoles()
         {
             List<string> Roles = RoleManager.Roles.Select(x => x.Name).ToList();
@@ -29,7 +28,6 @@ namespace ITech_Project.Controllers
         #endregion
 
         #region Adding Role
-        [Route("createrole")]
         public IActionResult AddRole()
         {
             return View();
@@ -61,7 +59,6 @@ namespace ITech_Project.Controllers
         #endregion
 
         #region Removing Role
-        [Route("deleterole/{name}")]
         public async Task<IActionResult> Delete(string name)
         {
             IdentityRole role = await RoleManager.FindByNameAsync(name);

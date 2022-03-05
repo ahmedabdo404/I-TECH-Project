@@ -1,0 +1,33 @@
+﻿<div class="container mt-3">
+    <h1>Profile</h1>
+    <hr />
+    <p><b>UserName: </b>@ViewBag.UserInfo.UserName</p>
+@*
+    @if (User.IsInRole("Customer"))
+    {
+        <p><b>First Name: </b>@Model.FirstName</p>
+        <p><b>First Name: </b>@Model.FirstName</p>
+        <p><b>Last Name: </b>@Model.Address</p>
+        <p><b>City: </b>@Model.City</p>
+        <p><b>CreditCardTypeId: </b>@Model.CreditCardTypeId</p>
+        <p><b>PostalCode: </b>@Model.PostalCode</p>
+        <p><b>Email: </b>@ViewBag.UserInfo.Email</p>
+        <p><b>PhoneNumber: </b>@ViewBag.UserInfo.PhoneNumber</p>
+        <a class="btn btn-success" asp-action="Update" asp-controller="Customer" asp-route-id="@Model.Id">Edit Data</a>
+    }
+    else if (User.IsInRole("Supplier"))
+    {
+        <p><b>First Name: </b>@Model.CompanyName</p>
+        <p><b>Last Name: </b>@Model.ContactLName</p>
+        <p><b>Address: </b>@Model.Address</p>
+        <p><b>City: </b>@Model.City</p>
+        <p><b>Email: </b>@ViewBag.UserInfo.Email</p>
+        <p><b>PhoneNumber: </b>@ViewBag.UserInfo.PhoneNumber</p>
+        <a class="btn btn-success" asp-action="Update" asp-controller="Supplier" asp-route-id="@Model.Id"> Edit Data</a>
+    }
+    else
+    {*@
+        <p><b>Email: </b>@ViewBag.UserInfo.Email</p>
+        <p><b>PhoneNumber: </b>@ViewBag.UserInfo.PhoneNumber</p>
+@*    }*@
+</div>

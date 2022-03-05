@@ -115,8 +115,8 @@ namespace ITech_Project
             }
             else
             {
-                app.UseStatusCodePagesWithRedirects("/Home/Error");
-                app.UseExceptionHandler("/Home/Error");
+                app.UseStatusCodePagesWithRedirects("/Error");
+                app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
             app.UseHttpsRedirection();

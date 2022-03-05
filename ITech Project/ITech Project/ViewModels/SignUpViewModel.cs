@@ -19,7 +19,7 @@ namespace ITech_Project.ViewModels
         [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Phone Number is required !")]
-        public int? Phone { get; set; }
+        public string Phone { get; set; }
 
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Password is required !")]

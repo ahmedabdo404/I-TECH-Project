@@ -1,7 +1,7 @@
 ﻿@model List<Supplier>
 
 @section style {
-    <link rel="stylesheet" href="~/assets/css/orders.css">
+<link rel="stylesheet" href="~/assets/css/orders.css">
 }
 
 <div class="container mt-3">
@@ -13,11 +13,11 @@
             <th>Contact Last Name</th>
             <th>Country</th>
             @*<th>Address</th>
-            <th>City</th>
-            <th>PostalCode</th>
-            <th>TypeGoods</th>
-            <th>LoGo</th>
-            <th>URL</th>*@
+                <th>City</th>
+                <th>PostalCode</th>
+                <th>TypeGoods</th>
+                <th>LoGo</th>
+                <th>URL</th>*@
             @if (User.IsInRole("Supplier"))
             {
                 <th>Details</th>
@@ -32,15 +32,15 @@
             <tr>
                 <td>@item.CompanyName</td>
                 <td>@item.ContactFName</td>
-                 <td>@item.ContactLName</td>           
+                <td>@item.ContactLName</td>
                 <td>@item.Country</td>
-              @*  <td>@item.Address</td>
-                <td>@item.City</td>
-                <td>@item.PostalCode</td>
-                <td>@item.TypeGoods</td>
-              <td>@item.Logo</td>
-                <td>@item.Url</td>*@
-       
+                @*  <td>@item.Address</td>
+                    <td>@item.City</td>
+                    <td>@item.PostalCode</td>
+                    <td>@item.TypeGoods</td>
+                    <td>@item.Logo</td>
+                    <td>@item.Url</td>*@
+
                 @if (User.IsInRole("Supplier"))
                 {
                     <td> <a asp-action="GetById" asp-controller="Supplier" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>

@@ -2,14 +2,14 @@
 
 @section style {
 
-    <link rel="stylesheet" href="~/assets/css/sub.css">
+<link rel="stylesheet" href="~/assets/css/sub.css">
 
 }
 
 @{
     Pager pager = new Pager();
     int pageNo = 0;
-    if(ViewBag.Pager != null)
+    if (ViewBag.Pager != null)
     {
         pager = ViewBag.Pager;
         pageNo = pager.CurrentPage;
@@ -36,7 +36,7 @@
     <!-- Content -->
     <div class="shop-content">
         <!-- Box 2 -->
-        <div class="ps-1 pe-1"id="product-list">
+        <div class="ps-1 pe-1" id="product-list">
             @*image*@
             @foreach (var item in Model)
             {
@@ -103,7 +103,7 @@
     </div>
 </section>
 
-<partial name="_Pager"  model="@pager"/>
+<partial name="_Pager" model="@pager" />
 
 
 <section>
@@ -172,8 +172,8 @@
 </section>
 
 @section scripts {
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="~/assets/js/sub.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="~/assets/js/sub.js"></script>
 
 }
 
