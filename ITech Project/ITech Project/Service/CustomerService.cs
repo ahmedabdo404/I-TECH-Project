@@ -45,11 +45,11 @@ namespace ITech_Project.Service
         //To Remove Any Customer
         public void Remove(int Id)
         {
-            Context.Customers.Remove(Context.Customers.FirstOrDefault(c => c.Id == Id));
+            var customer = Context.Customers.FirstOrDefault(c => c.Id == Id);
+            Context.Customers.Remove(customer);
+            Context.Users.Remove(Context.Users.FirstOrDefault(c => c.UserName == customer.FirstName));
             Context.SaveChanges();
         }
-
-
 
     }
 }

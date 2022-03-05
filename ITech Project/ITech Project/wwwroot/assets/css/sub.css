@@ -38,11 +38,11 @@
 }
 
 .product-box {
-    position: relative;
     max-width: 290px;
     transition: var(--transition2);
     overflow: hidden;
-    margin-left: 5px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .product-img {
@@ -71,7 +71,7 @@
 }
 
 .product-box:hover .product-img {
-    transform: scale(111%);
+    transform: scale(105%);
 }
 
 .product-title {
@@ -79,6 +79,12 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+}
+
+.product-box h2,
+.product-box span,
+.product-box p{
+    margin-left: 0.5rem 
 }
 
 .price {

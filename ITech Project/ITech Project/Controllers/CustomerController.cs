@@ -23,7 +23,7 @@ namespace ITech_Project.Controllers
             return View(CustomerService.GetAll());
         }
 
-        [Authorize(Roles = "Customer")]
+        [Authorize(Roles = "Customer, Admin")]
         public IActionResult GetById(int id)
         {
             return View(CustomerService.GetById(id));
@@ -84,7 +84,7 @@ namespace ITech_Project.Controllers
             try
             {
                 CustomerService.Remove(id);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("GetAllCustomers");
             }
             catch (Exception exception)
             {

@@ -86,7 +86,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 ProductRepo.Update(product);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("index", "home");
             }
             return View(product);
         }

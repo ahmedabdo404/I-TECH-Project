@@ -5,19 +5,19 @@
     <h2>Show Supplier details</h2>
 
     <table class="table table-bordered">
-         <tr>
-           <th>Company Name</th>
-           <td>@Model.CompanyName </td>
+        <tr>
+            <th>Company Name</th>
+            <td>@Model.CompanyName </td>
         </tr>
-         <tr>
-          <th>Contact Firs tName</th>
+        <tr>
+            <th>Contact Firs tName</th>
             <td>@Model.ContactFName </td>
         </tr>
         <tr>
             <th>Contact Las tName</th>
             <td>@Model.ContactLName </td>
         </tr>
-        
+
         <tr>
             <th>Address</th>
             <td>@Model.Address</td>
@@ -45,12 +45,12 @@
         <tr>
             <th>URL</th>
             <td>@Model.Url</td>
-        </tr>    
+        </tr>
     </table>
 
-    <a asp-action="GetAll" asp-controller="Supplier" class="btn btn-secondary">Back</a>
-    
+    <a asp-action="index" asp-controller="home" class="btn btn-secondary">Back</a>
+
 </div>
- 
+
 
 

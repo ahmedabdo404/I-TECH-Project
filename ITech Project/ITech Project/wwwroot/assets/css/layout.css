@@ -331,19 +331,19 @@ header a:active {
     border-radius: 5px;
 }
 
-    .cart-icon i {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: var(--font-size1);
-        color: var(--sec-color);
-    }
+.cart-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size1);
+    color: var(--sec-color);
+}
 
 .cart-items-number {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background-color: var(--sec-color);
     list-style: none;
@@ -353,14 +353,15 @@ header a:active {
     transform: translate(-50%, -50%)
 }
 
-    .cart-items-number a {
-        position: absolute;
-        color: var(--main-color) !important;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 15px;
-    }
+.cart-items-number a {
+    position: absolute;
+    color: var(--main-color) !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+
 /* res */
 @media(max-width:768px) {
     .cart-icon, .account {
@@ -404,9 +405,7 @@ header a:active {
 
 
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+/*<<<<<<<<<<<< Preloader*/
 /*#preloader {
     position: fixed;
     top: 0;
@@ -542,10 +541,27 @@ header a:active {
     width: 10px;
 }
 
+#preloader0:before {
+    -webkit-animation: trigger 1s infinite ease;
+    animation: trigger 1s infinite ease;
+    content: '';
+    position: absolute;
+    left: 25%;
+    top: 0;
+    height: 10px;
+    border-radius: 50%;
+    width: 10px;
+}
+
 @media (max-width: 768px){
     #preloader:before {
         margin-left: -50px;
     }
+
+    #preloader0:before {
+        left: 50%;
+    }
+
 }
 
 /*body & global*/

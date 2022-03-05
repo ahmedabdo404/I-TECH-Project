@@ -1,5 +1,9 @@
 ﻿@model List<Customer>
 
+@section style {
+<link rel="stylesheet" href="~/assets/css/orders.css">
+}
+
 <div class="container mt-5">
     <a asp-action="Create" asp-controller="Customer" class="btn btn-warning mt-3 mb-3"> Add new Customer </a>
     <table class="table table-bordered text-center">
@@ -16,21 +20,22 @@
             <th>Date Entered</th>
             <th>Details</th>
         </tr>
-        @foreach(var item in Model)
+        @foreach (var item in Model)
         {
-          <tr>
-              <th>@item.FirstName &nbsp; @item.LastName</th>
-              <th>@item.Address</th>
-              <th>@item.City</th>
-              <th>@item.CreditCardTypeId</th>
-              <th>@item.BillingAddress</th>
-              <th>@item.BillingCity</th>
-              <th>@item.ShipAddress</th>
-              <th>@item.ShipCity</th>
-              <th>@item.ShipCountry</th>
-              <th>@item.DateEntered</th>
-              <th><a asp-action="GetById" asp-route-id="@item.Id" asp-controller="Customer" class="btn btn-success" >Details</a></th>
-          </tr>  
+            <tr>
+                <th>@item.FirstName &nbsp; @item.LastName</th>
+                <th>@item.Address</th>
+                <th>@item.City</th>
+                <th>@item.CreditCardTypeId</th>
+                <th>@item.BillingAddress</th>
+                <th>@item.BillingCity</th>
+                <th>@item.ShipAddress</th>
+                <th>@item.ShipCity</th>
+                <th>@item.ShipCountry</th>
+                <th>@item.DateEntered</th>
+                <th><a asp-action="GetById" asp-route-id="@item.Id" asp-controller="Customer" class="btn btn-success">Details</a></th>
+                <th><a asp-action="index" asp-controller="home" class="btn btn-info">Back Home</a></th>
+            </tr>
         }
     </table>
 

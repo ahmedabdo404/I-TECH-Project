@@ -24,21 +24,33 @@ upBtn.onclick = () => {
 }
 
 // autocomplete
-$(function () {
+
+$(async function () {
     var availableTags = [
-        "SamSung A32",
-        "IdeaPad570"
+        "samsung",
+        "apple",
+        "dell",
+        "hp",
+        "mobile",
+        "laptop",
+        "realme",
+        "oppo",
+        "xiaomi",
+        "lenovo",
+        "accessories",
+        "hand free",
+        "covers"
     ];
     $("#tags").autocomplete({
         source: availableTags
     });
 });
 
-console.log("ahmedaaaaaaaadfasdfasa")
+/*console.log("ahmedaaaaaaaadfasdfasa")*/
 // Preloader
-let preloader = document.getElementById('preloader');
+let preloader = document.querySelector('#preloader, #preloader0');
 if (preloader) {
-    window.addEventListener('load', () => {
+    window.addEventListener('load', async () => {
         setTimeout(() => preloader.remove(), 500)
 
     });

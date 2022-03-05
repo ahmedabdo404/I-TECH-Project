@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ITech_Project.Service
 {
-    public class SupplierService: ISupplierService
+    public class SupplierService : ISupplierService
     {
 
         private readonly Db Context;
@@ -22,13 +22,15 @@ namespace ITech_Project.Service
 
         public void Delete(int id)
         {
-            Context.Suppliers.Remove(Context.Suppliers.FirstOrDefault(x=>x.Id==id));
+            var supplier = Context.Suppliers.FirstOrDefault(x => x.Id == id);
+            Context.Suppliers.Remove(supplier);
+            Context.Users.Remove(Context.Users.FirstOrDefault(x => x.UserName == supplier.ContactFName));
             Context.SaveChanges();
         }
 
         public List<Supplier> GetAll()
         {
-             return Context.Suppliers.ToList();
+            return Context.Suppliers.ToList();
         }
 
         public Supplier GetById(int id)
@@ -38,7 +40,7 @@ namespace ITech_Project.Service
 
         public Supplier GetByName(string name)
         {
-            return Context.Suppliers.FirstOrDefault(x => x.CompanyName== name );
+            return Context.Suppliers.FirstOrDefault(x => x.CompanyName == name);
         }
 
         public void Update(Supplier Supplier)
