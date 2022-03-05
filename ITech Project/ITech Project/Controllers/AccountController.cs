@@ -30,8 +30,6 @@ namespace ITech_Project.Controllers
 
         //To open an empty page
         [HttpGet]
-        [Route("AddCustomer")]
-
         public IActionResult SignUp()
         {
             return View();
@@ -47,14 +45,23 @@ namespace ITech_Project.Controllers
                 IdentityUser user = new();
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
+                user.PhoneNumber = newAccount.Phone;
 
                 //Saving user
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
                 if (Result.Succeeded)
                 {
-                    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    await signInManager.SignInAsync(user, false);  //False => Per session
-                    return RedirectToAction("Create", "Customer");
+                    IdentityResult role = await userManager.AddToRoleAsync(user, "Customer");
+                    if (role.Succeeded)
+                    {
+                        //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
+                        await signInManager.SignInAsync(user, false);  //False => Per session
+                        return RedirectToAction("Create", "Customer");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "No Supplier role is found !");
+                    }
                 }
                 else
                 {
@@ -74,8 +81,6 @@ namespace ITech_Project.Controllers
 
         //To open an empty page
         [HttpGet]
-        [Route("AddSupplier")]
-
         public IActionResult SignUpSupplier()
         {
             return View();
@@ -90,6 +95,7 @@ namespace ITech_Project.Controllers
 
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
+                user.PhoneNumber = newAccount.Phone;
 
                 //Saving user
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
@@ -125,7 +131,6 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        [Route("AddAdmin")]
         public IActionResult SignUpAdmin()
         {
             return View();
@@ -137,29 +142,17 @@ namespace ITech_Project.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SignUpAdmin(SignUpViewModel newAccount)
         {
-            if (ModelState.IsValid == true)
+            if (ModelState.IsValid)
             {
                 IdentityUser user = new();
                 user.UserName = newAccount.UserName;
                 user.Email = newAccount.Email;
+                user.PhoneNumber = newAccount.Phone;
 
                 //Saving user and creating cookie
                 IdentityResult Result = await userManager.CreateAsync(user, newAccount.Password);
                 if (Result.Succeeded)
                 {
-                    //Add to Admin Role
-                    //IdentityResult role = await userManager.AddToRoleAsync(user, "Admin");
-                    //if (role.Succeeded)
-                    //{
-                    //    //Creating Cookie from [signIn Manger] => Sign in, Sign out, Check Cookie
-                    //    await signInManager.SignInAsync(user, false);
-                    //    //if(await userManager.IsInRoleAsync(user,"Admin"))
-                    //    return RedirectToAction("Dashboard", "Dashboard");
-                    //}
-                    //else
-                    //{
-                    //    ModelState.AddModelError("", "No Admin role is found !");
-                    //}
                     await userManager.AddToRoleAsync(user, "Admin");
                     return RedirectToAction("Dashboard", "Dashboard");
                 }
@@ -199,7 +192,7 @@ namespace ITech_Project.Controllers
         [HttpGet]
         public async Task<IActionResult> LoginWithGoogle(string returnUrl)
         {
-            LoginViewModel model = new LoginViewModel
+            LoginViewModel model = new()
             {
                 ReturnUrl = returnUrl,
                 ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()

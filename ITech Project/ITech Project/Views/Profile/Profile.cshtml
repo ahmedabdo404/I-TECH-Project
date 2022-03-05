@@ -1,0 +1,33 @@
+﻿<h1>Profile</h1>
+
+<div class="container">
+    <hr />
+    <p>@ViewBag.UserInfo.UserName</p>
+
+    @if (User.IsInRole("Customer"))
+    {
+        <p>@Model.LastName</p>
+        <p>@Model.Address</p>
+        <p>@Model.City</p>
+        <p>@Model.CreditCardTypeId</p>
+        <p>@Model.PostalCode</p>
+        <p>@ViewBag.UserInfo.Email</p>
+        <p>@ViewBag.UserInfo.PhoneNumber</p>
+        <a class="btn btn-success" asp-action="Update" asp-controller="Customer" asp-route-id="@Model.Id">Edit Data</a>
+    }
+    else if (User.IsInRole("Supplier"))
+    {
+        <p>@Model.ContactLName</p>
+        <p>@Model.CompanyName</p>
+        <p>@Model.Address</p>
+        <p>@Model.City</p>
+        <p>@ViewBag.UserInfo.Email</p>
+        <p>@ViewBag.UserInfo.PhoneNumber</p>
+        <a class="btn btn-success" asp-action="Update" asp-controller="Supplier" asp-route-id="@Model.Id"> Edit Data</a>
+    }
+    else
+    {
+        <p>@ViewBag.UserInfo.Email</p>
+        <p>@ViewBag.UserInfo.PhoneNumber</p>
+    }
+</div>

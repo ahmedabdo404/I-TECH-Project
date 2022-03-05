@@ -13,9 +13,9 @@ namespace ITech_Project.Controllers
         {
             this.supplier = supplier;
         }
-        [Authorize(Roles = "Admin")]
 
-        [Route("suppliers")]
+
+        [Authorize(Roles = "Admin")]
         public IActionResult GetAll()
         {
 
@@ -23,20 +23,18 @@ namespace ITech_Project.Controllers
         }
 
         [Authorize(Roles = "Supplier")]
-        [Route("suplier/{id}")]
         public IActionResult GetById(int id)
         {
             return View(supplier.GetById(id));
         }
-        [Authorize(Roles = "Supplier")]
 
+        [Authorize(Roles = "Supplier")]
         public IActionResult GetByName(string name)
         {
             return View(supplier.GetByName(name));
         }
 
         [HttpGet]
-        [Route("createsupplier")]
         public IActionResult Create()
         {
             return View();
@@ -47,7 +45,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 supplier.Create(sup);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("index", "home");
             }
             return View(sup);
         }
@@ -55,7 +53,6 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Supplier")]
-        [Route("editsupplier/{id}")]
         public IActionResult Update(int id)
         {
             return View(supplier.GetById(id));
@@ -67,27 +64,24 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 supplier.Update(sup);
-                return RedirectToAction("GetAll");
+                return RedirectToAction("index", "home");
             }
             return View();
         }
 
         [Authorize(Roles = "Admin")]
-        [Route("deletesupplier/{id}")]
         public IActionResult Delete(int id)
         {
             try
             {
                 supplier.Delete(id);
                 return RedirectToAction("GetAll");
-
             }
             catch //(System.Exception)
             {
                 ModelState.AddModelError("", "this category is in use");
                 return View("Update");
             }
-
         }
 
     }

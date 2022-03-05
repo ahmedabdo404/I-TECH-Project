@@ -18,14 +18,12 @@ namespace ITech_Project.Controllers
         #region Read
 
         [Authorize(Roles = "Admin")]
-        [Route("Customers")]
         public IActionResult GetAllCustomers()
         {
             return View(CustomerService.GetAll());
         }
 
         [Authorize(Roles = "Customer")]
-        [Route("Customer/{id}")]
         public IActionResult GetById(int id)
         {
             return View(CustomerService.GetById(id));
@@ -57,7 +55,6 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Customer")]
-        [Route("editcustomer/{id}")]
         public IActionResult Update([FromRoute] int id)
         {
             Customer customer = CustomerService.GetById(id);
@@ -70,7 +67,7 @@ namespace ITech_Project.Controllers
             if (ModelState.IsValid)
             {
                 CustomerService.Update(customer);
-                return RedirectToAction("GetById");
+                return RedirectToAction("index", "home");
             }
             return View(customer);
         }

@@ -5,8 +5,8 @@ namespace ITech_Project.Controllers
 {
     public class DashboardController : Controller
     {
-        [Authorize(Roles = "Admin")]
         [Route("Dashboard")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Dashboard()
         {
             return View();
