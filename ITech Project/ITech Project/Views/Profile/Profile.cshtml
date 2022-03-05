@@ -2,7 +2,6 @@
     <h1>Profile</h1>
     <hr />
     <p><b>UserName: </b>@ViewBag.UserInfo.UserName</p>
-@*
     @if (User.IsInRole("Customer"))
     {
         <p><b>First Name: </b>@Model.FirstName</p>
@@ -26,8 +25,8 @@
         <a class="btn btn-success" asp-action="Update" asp-controller="Supplier" asp-route-id="@Model.Id"> Edit Data</a>
     }
     else
-    {*@
+    {
         <p><b>Email: </b>@ViewBag.UserInfo.Email</p>
         <p><b>PhoneNumber: </b>@ViewBag.UserInfo.PhoneNumber</p>
-@*    }*@
+    }
 </div>

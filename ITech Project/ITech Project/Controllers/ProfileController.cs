@@ -38,7 +38,7 @@ namespace ITech_Project.Controllers
                 return View(supplier);
 
             }
-            return View(currentUser);
+            return View();
         }
 
 
