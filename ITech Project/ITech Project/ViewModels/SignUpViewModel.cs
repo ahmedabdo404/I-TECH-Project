@@ -7,7 +7,7 @@ namespace ITech_Project.ViewModels
     {
         [Display(Name = "User Name")]
         [Required(ErrorMessage = "Name is required")]
-        [RegularExpression(pattern: @"[a-zA-z]{3,}", ErrorMessage = "Name must be more than 3 letters!")]
+        [RegularExpression(pattern: @"[a-zA-z]{3,}", ErrorMessage = "please enter letters or Name must be more than 3 letters !")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Email is required!")]

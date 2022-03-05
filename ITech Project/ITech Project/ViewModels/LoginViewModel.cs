@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Authentication;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITech_Project.ViewModels
@@ -6,17 +8,21 @@ namespace ITech_Project.ViewModels
     public class LoginViewModel
     {
        
-        [Required(ErrorMessage ="Invalid email address")]
+        [Required(ErrorMessage = "Email is Required")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
-        [Required(ErrorMessage ="Password must be not less than 6 letters!")]
+        [Required(ErrorMessage = "Password is Required!")]
         public string Password { get; set; }
 
 
         [Display (Name ="Remember me")]
         public bool RememberMe { get; set; }
+
+        public string  ReturnUrl { get; set; }
+
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
     }
 }

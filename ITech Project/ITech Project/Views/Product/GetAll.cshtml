@@ -1,7 +1,9 @@
 ﻿@model List<Product>
 
 @section style {
+
     <link rel="stylesheet" href="~/assets/css/sub.css">
+
 }
 
 @{
@@ -26,10 +28,9 @@
             <button class="filterbtn btn mx-1">More Filters</button>
         </div>
     </div>
-    @if (User.IsInRole("Supplier"))
-    {
-        <a class="btn btn-warning" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create</a>
-    }
+
+        <a class="btn btn-warning mb-3 ms-3" asp-controller="Product" asp-action="Create"><i class='bx bx-add-to-queue'></i> Create Product</a>
+
     <!-- Content -->
     <div class="shop-content">
         <!-- Box 2 -->
@@ -99,7 +100,7 @@
         </div>
     </div>
 </section>
-   
+
 <partial name="_Pager"  model="@pager"/>
 
 
@@ -171,4 +172,7 @@
 @section scripts {
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="~/assets/js/sub.js"></script>
+
 }
+
+

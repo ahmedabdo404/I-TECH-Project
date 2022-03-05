@@ -1,0 +1,46 @@
+﻿@model ITech_Project.ViewModels.MailRequestDto
+
+@{
+    ViewData["Title"] = "SendMail";
+}
+
+@section style {
+    <link rel="stylesheet" href="~/assets/css/contact.css">
+}
+
+<section class="items-section container">
+    <div class="h ms-0">
+        <p>Contact Information</p>
+    </div>
+    <div class="row m-0">
+        <div class="col-10 login-inputs">
+            <form asp-action="SendMail">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="col-3">
+                    <label asp-for="Subject" class="control-label"></label>
+                    <input asp-for="Subject" placeholder="Subject" class="form-control" />
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+                <div class="col-3">
+                    <label asp-for="ToEmail" class="control-label">Email</label>
+                    <input asp-for="ToEmail" placeholder="Email" class="form-control" />
+                    <span asp-validation-for="ToEmail" class="text-danger"></span>
+                </div>
+                <div class="d-flex flex-column">
+                    <label asp-for="Body" class="control-label"></label>
+                    <textarea asp-for="Body" class="form-control"  cols="60" rows="10" 
+                    placeholder="Type Your Message" style="resize: none"></textarea>
+                    <span asp-validation-for="Body" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="submit" class="btn btn-warning" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/assets/js/contact.js"></script>
+}

@@ -1,6 +1,8 @@
 using ITech_Project.Cart;
 using ITech_Project.Models;
 using ITech_Project.Service;
+using ITech_Project.Services;
+using ITech_Project.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,11 +11,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace ITech_Project
 {
@@ -29,6 +33,30 @@ namespace ITech_Project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //}).AddCookie(options =>
+            //{
+            //    options.LoginPath = "/account/login";
+            //}).AddGoogle(options =>
+            //{
+            //    options.ClientId = Configuration[""]
+            //    options.ClientSecret = Configuration
+            //});
+
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddGoogle(options =>
+            {
+                options.ClientId = "601718478288-rs8nuaml1u0a417kjirm7p0ol2okgjak.apps.googleusercontent.com";
+                options.ClientSecret = "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";
+            });
+
+
+
             services.AddControllersWithViews();
             services.AddDbContext<Db>(option =>
             option.UseSqlServer(Configuration.GetConnectionString("cs")));
@@ -46,6 +74,9 @@ namespace ITech_Project
             services.AddScoped<ISupplierService, SupplierService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => ShoppingCart.GEtShopCart(sc));
+          
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<IMailingService, MailingService>();
 
             services.AddSession();
 

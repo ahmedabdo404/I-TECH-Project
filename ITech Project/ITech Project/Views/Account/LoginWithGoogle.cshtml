@@ -1,0 +1,26 @@
+﻿@model LoginViewModel
+
+
+<div class="container mb-4">
+
+    <h1>Login with your Google Account</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" asp-action="ExternalLogin" asp-route-returnurl="@Model.ReturnUrl">
+                <div>
+                        @foreach(var provider in Model.ExternalLogins)
+                        {
+                            <input type="submit"class="btn btn-primary" name="provider"
+                            value="@provider.Name" title="Login with your @provider.Name account "/>
+                        }
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

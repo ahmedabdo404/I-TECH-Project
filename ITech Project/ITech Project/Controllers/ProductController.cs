@@ -16,6 +16,7 @@ namespace ITech_Project.Controllers
             ProductRepo = productRepo;
         }
 
+        [Route("search")]
         public IActionResult Filter(string searchstring)
         {
             var allproducts = ProductRepo.GetAll();
@@ -28,6 +29,8 @@ namespace ITech_Project.Controllers
             return View("GetAll", allproducts);
 
         }
+
+        [Route("products")]
         public IActionResult GetAll(int pg = 1)
         {
             var products = ProductRepo.GetAll();
@@ -43,7 +46,7 @@ namespace ITech_Project.Controllers
 
         }
 
-
+        [Route("product/{id}")]
         public IActionResult GetById([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
@@ -54,7 +57,7 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize]
-
+        [Route("createproduct")]
         public IActionResult Create()
         {
             return View();
@@ -74,6 +77,7 @@ namespace ITech_Project.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Supplier")]
+        [Route("editeproduct/{id}")]
         public IActionResult Update([FromRoute] int id)
         {
             var product = ProductRepo.GetById(id);
@@ -93,6 +97,7 @@ namespace ITech_Project.Controllers
             return View(product);
         }
 
+        [Route("deleteproduct/{id}")]
         [Authorize(Roles = "Suuplier, Admin")]
         public IActionResult Delete([FromRoute] int id)
         {
