@@ -51,7 +51,7 @@ $(async function () {
 let preloader = document.querySelector('#preloader, #preloader0');
 if (preloader) {
     window.addEventListener('load', async () => {
-        setTimeout(() => preloader.remove(), 500)
+        setTimeout(() => preloader.remove(), 250)
 
     });
 }

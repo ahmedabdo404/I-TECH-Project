@@ -4,7 +4,7 @@ let filterMobiles = document.querySelector("button[data-filter='.mobiles']")
 let filterLaptops = document.querySelector("button[data-filter='.Laptops']")
 let filterAccessories = document.querySelector("button[data-filter='.accessories']")
 
-let pageUrl = window.location.href.toLocaleLowerCase()
+let pageUrl = window.location.href.toLowerCase();
 
 window.onload = () => {
     if (pageUrl.includes("mobiles"))
