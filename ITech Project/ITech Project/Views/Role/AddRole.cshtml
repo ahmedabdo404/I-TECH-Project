@@ -7,7 +7,7 @@
 
 
 
-<div class="container mt-5">
+<div class="container">
     <h1 class="mb-2">Add Role</h1>
      <hr />
     <div class="row">
@@ -20,15 +20,12 @@
                     <span asp-validation-for="RoleName" class="text-danger"></span>
                 </div>
                 <br />
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-secondary" />
+                <div class="form-group ">
+                    <input type="submit" value="Create" class="btn btn-warning me-2" />
+                    <a asp-action="GetRoles" asp-controller="Role" class=" btn btn-secondary">Back</a>
                 </div>
             </form>
         </div>
     </div>
-    <div>
-    <a asp-action="GetRoles" asp-controller="Role" class="mb-5 mt-3">Back to List</a>
-    </div>
-
 </div>
 

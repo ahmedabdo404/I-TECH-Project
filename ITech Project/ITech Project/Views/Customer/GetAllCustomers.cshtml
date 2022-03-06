@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="~/assets/css/orders.css">
 }
 
-<div class="container mt-5">
+<div class="container">
     <a asp-action="Create" asp-controller="Customer" class="btn btn-warning mt-3 mb-3"> Add new Customer </a>
     <table class="table table-bordered text-center">
         <tr>
@@ -34,12 +34,12 @@
                 <th>@item.ShipCity</th>
                 <th>@item.ShipCountry</th>
                 <th>@item.DateEntered</th>
-                <th><a asp-action="GetById" asp-route-id="@item.Id" asp-controller="Customer" class="btn btn-success">Details</a></th>
+                <th><a asp-action="GetById" asp-route-id="@item.Id" asp-controller="Customer" class="btn btn-warning">Details</a></th>
                 <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Supplier" asp-route-id="@item.Id" onclick="ConfirmDelete(event)">Delete</a></td>
             </tr>
         }
     </table>
-    <a asp-action="index" asp-controller="home" class="btn btn-secondary">Back Home</a>
+    <a asp-action="dashboard" asp-controller="dashboard" class="btn btn-secondary">Back to dashboard</a>
 
 </div>
 

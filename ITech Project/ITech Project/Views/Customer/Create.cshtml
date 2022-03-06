@@ -1,13 +1,12 @@
 ﻿@model Customer
 
-<div class="container m-3">
-    <h4>Customer</h4>
-    <hr />
+<div class="container p-3">
     <h4>Add new Customer</h4>
+    <hr />
     <form asp-action="Create" asp-controller="Customer">
         <div class="row d-flex flex-column flex-md-row">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="col-9 col-md-6">
+            <div class="col-12 col-md-6">
 
                 <div class="form-group">
                     <label asp-for="FirstName" class="control-label"></label>
@@ -51,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="col-9 col-md-6">
+            <div class="col-12 col-md-6">
 
                 <div class="form-group">
                     <label asp-for="BillingCountry" class="control-label"></label>

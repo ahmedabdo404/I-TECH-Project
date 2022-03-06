@@ -4,15 +4,13 @@
     ViewData["Title"] = "Update";
 }
 <div class="container">
-    <h1>Update</h1>
-
-    <h4>Supplier</h4>
+    <h1>Edit your profile</h1>
     <hr />
-    <div class="col-md-12">
+    <div>
         <form asp-action="Update">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row d-flex flex-column flex-md-row">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
 
                     <div class="form-group">
                         @*<label asp-for="Id" class="control-label"></label>*@
@@ -52,7 +50,7 @@
 
                 </div>
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
 
                     <div class="form-group">
                         <label asp-for="PostalCode" class="control-label"></label>
@@ -82,8 +80,8 @@
                         <span asp-validation-for="Payment" class="text-danger"></span>
                     </div>
                     <div class="form-group mt-3">
-                        <input type="submit" value="Save" class="btn btn-primary me-2" />
-                        <a asp-action="Index" asp-controller="home" class="btn btn-warning">Back to List</a>
+                        <input type="submit" value="Save" class="btn btn-warning me-2" />
+                        <a asp-action="Index" asp-controller="home" class="btn btn-secondary">Back</a>
                     </div>
 
                 </div>
