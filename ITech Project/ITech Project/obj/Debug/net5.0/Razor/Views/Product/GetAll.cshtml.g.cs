@@ -42,7 +42,9 @@ using ITech_Project.pagination;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"469f557820dc74d3e4107597c1b17e3643031aa1", @"/Views/Product/GetAll.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8dd424cdfade54604a18dccd835c985414b57402", @"/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Views_Product_GetAll : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Product>>
+    #nullable disable
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/assets/css/sub.css"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -83,7 +85,7 @@ using ITech_Project.pagination;
             WriteLiteral("\r\n");
             DefineSection("style", async() => {
                 WriteLiteral("\r\n\r\n");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "469f557820dc74d3e4107597c1b17e3643031aa17421", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "469f557820dc74d3e4107597c1b17e3643031aa17467", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -138,7 +140,7 @@ using ITech_Project.pagination;
 #line hidden
 #nullable disable
             WriteLiteral("        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa110168", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa110214", async() => {
                 WriteLiteral("<i class=\'bx bx-add-to-queue\'></i> Create Product");
             }
             );
@@ -204,7 +206,7 @@ using ITech_Project.pagination;
 #line hidden
 #nullable disable
             WriteLiteral("                    <div class=\"product-box col-lg-4 col-md-6 mobiles\">\r\n\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa113514", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa113560", async() => {
                 WriteLiteral("\r\n                            <img");
                 BeginWriteAttribute("src", " src=\"", 1918, "\"", 1939, 1);
 #nullable restore
@@ -278,7 +280,7 @@ WriteAttributeValue("", 1946, item.Name, 1946, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa118013", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa118059", async() => {
                 WriteLiteral("\r\n                            <i class=\"bx bxs-cart-add add-cart\"></i>\r\n                        ");
             }
             );
@@ -335,7 +337,7 @@ WriteAttributeValue("", 1946, item.Name, 1946, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("                    <div class=\"product-box col-lg-4 col-md-6 Laptops\">\r\n\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa121636", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa121682", async() => {
                 WriteLiteral("\r\n                            <img");
                 BeginWriteAttribute("src", " src=\"", 2921, "\"", 2942, 1);
 #nullable restore
@@ -417,7 +419,7 @@ WriteAttributeValue("", 2949, item.Name, 2949, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa126563", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa126609", async() => {
                 WriteLiteral("\r\n                            <i class=\"bx bxs-cart-add add-cart\"></i>\r\n                        ");
             }
             );
@@ -466,7 +468,7 @@ WriteAttributeValue("", 2949, item.Name, 2949, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("                    <div class=\"product-box col-lg-4 col-md-6 accessories\">\r\n\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa129823", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa129869", async() => {
                 WriteLiteral("\r\n                            <img");
                 BeginWriteAttribute("src", " src=\"", 3989, "\"", 4010, 1);
 #nullable restore
@@ -548,7 +550,7 @@ WriteAttributeValue("", 4017, item.Name, 4017, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa134755", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa134801", async() => {
                 WriteLiteral("\r\n                            <i class=\"bx bxs-cart-add add-cart\"></i>\r\n                        ");
             }
             );
@@ -597,7 +599,7 @@ WriteAttributeValue("", 4017, item.Name, 4017, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("        </div>\r\n    </div>\r\n</section>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "469f557820dc74d3e4107597c1b17e3643031aa137925", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "469f557820dc74d3e4107597c1b17e3643031aa137971", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -693,7 +695,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper.Model = pager;
 ");
             DefineSection("scripts", async() => {
                 WriteLiteral("\r\n<script src=\"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js\"></script>\r\n");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa143459", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "469f557820dc74d3e4107597c1b17e3643031aa143505", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -712,16 +714,26 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper.Model = pager;
             WriteLiteral("\r\n\r\n");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<Product>> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<Product>> Html { get; private set; } = default!;
+        #nullable disable
     }
 }
 #pragma warning restore 1591
