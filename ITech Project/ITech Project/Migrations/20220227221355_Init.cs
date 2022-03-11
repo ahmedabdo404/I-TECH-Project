@@ -224,7 +224,7 @@ namespace ITech_Project.Migrations
                         column: x => x.CustomerId,
                         principalTable: "Customers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -239,7 +239,9 @@ namespace ITech_Project.Migrations
                     UnitsInStock = table.Column<int>(type: "int", nullable: false),
                     Discount = table.Column<double>(type: "float", nullable: false),
                     Picture = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ranking = table.Column<byte>(type: "tinyint", nullable: true),
+                    Ranking = table.Column<decimal>(type: "decimal", nullable: false),
+                    NumberOfReviews = table.Column<int>(type: "int", nullable: false),
+                    TotalReviews = table.Column<int>(type: "int", nullable: false),
                     Note = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Color = table.Column<byte>(type: "tinyint", nullable: false),
                     Category = table.Column<byte>(type: "tinyint", nullable: false),
@@ -256,7 +258,7 @@ namespace ITech_Project.Migrations
                         column: x => x.SupplierId,
                         principalTable: "Suppliers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -280,13 +282,13 @@ namespace ITech_Project.Migrations
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_OrderDetails_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -307,7 +309,7 @@ namespace ITech_Project.Migrations
                         column: x => x.productId,
                         principalTable: "Products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(

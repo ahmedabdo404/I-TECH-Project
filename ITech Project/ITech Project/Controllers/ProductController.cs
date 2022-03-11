@@ -60,6 +60,7 @@ namespace ITech_Project.Controllers
         }
 
         [HttpPost]
+
         public IActionResult Create(Product product)
         {
             if (ModelState.IsValid)
@@ -109,5 +110,10 @@ namespace ITech_Project.Controllers
             }
         }
 
+        public IActionResult AddReview([FromRoute] int id, [FromQuery] int Rank)
+        {
+            ProductRepo.AddReview(id, Rank);
+            return RedirectToAction("getall");
+        }
     }
 }

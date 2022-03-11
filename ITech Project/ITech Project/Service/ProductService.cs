@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace ITech_Project.Service
 {
@@ -45,5 +46,22 @@ namespace ITech_Project.Service
             Context.SaveChanges();
         }
 
+        public void AddReview(int id, int Rank)
+        {
+            if (Context.Products.FirstOrDefault(x => x.Id == id).NumberOfReviews == null)
+                Context.Products.FirstOrDefault(x => x.Id == id).NumberOfReviews = 1;
+            else
+                Context.Products.FirstOrDefault(x => x.Id == id).NumberOfReviews++;
+
+            if (Context.Products.FirstOrDefault(x => x.Id == id).TotalReviews == null)
+                Context.Products.FirstOrDefault(x => x.Id == id).TotalReviews = Rank;
+            else
+                Context.Products.FirstOrDefault(x => x.Id == id).TotalReviews += Rank;
+
+            Context.Products.FirstOrDefault(x => x.Id == id).Ranking =
+                Context.Products.FirstOrDefault(x => x.Id == id).TotalReviews / Context.Products.FirstOrDefault(x => x.Id == id).NumberOfReviews;
+
+            Context.SaveChanges();
+        }
     }
 }

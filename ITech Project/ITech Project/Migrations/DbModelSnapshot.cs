@@ -114,11 +114,13 @@ namespace ITech_Project.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Orders");
                 });
@@ -192,14 +194,20 @@ namespace ITech_Project.Migrations
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("NumberOfReviews")
+                        .HasColumnType("int");
+
                     b.Property<string>("Picture")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte?>("Ranking")
-                        .HasColumnType("tinyint");
+                    b.Property<decimal?>("Ranking")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("SupplierId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TotalReviews")
                         .HasColumnType("int");
 
                     b.Property<double>("UnitPrice")
@@ -491,7 +499,13 @@ namespace ITech_Project.Migrations
                         .WithMany()
                         .HasForeignKey("CustomerId");
 
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("Customer");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ITech_Project.Models.OrderDetail", b =>

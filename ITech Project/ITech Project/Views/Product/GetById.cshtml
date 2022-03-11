@@ -96,7 +96,7 @@
                     <hr>
                 </div>
                 <div class="Product-Specification">
-                    <h4>Product Specification</h4>
+                    <h4>Specification</h4>
                     <hr>
                     <span class="d-block">
                         Brand:
@@ -125,27 +125,31 @@
                     </span>
                 </div>
                 <div class="Product-reviews">
-                    <h4>Product Reviews</h4>
+                    <h4>Reviews</h4>
                     <hr>
                     <span class="d-block">
+                        @if(Model.Ranking == null)
+                        {
+                             <p class="d-inline">No Reviews yet</p>
+                        }
+
                         @for (int i = 0; i < Model.Ranking; i++)
                         {
                             <i class='bx bxs-star'></i>
                         }
-                        @for (byte? i = Model.Ranking; i < 5; i++)
+
+                        @for (decimal? i = Model.Ranking; i < 5; i++)
                         {
                             <i class='bx bx-star'></i>
                         }
                         @switch (Model.Ranking)
                         {
-                            case 0:
+
+                            case 1:
                                 <p class="d-inline">Very Bad</p>
                                 break;
-                            case 1:
-                                <p class="d-inline">Bad</p>
-                                break;
                             case 2:
-                                <p class="d-inline">Normal</p>
+                                <p class="d-inline">Bad</p>
                                 break;
                             case 3:
                                 <p class="d-inline">Good</p>
@@ -162,16 +166,16 @@
             </div>
             <div class="Desc">
                 <div class="Product-Description">
-                    <h4>Product description</h4>
+                    <h4>Description</h4>
                     <hr>
                     <span class="d-block">
-                        <p>
+                        <p style="word-wrap: break-word">
                             @Model.Description
                         </p>
                     </span>
                 </div>
                 <div class="Product-price">
-                    <h4>Product price</h4>
+                    <h4>Price</h4>
                     <hr>
                     <span class="d-block price-val">
                         @{
@@ -202,11 +206,11 @@
             </div>
             <div class="d-flex flex-row" id="ca-body">
                 <div>
-                    <h6>Product Description:</h6><br>
-                    <p>@Model.Description</p>
+                    <h5>Product Description:</h5><br>
+                    <p style="word-wrap: break-word">@Model.Description</p>
                 </div>
                 <div hidden>
-                    <h6>Product Specification:</h6><br>
+                    <h5>Product Specification:</h5><br>
                     <span class="d-block">
                         Brand:
                         @if (Model.Category == Category.Laptop)
@@ -233,10 +237,23 @@
                         }
                     </span>
                 </div>
-                <div hidden>
-                    <h6>Customers reviews:</h6><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolorem, atque nemo tenetur veritatis fuga dolore modi exercitationem quidem labore accusantium, delectus reiciendis quam voluptates architecto hic debitis sapiente earum.
+                <div hidden class="Customers-reviews">
+                    <h5>Customers reviews:</h5><br>
+                    <h6>Total Reviews: @Model.NumberOfReviews</h6>
+                    <p class="d-inline">Add Your Review: </p>
+                    <section class="d-inline-block">
+                        <i class='bx bx-star' title="1 of 5"></i>
+                        <i class='bx bx-star' title="2 of 5"></i>
+                        <i class='bx bx-star' title="3 of 5"></i>
+                        <i class='bx bx-star' title="4 of 5"></i>
+                        <i class='bx bx-star' title="5 of 5"></i>
+                    </section>
+                    <p class="review-value d-inline">
 
+                    </p>
+                    <button type="button" class="btn btn-warning ms-md-2 ms-0" disabled>
+                        <a>Submit Review</a>
+                    </button>
                 </div>
             </div>
         </div>

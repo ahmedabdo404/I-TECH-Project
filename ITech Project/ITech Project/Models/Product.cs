@@ -27,8 +27,9 @@ namespace ITech_Project.Models
         [Required(ErrorMessage = "Picture is required !")]
         public string Picture { get; set; }
 
-        [Range(1, 5)]
-        public byte? Ranking { get; set; }
+        [Range(0, 5)]
+        public decimal? Ranking { get; set; }
+
         public string Note { get; set; }
         public Color Color { get; set; }
 
@@ -47,5 +48,7 @@ namespace ITech_Project.Models
         [ForeignKey("Supplier")]
         public int? SupplierId { get; set; }
         public Supplier Supplier { get; set; }
+        public int? NumberOfReviews { get; set; }
+        public int? TotalReviews { get; set; }
     }
 }

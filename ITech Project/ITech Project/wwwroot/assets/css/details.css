@@ -109,17 +109,17 @@ hr {
     text-decoration: none;
 }
 
-    .add-to-cart p {
-        width: fit-content;
-        margin: 0;
-        margin-left: 0.2rem;
-        color: var(--sec-color);
-    }
+.add-to-cart p {
+    width: fit-content;
+    margin: 0;
+    margin-left: 0.2rem;
+    color: var(--sec-color);
+}
 
-    .add-to-cart i {
-        font-size: var(--font-size1);
-        color: var(--sec-color);
-    }
+.add-to-cart i {
+    font-size: var(--font-size1);
+    color: var(--sec-color);
+}
 
 
 #custome-accordion {
@@ -129,34 +129,47 @@ hr {
     margin-bottom: 2rem;
 }
 
-    #custome-accordion #ca-title {
-        width: fit-content;
-        /* background-color: var(--third-color); */
-    }
+#custome-accordion #ca-title {
+    width: fit-content;
+    /* background-color: var(--third-color); */
+}
 
-        #custome-accordion #ca-title span {
-            margin-right: 1rem;
-            cursor: pointer;
-            color: var(--main-color);
-            transition: var(--transition1);
-            font-size: var(--font-size2);
-            border-radius: 2px;
-            padding: 0.5rem;
-        }
+#custome-accordion #ca-title span {
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--main-color);
+    transition: var(--transition1);
+    font-size: var(--font-size2);
+    border-radius: 2px;
+    padding: 0.5rem;
+}
 
     /* #custome-accordion #ca-title span:hover{
 transform: translateY(-10%);
 color: var(--fifth-color)
 } */
 
-    #custome-accordion #ca-body div {
-        width: 100%;
-        height: auto;
-        background-color: var(--third-color);
-        border-radius: 2px;
-        padding: 1rem;
-        /* transition: var(--transition1); */
-    }
+#custome-accordion #ca-body div {
+    width: 100%;
+    height: auto;
+    background-color: var(--third-color);
+    border-radius: 2px;
+    padding: 1rem;
+    /* transition: var(--transition1); */
+}
+
+.Customers-reviews i {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.Customers-reviews button a {
+    color: var(--forth-color);
+}
+
+.Customers-reviews i:hover {
+    color: var(--seventh-color);
+}
 
 @media (max-width: 992px) {
     .details {
@@ -214,24 +227,24 @@ color: var(--fifth-color)
         margin-bottom: 1rem;
     }
 
-        #custome-accordion #ca-title span {
-            width: fit-content;
-            font-size: 0.8rem !important;
-            margin: 0;
-            padding: 0.3rem
-        }
+    #custome-accordion #ca-title span {
+        width: fit-content;
+        font-size: 0.8rem !important;
+        margin: 0;
+        padding: 0.3rem
+    }
 
-        #custome-accordion #ca-body div {
-            width: 100%;
-        }
+    #custome-accordion #ca-body div {
+        width: 100%;
+    }
 
     .Product-Description {
         width: 250px !important;
     }
 
-        .Product-Description p {
-            font-size: 0.8rem;
-        }
+    .Product-Description p {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 450px) {
