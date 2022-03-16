@@ -73,11 +73,11 @@ hr {
     width: 100%
 }
 
-    .Desc h4,
-    .Desc span {
-        width: auto;
-        margin: 0.8rem 0
-    }
+.Desc h4,
+.Desc span {
+    width: auto;
+    margin: 0.8rem 0
+}
 
 .price-val p:nth-child(1) {
     color: var(--fifth-color);
@@ -104,9 +104,34 @@ hr {
     width: 150px !important;
     height: 2.5rem;
     background-color: var(--main-color);
-    border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    transition: var(--transition1);
+}
+
+/*.cart-btn {
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition2);
+    margin-bottom: 10px;
+    background-color: var(--main-color);
+}*/
+
+.add-to-cart:hover {
+    background-color: var(--sec-color);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 5px;
+}
+
+.add-to-cart:hover p,
+.add-to-cart:hover i {
+    color: var(--main-color);
 }
 
 .add-to-cart p {

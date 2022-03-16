@@ -58,12 +58,15 @@
                             </span>
                         </div>
 
-
-                        <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
-                            <div class="product-add">
-                                <i class='bx bxs-message-square-add'></i>
-                            </div>
-                        </a>
+                        @if(@item.product.UnitsInStock != @item.Amount)
+                        {
+                            <a asp-action="AddToShoppingCart" asp-route-id="@item.product.Id">
+                                <div class="product-add">
+                                    <i class='bx bxs-message-square-add'></i>
+                                
+                                </div>
+                            </a> 
+                        }
 
                         <a asp-action="RemoveItemFromCart" asp-route-id="@item.product.Id">
                             <div class="product-remove">

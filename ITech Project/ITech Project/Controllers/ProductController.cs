@@ -113,7 +113,7 @@ namespace ITech_Project.Controllers
         public IActionResult AddReview([FromRoute] int id, [FromQuery] int Rank)
         {
             ProductRepo.AddReview(id, Rank);
-            return RedirectToAction("getall");
+            return View();
         }
     }
 }

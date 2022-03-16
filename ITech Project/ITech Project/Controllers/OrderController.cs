@@ -62,8 +62,7 @@ namespace ITech_Project.Controllers
         public IActionResult AddToShoppingCart(int id)
         {
             var item = proRepo.GetById(id);
-
-            if (item != null)
+            if (item != null && item.UnitsInStock > 0)
             {
                 shoppingCart.AddItemToCart(item);
             }

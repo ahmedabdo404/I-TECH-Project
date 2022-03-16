@@ -184,13 +184,23 @@
                         <p class="d-inline" style="text-decoration: line-through">$ @Model.UnitPrice</p>
                         <p class="d-inline">$@price</p>
                     </span>
-
+                    @if(@Model.UnitsInStock > 0)
+                    {
                     <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@Model.Id">
                         <span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
                             <i class='bx bxs-cart-add add-cart '></i>
                             <p class="d-inline">add-to cart</p>
                         </span>
-                    </a>
+                    </a>                        
+                    }
+                    else
+                    {
+                        <span class="d-flex justify-content-center align-items-center flex-row add-to-cart">
+                            <i class='bx bxs-no-entry add-cart'></i>
+                            <p class="d-inline">Out of stock</p>
+                        </span>
+                    }
+
                     @if (User.IsInRole("Admin"))
                     {
                         <a asp-action="Delete" asp-route-id="@Model.Id" id="delete-product" class="btn btn-danger">Delete</a>
@@ -251,9 +261,18 @@
                     <p class="review-value d-inline">
 
                     </p>
-                    <button type="button" class="btn btn-warning ms-md-2 ms-0" disabled>
-                        <a>Submit Review</a>
-                    </button>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button type="button" class="btn btn-warning ms-md-2 ms-0 submitBtnLink" disabled>
+                            <a>Submit Review</a>
+                        </button>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-warning ms-md-2 ms-0" disabled>
+                            <a asp-action="login" asp-controller="account">Login To Complete Review</a>
+                        </button>
+                    }
                 </div>
             </div>
         </div>

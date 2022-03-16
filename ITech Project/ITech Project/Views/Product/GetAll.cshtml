@@ -58,10 +58,17 @@
                         <span class="d-block Model-Brand">@item.ModelMobile</span>
 
                         <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
-                        <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
-                            <i class="bx bxs-cart-add add-cart"></i>
-                        </a>
                         <span class="price">$@price</span>
+                        @if(item.UnitsInStock == 0)
+                        {
+                            <a><i class='bx bxs-no-entry add-cart'></i></a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                                <i class="bx bxs-cart-add add-cart"></i>
+                            </a> 
+                        }
                     </div>
                 }
                 @if (item.ModelLabtop != null)
@@ -76,9 +83,18 @@
 
                         <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
                         <span class="price">$@price</span>
-                        <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
-                            <i class="bx bxs-cart-add add-cart"></i>
-                        </a>
+                        @if(item.UnitsInStock == 0)
+                        {
+                            <a>
+                                <i class='bx bxs-no-entry add-cart'></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                                <i class="bx bxs-cart-add add-cart"></i>
+                            </a> 
+                        }
                     </div>
                 }
                 @if (item.Accessories != null)
@@ -93,9 +109,17 @@
 
                         <p class="d-inline" style="text-decoration: line-through">$ @item.UnitPrice</p>
                         <span class="price">$@price</span>
-                        <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
-                            <i class="bx bxs-cart-add add-cart"></i>
-                        </a>
+                        @if(item.UnitsInStock == 0)
+                        {
+                            <a><i class='bx bxs-no-entry add-cart'></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Order" asp-action="AddToShoppingCart" asp-route-id="@item.Id">
+                                <i class="bx bxs-cart-add add-cart"></i>
+                            </a> 
+                        }
                     </div>
                 }
             }

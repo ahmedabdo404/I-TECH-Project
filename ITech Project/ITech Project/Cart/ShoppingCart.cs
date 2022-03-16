@@ -49,8 +49,10 @@ namespace ITech_Project.Cart
                 };
                 _context.ShoppingCartItems.Add(ShoppingCartItem);
             }
-            else
-            { ShoppingCartItem.Amount++; }
+            else if(product.UnitsInStock > ShoppingCartItem.Amount)
+            { 
+                ShoppingCartItem.Amount++;
+            }
             _context.SaveChanges();
         }
 
@@ -82,7 +84,6 @@ namespace ITech_Project.Cart
             return ShoppingCartItems ?? _context.ShoppingCartItems.Where(f => f.ShoppingCartId ==
               ShoppingCartId).Include(n => n.product).ToList();
         }
-
 
         public double GetShoppingCartTotal() => _context.ShoppingCartItems.Where(n => n.ShoppingCartId ==
          ShoppingCartId).Select(n => (n.product.UnitPrice - n.product.Discount) * n.Amount).Sum();

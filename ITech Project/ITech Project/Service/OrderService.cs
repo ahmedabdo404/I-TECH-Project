@@ -32,7 +32,7 @@ namespace ITech_Project.Service
         //Create
         int IOrderService.Create(Order ord)
         {
-             Context.Orders.Add(ord);
+            Context.Orders.Add(ord);
             int row = Context.SaveChanges();
             return row;
         }
@@ -69,9 +69,9 @@ namespace ITech_Project.Service
                     Price = item.product.UnitPrice,
                     ProductId = item.product.Id,
                     Quantity = item.Amount,
-                    OrderId = order.Id
-
+                    OrderId = order.Id,
                 };
+                item.product.UnitsInStock -= item.Amount;
                 await Context.OrderDetails.AddAsync(orderitem);
             }
             await Context.SaveChangesAsync();
