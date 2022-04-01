@@ -1,4 +1,5 @@
-﻿// hide nav bar
+﻿
+// hide nav bar
 let menu = document.querySelector('#menu-bar i')
 let navbar = document.querySelector('.top-nav, .menu-links')
 
@@ -24,7 +25,6 @@ upBtn.onclick = () => {
 }
 
 // autocomplete
-
 $(async function () {
     var availableTags = [
         "samsung",
@@ -46,12 +46,10 @@ $(async function () {
     });
 });
 
-/*console.log("ahmedaaaaaaaadfasdfasa")*/
 // Preloader
 let preloader = document.querySelector('#preloader, #preloader0');
 if (preloader) {
     window.addEventListener('load', async () => {
-        setTimeout(() => preloader.remove(), 250)
-
+        setTimeout(() => preloader.remove(), 250);
     });
 }
